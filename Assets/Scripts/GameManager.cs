@@ -12,4 +12,14 @@ public class GameManager : MonoBehaviour
     {
         currentLevel = SceneManager.GetActiveScene().buildIndex;
     }
+
+    public void setClass(int num)
+    {
+        classType = num;
+    }
+
+    public void setBoss(int num)
+    {
+        boss = num;
+    }
 }
