@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     public GameObject net;
     public float netSpeed;
 
+    public float chargeTime;
+
     [Header("Controlls")]
     public InputActionReference move;
     public InputActionReference primaryButton;
@@ -110,6 +112,7 @@ public class PlayerController : MonoBehaviour
                     blocking = true;
                     canAttack = false;
                     shield.SetActive(true);
+                    StartCoroutine(blockCounter());
                 }
                 else if (phase.canceled)
                 {
@@ -139,7 +142,12 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator blockCounter()
     {
-        //count up while blocking
+        
+        while (blocking)
+        {
+            chargeTime += Time.deltaTime;
+        }
+        chargeTime = 0;
         return null;
     }
 

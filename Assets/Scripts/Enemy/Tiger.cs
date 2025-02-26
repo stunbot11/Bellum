@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Tiger : MonoBehaviour
 {
-    [HideInInspector] public int thisTigerNum;
+    public int thisTigerNum;
     [HideInInspector] public int pendingAttack;
     private Tiger tiger1;
     private Tiger tiger2;
