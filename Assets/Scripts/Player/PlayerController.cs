@@ -54,17 +54,26 @@ public class PlayerController : MonoBehaviour
         if (rb.linearVelocity != Vector2.zero && !dodgeing)
             direction = (Mathf.Atan2(move.action.ReadValue<Vector2>().y, move.action.ReadValue<Vector2>().x) * Mathf.Rad2Deg) - 90;
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, direction));
+
+        if (blocking)
+        {
+            chargeTime += Time.deltaTime;
+        }
+        else
+            chargeTime = 0;
     }
 
     public void takeDamage(int damage)
     {
-        if (!dodgeing)
+        if (blocking && chargeTime <= .3)
+            print("perfect block");
+        else if (!dodgeing)
             health -= blocking ? damage / 4 : damage;
     }
 
     public void primary(InputAction.CallbackContext phase)
     {
-        if (canAttack)
+        if (canAttack && !blocking)
         {
                 switch (gameManager.classType)
             {
@@ -112,7 +121,6 @@ public class PlayerController : MonoBehaviour
                     blocking = true;
                     canAttack = false;
                     shield.SetActive(true);
-                    StartCoroutine(blockCounter());
                 }
                 else if (phase.canceled)
                 {
@@ -138,17 +146,6 @@ public class PlayerController : MonoBehaviour
             default:
                 break;
         }
-    }
-
-    private IEnumerator blockCounter()
-    {
-        
-        while (blocking)
-        {
-            chargeTime += Time.deltaTime;
-        }
-        chargeTime = 0;
-        return null;
     }
 
     private IEnumerator dodgeCooldown(float time)
