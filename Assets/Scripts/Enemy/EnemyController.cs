@@ -4,12 +4,15 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     [HideInInspector] public GameObject player;
+    [HideInInspector] public bool targetOveride;
+    [HideInInspector] public Vector2 target;
     private Rigidbody2D rb;
     public GameObject hitEffect;
 
     [Header("Stats")]
     public int health;
     public float speed;
+    public float speedMod;
 
     public bool canAttack;
     
@@ -21,9 +24,10 @@ public class EnemyController : MonoBehaviour
 
     private void Update()
     {
-        Vector2 targetPos = (player.transform.position - transform.position).normalized;
+        Vector2 targetPos = ((targetOveride ? target : player.transform.position) - transform.position).normalized;
         rb.rotation = Mathf.Atan2(targetPos.y, targetPos.x) * Mathf.Rad2Deg - 90;
-        rb.linearVelocity = targetPos * speed;
+        if (targetOveride ? Vector2.Distance(transform.position, target) <= 1 : true)
+            rb.linearVelocity = targetPos * speed * speedMod;
     }
 
     public void takeDamage(int damage)

@@ -29,7 +29,9 @@ public class PlayerController : MonoBehaviour
     public int health;
     public float speed;
 
+    public GameObject hitEffect;
     private float direction;
+    private float timeSinceAction;
 
     [SerializeField] private bool blocking;
     [SerializeField] private bool canDodge;
@@ -48,6 +50,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        timeSinceAction += Time.deltaTime;
         if (!dodgeing)
             rb.linearVelocity = move.action.ReadValue<Vector2>() * speed * (blocking ? .5f : 1);
 
@@ -68,13 +71,24 @@ public class PlayerController : MonoBehaviour
         if (blocking && chargeTime <= .3)
             print("perfect block");
         else if (!dodgeing)
+        {
             health -= blocking ? damage / 4 : damage;
+            hitEffect.SetActive(true);
+            StartCoroutine(hitVXF());
+        }
+    }
+
+    IEnumerator hitVXF()
+    {
+        yield return new WaitForSeconds(.3f);
+        hitEffect.SetActive(false);
     }
 
     public void primary(InputAction.CallbackContext phase)
     {
-        if (canAttack && !blocking)
+        if (canAttack && !blocking && timeSinceAction >= .2f)
         {
+            timeSinceAction = 0;
                 switch (gameManager.classType)
             {
                 case 1: //sword
@@ -112,39 +126,43 @@ public class PlayerController : MonoBehaviour
 
     public void secondary(InputAction.CallbackContext phase)
     {
-        switch (gameManager.classType)
+        if (timeSinceAction >= .2f || phase.canceled && blocking)
         {
-            case 1: //block
-                if (phase.started)
-                {
-                    StopCoroutine(attackCooldown(.25f, .1f));
-                    blocking = true;
-                    canAttack = false;
-                    shield.SetActive(true);
-                }
-                else if (phase.canceled)
-                {
-                    StartCoroutine(attackCooldown(.25f));
-                    blocking = false;
-                    shield.SetActive(false);
-                }
-                break;
+            timeSinceAction = 0;
+            switch (gameManager.classType)
+            {
+                case 1: //block
+                    if (phase.started)
+                    {
+                        StopCoroutine(attackCooldown(.25f, .1f));
+                        blocking = true;
+                        canAttack = false;
+                        shield.SetActive(true);
+                    }
+                    else if (phase.canceled)
+                    {
+                        StartCoroutine(attackCooldown(.25f));
+                        blocking = false;
+                        shield.SetActive(false);
+                    }
+                    break;
 
-            case 2: //dodge
-                if (phase.started && canDodge)
-                {
-                    dodgeing = true;
-                    canDodge = false;
-                    rb.linearVelocity = move.action.ReadValue<Vector2>() * speed * 3;
-                    StartCoroutine(dodgeCooldown(.15f));
-                }
-                break;
+                case 2: //dodge
+                    if (phase.started && canDodge)
+                    {
+                        dodgeing = true;
+                        canDodge = false;
+                        rb.linearVelocity = move.action.ReadValue<Vector2>() * speed * 3;
+                        StartCoroutine(dodgeCooldown(.15f));
+                    }
+                    break;
 
-            case 3: //throw net
-                break;
+                case 3: //throw net
+                    break;
 
-            default:
-                break;
+                default:
+                    break;
+            }
         }
     }
 
