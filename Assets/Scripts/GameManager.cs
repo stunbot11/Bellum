@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
 
     public int currentLevel = 0;
 
+     public int lionReady;
+     public int lionCheck;
+
     private void Start()
     {
         currentLevel = SceneManager.GetActiveScene().buildIndex;

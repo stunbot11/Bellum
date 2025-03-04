@@ -7,7 +7,6 @@ public class AttackHandler : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        print(collision.gameObject);
         if (parent.tag != collision.tag)
         {
             switch (collision.tag)

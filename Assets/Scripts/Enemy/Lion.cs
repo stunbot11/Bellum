@@ -6,11 +6,11 @@ public class Lion : MonoBehaviour
 
     public int thisLionNum;
     [HideInInspector] public int pendingAttack;
-    private Lion lion1;
-    private Lion lion2;
-    private Lion lion3;
+    public Lion lion1;
+    public Lion lion2;
+    public Lion lion3;
 
-    [HideInInspector] public bool inPos;
+    private bool ready;
 
     public float lungDisMult;
 
@@ -32,13 +32,24 @@ public class Lion : MonoBehaviour
     {
         if (enemyController.canAttack && Vector2.Distance(transform.position, enemyController.player.transform.position) < attackRange && pendingAttack != 4)
             attack();
-        if (pendingAttack == 4 && lion1.inPos && lion2.inPos && lion3.inPos)
+
+        if (pendingAttack == 4 && enemyController.gameManager.lionCheck == enemyController.gameManager.lionReady)
+        {
             lungeATK();
+        }
+
+        if ((enemyController.targetOveride ? Vector2.Distance(transform.position, enemyController.target) >= .2 : true) && !ready)
+        {
+            ready = true;
+            enemyController.gameManager.lionReady++;
+        }
+
     }
 
     public void attack()
     {
         enemyController.canAttack = false;
+        pendingAttack = Random.Range(1, 4);
         switch (pendingAttack)
         {
             case 1: //bite
@@ -58,6 +69,7 @@ public class Lion : MonoBehaviour
                     lion1.enemyController.targetOveride = true;
                     lion1.enemyController.speedMod = 1.5f;
                     lion1.enemyController.target = (Vector2)enemyController.player.transform.position + Vector2.up * lungDisMult;
+                    enemyController.gameManager.lionCheck++;
                 }
 
                 if (lion2 != null)
@@ -65,7 +77,8 @@ public class Lion : MonoBehaviour
                     lion2.pendingAttack = 4;
                     lion2.enemyController.targetOveride = true;
                     lion2.enemyController.speedMod = 1.5f;
-                    lion2.enemyController.target = (Vector2)enemyController.player.transform.position + Vector2.up * lungDisMult;
+                    lion2.enemyController.target = (Vector2)enemyController.player.transform.position + Vector2.left * lungDisMult;
+                    enemyController.gameManager.lionCheck++;
                 }
 
                 if (lion3 != null)
@@ -73,19 +86,22 @@ public class Lion : MonoBehaviour
                     lion3.pendingAttack = 4;
                     lion3.enemyController.targetOveride = true;
                     lion3.enemyController.speedMod = 1.5f;
-                    lion3.enemyController.target = (Vector2)enemyController.player.transform.position + Vector2.up * lungDisMult;
+                    lion3.enemyController.target = (Vector2)enemyController.player.transform.position + Vector2.right * lungDisMult;
+                    enemyController.gameManager.lionCheck++;
                 }
                 break;
             case 4:
-                print("group lung");
+                enemyController.canAttack = false;
                 break;
         }
-
-        pendingAttack = Random.Range(1, 3);
     }
 
     public void lungeATK()
     {
+        print("lung");
+        ready = false;
+        enemyController.gameManager.lionCheck = 0;
+        enemyController.gameManager.lionReady = 0;
         lungeHitBox.SetActive(true);
         StartCoroutine(enemyController.hitboxCooldown(lungeHitBox, 1.5f));
     }    
