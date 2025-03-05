@@ -8,7 +8,7 @@ public class EnemyController : MonoBehaviour
     [HideInInspector] public Vector2 target;
 
     [HideInInspector] public GameManager gameManager;
-    private Rigidbody2D rb;
+    [HideInInspector] public Rigidbody2D rb;
     public GameObject hitEffect;
 
     [Header("Stats")]
@@ -20,6 +20,7 @@ public class EnemyController : MonoBehaviour
     
     void Start()
     {
+        target = Vector2.up * 999999;
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.Find("Player");

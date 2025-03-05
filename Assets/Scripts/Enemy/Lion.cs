@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Lion : MonoBehaviour
 {
@@ -12,7 +14,8 @@ public class Lion : MonoBehaviour
 
     private bool ready;
 
-    public float lungDisMult;
+    public float lungeDisMult;
+    public float lungeSpeed;
 
     public GameObject biteHitBox;
     public GameObject slashHitBox;
@@ -33,17 +36,17 @@ public class Lion : MonoBehaviour
         if (enemyController.canAttack && Vector2.Distance(transform.position, enemyController.player.transform.position) < attackRange && pendingAttack != 4)
             attack();
 
-        if (pendingAttack == 4 && enemyController.gameManager.lionCheck == enemyController.gameManager.lionReady)
+        if (pendingAttack == 4 && enemyController.gameManager.lionCheck == enemyController.gameManager.lionReady && enemyController.gameManager.lionCheck != 0 && ready)
         {
             lungeATK();
         }
 
-        if ((enemyController.targetOveride ? Vector2.Distance(transform.position, enemyController.target) >= .2 : true) && !ready)
+        if ((enemyController.targetOveride ? Vector2.Distance(transform.position, enemyController.target) <= .2 : true) && !ready && pendingAttack == 4)
         {
             ready = true;
+            print(thisLionNum + "is ready");
             enemyController.gameManager.lionReady++;
         }
-
     }
 
     public void attack()
@@ -65,29 +68,29 @@ public class Lion : MonoBehaviour
             case 3: //group lunge
                 if (lion1 != null)
                 {
+                    enemyController.gameManager.lionCheck++;
                     lion1.pendingAttack = 4;
                     lion1.enemyController.targetOveride = true;
                     lion1.enemyController.speedMod = 1.5f;
-                    lion1.enemyController.target = (Vector2)enemyController.player.transform.position + Vector2.up * lungDisMult;
-                    enemyController.gameManager.lionCheck++;
+                    lion1.enemyController.target = (Vector2)enemyController.player.transform.position + Vector2.up * lungeDisMult;
                 }
 
                 if (lion2 != null)
                 {
+                    enemyController.gameManager.lionCheck++;
                     lion2.pendingAttack = 4;
                     lion2.enemyController.targetOveride = true;
                     lion2.enemyController.speedMod = 1.5f;
-                    lion2.enemyController.target = (Vector2)enemyController.player.transform.position + Vector2.left * lungDisMult;
-                    enemyController.gameManager.lionCheck++;
+                    lion2.enemyController.target = (Vector2)enemyController.player.transform.position + Vector2.left * lungeDisMult;
                 }
 
                 if (lion3 != null)
                 {
+                    enemyController.gameManager.lionCheck++;
                     lion3.pendingAttack = 4;
                     lion3.enemyController.targetOveride = true;
                     lion3.enemyController.speedMod = 1.5f;
-                    lion3.enemyController.target = (Vector2)enemyController.player.transform.position + Vector2.right * lungDisMult;
-                    enemyController.gameManager.lionCheck++;
+                    lion3.enemyController.target = (Vector2)enemyController.player.transform.position + Vector2.right * lungeDisMult;
                 }
                 break;
             case 4:
@@ -95,14 +98,22 @@ public class Lion : MonoBehaviour
                 break;
         }
     }
-
     public void lungeATK()
     {
-        print("lung");
-        ready = false;
+        //ready = false;
+        enemyController.rb.linearVelocity = (thisLionNum == 1 ? Vector2.down : (thisLionNum == 2 ? Vector2.right : Vector2.left)) * lungeSpeed;
+        lungeHitBox.SetActive(true);
+        StartCoroutine(lungeTime(2f));
+    }    
+
+    IEnumerator lungeTime(float time)
+    {
+        yield return new WaitForSeconds(time);
         enemyController.gameManager.lionCheck = 0;
         enemyController.gameManager.lionReady = 0;
-        lungeHitBox.SetActive(true);
-        StartCoroutine(enemyController.hitboxCooldown(lungeHitBox, 1.5f));
-    }    
+        enemyController.targetOveride = false;
+        enemyController.target = Vector2.up * 999999;
+        StartCoroutine(enemyController.hitboxCooldown(lungeHitBox, 1));
+        pendingAttack = Random.Range(1, 4);
+    }
 }

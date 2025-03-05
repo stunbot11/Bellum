@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
     public GameObject hitEffect;
     private float direction;
     private float timeSinceAction;
+    private float iframes;
 
     [SerializeField] private bool blocking;
     [SerializeField] private bool canDodge;
@@ -50,6 +51,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        iframes -= Time.deltaTime;
         timeSinceAction += Time.deltaTime;
         if (!dodgeing)
             rb.linearVelocity = move.action.ReadValue<Vector2>() * speed * (blocking ? .5f : 1);
@@ -68,13 +70,26 @@ public class PlayerController : MonoBehaviour
 
     public void takeDamage(int damage)
     {
-        if (blocking && chargeTime <= .3)
-            print("perfect block");
-        else if (!dodgeing)
+        if (iframes < 0)
         {
-            health -= blocking ? damage / 4 : damage;
-            hitEffect.SetActive(true);
-            StartCoroutine(hitVXF());
+            if (blocking && chargeTime <= .3)
+            {
+                print("perfect block");
+                iframes = .15f;
+            }
+            else if (!dodgeing)
+            {
+                health -= blocking ? damage / 4 : damage;
+                hitEffect.SetActive(true);
+                StartCoroutine(hitVXF());
+                iframes = .3f;
+            }
+
+            if (health <= 0)
+            {
+                StopAllCoroutines();
+                gameManager.menu();
+            }
         }
     }
 
