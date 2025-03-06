@@ -52,7 +52,14 @@ public class Lion : MonoBehaviour
     public void attack()
     {
         enemyController.canAttack = false;
-        pendingAttack = Random.Range(1, 4);
+        float temp = Random.Range(1f, 100.0f);
+
+        if (temp <= 50)
+            pendingAttack = 1;
+        else if (temp <= 66.66f)
+            pendingAttack = 3;
+        else
+            pendingAttack = 2;
         switch (pendingAttack)
         {
             case 1: //bite
@@ -71,7 +78,7 @@ public class Lion : MonoBehaviour
                     enemyController.gameManager.lionCheck++;
                     lion1.pendingAttack = 4;
                     lion1.enemyController.targetOveride = true;
-                    lion1.enemyController.speedMod = 1.5f;
+                    lion1.enemyController.speedMod = 3f;
                     lion1.enemyController.target = (Vector2)enemyController.player.transform.position + Vector2.up * lungeDisMult;
                 }
 
@@ -80,7 +87,7 @@ public class Lion : MonoBehaviour
                     enemyController.gameManager.lionCheck++;
                     lion2.pendingAttack = 4;
                     lion2.enemyController.targetOveride = true;
-                    lion2.enemyController.speedMod = 1.5f;
+                    lion2.enemyController.speedMod = 3f;
                     lion2.enemyController.target = (Vector2)enemyController.player.transform.position + Vector2.left * lungeDisMult;
                 }
 
@@ -89,7 +96,7 @@ public class Lion : MonoBehaviour
                     enemyController.gameManager.lionCheck++;
                     lion3.pendingAttack = 4;
                     lion3.enemyController.targetOveride = true;
-                    lion3.enemyController.speedMod = 1.5f;
+                    lion3.enemyController.speedMod = 3f;
                     lion3.enemyController.target = (Vector2)enemyController.player.transform.position + Vector2.right * lungeDisMult;
                 }
                 break;
@@ -100,7 +107,6 @@ public class Lion : MonoBehaviour
     }
     public void lungeATK()
     {
-        //ready = false;
         enemyController.rb.linearVelocity = (thisLionNum == 1 ? Vector2.down : (thisLionNum == 2 ? Vector2.right : Vector2.left)) * lungeSpeed;
         lungeHitBox.SetActive(true);
         StartCoroutine(lungeTime(2f));
@@ -109,9 +115,11 @@ public class Lion : MonoBehaviour
     IEnumerator lungeTime(float time)
     {
         yield return new WaitForSeconds(time);
+        ready = false;
         enemyController.gameManager.lionCheck = 0;
         enemyController.gameManager.lionReady = 0;
         enemyController.targetOveride = false;
+        enemyController.speedMod = 0;
         enemyController.target = Vector2.up * 999999;
         StartCoroutine(enemyController.hitboxCooldown(lungeHitBox, 1));
         pendingAttack = Random.Range(1, 4);

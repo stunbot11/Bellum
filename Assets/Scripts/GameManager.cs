@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    [HideInInspector] public PlayerController playerController;
     public int classType = 1; // 1 sword and shield / 2 bow / 3 tridant
     public int boss = 1;
     private int currentScene;
@@ -18,12 +19,6 @@ public class GameManager : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject); 
         currentScene = SceneManager.GetActiveScene().buildIndex;
-    }
-
-    private void Update()
-    {
-        //if (currentScene != 0)
-            //playerHealthBar.fillAmount = playerHealth / playerMaxHealth;
     }
 
     public void start()

@@ -3,11 +3,17 @@ using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb;
     private GameManager gameManager;
+
+    public Image healthBar;
+    public Image fadeScreen;
+    public TextMeshProUGUI fadeText;
 
     [Header("weapons")]
     private GameObject weapon;
@@ -26,6 +32,7 @@ public class PlayerController : MonoBehaviour
     public InputActionReference secondaryButton;
 
     [Header("Player Stats")]
+    public int maxHealth;
     public int health;
     public float speed;
 
@@ -46,14 +53,16 @@ public class PlayerController : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        gameManager.playerController = this;
         weapon = GameObject.Find("sword");
     }
 
     private void Update()
     {
+        healthBar.fillAmount = (float)health / (float)maxHealth;
         iframes -= Time.deltaTime;
         timeSinceAction += Time.deltaTime;
-        if (!dodgeing)
+        if (!dodgeing && health > 0)
             rb.linearVelocity = move.action.ReadValue<Vector2>() * speed * (blocking ? .5f : 1);
 
         if (rb.linearVelocity != Vector2.zero && !dodgeing)
@@ -66,6 +75,19 @@ public class PlayerController : MonoBehaviour
         }
         else
             chargeTime = 0;
+
+        if (health <= 0)
+        {
+            Color tempScreen = fadeScreen.color;
+            tempScreen.a += Time.deltaTime / 3;
+            fadeScreen.color = tempScreen;
+
+            Color tempText = fadeText.color;
+            tempText.a += Time.deltaTime / 3;
+            fadeText.color = tempText;
+            if (tempScreen.a - (2 / 3) > 1)
+                gameManager.menu();
+        }
     }
 
     public void takeDamage(int damage)
@@ -88,7 +110,9 @@ public class PlayerController : MonoBehaviour
             if (health <= 0)
             {
                 StopAllCoroutines();
-                gameManager.menu();
+                primaryButton.action.started -= primary;
+                secondaryButton.action.started -= secondary;
+                secondaryButton.action.canceled -= secondary;
             }
         }
     }
@@ -189,6 +213,5 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(.75f);
         canDodge = true;
     }
-
 }
 
