@@ -14,6 +14,7 @@ public class ArenaHandler : MonoBehaviour
             {
                 boss[i].SetActive(true);
             }
+            Destroy(this);
         }
     }
 }

@@ -44,7 +44,6 @@ public class Lion : MonoBehaviour
         if ((enemyController.targetOveride ? Vector2.Distance(transform.position, enemyController.target) <= .2 : true) && !ready && pendingAttack == 4)
         {
             ready = true;
-            print(thisLionNum + "is ready");
             enemyController.gameManager.lionReady++;
         }
     }

@@ -11,13 +11,17 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private GameManager gameManager;
 
+    [Header("UI")]
     public Image healthBar;
-    public Image fadeScreen;
-    public TextMeshProUGUI fadeText;
+    private Image fadeScreen;
+    private TextMeshProUGUI fadeText;
+    private Image winScreen;
+    private TextMeshProUGUI winText;
 
     [Header("weapons")]
     private GameObject weapon;
-    public GameObject hitbox;
+    public GameObject swordHitbox;
+    public GameObject tridantHitbox;
     public GameObject shield;
     public GameObject arrow;
     public float arrowSpeed;
@@ -48,6 +52,8 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         primaryButton.action.started += primary;
+        if (gameManager.classType == 2)
+            primaryButton.action.canceled += primary;
         secondaryButton.action.started += secondary;
         secondaryButton.action.canceled += secondary;
 
@@ -55,6 +61,11 @@ public class PlayerController : MonoBehaviour
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         gameManager.playerController = this;
         weapon = GameObject.Find("sword");
+
+        fadeScreen = GameObject.Find("death screen").GetComponent<Image>();
+        fadeText = GameObject.Find("death text").GetComponent<TextMeshProUGUI>();
+        winScreen = GameObject.Find("win screen").GetComponent<Image>();
+        winText = GameObject.Find("win text").GetComponent<TextMeshProUGUI>();
     }
 
     private void Update()
@@ -69,7 +80,7 @@ public class PlayerController : MonoBehaviour
             direction = (Mathf.Atan2(move.action.ReadValue<Vector2>().y, move.action.ReadValue<Vector2>().x) * Mathf.Rad2Deg) - 90;
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, direction));
 
-        if (blocking)
+        if (blocking || gameManager.classType == 2 && primaryButton.action.inProgress)
         {
             chargeTime += Time.deltaTime;
         }
@@ -85,6 +96,19 @@ public class PlayerController : MonoBehaviour
             Color tempText = fadeText.color;
             tempText.a += Time.deltaTime / 3;
             fadeText.color = tempText;
+            if (tempScreen.a - (2 / 3) > 1)
+                gameManager.menu();
+        }
+
+        if (gameManager.bossesDead >= gameManager.totalBosses && gameManager.totalBosses != 0)
+        {
+            Color tempScreen = winScreen.color;
+            tempScreen.a += Time.deltaTime / 3;
+            winScreen.color = tempScreen;
+
+            Color tempText = winText.color;
+            tempText.a += Time.deltaTime / 3;
+            winText.color = tempText;
             if (tempScreen.a - (2 / 3) > 1)
                 gameManager.menu();
         }
@@ -125,26 +149,35 @@ public class PlayerController : MonoBehaviour
 
     public void primary(InputAction.CallbackContext phase)
     {
-        if (canAttack && !blocking && timeSinceAction >= .2f)
+        if (canAttack && !blocking && timeSinceAction >= .2f || gameManager.classType == 2 && chargeTime > 0)
         {
             timeSinceAction = 0;
                 switch (gameManager.classType)
             {
                 case 1: //sword
                     canAttack = false;
-                    hitbox.SetActive(true);
-                    StartCoroutine(attackCooldown(.4f, .1f));
+                    swordHitbox.SetActive(true);
+                    StartCoroutine(attackCooldown(.4f, .1f, swordHitbox));
                     break;
 
                 case 2: //bow
-                    canAttack = false;
-                    GameObject a = Instantiate(arrow, transform.position, transform.rotation, null);
-                    a.GetComponent<Rigidbody2D>().linearVelocity = rb.linearVelocity * arrowSpeed;
-                    StartCoroutine(attackCooldown(.5f));
+                    if (phase.started)
+                    {
+                        canAttack = false;
+                        
+                    }
+                    else if (phase.canceled)
+                    {
+                        GameObject p = Instantiate(arrow, transform.position, transform.rotation, null);
+                        p.GetComponent<Rigidbody2D>().linearVelocity = rb.linearVelocity * arrowSpeed;
+                        StartCoroutine(attackCooldown(.5f));
+                    }
                     break;
 
                 case 3: //trident
-
+                    canAttack = false;
+                    tridantHitbox.SetActive(true);
+                    StartCoroutine(attackCooldown(.4f, .1f, tridantHitbox));
                     break;
 
                 default:
@@ -154,7 +187,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    IEnumerator attackCooldown(float time, float hitboxActiveTime = 0)
+    IEnumerator attackCooldown(float time, float hitboxActiveTime = 0, GameObject hitbox = null)
     {
         yield return new WaitForSeconds(hitboxActiveTime);
         hitbox.SetActive(false);
