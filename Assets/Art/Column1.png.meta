@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: b5e294bb4a9be234cb85878523a40a00
+guid: c20a2a9f116134742ba9acd85d213436
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4771119571022661869
-    second: ahneemayshun_0
-  - first:
-      213: 8462712060520570683
-    second: ahneemayshun_1
+      213: 7629440198364185545
+    second: Column1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ahneemayshun_0
+      name: Column1_0
       rect:
         serializedVersion: 2
-        x: 1893
-        y: 1072
-        width: 27
-        height: 8
+        x: 129
+        y: 22
+        width: 342
+        height: 801
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,30 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 317b744570499cdb0800000000000000
-      internalID: -4771119571022661869
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ahneemayshun_1
-      rect:
-        serializedVersion: 2
-        x: 750
-        y: 65
-        width: 426
-        height: 965
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b3f1ebb18c7917570800000000000000
-      internalID: 8462712060520570683
+      spriteID: 9c3459a107731e960800000000000000
+      internalID: 7629440198364185545
       vertices: []
       indices: 
       edges: []
@@ -172,9 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      ahneemayshun_0: -4771119571022661869
-      ahneemayshun_1: 8462712060520570683
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
