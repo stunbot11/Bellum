@@ -10,8 +10,8 @@ public class GameManager : MonoBehaviour
     private int currentScene;
 
 
-    [HideInInspector] public int lionReady;
-    [HideInInspector] public int lionCheck;
+     public int lionReady;
+     public int lionCheck;
     [HideInInspector] public int totalBosses;
     [HideInInspector] public int bossesDead;
 

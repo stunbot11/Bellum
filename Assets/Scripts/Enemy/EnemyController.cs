@@ -10,6 +10,7 @@ public class EnemyController : MonoBehaviour
     [HideInInspector] public GameManager gameManager;
     [HideInInspector] public Rigidbody2D rb;
     public GameObject hitEffect;
+    private bool goingToTarget;
 
     [Header("Stats")]
     public int health;
@@ -25,6 +26,7 @@ public class EnemyController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.Find("Player");
         gameManager.totalBosses++;
+        StartCoroutine(goToTime());
     }
 
     private void Update()
@@ -40,6 +42,13 @@ public class EnemyController : MonoBehaviour
             rb.linearVelocity = moveDir * speed * speedMod;
         else
             rb.linearVelocity = Vector2.zero;
+
+        if (Vector2.Distance(transform.position, target) <= .3 && goingToTarget)
+        {
+            goingToTarget = false;
+            targetOveride = false;
+            StartCoroutine(goToTime());
+        }
     }
 
     public void takeDamage(int damage)
@@ -68,5 +77,21 @@ public class EnemyController : MonoBehaviour
 
         yield return new WaitForSeconds(cooldown);
         canAttack = true;
+    }
+
+    private void goToRandom()
+    {
+        Vector2 goTo = new Vector2(Random.Range(transform.position.x - 5, transform.position.x + 5), Random.Range(transform.position.y - 5, transform.position.y + 5));
+        print(goTo + "             goto");
+        print(transform.position + "             transform");
+        target = goTo;
+        targetOveride = true;
+        goingToTarget = true;
+    }
+
+    IEnumerator goToTime()
+    {
+        yield return new WaitForSeconds(Random.Range(4f, 10f));
+        goToRandom();
     }
 }

@@ -118,7 +118,7 @@ public class Lion : MonoBehaviour
         enemyController.gameManager.lionCheck = 0;
         enemyController.gameManager.lionReady = 0;
         enemyController.targetOveride = false;
-        enemyController.speedMod = 0;
+        enemyController.speedMod = 1;
         enemyController.target = Vector2.up * 999999;
         StartCoroutine(enemyController.hitboxCooldown(lungeHitBox, 1));
         pendingAttack = Random.Range(1, 4);

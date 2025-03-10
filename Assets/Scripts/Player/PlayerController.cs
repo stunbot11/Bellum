@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
     public InputActionReference move;
     public InputActionReference primaryButton;
     public InputActionReference secondaryButton;
+    public GameObject rotPoint;
 
     [Header("Player Stats")]
     public int maxHealth;
@@ -51,16 +52,16 @@ public class PlayerController : MonoBehaviour
     private bool dodgeing;
     private void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        gameManager.playerController = this;
+        weapon = GameObject.Find("sword");
+
         primaryButton.action.started += primary;
         if (gameManager.classType == 2)
             primaryButton.action.canceled += primary;
         secondaryButton.action.started += secondary;
         secondaryButton.action.canceled += secondary;
-
-        rb = GetComponent<Rigidbody2D>();
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        gameManager.playerController = this;
-        weapon = GameObject.Find("sword");
 
         fadeScreen = GameObject.Find("death screen").GetComponent<Image>();
         fadeText = GameObject.Find("death text").GetComponent<TextMeshProUGUI>();
@@ -78,7 +79,7 @@ public class PlayerController : MonoBehaviour
 
         if (rb.linearVelocity != Vector2.zero && !dodgeing)
             direction = (Mathf.Atan2(move.action.ReadValue<Vector2>().y, move.action.ReadValue<Vector2>().x) * Mathf.Rad2Deg) - 90;
-        transform.rotation = Quaternion.Euler(new Vector3(0, 0, direction));
+        rotPoint.transform.rotation = Quaternion.Euler(new Vector3(0, 0, direction));
 
         if (blocking || gameManager.classType == 2 && primaryButton.action.inProgress)
         {
@@ -168,7 +169,7 @@ public class PlayerController : MonoBehaviour
                     }
                     else if (phase.canceled)
                     {
-                        GameObject p = Instantiate(arrow, transform.position, transform.rotation, null);
+                        GameObject p = Instantiate(arrow, transform.position, rotPoint.transform.rotation, null);
                         p.GetComponent<Rigidbody2D>().linearVelocity = rb.linearVelocity * arrowSpeed;
                         StartCoroutine(attackCooldown(.5f));
                     }
@@ -190,7 +191,8 @@ public class PlayerController : MonoBehaviour
     IEnumerator attackCooldown(float time, float hitboxActiveTime = 0, GameObject hitbox = null)
     {
         yield return new WaitForSeconds(hitboxActiveTime);
-        hitbox.SetActive(false);
+        if (hitbox != null)
+            hitbox.SetActive(false);
 
         yield return new WaitForSeconds(time - hitboxActiveTime);
         canAttack = true;
