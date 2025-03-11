@@ -170,7 +170,9 @@ public class PlayerController : MonoBehaviour
                     else if (phase.canceled)
                     {
                         GameObject p = Instantiate(arrow, transform.position, rotPoint.transform.rotation, null);
-                        p.GetComponent<Rigidbody2D>().linearVelocity = rb.linearVelocity * arrowSpeed;
+
+                        p.GetComponent<Rigidbody2D>().linearVelocity = (rb.linearVelocity + new Vector2(Mathf.Sin(direction), Mathf.Cos(direction)).normalized) * (chargeTime > 5 ? Mathf.Lerp(arrowSpeed, arrowSpeed / 4, (chargeTime - 5) / 3) : Mathf.Lerp(arrowSpeed / 4, arrowSpeed, chargeTime / 2));
+                        timeSinceAction = 0;
                         StartCoroutine(attackCooldown(.5f));
                     }
                     break;
