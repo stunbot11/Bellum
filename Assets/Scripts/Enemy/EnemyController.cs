@@ -82,8 +82,6 @@ public class EnemyController : MonoBehaviour
     private void goToRandom()
     {
         Vector2 goTo = new Vector2(Random.Range(transform.position.x - 5, transform.position.x + 5), Random.Range(transform.position.y - 5, transform.position.y + 5));
-        print(goTo + "             goto");
-        print(transform.position + "             transform");
         target = goTo;
         targetOveride = true;
         goingToTarget = true;

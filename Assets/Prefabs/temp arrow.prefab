@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 1570547845841649749}
   - component: {fileID: 5782780192711740663}
   - component: {fileID: 2890132478969170515}
+  - component: {fileID: 2215852509667239958}
   m_Layer: 0
   m_Name: temp arrow
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -166,3 +167,17 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &2215852509667239958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3470927396447796118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bca00cf7c241b5542969d20235895902, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  creator: {fileID: 0}

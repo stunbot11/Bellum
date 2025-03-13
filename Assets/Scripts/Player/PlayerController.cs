@@ -13,10 +13,14 @@ public class PlayerController : MonoBehaviour
 
     [Header("UI")]
     public Image healthBar;
+    public Image chargeBar;
     private Image fadeScreen;
     private TextMeshProUGUI fadeText;
     private Image winScreen;
     private TextMeshProUGUI winText;
+
+    public float chargeTime;
+    public float negCharge;
 
     [Header("weapons")]
     private GameObject weapon;
@@ -28,18 +32,18 @@ public class PlayerController : MonoBehaviour
     public GameObject net;
     public float netSpeed;
 
-    public float chargeTime;
-
     [Header("Controlls")]
     public InputActionReference move;
     public InputActionReference primaryButton;
     public InputActionReference secondaryButton;
     public GameObject rotPoint;
+    private Vector2 lastInput;
 
     [Header("Player Stats")]
     public int maxHealth;
     public int health;
     public float speed;
+    public int arrowDamage;
 
     public GameObject hitEffect;
     private float direction;
@@ -78,15 +82,25 @@ public class PlayerController : MonoBehaviour
             rb.linearVelocity = move.action.ReadValue<Vector2>() * speed * (blocking ? .5f : 1);
 
         if (rb.linearVelocity != Vector2.zero && !dodgeing)
+        {
+            lastInput = move.action.ReadValue<Vector2>();
             direction = (Mathf.Atan2(move.action.ReadValue<Vector2>().y, move.action.ReadValue<Vector2>().x) * Mathf.Rad2Deg) - 90;
+        }
         rotPoint.transform.rotation = Quaternion.Euler(new Vector3(0, 0, direction));
 
-        if (blocking || gameManager.classType == 2 && primaryButton.action.inProgress)
+        if (blocking || gameManager.classType == 2 && primaryButton.action.inProgress && canAttack)
         {
-            chargeTime += Time.deltaTime;
+            if (chargeTime < 4)
+                chargeTime += Time.deltaTime;
+            else
+                negCharge -= Time.deltaTime;
         }
         else
+        {
             chargeTime = 0;
+            negCharge = 0;
+        }
+        chargeBar.fillAmount = (chargeTime + negCharge) / 2;
 
         if (health <= 0)
         {
@@ -150,7 +164,7 @@ public class PlayerController : MonoBehaviour
 
     public void primary(InputAction.CallbackContext phase)
     {
-        if (canAttack && !blocking && timeSinceAction >= .2f || gameManager.classType == 2 && chargeTime > 0)
+        if (canAttack && !blocking && timeSinceAction >= .2f || gameManager.classType == 2 && chargeTime > 0 && !canAttack)
         {
             timeSinceAction = 0;
                 switch (gameManager.classType)
@@ -162,16 +176,14 @@ public class PlayerController : MonoBehaviour
                     break;
 
                 case 2: //bow
-                    if (phase.started)
+                    if (phase.canceled && canAttack)
                     {
                         canAttack = false;
-                        
-                    }
-                    else if (phase.canceled)
-                    {
                         GameObject p = Instantiate(arrow, transform.position, rotPoint.transform.rotation, null);
 
-                        p.GetComponent<Rigidbody2D>().linearVelocity = (rb.linearVelocity + new Vector2(Mathf.Sin(direction), Mathf.Cos(direction)).normalized) * (chargeTime > 5 ? Mathf.Lerp(arrowSpeed, arrowSpeed / 4, (chargeTime - 5) / 3) : Mathf.Lerp(arrowSpeed / 4, arrowSpeed, chargeTime / 2));
+                        p.GetComponent<Rigidbody2D>().linearVelocity = (rb.linearVelocity / 8 + lastInput) * Mathf.Lerp(arrowSpeed / 4, arrowSpeed, Mathf.Clamp(chargeTime + negCharge, 0, arrowSpeed) / 2);
+                        p.GetComponent<ProjectileHandler>().damage = Mathf.RoundToInt(Mathf.Lerp(arrowDamage, arrowDamage * 4, chargeTime - (chargeTime + negCharge) / 2));
+                        p.GetComponent<ProjectileHandler>().creator = this.gameObject;
                         timeSinceAction = 0;
                         StartCoroutine(attackCooldown(.5f));
                     }
