@@ -326,6 +326,7 @@ MonoBehaviour:
   speed: 2
   speedMod: 1
   canAttack: 1
+  imbolized: 0
 --- !u!114 &77340928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1439,6 +1440,7 @@ MonoBehaviour:
   speed: 2
   speedMod: 1
   canAttack: 1
+  imbolized: 0
 --- !u!60 &273770218
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1768,6 +1770,7 @@ MonoBehaviour:
   speed: 2
   speedMod: 1
   canAttack: 1
+  imbolized: 0
 --- !u!60 &363483475
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2099,12 +2102,12 @@ MonoBehaviour:
   chargeTime: 0
   negCharge: 0
   swordHitbox: {fileID: 1178491541}
-  tridantHitbox: {fileID: 0}
+  tridantHitbox: {fileID: 1127114760}
   shield: {fileID: 1618169174}
   arrow: {fileID: 3470927396447796118, guid: b29881a35e56ab040b08c87497aae853, type: 3}
   arrowSpeed: 10
-  net: {fileID: 0}
-  netSpeed: 0
+  net: {fileID: 7648558861910415676, guid: e80540a9d2979ac41b84a5085fb466d3, type: 3}
+  netSpeed: 5
   move: {fileID: 3436705916817569451, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   primaryButton: {fileID: 3658735693287619419, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   secondaryButton: {fileID: -2939953398453020104, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
@@ -2114,9 +2117,6 @@ MonoBehaviour:
   speed: 5
   arrowDamage: 5
   hitEffect: {fileID: 1319581403}
-  blocking: 0
-  canDodge: 1
-  canAttack: 1
 --- !u!212 &428950514
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10881,7 +10881,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1539786765
 Transform:
   m_ObjectHideFlags: 0
