@@ -18,6 +18,7 @@ public class EnemyController : MonoBehaviour
     public float speedMod = 1;
 
     public bool canAttack;
+    public bool imbolized;
     
     void Start()
     {
@@ -77,6 +78,12 @@ public class EnemyController : MonoBehaviour
 
         yield return new WaitForSeconds(cooldown);
         canAttack = true;
+    }
+
+    public IEnumerator imbolizedCooldown()
+    {
+        yield return new WaitForSeconds(2f);
+        imbolized = false;
     }
 
     private void goToRandom()

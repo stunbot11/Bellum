@@ -5,6 +5,8 @@ public class ProjectileHandler : MonoBehaviour
     [HideInInspector] public int damage;
     [HideInInspector] public GameObject creator;
 
+    public bool net;
+
     private void Start()
     {
         Destroy(gameObject, 5);
@@ -15,6 +17,11 @@ public class ProjectileHandler : MonoBehaviour
         if (creator.CompareTag("Player") && collision.CompareTag("Enemy"))
         {
             EnemyController enemyController = collision.GetComponent<EnemyController>();
+            if (net)
+            {
+                enemyController.imbolized = true;
+                StartCoroutine(enemyController.imbolizedCooldown());
+            }
             enemyController.takeDamage(damage);
             Destroy(gameObject);
         }

@@ -50,16 +50,19 @@ public class PlayerController : MonoBehaviour
     private float timeSinceAction;
     private float iframes;
 
-    [SerializeField] private bool blocking;
-    [SerializeField] private bool canDodge;
-    [SerializeField] private bool canAttack = true;
+    private bool blocking;
+    private bool canDodge;
+    private bool canAttack = true;
     private bool dodgeing;
+    private bool canNet = true;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         gameManager.playerController = this;
         weapon = GameObject.Find("sword");
+
+        arrowDamage = gameManager.challenges[0] ? arrowDamage / 2 : arrowDamage;
 
         primaryButton.action.started += primary;
         if (gameManager.classType == 2)
@@ -184,7 +187,6 @@ public class PlayerController : MonoBehaviour
                         p.GetComponent<Rigidbody2D>().linearVelocity = (rb.linearVelocity / 8 + lastInput) * Mathf.Lerp(arrowSpeed / 4, arrowSpeed, Mathf.Clamp(chargeTime + negCharge, 0, arrowSpeed) / 2);
                         p.GetComponent<ProjectileHandler>().damage = Mathf.RoundToInt(Mathf.Lerp(arrowDamage, arrowDamage * 4, chargeTime - (chargeTime + negCharge) / 2));
                         p.GetComponent<ProjectileHandler>().creator = this.gameObject;
-                        timeSinceAction = 0;
                         StartCoroutine(attackCooldown(.5f));
                     }
                     break;
@@ -214,7 +216,7 @@ public class PlayerController : MonoBehaviour
 
     public void secondary(InputAction.CallbackContext phase)
     {
-        if (timeSinceAction >= .2f || phase.canceled && blocking)
+        if (timeSinceAction >= .2f && canNet|| phase.canceled && blocking)
         {
             timeSinceAction = 0;
             switch (gameManager.classType)
@@ -246,6 +248,12 @@ public class PlayerController : MonoBehaviour
                     break;
 
                 case 3: //throw net
+                    if (phase.started)
+                    {
+                        GameObject n = Instantiate(net, transform.position, rotPoint.transform.rotation, null);
+                        n.GetComponent<Rigidbody2D>().linearVelocity = (rb.linearVelocity / 8 + lastInput) * netSpeed;
+                        n.GetComponent<ProjectileHandler>().creator = this.gameObject;
+                    }
                     break;
 
                 default:
@@ -261,6 +269,12 @@ public class PlayerController : MonoBehaviour
 
         yield return new WaitForSeconds(.75f);
         canDodge = true;
+    }
+
+    private IEnumerator netCoolDown()
+    {
+        yield return new WaitForSeconds(15);
+        canNet = true;
     }
 }
 
