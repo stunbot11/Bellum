@@ -45,6 +45,22 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public int arrowDamage;
 
+    [Header("Upgrade stuffs")]
+    public int upgradePoints;
+    // Secutor upgrades:
+    //// upgrade path 1: DoT / Faster Swings / Enemies take more damage while DoT is in effect
+    //// upgrade path 2: blocking blocks more damage / easier perfect blocks / enemies take more damage after perfect block
+    // Sagittarius upgrades:
+    //// upgrade path 1: stronger charges / fire arrows / more arrows shot
+    //// upgrade path 2: faster dodge cooldown / 2 dodge charges / dodging through enemies damage them
+    // Retiarius upgrades:
+    ////
+    ////
+    // upgrade path 3: faster move speed / more health / more damage
+    private int tempPoints;
+    private int[] upgrades = { 0, 0, 0 };
+
+    [Header("Misc.")]
     public GameObject hitEffect;
     private float direction;
     private float timeSinceAction;
@@ -67,8 +83,14 @@ public class PlayerController : MonoBehaviour
         primaryButton.action.started += primary;
         if (gameManager.classType == 2)
             primaryButton.action.canceled += primary;
-        secondaryButton.action.started += secondary;
-        secondaryButton.action.canceled += secondary;
+        if (!gameManager.challenges[2])
+        {
+            secondaryButton.action.started += secondary;
+            secondaryButton.action.canceled += secondary;
+        }
+        if (!gameManager.challenges[3])
+            upgradePoints = 0;
+        tempPoints = upgradePoints;
 
         fadeScreen = GameObject.Find("death screen").GetComponent<Image>();
         fadeText = GameObject.Find("death text").GetComponent<TextMeshProUGUI>();
@@ -253,12 +275,39 @@ public class PlayerController : MonoBehaviour
                         GameObject n = Instantiate(net, transform.position, rotPoint.transform.rotation, null);
                         n.GetComponent<Rigidbody2D>().linearVelocity = (rb.linearVelocity / 8 + lastInput) * netSpeed;
                         n.GetComponent<ProjectileHandler>().creator = this.gameObject;
+                        canNet = false;
+                        StartCoroutine(netCoolDown());
                     }
                     break;
 
                 default:
                     break;
             }
+        }
+    }
+
+    public void upgrade(int path)
+    {
+        if (tempPoints > 0)
+        {
+            upgrades[path]++;
+            tempPoints--;
+        }
+    }
+
+    public void confirmUpgrades()
+    {
+        upgradePoints = tempPoints;
+        //upgradeMenu.setActive(false); need to set upgrade menu
+    }
+
+    public void resetUpgrades()
+    {
+        tempPoints = upgradePoints;
+        
+        for (int i = 0; i < upgrades.Length; i++)
+        {
+            upgrades[i] = 0;
         }
     }
 

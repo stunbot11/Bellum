@@ -27,6 +27,7 @@ public class EnemyController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.Find("Player");
         gameManager.totalBosses++;
+        health = gameManager.challenges[1] ? health * 2 : health;
         StartCoroutine(goToTime());
     }
 
@@ -39,7 +40,7 @@ public class EnemyController : MonoBehaviour
         rb.rotation = angle;
 
         Vector2 moveDir = new Vector2(Mathf.Sin(angle * Mathf.Deg2Rad) * -1, Mathf.Cos(angle * Mathf.Deg2Rad)).normalized;
-        if ((targetOveride ? Vector2.Distance(transform.position, target) >= .2 : true))
+        if ((targetOveride ? Vector2.Distance(transform.position, target) >= .2 : true) && !imbolized)
             rb.linearVelocity = moveDir * speed * speedMod;
         else
             rb.linearVelocity = Vector2.zero;
@@ -52,8 +53,10 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    public void takeDamage(int damage)
+    public void takeDamage(int damage, bool net = false)
     {
+        if (net)
+            StartCoroutine(imbolizedCooldown());
         hitEffect.SetActive(true);
         StartCoroutine(hitEffectStop());
         health -= damage;

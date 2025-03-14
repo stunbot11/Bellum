@@ -167,4 +167,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   creator: {fileID: 0}
-  net: 0
+  net: 1

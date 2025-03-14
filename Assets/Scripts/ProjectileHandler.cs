@@ -18,11 +18,8 @@ public class ProjectileHandler : MonoBehaviour
         {
             EnemyController enemyController = collision.GetComponent<EnemyController>();
             if (net)
-            {
                 enemyController.imbolized = true;
-                StartCoroutine(enemyController.imbolizedCooldown());
-            }
-            enemyController.takeDamage(damage);
+            enemyController.takeDamage(damage, net);
             Destroy(gameObject);
         }
         else if (creator.CompareTag("Enemy") && collision.CompareTag("Player"))

@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    private EventSystem eventSystem;
     [HideInInspector] public PlayerController playerController;
     public int classType = 1; // 1 sword and shield / 2 bow / 3 tridant
     public int boss = 1;
@@ -25,6 +27,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         DontDestroyOnLoad(gameObject); 
+        eventSystem = GameObject.Find("EventSystem").GetComponent<EventSystem>();
     }
 
     public void start()
@@ -61,5 +64,7 @@ public class GameManager : MonoBehaviour
         mainMenus[currentMainMenu].SetActive(false);
         mainMenus[menu].SetActive(true);
         currentMainMenu = menu;
+
+        eventSystem.SetSelectedGameObject(GameObject.Find(menu == 0 ? "start" : "Challenges Back"));
     }
 }
