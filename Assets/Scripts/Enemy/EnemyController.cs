@@ -19,6 +19,9 @@ public class EnemyController : MonoBehaviour
 
     public bool canAttack;
     public bool imbolized;
+
+    private bool inDoT;
+    public int dotTicks;
     
     void Start()
     {
@@ -51,15 +54,21 @@ public class EnemyController : MonoBehaviour
             targetOveride = false;
             StartCoroutine(goToTime());
         }
+
+        if (dotTicks > 0 && !inDoT)
+        {
+            inDoT = true;
+            StartCoroutine(DoT());
+        }
     }
 
-    public void takeDamage(int damage, bool net = false)
+    public void takeDamage(int damage, bool net = false, string dmgType = null)
     {
         if (net)
             StartCoroutine(imbolizedCooldown());
         hitEffect.SetActive(true);
         StartCoroutine(hitEffectStop());
-        health -= damage;
+        health -= (int)(dmgType == "DoT" ? damage : (damage * (gameManager.classType == 1 && player.GetComponent<PlayerController>().upgrades[0] >= 3 && inDoT ? 1.5f : 1)));
         if (health <= 0)
         {
             gameManager.bossesDead++;
@@ -101,5 +110,13 @@ public class EnemyController : MonoBehaviour
     {
         yield return new WaitForSeconds(Random.Range(4f, 10f));
         goToRandom();
+    }
+
+    IEnumerator DoT()
+    {
+        dotTicks--;
+        yield return new WaitForSeconds(1);
+        takeDamage(5);
+        inDoT = false;
     }
 }

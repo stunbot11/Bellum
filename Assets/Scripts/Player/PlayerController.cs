@@ -46,19 +46,17 @@ public class PlayerController : MonoBehaviour
     public int arrowDamage;
 
     [Header("Upgrade stuffs")]
-    public int upgradePoints;
     // Secutor upgrades:
     //// upgrade path 1: DoT / Faster Swings / Enemies take more damage while DoT is in effect
     //// upgrade path 2: blocking blocks more damage / easier perfect blocks / enemies take more damage after perfect block
     // Sagittarius upgrades:
-    //// upgrade path 1: stronger charges / fire arrows / more arrows shot
+    //// upgrade path 1: faster charges / fire arrows / more arrows shot
     //// upgrade path 2: faster dodge cooldown / 2 dodge charges / dodging through enemies damage them
     // Retiarius upgrades:
     ////
     ////
     // upgrade path 3: faster move speed / more health / more damage
-    private int tempPoints;
-    private int[] upgrades = { 0, 0, 0 };
+    public int[] upgrades = { 0, 0, 0 };
 
     [Header("Misc.")]
     public GameObject hitEffect;
@@ -67,12 +65,14 @@ public class PlayerController : MonoBehaviour
     private float iframes;
 
     private bool blocking;
-    private bool canDodge;
+    private bool chargingDodge;
+    private int canDodge = 1;
     private bool canAttack = true;
     private bool dodgeing;
     private bool canNet = true;
     private void Start()
     {
+        move.action.Disable();
         rb = GetComponent<Rigidbody2D>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         gameManager.playerController = this;
@@ -80,6 +80,15 @@ public class PlayerController : MonoBehaviour
 
         arrowDamage = gameManager.challenges[0] ? arrowDamage / 2 : arrowDamage;
 
+        fadeScreen = GameObject.Find("death screen").GetComponent<Image>();
+        fadeText = GameObject.Find("death text").GetComponent<TextMeshProUGUI>();
+        winScreen = GameObject.Find("win screen").GetComponent<Image>();
+        winText = GameObject.Find("win text").GetComponent<TextMeshProUGUI>();
+    }
+
+    public void fakeStart()
+    {
+        move.action.Enable();
         primaryButton.action.started += primary;
         if (gameManager.classType == 2)
             primaryButton.action.canceled += primary;
@@ -88,14 +97,6 @@ public class PlayerController : MonoBehaviour
             secondaryButton.action.started += secondary;
             secondaryButton.action.canceled += secondary;
         }
-        if (!gameManager.challenges[3])
-            upgradePoints = 0;
-        tempPoints = upgradePoints;
-
-        fadeScreen = GameObject.Find("death screen").GetComponent<Image>();
-        fadeText = GameObject.Find("death text").GetComponent<TextMeshProUGUI>();
-        winScreen = GameObject.Find("win screen").GetComponent<Image>();
-        winText = GameObject.Find("win text").GetComponent<TextMeshProUGUI>();
     }
 
     private void Update()
@@ -116,7 +117,7 @@ public class PlayerController : MonoBehaviour
         if (blocking || gameManager.classType == 2 && primaryButton.action.inProgress && canAttack)
         {
             if (chargeTime < 4)
-                chargeTime += Time.deltaTime;
+                chargeTime += Time.deltaTime * (gameManager.classType == 2 && upgrades[0] > 0 ? 1.25f : 1) * (gameManager.classType == 1 && upgrades[1] > 1 ? .75f : 1);
             else
                 negCharge -= Time.deltaTime;
         }
@@ -152,6 +153,12 @@ public class PlayerController : MonoBehaviour
             if (tempScreen.a - (2 / 3) > 1)
                 gameManager.menu();
         }
+
+        if (canDodge < (upgrades[1] > 1 ? 2 : 1) && !chargingDodge)
+        {
+            chargingDodge = true;
+            StartCoroutine(dodgeCooldown(.15f * (upgrades[1] > 0 ? .75f : 1)));
+        }
     }
 
     public void takeDamage(int damage)
@@ -165,7 +172,7 @@ public class PlayerController : MonoBehaviour
             }
             else if (!dodgeing)
             {
-                health -= blocking ? damage / 4 : damage;
+                health -= blocking ? damage / (gameManager.classType == 0 && upgrades[1] > 0 ? 8 : 4) : damage;
                 hitEffect.SetActive(true);
                 StartCoroutine(hitVXF());
                 iframes = .3f;
@@ -197,7 +204,7 @@ public class PlayerController : MonoBehaviour
                 case 1: //sword
                     canAttack = false;
                     swordHitbox.SetActive(true);
-                    StartCoroutine(attackCooldown(.4f, .1f, swordHitbox));
+                    StartCoroutine(attackCooldown(.4f * (upgrades[0] > 0 ? .75f : 1), .1f, swordHitbox));
                     break;
 
                 case 2: //bow
@@ -207,7 +214,7 @@ public class PlayerController : MonoBehaviour
                         GameObject p = Instantiate(arrow, transform.position, rotPoint.transform.rotation, null);
 
                         p.GetComponent<Rigidbody2D>().linearVelocity = (rb.linearVelocity / 8 + lastInput) * Mathf.Lerp(arrowSpeed / 4, arrowSpeed, Mathf.Clamp(chargeTime + negCharge, 0, arrowSpeed) / 2);
-                        p.GetComponent<ProjectileHandler>().damage = Mathf.RoundToInt(Mathf.Lerp(arrowDamage, arrowDamage * 4, chargeTime - (chargeTime + negCharge) / 2));
+                        p.GetComponent<ProjectileHandler>().damage = Mathf.RoundToInt(Mathf.Lerp(arrowDamage, arrowDamage * 4, chargeTime - (chargeTime + negCharge) / 2)); //changes arrow speed and dmg based on charge time
                         p.GetComponent<ProjectileHandler>().creator = this.gameObject;
                         StartCoroutine(attackCooldown(.5f));
                     }
@@ -260,12 +267,11 @@ public class PlayerController : MonoBehaviour
                     break;
 
                 case 2: //dodge
-                    if (phase.started && canDodge)
+                    if (phase.started && canDodge > 0)
                     {
                         dodgeing = true;
-                        canDodge = false;
+                        canDodge--;
                         rb.linearVelocity = move.action.ReadValue<Vector2>() * speed * 3;
-                        StartCoroutine(dodgeCooldown(.15f));
                     }
                     break;
 
@@ -286,38 +292,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void upgrade(int path)
-    {
-        if (tempPoints > 0)
-        {
-            upgrades[path]++;
-            tempPoints--;
-        }
-    }
-
-    public void confirmUpgrades()
-    {
-        upgradePoints = tempPoints;
-        //upgradeMenu.setActive(false); need to set upgrade menu
-    }
-
-    public void resetUpgrades()
-    {
-        tempPoints = upgradePoints;
-        
-        for (int i = 0; i < upgrades.Length; i++)
-        {
-            upgrades[i] = 0;
-        }
-    }
-
     private IEnumerator dodgeCooldown(float time)
     {
         yield return new WaitForSeconds(time);
         dodgeing = false;
 
         yield return new WaitForSeconds(.75f);
-        canDodge = true;
+        canDodge++;
+        chargingDodge = false;
     }
 
     private IEnumerator netCoolDown()
