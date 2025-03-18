@@ -9,7 +9,7 @@ using TMPro;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private GameManager gameManager;
+    [HideInInspector] public GameManager gameManager;
 
     [Header("UI")]
     public Image healthBar;
@@ -43,18 +43,18 @@ public class PlayerController : MonoBehaviour
     public int maxHealth;
     public int health;
     public float speed;
-    public int arrowDamage;
+    public int damage;
 
     [Header("Upgrade stuffs")]
     // Secutor upgrades:
-    //// upgrade path 1: DoT / Faster Swings / Enemies take more damage while DoT is in effect
-    //// upgrade path 2: blocking blocks more damage / easier perfect blocks / enemies take more damage after perfect block
+    //// upgrade path 1: DoT / Faster Swings / Enemies take more damage while DoT is in effect (done)
+    //// upgrade path 2: blocking blocks more damage / easier perfect blocks (done) / enemies take more damage after perfect block
     // Sagittarius upgrades:
     //// upgrade path 1: faster charges / fire arrows / more arrows shot
     //// upgrade path 2: faster dodge cooldown / 2 dodge charges / dodging through enemies damage them
     // Retiarius upgrades:
-    ////
-    ////
+    //// upgrade path 1: longer attack range / wider attack range / more damage
+    //// upgrade path 2: effect-damge increase / knockback/ knockback damage
     // upgrade path 3: faster move speed / more health / more damage
     public int[] upgrades = { 0, 0, 0 };
 
@@ -78,7 +78,7 @@ public class PlayerController : MonoBehaviour
         gameManager.playerController = this;
         weapon = GameObject.Find("sword");
 
-        arrowDamage = gameManager.challenges[0] ? arrowDamage / 2 : arrowDamage;
+        damage = Mathf.RoundToInt((gameManager.challenges[0] ? damage / 2 : damage) * (upgrades[2] > 2 ? 1.25f : 1));
 
         fadeScreen = GameObject.Find("death screen").GetComponent<Image>();
         fadeText = GameObject.Find("death text").GetComponent<TextMeshProUGUI>();
@@ -88,6 +88,9 @@ public class PlayerController : MonoBehaviour
 
     public void fakeStart()
     {
+        health += (upgrades[2] > 1 ? health / 4 : 0);
+        maxHealth += (upgrades[2] > 1 ? maxHealth / 4 : 0);
+
         move.action.Enable();
         primaryButton.action.started += primary;
         if (gameManager.classType == 2)
@@ -105,7 +108,7 @@ public class PlayerController : MonoBehaviour
         iframes -= Time.deltaTime;
         timeSinceAction += Time.deltaTime;
         if (!dodgeing && health > 0)
-            rb.linearVelocity = move.action.ReadValue<Vector2>() * speed * (blocking ? .5f : 1);
+            rb.linearVelocity = move.action.ReadValue<Vector2>() * speed * (blocking ? .5f : 1) * (upgrades[0] > 0 ? 1.25f : 1);
 
         if (rb.linearVelocity != Vector2.zero && !dodgeing)
         {
@@ -214,7 +217,7 @@ public class PlayerController : MonoBehaviour
                         GameObject p = Instantiate(arrow, transform.position, rotPoint.transform.rotation, null);
 
                         p.GetComponent<Rigidbody2D>().linearVelocity = (rb.linearVelocity / 8 + lastInput) * Mathf.Lerp(arrowSpeed / 4, arrowSpeed, Mathf.Clamp(chargeTime + negCharge, 0, arrowSpeed) / 2);
-                        p.GetComponent<ProjectileHandler>().damage = Mathf.RoundToInt(Mathf.Lerp(arrowDamage, arrowDamage * 4, chargeTime - (chargeTime + negCharge) / 2)); //changes arrow speed and dmg based on charge time
+                        p.GetComponent<ProjectileHandler>().damage = Mathf.RoundToInt(Mathf.Lerp(damage, damage * 4, chargeTime - (chargeTime + negCharge) / 2)); //changes arrow speed and dmg based on charge time
                         p.GetComponent<ProjectileHandler>().creator = this.gameObject;
                         StartCoroutine(attackCooldown(.5f));
                     }

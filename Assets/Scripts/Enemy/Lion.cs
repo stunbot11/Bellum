@@ -26,7 +26,7 @@ public class Lion : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        enemyController = GetComponentInParent<EnemyController>();
+        enemyController = GetComponent<EnemyController>();
         pendingAttack = Random.Range(1, 3);
     }
 
