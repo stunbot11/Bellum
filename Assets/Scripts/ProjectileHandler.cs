@@ -14,19 +14,28 @@ public class ProjectileHandler : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (creator.CompareTag("Player") && collision.CompareTag("Enemy"))
+        if (creator.CompareTag(collision.tag))
         {
-            EnemyController enemyController = collision.GetComponent<EnemyController>();
-            if (net)
-                enemyController.imbolized = true;
-            enemyController.takeDamage(damage, net);
-            Destroy(gameObject);
-        }
-        else if (creator.CompareTag("Enemy") && collision.CompareTag("Player"))
-        {
-            PlayerController playerController = collision.GetComponent<PlayerController>();
-            playerController.takeDamage(damage);
-            Destroy(gameObject);
+            switch (collision.tag)
+            {
+                case "Player":
+                    PlayerController playerController = collision.GetComponent<PlayerController>();
+                    playerController.takeDamage(damage);
+                    Destroy(gameObject);
+                    break;
+
+                case "Enemy":
+                    EnemyController enemyController = collision.GetComponent<EnemyController>();
+                    if (net)
+                        enemyController.imbolized = true;
+                    enemyController.takeDamage(damage, net, "norm", creator.GetComponent<PlayerController>().gameManager.classType == 2 ? 5 : 0);
+                    Destroy(gameObject);
+                    break;
+
+                case "TestDummy":
+                    collision.GetComponent<DamageDummy>().takeDamage(damage);
+                    break;
+            }
         }
     }
 }

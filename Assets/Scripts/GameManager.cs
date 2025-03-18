@@ -10,8 +10,7 @@ public class GameManager : MonoBehaviour
     public int classType = 1; // 1 sword and shield / 2 bow / 3 tridant
     public int boss = 1;
     public bool[] challenges; //1: half damage / 2: double boss health / 3: no secondary abilities / 4: no upgrades
-    public GameObject[] challengeOn;
-    public GameObject[] challengeOff;
+    public Image[] challengeColors;
 
     private int currentMainMenu;
     public GameObject[] mainMenus;
@@ -55,8 +54,7 @@ public class GameManager : MonoBehaviour
     {
         num--;
         challenges[num] = challenges[num] == true ? false : true;
-        challengeOn[num].SetActive(challenges[num]);
-        challengeOff[num].SetActive(!challenges[num]);
+        challengeColors[num].color = challenges[num] ? Color.green : Color.red;
     }
 
     public void menuSelect(int menu)

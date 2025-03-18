@@ -62,8 +62,10 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    public void takeDamage(int damage, bool net = false, string dmgType = null)
+    public void takeDamage(int damage, bool net = false, string dmgType = null, int ToDoT = 0)
     {
+        if (ToDoT >= dotTicks)
+            dotTicks = ToDoT;
         if (net)
             StartCoroutine(imbolizedCooldown());
         hitEffect.SetActive(true);
@@ -116,7 +118,7 @@ public class EnemyController : MonoBehaviour
     {
         dotTicks--;
         yield return new WaitForSeconds(1);
-        takeDamage(5);
+        takeDamage(5, false, "DoT");
         inDoT = false;
     }
 }
