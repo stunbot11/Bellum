@@ -18,6 +18,7 @@ public class EnemyController : MonoBehaviour
     public float speedMod = 1;
 
     public bool canAttack;
+    public bool canMove;
     public bool imbolized;
 
     private bool inDoT;
@@ -43,7 +44,7 @@ public class EnemyController : MonoBehaviour
         rb.rotation = angle;
 
         Vector2 moveDir = new Vector2(Mathf.Sin(angle * Mathf.Deg2Rad) * -1, Mathf.Cos(angle * Mathf.Deg2Rad)).normalized;
-        if ((targetOveride ? Vector2.Distance(transform.position, target) >= .2 : true) && !imbolized)
+        if ((targetOveride ? Vector2.Distance(transform.position, target) >= .2 : true) && !imbolized && canMove)
             rb.linearVelocity = moveDir * speed * speedMod;
         else
             rb.linearVelocity = Vector2.zero;
@@ -85,13 +86,15 @@ public class EnemyController : MonoBehaviour
         hitEffect.SetActive(false);
     }
 
-    public IEnumerator hitboxCooldown(GameObject hitbox, float cooldown)
+    public IEnumerator cooldown(float cooldown, GameObject hitbox = null)
     {
         yield return new WaitForSeconds(.1f);
-        hitbox.SetActive(false);
+        if (hitbox != null)
+            hitbox.SetActive(false);
 
         yield return new WaitForSeconds(cooldown);
         canAttack = true;
+        canMove = true;
     }
 
     public IEnumerator imbolizedCooldown()

@@ -6,22 +6,25 @@ public class ProjectileHandler : MonoBehaviour
     [HideInInspector] public GameObject creator;
 
     public bool net;
+    public bool stay;
 
     private void Start()
     {
+        if (!stay)
         Destroy(gameObject, 5);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (creator.CompareTag(collision.tag))
+        if (!creator.CompareTag(collision.tag))
         {
             switch (collision.tag)
             {
                 case "Player":
                     PlayerController playerController = collision.GetComponent<PlayerController>();
                     playerController.takeDamage(damage);
-                    Destroy(gameObject);
+                    if (!stay)
+                        Destroy(gameObject);
                     break;
 
                 case "Enemy":
@@ -29,11 +32,14 @@ public class ProjectileHandler : MonoBehaviour
                     if (net)
                         enemyController.imbolized = true;
                     enemyController.takeDamage(damage, net, "norm", creator.GetComponent<PlayerController>().gameManager.classType == 2 ? 5 : 0);
-                    Destroy(gameObject);
+                    if (!stay)
+                        Destroy(gameObject);
                     break;
 
                 case "TestDummy":
                     collision.GetComponent<DamageDummy>().takeDamage(damage);
+                    if (!stay)
+                        Destroy(gameObject);
                     break;
             }
         }

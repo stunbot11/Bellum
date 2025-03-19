@@ -27,7 +27,6 @@ public class Lion : MonoBehaviour
     void Start()
     {
         enemyController = GetComponent<EnemyController>();
-        pendingAttack = Random.Range(1, 3);
     }
 
     // Update is called once per frame
@@ -63,12 +62,12 @@ public class Lion : MonoBehaviour
         {
             case 1: //bite
                 biteHitBox.SetActive(true);
-                StartCoroutine(enemyController.hitboxCooldown(biteHitBox, 1.5f));
+                StartCoroutine(enemyController.cooldown(1.5f, biteHitBox));
                 break;
 
             case 2: //slash
                 slashHitBox.SetActive(true);
-                StartCoroutine(enemyController.hitboxCooldown(slashHitBox, 1.5f));
+                StartCoroutine(enemyController.cooldown(1.5f, slashHitBox));
                 break;
 
             case 3: //group lunge
@@ -120,7 +119,7 @@ public class Lion : MonoBehaviour
         enemyController.targetOveride = false;
         enemyController.speedMod = 1;
         enemyController.target = Vector2.up * 999999;
-        StartCoroutine(enemyController.hitboxCooldown(lungeHitBox, 1));
+        StartCoroutine(enemyController.cooldown(1, lungeHitBox));
         pendingAttack = Random.Range(1, 4);
     }
 }

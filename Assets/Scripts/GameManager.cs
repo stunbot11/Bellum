@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
 
     public void start()
     {
-        SceneManager.LoadScene(boss);
+        SceneManager.LoadScene(1);
     }
 
     public void menu()
