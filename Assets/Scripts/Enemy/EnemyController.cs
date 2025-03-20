@@ -23,6 +23,8 @@ public class EnemyController : MonoBehaviour
 
     private bool inDoT;
     public int dotTicks;
+
+    [HideInInspector] public float angle;
     
     void Start()
     {
@@ -40,7 +42,7 @@ public class EnemyController : MonoBehaviour
         //gets angle from enemy to player in 8 directions and moves towards them
         Vector2 targetPos = ((targetOveride ? target : player.transform.position) - transform.position).normalized;
         float tempRot = Mathf.Atan2(targetPos.y, targetPos.x) * Mathf.Rad2Deg;
-        float angle = (Mathf.Round((tempRot - 45) / 45) * 45 - 45);
+        angle = (Mathf.Round((tempRot - 45) / 45) * 45 - 45);
         rb.rotation = angle;
 
         Vector2 moveDir = new Vector2(Mathf.Sin(angle * Mathf.Deg2Rad) * -1, Mathf.Cos(angle * Mathf.Deg2Rad)).normalized;
@@ -88,9 +90,11 @@ public class EnemyController : MonoBehaviour
 
     public IEnumerator cooldown(float cooldown, GameObject hitbox = null)
     {
-        yield return new WaitForSeconds(.1f);
         if (hitbox != null)
+        {
+            yield return new WaitForSeconds(.1f);
             hitbox.SetActive(false);
+        }
 
         yield return new WaitForSeconds(cooldown);
         canAttack = true;

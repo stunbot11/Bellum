@@ -6,6 +6,7 @@ public class Commodus : MonoBehaviour
 {
     private EnemyController enemyController;
 
+    private float moveTime;
     [Header("atk stats")]
     public GameObject arrow;
     [HideInInspector] public int pendingAttack;
@@ -53,13 +54,13 @@ public class Commodus : MonoBehaviour
                 ProjectileHandler projectileData = p.GetComponent<ProjectileHandler>();
                 projectileData.creator = this.gameObject;
                 projectileData.damage = singleDmg;
-                p.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(Mathf.Sin(enemyController.rb.rotation * Mathf.Rad2Deg), Mathf.Cos(enemyController.rb.rotation * Mathf.Rad2Deg)).normalized * arrowSpeed;
+                p.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(Mathf.Sin(enemyController.angle * Mathf.Rad2Deg), Mathf.Cos(enemyController.angle * Mathf.Rad2Deg)).normalized * arrowSpeed;
                 Destroy(p, 5);
                 StartCoroutine(enemyController.cooldown(1));
                 break;
                 
             case 2: // triple shot
-                float ang1 = (Mathf.Sin(enemyController.rb.rotation * Mathf.Rad2Deg) / Mathf.Cos(enemyController.rb.rotation * Mathf.Rad2Deg) * Mathf.Rad2Deg);
+                float ang1 = (Mathf.Sin(enemyController.angle * Mathf.Rad2Deg) / Mathf.Cos(enemyController.angle * Mathf.Rad2Deg) * Mathf.Rad2Deg);
                 for (int i = 0; i < tripNum; i++)
                 {
                     float ang = Mathf.LerpAngle(ang1 - 45, ang1 + 45, (i / (float)tripNum));
@@ -88,17 +89,15 @@ public class Commodus : MonoBehaviour
     {
         for (int i = 0; i < burstNum; i++)
         {
+            yield return new WaitForSeconds(burstSpeed);
             GameObject p = Instantiate(arrow, transform.position, Quaternion.identity, null);
             ProjectileHandler projectileData = p.GetComponent<ProjectileHandler>();
             projectileData.creator = this.gameObject;
             projectileData.damage = singleDmg;
-            p.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(Mathf.Sin(enemyController.rb.rotation * Mathf.Rad2Deg), Mathf.Cos(enemyController.rb.rotation * Mathf.Rad2Deg)).normalized * arrowSpeed;
+            p.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(Mathf.Cos(enemyController.angle * Mathf.Rad2Deg), Mathf.Sin(enemyController.angle * Mathf.Rad2Deg)).normalized * arrowSpeed;
             Destroy(p, 5);
-            StartCoroutine(enemyController.cooldown(1));
-            Destroy(p, 5);
-            yield return new WaitForSeconds(burstSpeed);
         }
-        StartCoroutine(enemyController.cooldown(2));
+        StartCoroutine(enemyController.cooldown(1));
     }
 
     IEnumerator vollyStuff(float telegraph)
