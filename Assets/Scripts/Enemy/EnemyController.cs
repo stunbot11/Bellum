@@ -17,8 +17,8 @@ public class EnemyController : MonoBehaviour
     public float speed;
     public float speedMod = 1;
 
-    public bool canAttack;
-    public bool canMove;
+    public bool canAttack = true;
+    public bool canMove = true;
     public bool imbolized;
 
     private bool inDoT;
@@ -34,6 +34,7 @@ public class EnemyController : MonoBehaviour
         player = GameObject.Find("Player");
         gameManager.totalBosses++;
         health = gameManager.challenges[1] ? health * 2 : health;
+        canMove = true;
         StartCoroutine(goToTime());
     }
 

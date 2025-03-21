@@ -31,7 +31,7 @@ public class ProjectileHandler : MonoBehaviour
                     EnemyController enemyController = collision.GetComponent<EnemyController>();
                     if (net)
                         enemyController.imbolized = true;
-                    enemyController.takeDamage(damage, net, "norm", creator.GetComponent<PlayerController>().gameManager.classType == 2 ? 5 : 0);
+                    enemyController.takeDamage(damage, net, "norm", creator.GetComponent<PlayerController>().gameManager.classType == 2 && creator.GetComponent<PlayerController>().upgrades[0] > 1 ? 5 : 0);
                     if (!stay)
                         Destroy(gameObject);
                     break;

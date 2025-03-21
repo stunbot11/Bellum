@@ -360,6 +360,7 @@ MonoBehaviour:
   canMove: 0
   imbolized: 0
   dotTicks: 0
+  angle: 0
 --- !u!114 &77340928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1887,6 +1888,7 @@ MonoBehaviour:
   canMove: 0
   imbolized: 0
   dotTicks: 0
+  angle: 0
 --- !u!60 &273770218
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2219,6 +2221,7 @@ MonoBehaviour:
   canMove: 0
   imbolized: 0
   dotTicks: 0
+  angle: 0
 --- !u!60 &363483475
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2626,7 +2629,7 @@ MonoBehaviour:
   maxHealth: 100
   health: 100
   speed: 5
-  damage: 0
+  damage: 5
   upgrades: 000000000000000000000000
   hitEffect: {fileID: 1319581403}
 --- !u!212 &428950514
@@ -11183,6 +11186,7 @@ MonoBehaviour:
   canMove: 1
   imbolized: 0
   dotTicks: 0
+  angle: 0
 --- !u!58 &1211185859
 CircleCollider2D:
   m_ObjectHideFlags: 0
