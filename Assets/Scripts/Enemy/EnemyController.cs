@@ -47,12 +47,12 @@ public class EnemyController : MonoBehaviour
         rb.rotation = angle;
 
         Vector2 moveDir = new Vector2(Mathf.Sin(angle * Mathf.Deg2Rad) * -1, Mathf.Cos(angle * Mathf.Deg2Rad)).normalized;
-        if ((targetOveride ? Vector2.Distance(transform.position, target) >= .2 : true) && !imbolized && canMove)
+        if ((targetOveride ? Vector2.Distance(transform.position, target) >= 1 : true) && !imbolized && canMove)
             rb.linearVelocity = moveDir * speed * speedMod;
         else
             rb.linearVelocity = Vector2.zero;
 
-        if (Vector2.Distance(transform.position, target) <= .3 && goingToTarget)
+        if (Vector2.Distance(transform.position, target) <= 1 && goingToTarget)
         {
             goingToTarget = false;
             targetOveride = false;

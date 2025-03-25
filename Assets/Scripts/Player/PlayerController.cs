@@ -8,6 +8,7 @@ using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
+    public GameObject sisyphus;
     private Rigidbody2D rb;
     [HideInInspector] public GameManager gameManager;
 
@@ -108,7 +109,7 @@ public class PlayerController : MonoBehaviour
         iframes -= Time.deltaTime;
         timeSinceAction += Time.deltaTime;
         if (!dodgeing && health > 0)
-            rb.linearVelocity = move.action.ReadValue<Vector2>() * speed * (blocking ? .5f : 1) * (upgrades[0] > 0 ? 1.25f : 1);
+            rb.linearVelocity = move.action.ReadValue<Vector2>() * speed * ((blocking || (gameManager.classType == 2 && primaryButton.action.inProgress)) ? .5f : 1) * (upgrades[0] > 0 ? 1.25f : 1);
 
         if (rb.linearVelocity != Vector2.zero && !dodgeing)
         {
@@ -309,6 +310,18 @@ public class PlayerController : MonoBehaviour
     {
         yield return new WaitForSeconds(15);
         canNet = true;
+    }
+
+    public float susytime;
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("rock"))
+        {
+            susytime += Time.deltaTime;
+            if (susytime > 60)
+                sisyphus.SetActive(true);
+        }
     }
 }
 

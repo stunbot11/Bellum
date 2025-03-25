@@ -1,5 +1,7 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 using UnityEngine.WSA;
 
 public class Commodus : MonoBehaviour
@@ -8,9 +10,12 @@ public class Commodus : MonoBehaviour
 
     private float moveTime;
     [Header("atk stats")]
+    public Vector2 arrowDirection;
     public GameObject arrow;
     [HideInInspector] public int pendingAttack;
     public float attackRange;
+    public bool meGoShootyShootyShootShoot = true;
+    public float ang1;
 
     public int singleDmg;
     public float arrowSpeed;
@@ -38,37 +43,45 @@ public class Commodus : MonoBehaviour
 
     private void Update()
     {
-        if (enemyController.canAttack)
+        if (enemyController.canAttack && meGoShootyShootyShootShoot) // add another bool that will happend during cooldown that lets player move
             attack();
     }
 
     private void attack()
-    {
+    { // set attack vars to false and get rotation needed for arrow
         pendingAttack = Random.Range(1, 5);
         enemyController.canAttack = false;
         enemyController.canMove = false;
+        meGoShootyShootyShootShoot = false;
+        Vector2 arrowDirectionTemp = (enemyController.player.transform.position -transform.position).normalized;
+        ang1 = (Mathf.Round(((Mathf.Atan2(arrowDirectionTemp.y, arrowDirectionTemp.x) * Mathf.Rad2Deg) - 45) / 45) * 45 - 45);
+        arrowDirection = new Vector2(Mathf.Sin(ang1 * Mathf.Deg2Rad) * -1, Mathf.Cos(ang1 * Mathf.Deg2Rad)).normalized;
+
         switch (pendingAttack)
         {
             case 1: // single shot
                 GameObject p = Instantiate(arrow, transform.position, Quaternion.identity, null);
                 ProjectileHandler projectileData = p.GetComponent<ProjectileHandler>();
+                p.GetComponent<Rigidbody2D>().rotation = ang1;
                 projectileData.creator = this.gameObject;
                 projectileData.damage = singleDmg;
-                p.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(Mathf.Sin(enemyController.angle * Mathf.Rad2Deg), Mathf.Cos(enemyController.angle * Mathf.Rad2Deg)).normalized * arrowSpeed;
+                p.GetComponent<Rigidbody2D>().linearVelocity = arrowDirection * arrowSpeed;
                 Destroy(p, 5);
                 StartCoroutine(enemyController.cooldown(1));
                 break;
                 
             case 2: // triple shot
-                float ang1 = (Mathf.Sin(enemyController.angle * Mathf.Rad2Deg) / Mathf.Cos(enemyController.angle * Mathf.Rad2Deg) * Mathf.Rad2Deg);
+
                 for (int i = 0; i < tripNum; i++)
                 {
-                    float ang = Mathf.LerpAngle(ang1 - 45, ang1 + 45, (i / (float)tripNum));
+                    float ang = Mathf.Lerp(ang1 - 45, ang1 + 45, (i / (float)tripNum));
+                    print(ang);
                     GameObject p1 = Instantiate(arrow, transform.position, Quaternion.identity, null);
+                    p1.GetComponent<Rigidbody2D>().rotation = ang;
                     ProjectileHandler projectileData1 = p1.GetComponent<ProjectileHandler>();
                     projectileData1.creator = this.gameObject;
                     projectileData1.damage = tripDmg;
-                    p1.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(Mathf.Cos(ang * Mathf.Deg2Rad), Mathf.Sin(ang * Mathf.Deg2Rad)).normalized * arrowSpeed;
+                    p1.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(Mathf.Sin(ang * Mathf.Deg2Rad) * -1, Mathf.Cos(ang * Mathf.Deg2Rad)).normalized * arrowSpeed;
                     Destroy(p1, 5);
                     StartCoroutine(enemyController.cooldown(2));
                 }
@@ -83,6 +96,7 @@ public class Commodus : MonoBehaviour
                 StartCoroutine(vollyStuff(.5f));
                 break;
         }
+        StartCoroutine(meGoNameThings());
     }
 
     IEnumerator burst()
@@ -91,10 +105,11 @@ public class Commodus : MonoBehaviour
         {
             yield return new WaitForSeconds(burstSpeed);
             GameObject p = Instantiate(arrow, transform.position, Quaternion.identity, null);
+            p.GetComponent<Rigidbody2D>().rotation = ang1;
             ProjectileHandler projectileData = p.GetComponent<ProjectileHandler>();
             projectileData.creator = this.gameObject;
             projectileData.damage = singleDmg;
-            p.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(Mathf.Cos(enemyController.angle * Mathf.Rad2Deg), Mathf.Sin(enemyController.angle * Mathf.Rad2Deg)).normalized * arrowSpeed;
+            p.GetComponent<Rigidbody2D>().linearVelocity = arrowDirection * arrowSpeed;
             Destroy(p, 5);
         }
         StartCoroutine(enemyController.cooldown(1));
@@ -110,5 +125,11 @@ public class Commodus : MonoBehaviour
 
         yield return new WaitForSeconds(.5f);
         StartCoroutine(enemyController.cooldown(2));
+    }
+
+    IEnumerator meGoNameThings()
+    {
+        yield return new WaitForSeconds(Random.Range(3, 10));
+        meGoShootyShootyShootShoot = true;
     }
 }
