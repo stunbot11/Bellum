@@ -42,7 +42,7 @@ public class Commodus : MonoBehaviour
     public AudioSource Aagh;
     public AudioSource Hoogh;
     public AudioSource Ough;
-    private bool canSteppy;
+    private bool canSteppy = true;
 
 
     void Start()
