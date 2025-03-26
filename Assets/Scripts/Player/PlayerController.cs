@@ -216,6 +216,7 @@ public class PlayerController : MonoBehaviour
                 case 1: //sword
                     canAttack = false;
                     swordHitbox.SetActive(true);
+                    swingSword.Play();
                     StartCoroutine(attackCooldown(.4f * (upgrades[0] > 0 ? .75f : 1), .1f, swordHitbox));
                     break;
 
@@ -224,6 +225,7 @@ public class PlayerController : MonoBehaviour
                     {
                         canAttack = false;
                         GameObject p = Instantiate(arrow, transform.position, rotPoint.transform.rotation, null);
+                        shootBow.Play();
 
                         p.GetComponent<Rigidbody2D>().linearVelocity = (rb.linearVelocity / 8 + lastInput) * Mathf.Lerp(arrowSpeed / 4, arrowSpeed, Mathf.Clamp(chargeTime + negCharge, 0, arrowSpeed) / 2);
                         p.GetComponent<ProjectileHandler>().damage = Mathf.RoundToInt(Mathf.Lerp(damage, damage * 4, chargeTime - (chargeTime + negCharge) / 2)); //changes arrow speed and dmg based on charge time
