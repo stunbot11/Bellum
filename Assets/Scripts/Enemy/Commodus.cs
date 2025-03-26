@@ -63,6 +63,7 @@ public class Commodus : MonoBehaviour
         enemyController.canAttack = false;
         enemyController.canMove = false;
         meGoShootyShootyShootShoot = false;
+        shootyShoot.Play();
         Vector2 arrowDirectionTemp = (enemyController.player.transform.position -transform.position).normalized;
         ang1 = (Mathf.Round(((Mathf.Atan2(arrowDirectionTemp.y, arrowDirectionTemp.x) * Mathf.Rad2Deg) - 45) / 45) * 45 - 45);
         arrowDirection = new Vector2(Mathf.Sin(ang1 * Mathf.Deg2Rad) * -1, Mathf.Cos(ang1 * Mathf.Deg2Rad)).normalized;
@@ -70,7 +71,6 @@ public class Commodus : MonoBehaviour
         switch (pendingAttack)
         {
             case 1: // single shot
-                shootyShoot.Play();
                 GameObject p = Instantiate(arrow, transform.position, Quaternion.identity, null);
                 ProjectileHandler projectileData = p.GetComponent<ProjectileHandler>();
                 p.GetComponent<Rigidbody2D>().rotation = ang1;
@@ -83,7 +83,6 @@ public class Commodus : MonoBehaviour
                 
             case 2: // triple shot
 
-                shootyShoot.Play();
                 for (int i = 0; i < tripNum; i++)
                 {
                     float ang = Mathf.Lerp(ang1 - 45, ang1 + 45, (i / (float)tripNum));
@@ -116,7 +115,6 @@ public class Commodus : MonoBehaviour
         for (int i = 0; i < burstNum; i++)
         {
             yield return new WaitForSeconds(burstSpeed);
-            shootyShoot.Play();
             GameObject p = Instantiate(arrow, transform.position, Quaternion.identity, null);
             p.GetComponent<Rigidbody2D>().rotation = ang1;
             ProjectileHandler projectileData = p.GetComponent<ProjectileHandler>();
