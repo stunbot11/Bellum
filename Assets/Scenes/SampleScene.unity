@@ -12690,6 +12690,11 @@ MonoBehaviour:
   vollyDmg: 3
   vollyRad: 0
   vollyTime: 1.5
+  biggerSteppy: {fileID: 1211185864}
+  shootyShoot: {fileID: 1211185865}
+  Aagh: {fileID: 1211185863}
+  Hoogh: {fileID: 1211185862}
+  Ough: {fileID: 1211185861}
 --- !u!114 &1211185858
 MonoBehaviour:
   m_ObjectHideFlags: 0
