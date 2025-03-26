@@ -79,6 +79,7 @@ public class PlayerController : MonoBehaviour
     public AudioSource hurtOugh;
     public AudioSource swingSword;
     public AudioSource shootBow;
+    private bool canSteppy;
     private void Start()
     {
         move.action.Disable();
@@ -123,6 +124,7 @@ public class PlayerController : MonoBehaviour
         {
             lastInput = move.action.ReadValue<Vector2>();
             direction = (Mathf.Atan2(move.action.ReadValue<Vector2>().y, move.action.ReadValue<Vector2>().x) * Mathf.Rad2Deg) - 90;
+            if (canSteppy) StartCoroutine(bigSteppy());
         }
         rotPoint.transform.rotation = Quaternion.Euler(new Vector3(0, 0, direction));
 
@@ -171,6 +173,14 @@ public class PlayerController : MonoBehaviour
             chargingDodge = true;
             StartCoroutine(dodgeCooldown(.15f * (upgrades[1] > 0 ? .75f : 1)));
         }
+    }
+
+    public IEnumerator bigSteppy()
+    {
+        canSteppy = false;
+        step.Play();
+        yield return new WaitForSeconds(0.17f);
+        canSteppy = true;
     }
 
     public void takeDamage(int damage)
