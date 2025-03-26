@@ -37,11 +37,12 @@ public class Commodus : MonoBehaviour
     
 
     [Header("SFX")]
-    public AudioSource biggerSteppy;
+    public AudioSource step;
     public AudioSource shootyShoot;
     public AudioSource Aagh;
     public AudioSource Hoogh;
     public AudioSource Ough;
+    private bool canSteppy;
 
 
     void Start()
@@ -55,6 +56,9 @@ public class Commodus : MonoBehaviour
     {
         if (enemyController.canAttack && meGoShootyShootyShootShoot) // add another bool that will happend during cooldown that lets player move
             attack();
+
+        if (enemyController.goingToTarget && canSteppy)
+            StartCoroutine(biggerSteppy());
     }
 
     private void attack()
@@ -110,6 +114,13 @@ public class Commodus : MonoBehaviour
         StartCoroutine(meGoNameThings());
     }
 
+    IEnumerator biggerSteppy()
+    {
+        canSteppy = false;
+        step.Play();
+        yield return new WaitForSeconds(0.17f);
+        canSteppy = true;
+    }
     IEnumerator burst()
     {
         for (int i = 0; i < burstNum; i++)

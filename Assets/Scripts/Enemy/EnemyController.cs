@@ -10,7 +10,7 @@ public class EnemyController : MonoBehaviour
     [HideInInspector] public GameManager gameManager;
     [HideInInspector] public Rigidbody2D rb;
     public GameObject hitEffect;
-    private bool goingToTarget;
+    public bool goingToTarget;
 
     [Header("Stats")]
     public int health;
