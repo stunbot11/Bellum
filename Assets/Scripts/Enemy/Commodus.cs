@@ -37,11 +37,12 @@ public class Commodus : MonoBehaviour
     
 
     [Header("SFX")]
-    public AudioSource step;
-    public AudioSource shootyShoot;
-    public AudioSource Aagh;
-    public AudioSource Hoogh;
-    public AudioSource Ough;
+    public AudioSource cVocalCords;
+    public AudioClip steppy;
+    public AudioClip shootyShoot;
+    public AudioClip Aagh;
+    public AudioClip Hoogh;
+    public AudioClip Ough;
     private bool canSteppy = true;
 
 
@@ -67,7 +68,7 @@ public class Commodus : MonoBehaviour
         enemyController.canAttack = false;
         enemyController.canMove = false;
         meGoShootyShootyShootShoot = false;
-        shootyShoot.Play();
+        cVocalCords.PlayOneShot(shootyShoot);
         Vector2 arrowDirectionTemp = (enemyController.player.transform.position -transform.position).normalized;
         ang1 = (Mathf.Round(((Mathf.Atan2(arrowDirectionTemp.y, arrowDirectionTemp.x) * Mathf.Rad2Deg) - 45) / 45) * 45 - 45);
         arrowDirection = new Vector2(Mathf.Sin(ang1 * Mathf.Deg2Rad) * -1, Mathf.Cos(ang1 * Mathf.Deg2Rad)).normalized;
@@ -117,7 +118,7 @@ public class Commodus : MonoBehaviour
     IEnumerator biggerSteppy()
     {
         canSteppy = false;
-        step.Play();
+        cVocalCords.PlayOneShot(steppy);
         yield return new WaitForSeconds(0.17f);
         canSteppy = true;
     }

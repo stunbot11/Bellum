@@ -73,12 +73,13 @@ public class PlayerController : MonoBehaviour
     private bool canNet = true;
 
     [Header("SFX")]
-    public AudioSource step;
-    public AudioSource hurtHoogh;
-    public AudioSource hurtAagh;
-    public AudioSource hurtOugh;
-    public AudioSource swingSword;
-    public AudioSource shootBow;
+    public AudioSource pVocalCords;
+    public AudioClip step;
+    public AudioClip hurtHoogh;
+    public AudioClip hurtAagh;
+    public AudioClip hurtOugh;
+    public AudioClip swingSword;
+    public AudioClip shootBow;
     private bool canSteppy;
     private void Start()
     {
@@ -178,7 +179,7 @@ public class PlayerController : MonoBehaviour
     public IEnumerator bigSteppy()
     {
         canSteppy = false;
-        step.Play();
+        pVocalCords.PlayOneShot(step);
         yield return new WaitForSeconds(0.17f);
         canSteppy = true;
     }
@@ -226,7 +227,7 @@ public class PlayerController : MonoBehaviour
                 case 1: //sword
                     canAttack = false;
                     swordHitbox.SetActive(true);
-                    swingSword.Play();
+                    pVocalCords.PlayOneShot(swingSword);
                     StartCoroutine(attackCooldown(.4f * (upgrades[0] > 0 ? .75f : 1), .1f, swordHitbox));
                     break;
 
@@ -235,7 +236,7 @@ public class PlayerController : MonoBehaviour
                     {
                         canAttack = false;
                         GameObject p = Instantiate(arrow, transform.position, rotPoint.transform.rotation, null);
-                        shootBow.Play();
+                        pVocalCords.PlayOneShot(shootBow);
 
                         p.GetComponent<Rigidbody2D>().linearVelocity = (rb.linearVelocity / 8 + lastInput) * Mathf.Lerp(arrowSpeed / 4, arrowSpeed, Mathf.Clamp(chargeTime + negCharge, 0, arrowSpeed) / 2);
                         p.GetComponent<ProjectileHandler>().damage = Mathf.RoundToInt(Mathf.Lerp(damage, damage * 4, chargeTime - (chargeTime + negCharge) / 2)); //changes arrow speed and dmg based on charge time
