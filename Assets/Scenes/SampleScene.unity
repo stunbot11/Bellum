@@ -3263,6 +3263,12 @@ MonoBehaviour:
   damage: 5
   upgrades: 000000000000000000000000
   hitEffect: {fileID: 1319581403}
+  step: {fileID: 428950515}
+  hurtHoogh: {fileID: 428950517}
+  hurtAagh: {fileID: 428950518}
+  hurtOugh: {fileID: 428950516}
+  swingSword: {fileID: 817556668}
+  shootBow: {fileID: 1897907430}
   susytime: 0
 --- !u!212 &428950514
 SpriteRenderer:

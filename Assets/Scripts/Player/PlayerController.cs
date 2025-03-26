@@ -71,6 +71,14 @@ public class PlayerController : MonoBehaviour
     private bool canAttack = true;
     private bool dodgeing;
     private bool canNet = true;
+
+    [Header("SFX")]
+    public AudioSource step;
+    public AudioSource hurtHoogh;
+    public AudioSource hurtAagh;
+    public AudioSource hurtOugh;
+    public AudioSource swingSword;
+    public AudioSource shootBow;
     private void Start()
     {
         move.action.Disable();
