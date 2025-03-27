@@ -361,8 +361,8 @@ MonoBehaviour:
   canMove: 0
   imbolized: 0
   dotTicks: 0
-  eVocalCords: {fileID: 0}
-  steppy: {fileID: 0}
+  eVocalCords: {fileID: 832721895}
+  steppy: {fileID: 8300000, guid: b6adb1ca50898e44987bb6a0f1161e05, type: 3}
   attack1: {fileID: 0}
   attack2: {fileID: 0}
   hurtAagh: {fileID: 0}
@@ -2132,8 +2132,8 @@ MonoBehaviour:
   canMove: 0
   imbolized: 0
   dotTicks: 0
-  eVocalCords: {fileID: 0}
-  steppy: {fileID: 0}
+  eVocalCords: {fileID: 832721895}
+  steppy: {fileID: 8300000, guid: b6adb1ca50898e44987bb6a0f1161e05, type: 3}
   attack1: {fileID: 0}
   attack2: {fileID: 0}
   hurtAagh: {fileID: 0}
@@ -2474,8 +2474,8 @@ MonoBehaviour:
   canMove: 0
   imbolized: 0
   dotTicks: 0
-  eVocalCords: {fileID: 0}
-  steppy: {fileID: 0}
+  eVocalCords: {fileID: 832721895}
+  steppy: {fileID: 8300000, guid: b6adb1ca50898e44987bb6a0f1161e05, type: 3}
   attack1: {fileID: 0}
   attack2: {fileID: 0}
   hurtAagh: {fileID: 0}
