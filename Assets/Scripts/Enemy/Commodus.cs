@@ -37,14 +37,7 @@ public class Commodus : MonoBehaviour
     public float vollyTime;
     
 
-    [Header("SFX")]
-    public AudioSource cVocalCords;
-    public AudioClip steppy;
-    public AudioClip shootyShoot;
-    public AudioClip Aagh;
-    public AudioClip Hoogh;
-    public AudioClip Ough;
-    private bool canSteppy = true;
+
 
 
     void Start()
@@ -59,9 +52,6 @@ public class Commodus : MonoBehaviour
     {
         if (enemyController.canAttack && meGoShootyShootyShootShoot) // add another bool that will happend during cooldown that lets player move
             attack();
-
-        if (enemyController.goingToTarget && canSteppy)
-            StartCoroutine(biggerSteppy());
     }
 
     private void attack()
@@ -117,13 +107,7 @@ public class Commodus : MonoBehaviour
         StartCoroutine(meGoNameThings());
     }
 
-    IEnumerator biggerSteppy()
-    {
-        canSteppy = false;
-        cVocalCords.PlayOneShot(steppy);
-        yield return new WaitForSeconds(0.17f);
-        canSteppy = true;
-    }
+    
     IEnumerator burst()
     {
         for (int i = 0; i < burstNum; i++)

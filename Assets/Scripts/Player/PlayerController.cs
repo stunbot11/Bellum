@@ -82,6 +82,8 @@ public class PlayerController : MonoBehaviour
     public AudioClip swingSword;
     public AudioClip shootBow;
     private bool canSteppy;
+    private int pickYourPoison;
+
     private void Start()
     {
         move.action.Disable();
@@ -197,6 +199,27 @@ public class PlayerController : MonoBehaviour
             else if (!dodgeing)
             {
                 health -= blocking ? damage / (gameManager.classType == 0 && upgrades[1] > 0 ? 8 : 4) : damage;
+                pickYourPoison = Random.Range(1, 3);
+
+                switch (pickYourPoison)
+                {
+                    case 1:
+                        pVocalCords.PlayOneShot(hurtAagh);
+                        break;
+
+                    case 2:
+                        pVocalCords.PlayOneShot(hurtHoogh);
+                        break;
+
+                    case 3:
+                        pVocalCords.PlayOneShot(hurtOugh);
+                        break;
+
+
+                    default:
+                        break;
+                }
+
                 hitEffect.SetActive(true);
                 StartCoroutine(hitVXF());
                 iframes = .3f;

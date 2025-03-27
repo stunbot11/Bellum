@@ -24,6 +24,18 @@ public class EnemyController : MonoBehaviour
     private bool inDoT;
     public int dotTicks;
 
+    [Header("SFX")]
+    public AudioSource eVocalCords;
+    public AudioClip steppy;
+    public AudioClip shootyShoot;
+    public AudioClip cAagh;
+    public AudioClip cHoogh;
+    public AudioClip cOugh;
+    public AudioClip jAagh;
+    public AudioClip jHoogh;
+    public AudioClip jOugh;
+    private bool canSteppy = true;
+
     [HideInInspector] public float angle;
     [HideInInspector] public float distance;
 
@@ -65,6 +77,9 @@ public class EnemyController : MonoBehaviour
             inDoT = true;
             StartCoroutine(DoT());
         }
+
+        if (goingToTarget && canSteppy)
+            StartCoroutine(biggerSteppy());
     }
 
     public void takeDamage(int damage, bool net = false, string dmgType = null, int ToDoT = 0)
@@ -129,5 +144,13 @@ public class EnemyController : MonoBehaviour
         yield return new WaitForSeconds(1);
         takeDamage(5, false, "DoT");
         inDoT = false;
+    }
+
+    IEnumerator biggerSteppy()
+    {
+        canSteppy = false;
+        eVocalCords.PlayOneShot(steppy);
+        yield return new WaitForSeconds(0.17f);
+        canSteppy = true;
     }
 }
