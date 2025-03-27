@@ -27,14 +27,13 @@ public class EnemyController : MonoBehaviour
     [Header("SFX")]
     public AudioSource eVocalCords;
     public AudioClip steppy;
-    public AudioClip shootyShoot;
-    public AudioClip cAagh;
-    public AudioClip cHoogh;
-    public AudioClip cOugh;
-    public AudioClip jAagh;
-    public AudioClip jHoogh;
-    public AudioClip jOugh;
+    public AudioClip attack1;
+    public AudioClip attack2;
+    public AudioClip hurtAagh;
+    public AudioClip hurtHoogh;
+    public AudioClip hurtOugh;
     private bool canSteppy = true;
+    private int pickYourPoison;
 
     [HideInInspector] public float angle;
     [HideInInspector] public float distance;
@@ -54,7 +53,7 @@ public class EnemyController : MonoBehaviour
     private void Update()
     {
         //gets angle from enemy to player in 8 directions and moves towards them
-        Vector2 targetPos = ((targetOveride ? target : player.transform.position) - transform.position).normalized;
+        Vector2 targetPos = ((targetOveride ? (Vector3)target : player.transform.position) - transform.position).normalized;
         float tempRot = Mathf.Atan2(targetPos.y, targetPos.x) * Mathf.Rad2Deg * (gameManager.boss == 2 && !targetOveride && Vector2.Distance(player.transform.position, transform.position) <= distance ? -1 : 1);
         angle = (Mathf.Round((tempRot - 45) / 45) * 45 - 45);
         rb.rotation = angle;
@@ -78,7 +77,7 @@ public class EnemyController : MonoBehaviour
             StartCoroutine(DoT());
         }
 
-        if (goingToTarget && canSteppy)
+        if (gameManager.boss<3 && goingToTarget && canSteppy)
             StartCoroutine(biggerSteppy());
     }
 
@@ -89,6 +88,29 @@ public class EnemyController : MonoBehaviour
         if (net)
             StartCoroutine(imbolizedCooldown());
         hitEffect.SetActive(true);
+        if (!net)
+        {
+            pickYourPoison = Random.Range(1, 3);
+            if (gameManager.boss == 2)
+                switch (pickYourPoison)
+                {
+                    case 1:
+                        eVocalCords.PlayOneShot(hurtAagh);
+                        break;
+
+                    case 2:
+                        eVocalCords.PlayOneShot(hurtHoogh);
+                        break;
+
+                    case 3:
+                        eVocalCords.PlayOneShot(hurtOugh);
+                        break;
+
+
+                    default:
+                        break;
+                }
+        }
         StartCoroutine(hitEffectStop());
         health -= (int)(dmgType == "DoT" ? damage : (damage * (gameManager.classType == 1 && player.GetComponent<PlayerController>().upgrades[0] >= 3 && inDoT ? 1.5f : 1)));
         if (health <= 0)

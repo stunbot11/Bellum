@@ -60,7 +60,6 @@ public class Commodus : MonoBehaviour
         enemyController.canAttack = false;
         enemyController.canMove = false;
         meGoShootyShootyShootShoot = false;
-        cVocalCords.PlayOneShot(shootyShoot);
         Vector2 arrowDirectionTemp = (enemyController.player.transform.position -transform.position).normalized;
         ang1 = (Mathf.Round(((Mathf.Atan2(arrowDirectionTemp.y, arrowDirectionTemp.x) * Mathf.Rad2Deg) - 45) / 45) * 45 - 45);
         arrowDirection = new Vector2(Mathf.Sin(ang1 * Mathf.Deg2Rad) * -1, Mathf.Cos(ang1 * Mathf.Deg2Rad)).normalized;

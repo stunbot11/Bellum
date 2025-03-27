@@ -197,7 +197,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 67232402}
-  - component: {fileID: 67232406}
   m_Layer: 0
   m_Name: Janus
   m_TagString: Enemy
@@ -220,103 +219,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &67232406
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 67232401}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b4f6741214bcd0d48951693d79525856, type: 3}
-  m_Resource: {fileID: 8300000, guid: b4f6741214bcd0d48951693d79525856, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &77340922
 GameObject:
   m_ObjectHideFlags: 0
@@ -459,6 +361,13 @@ MonoBehaviour:
   canMove: 0
   imbolized: 0
   dotTicks: 0
+  eVocalCords: {fileID: 0}
+  steppy: {fileID: 0}
+  shootyShoot: {fileID: 0}
+  swingSword: {fileID: 0}
+  hurtAagh: {fileID: 0}
+  hurtHoogh: {fileID: 0}
+  hurtOugh: {fileID: 0}
   angle: 0
   distance: 0
 --- !u!114 &77340928
@@ -2223,6 +2132,13 @@ MonoBehaviour:
   canMove: 0
   imbolized: 0
   dotTicks: 0
+  eVocalCords: {fileID: 0}
+  steppy: {fileID: 0}
+  shootyShoot: {fileID: 0}
+  swingSword: {fileID: 0}
+  hurtAagh: {fileID: 0}
+  hurtHoogh: {fileID: 0}
+  hurtOugh: {fileID: 0}
   angle: 0
   distance: 0
 --- !u!60 &273770218
@@ -2558,6 +2474,13 @@ MonoBehaviour:
   canMove: 0
   imbolized: 0
   dotTicks: 0
+  eVocalCords: {fileID: 0}
+  steppy: {fileID: 0}
+  shootyShoot: {fileID: 0}
+  swingSword: {fileID: 0}
+  hurtAagh: {fileID: 0}
+  hurtHoogh: {fileID: 0}
+  hurtOugh: {fileID: 0}
   angle: 0
   distance: 0
 --- !u!60 &363483475
@@ -11910,12 +11833,6 @@ MonoBehaviour:
   vollyDmg: 3
   vollyRad: 0
   vollyTime: 1.5
-  cVocalCords: {fileID: 0}
-  steppy: {fileID: 8300000, guid: b6adb1ca50898e44987bb6a0f1161e05, type: 3}
-  shootyShoot: {fileID: 8300000, guid: 3c2d1c0e82aeb8e4f9afeaeac9f56761, type: 3}
-  Aagh: {fileID: 8300000, guid: f0d8e70fffb451b418deadef295ce41a, type: 3}
-  Hoogh: {fileID: 8300000, guid: 27b6e8e0f649ad3439e447c34e17d750, type: 3}
-  Ough: {fileID: 8300000, guid: c2e0ac681bd891241b7dd2f9b0781f19, type: 3}
 --- !u!114 &1211185858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11942,6 +11859,13 @@ MonoBehaviour:
   canMove: 1
   imbolized: 0
   dotTicks: 0
+  eVocalCords: {fileID: 832721895}
+  steppy: {fileID: 8300000, guid: b6adb1ca50898e44987bb6a0f1161e05, type: 3}
+  shootyShoot: {fileID: 8300000, guid: 3c2d1c0e82aeb8e4f9afeaeac9f56761, type: 3}
+  swingSword: {fileID: 0}
+  hurtAagh: {fileID: 8300000, guid: f0d8e70fffb451b418deadef295ce41a, type: 3}
+  hurtHoogh: {fileID: 8300000, guid: 27b6e8e0f649ad3439e447c34e17d750, type: 3}
+  hurtOugh: {fileID: 8300000, guid: c2e0ac681bd891241b7dd2f9b0781f19, type: 3}
   angle: 0
   distance: 0
 --- !u!58 &1211185859
