@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     private int currentMainMenu;
     public GameObject[] mainMenus;
 
+    [HideInInspector] public EmperorType activeEmperor;
 
      public int lionReady;
      public int lionCheck;
