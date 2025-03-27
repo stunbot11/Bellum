@@ -9,8 +9,9 @@ public class Commodus : MonoBehaviour
     private EnemyController enemyController;
 
     private float moveTime;
+    public float spaceAway;
     [Header("atk stats")]
-    public Vector2 arrowDirection;
+    [HideInInspector] public Vector2 arrowDirection;
     public GameObject arrow;
     [HideInInspector] public int pendingAttack;
     public float attackRange;
@@ -51,6 +52,7 @@ public class Commodus : MonoBehaviour
         enemyController = GetComponent<EnemyController>();
         volly.GetComponent<ProjectileHandler>().creator = this.gameObject;
         pendingAttack = Random.Range(1, 3);
+        enemyController.distance = spaceAway;
     }
 
     private void Update()
@@ -99,8 +101,8 @@ public class Commodus : MonoBehaviour
                     projectileData1.damage = tripDmg;
                     p1.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(Mathf.Sin(ang * Mathf.Deg2Rad) * -1, Mathf.Cos(ang * Mathf.Deg2Rad)).normalized * arrowSpeed;
                     Destroy(p1, 5);
-                    StartCoroutine(enemyController.cooldown(2));
                 }
+                StartCoroutine(enemyController.cooldown(2));
                 break;
 
             case 3: // burst shot
@@ -152,7 +154,7 @@ public class Commodus : MonoBehaviour
 
     IEnumerator meGoNameThings()
     {
-        yield return new WaitForSeconds(Random.Range(3, 10));
+        yield return new WaitForSeconds(Random.Range(3, 5));
         meGoShootyShootyShootShoot = true;
     }
 }

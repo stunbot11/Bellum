@@ -58,6 +58,7 @@ public class PlayerController : MonoBehaviour
     //// upgrade path 2: effect-damge increase / knockback/ knockback damage
     // upgrade path 3: faster move speed / more health / more damage
     public int[] upgrades = { 0, 0, 0 };
+    public int tripArrowCount = 3;
 
     [Header("Misc.")]
     public GameObject hitEffect;
@@ -234,13 +235,28 @@ public class PlayerController : MonoBehaviour
                 case 2: //bow
                     if (phase.canceled && canAttack)
                     {
-                        canAttack = false;
-                        GameObject p = Instantiate(arrow, transform.position, rotPoint.transform.rotation, null);
-                        pVocalCords.PlayOneShot(shootBow);
+                        if (upgrades[0] > 2) // if player has upgrade 3 for path 1 it will shoot multiple arrows
+                        {
+                            for (int i = 0; i < tripArrowCount; i++)
+                            {
+                                float ang = Mathf.Lerp(direction - 30, direction + 30, (i / (float)tripArrowCount));
+                                GameObject p1 = Instantiate(arrow, transform.position, Quaternion.identity, null);
+                                p1.GetComponent<Rigidbody2D>().rotation = ang;
+                                ProjectileHandler projectileData1 = p1.GetComponent<ProjectileHandler>();
+                                projectileData1.creator = this.gameObject;
+                                projectileData1.damage = Mathf.RoundToInt(Mathf.Lerp(damage, damage * 4, chargeTime - (chargeTime + negCharge) / 2));
+                                p1.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(Mathf.Sin(ang * Mathf.Deg2Rad) * -1, Mathf.Cos(ang * Mathf.Deg2Rad)).normalized * Mathf.Lerp(arrowSpeed / 4, arrowSpeed, Mathf.Clamp(chargeTime + negCharge, 0, arrowSpeed) / 2);
+                                Destroy(p1, 5);
+                            }
+                        }
+                        else
+                        {
+                            GameObject p = Instantiate(arrow, transform.position, rotPoint.transform.rotation, null);
 
-                        p.GetComponent<Rigidbody2D>().linearVelocity = (rb.linearVelocity / 8 + lastInput) * Mathf.Lerp(arrowSpeed / 4, arrowSpeed, Mathf.Clamp(chargeTime + negCharge, 0, arrowSpeed) / 2);
-                        p.GetComponent<ProjectileHandler>().damage = Mathf.RoundToInt(Mathf.Lerp(damage, damage * 4, chargeTime - (chargeTime + negCharge) / 2)); //changes arrow speed and dmg based on charge time
-                        p.GetComponent<ProjectileHandler>().creator = this.gameObject;
+                            p.GetComponent<Rigidbody2D>().linearVelocity = (rb.linearVelocity / 8 + lastInput) * Mathf.Lerp(arrowSpeed / 4, arrowSpeed, Mathf.Clamp(chargeTime + negCharge, 0, arrowSpeed) / 2);
+                            p.GetComponent<ProjectileHandler>().damage = Mathf.RoundToInt(Mathf.Lerp(damage, damage * 4, chargeTime - (chargeTime + negCharge) / 2)); //changes arrow speed and dmg based on charge time
+                            p.GetComponent<ProjectileHandler>().creator = this.gameObject;
+                        }
                         StartCoroutine(attackCooldown(.5f));
                     }
                     break;

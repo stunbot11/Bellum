@@ -25,7 +25,8 @@ public class EnemyController : MonoBehaviour
     public int dotTicks;
 
     [HideInInspector] public float angle;
-    
+    [HideInInspector] public float distance;
+
     void Start()
     {
         target = Vector2.up * 999999;
@@ -42,7 +43,7 @@ public class EnemyController : MonoBehaviour
     {
         //gets angle from enemy to player in 8 directions and moves towards them
         Vector2 targetPos = ((targetOveride ? target : player.transform.position) - transform.position).normalized;
-        float tempRot = Mathf.Atan2(targetPos.y, targetPos.x) * Mathf.Rad2Deg;
+        float tempRot = Mathf.Atan2(targetPos.y, targetPos.x) * Mathf.Rad2Deg * (gameManager.boss == 2 && !targetOveride && Vector2.Distance(player.transform.position, transform.position) <= distance ? -1 : 1);
         angle = (Mathf.Round((tempRot - 45) / 45) * 45 - 45);
         rb.rotation = angle;
 
