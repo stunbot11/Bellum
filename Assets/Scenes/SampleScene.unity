@@ -754,6 +754,7 @@ MonoBehaviour:
   imbolized: 0
   dotTicks: 0
   angle: 0
+  distance: 0
 --- !u!114 &77340928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2517,6 +2518,7 @@ MonoBehaviour:
   imbolized: 0
   dotTicks: 0
   angle: 0
+  distance: 0
 --- !u!60 &273770218
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2851,6 +2853,7 @@ MonoBehaviour:
   imbolized: 0
   dotTicks: 0
   angle: 0
+  distance: 0
 --- !u!60 &363483475
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3262,6 +3265,7 @@ MonoBehaviour:
   speed: 5
   damage: 5
   upgrades: 000000000000000000000000
+  tripArrowCount: 3
   hitEffect: {fileID: 1319581403}
   pVocalCords: {fileID: 428950515}
   step: {fileID: 8300000, guid: 8d6c8a504c1a12042bfc79b7d72452f3, type: 3}
@@ -12281,6 +12285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efdfafb2a1a3f234599fb6919420e6c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spaceAway: 3
   arrowDirection: {x: 0, y: 0}
   arrow: {fileID: 3470927396447796118, guid: b29881a35e56ab040b08c87497aae853, type: 3}
   pendingAttack: 0
@@ -12331,6 +12336,7 @@ MonoBehaviour:
   imbolized: 0
   dotTicks: 0
   angle: 0
+  distance: 0
 --- !u!58 &1211185859
 CircleCollider2D:
   m_ObjectHideFlags: 0
