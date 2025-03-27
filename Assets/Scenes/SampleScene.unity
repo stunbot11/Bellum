@@ -363,8 +363,8 @@ MonoBehaviour:
   dotTicks: 0
   eVocalCords: {fileID: 0}
   steppy: {fileID: 0}
-  shootyShoot: {fileID: 0}
-  swingSword: {fileID: 0}
+  attack1: {fileID: 0}
+  attack2: {fileID: 0}
   hurtAagh: {fileID: 0}
   hurtHoogh: {fileID: 0}
   hurtOugh: {fileID: 0}
@@ -2134,8 +2134,8 @@ MonoBehaviour:
   dotTicks: 0
   eVocalCords: {fileID: 0}
   steppy: {fileID: 0}
-  shootyShoot: {fileID: 0}
-  swingSword: {fileID: 0}
+  attack1: {fileID: 0}
+  attack2: {fileID: 0}
   hurtAagh: {fileID: 0}
   hurtHoogh: {fileID: 0}
   hurtOugh: {fileID: 0}
@@ -2476,8 +2476,8 @@ MonoBehaviour:
   dotTicks: 0
   eVocalCords: {fileID: 0}
   steppy: {fileID: 0}
-  shootyShoot: {fileID: 0}
-  swingSword: {fileID: 0}
+  attack1: {fileID: 0}
+  attack2: {fileID: 0}
   hurtAagh: {fileID: 0}
   hurtHoogh: {fileID: 0}
   hurtOugh: {fileID: 0}
@@ -11861,8 +11861,8 @@ MonoBehaviour:
   dotTicks: 0
   eVocalCords: {fileID: 832721895}
   steppy: {fileID: 8300000, guid: b6adb1ca50898e44987bb6a0f1161e05, type: 3}
-  shootyShoot: {fileID: 8300000, guid: 3c2d1c0e82aeb8e4f9afeaeac9f56761, type: 3}
-  swingSword: {fileID: 0}
+  attack1: {fileID: 8300000, guid: 3c2d1c0e82aeb8e4f9afeaeac9f56761, type: 3}
+  attack2: {fileID: 0}
   hurtAagh: {fileID: 8300000, guid: f0d8e70fffb451b418deadef295ce41a, type: 3}
   hurtHoogh: {fileID: 8300000, guid: 27b6e8e0f649ad3439e447c34e17d750, type: 3}
   hurtOugh: {fileID: 8300000, guid: c2e0ac681bd891241b7dd2f9b0781f19, type: 3}

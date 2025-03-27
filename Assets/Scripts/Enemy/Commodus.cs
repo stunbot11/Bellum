@@ -67,6 +67,7 @@ public class Commodus : MonoBehaviour
         switch (pendingAttack)
         {
             case 1: // single shot
+                enemyController.eVocalCords.PlayOneShot(enemyController.attack1);
                 GameObject p = Instantiate(arrow, transform.position, Quaternion.identity, null);
                 ProjectileHandler projectileData = p.GetComponent<ProjectileHandler>();
                 p.GetComponent<Rigidbody2D>().rotation = ang1;
@@ -83,6 +84,7 @@ public class Commodus : MonoBehaviour
                 {
                     float ang = Mathf.Lerp(ang1 - 45, ang1 + 45, (i / (float)tripNum));
                     print(ang);
+                    enemyController.eVocalCords.PlayOneShot(enemyController.attack1);
                     GameObject p1 = Instantiate(arrow, transform.position, Quaternion.identity, null);
                     p1.GetComponent<Rigidbody2D>().rotation = ang;
                     ProjectileHandler projectileData1 = p1.GetComponent<ProjectileHandler>();
@@ -112,6 +114,7 @@ public class Commodus : MonoBehaviour
         for (int i = 0; i < burstNum; i++)
         {
             yield return new WaitForSeconds(burstSpeed);
+            enemyController.eVocalCords.PlayOneShot(enemyController.attack1);
             GameObject p = Instantiate(arrow, transform.position, Quaternion.identity, null);
             p.GetComponent<Rigidbody2D>().rotation = ang1;
             ProjectileHandler projectileData = p.GetComponent<ProjectileHandler>();
