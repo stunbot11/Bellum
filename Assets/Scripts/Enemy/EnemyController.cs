@@ -32,6 +32,7 @@ public class EnemyController : MonoBehaviour
     public AudioClip hurtAagh;
     public AudioClip hurtHoogh;
     public AudioClip hurtOugh;
+    public AudioClip netHit;
     private bool canSteppy = true;
     private int pickYourPoison;
 
@@ -111,6 +112,7 @@ public class EnemyController : MonoBehaviour
                         break;
                 }
         }
+        else eVocalCords.PlayOneShot(netHit);
         StartCoroutine(hitEffectStop());
         health -= (int)(dmgType == "DoT" ? damage : (damage * (gameManager.classType == 1 && player.GetComponent<PlayerController>().upgrades[0] >= 3 && inDoT ? 1.5f : 1)));
         if (health <= 0)

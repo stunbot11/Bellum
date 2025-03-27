@@ -368,6 +368,7 @@ MonoBehaviour:
   hurtAagh: {fileID: 0}
   hurtHoogh: {fileID: 0}
   hurtOugh: {fileID: 0}
+  netHit: {fileID: 8300000, guid: a322bb9bea92c97409d120e0b7810c51, type: 3}
   angle: 0
   distance: 0
 --- !u!114 &77340928
@@ -2139,6 +2140,7 @@ MonoBehaviour:
   hurtAagh: {fileID: 0}
   hurtHoogh: {fileID: 0}
   hurtOugh: {fileID: 0}
+  netHit: {fileID: 8300000, guid: a322bb9bea92c97409d120e0b7810c51, type: 3}
   angle: 0
   distance: 0
 --- !u!60 &273770218
@@ -2481,6 +2483,7 @@ MonoBehaviour:
   hurtAagh: {fileID: 0}
   hurtHoogh: {fileID: 0}
   hurtOugh: {fileID: 0}
+  netHit: {fileID: 8300000, guid: a322bb9bea92c97409d120e0b7810c51, type: 3}
   angle: 0
   distance: 0
 --- !u!60 &363483475
@@ -11866,6 +11869,7 @@ MonoBehaviour:
   hurtAagh: {fileID: 8300000, guid: f0d8e70fffb451b418deadef295ce41a, type: 3}
   hurtHoogh: {fileID: 8300000, guid: 27b6e8e0f649ad3439e447c34e17d750, type: 3}
   hurtOugh: {fileID: 8300000, guid: c2e0ac681bd891241b7dd2f9b0781f19, type: 3}
+  netHit: {fileID: 8300000, guid: a322bb9bea92c97409d120e0b7810c51, type: 3}
   angle: 0
   distance: 0
 --- !u!58 &1211185859
