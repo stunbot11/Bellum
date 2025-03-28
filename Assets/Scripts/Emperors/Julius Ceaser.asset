@@ -10,17 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0be1303181aa86f4b866165c2f821454, type: 3}
-  m_Name: Commodus
+  m_Name: Julius Ceaser
   m_EditorClassIdentifier: 
-  emperorName: Commodus
-  bossEffectDiscription: Increases boss hp and bosses speed.
-  arenaEffectDiscription: An Elephant appears and acts as another enemy for the player
-    to fight.
-  increaseDamage: 0
-  increaseHealth: 1
-  increaseSpeed: 1
+  emperorName: Julius Caeser
+  bossEffectDiscription: Increases boss attack damage and lowers the hp of the player
+    character.
+  arenaEffectDiscription: Horses run from one side of the coliseum to the other side.
+    The player gets damaged if they get hit by the horses.
+  increaseDamage: 1
+  increaseHealth: 0
+  increaseSpeed: 0
   bossEffectStrength: 1
   decreaseDamage: 0
-  decreaseHealth: 0
+  decreaseHealth: 1
   decreaseSpeed: 0
   playerEffectStrength: 1

@@ -9,9 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 0be1303181aa86f4b866165c2f821454, type: 3}
   m_Name: Constantine the Great
-  m_EditorClassIdentifier: Assembly-CSharp::EmperorType
-  emperor: 0
-  bossEffect: 
-  arenaEffect: 
+  m_EditorClassIdentifier: 
+  emperorName: Constantine the Great
+  bossEffectDiscription: Debuffs player characters speed and attack damage.
+  arenaEffectDiscription: Puddles of water appear in a pattern that hurt the player
+    if crossed.
+  increaseDamage: 0
+  increaseHealth: 0
+  increaseSpeed: 0
+  bossEffectStrength: 1
+  decreaseDamage: 0
+  decreaseHealth: 0
+  decreaseSpeed: 0
+  playerEffectStrength: 1

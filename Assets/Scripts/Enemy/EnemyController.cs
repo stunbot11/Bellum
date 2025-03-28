@@ -13,13 +13,14 @@ public class EnemyController : MonoBehaviour
     public bool goingToTarget;
 
     [Header("Stats")]
+    [HideInInspector] public float effectMod;
     public int health;
     public float speed;
     public float speedMod = 1;
 
-    public bool canAttack = true;
-    public bool canMove = true;
-    public bool imbolized;
+    [HideInInspector] public bool canAttack = true;
+    [HideInInspector] public bool canMove = true;
+    [HideInInspector] public bool imbolized;
 
     private bool inDoT;
     public int dotTicks;
@@ -49,6 +50,8 @@ public class EnemyController : MonoBehaviour
         health = gameManager.challenges[1] ? health * 2 : health;
         canMove = true;
         StartCoroutine(goToTime());
+        speed = gameManager.activeEmperor.increaseSpeed ? speed * gameManager.activeEmperor.bossEffectStrength : speed;
+        health = gameManager.activeEmperor.increaseHealth ? Mathf.RoundToInt(health * gameManager.activeEmperor.bossEffectStrength) : health;
     }
 
     private void Update()

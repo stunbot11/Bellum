@@ -10,15 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0be1303181aa86f4b866165c2f821454, type: 3}
-  m_Name: Commodus
+  m_Name: yippeee
   m_EditorClassIdentifier: 
-  emperorName: Commodus
-  bossEffectDiscription: Increases boss hp and bosses speed.
-  arenaEffectDiscription: An Elephant appears and acts as another enemy for the player
-    to fight.
+  emperorName: 
+  bossEffectDiscription: 
+  arenaEffectDiscription: 
   increaseDamage: 0
-  increaseHealth: 1
-  increaseSpeed: 1
+  increaseHealth: 0
+  increaseSpeed: 0
   bossEffectStrength: 1
   decreaseDamage: 0
   decreaseHealth: 0
