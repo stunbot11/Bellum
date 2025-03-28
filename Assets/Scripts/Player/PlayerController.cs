@@ -105,6 +105,9 @@ public class PlayerController : MonoBehaviour
     {
         health += (upgrades[2] > 1 ? health / 4 : 0);
         maxHealth += (upgrades[2] > 1 ? maxHealth / 4 : 0);
+        speed = gameManager.activeEmperor.decreaseSpeed ? speed * gameManager.activeEmperor.playerEffectStrength : speed;
+        health = gameManager.activeEmperor.decreaseHealth ? Mathf.RoundToInt(health * gameManager.activeEmperor.playerEffectStrength) : health;
+        damage = gameManager.activeEmperor.decreaseDamage ? Mathf.RoundToInt(damage * gameManager.activeEmperor.playerEffectStrength) : damage;
 
         move.action.Enable();
         primaryButton.action.started += primary;
