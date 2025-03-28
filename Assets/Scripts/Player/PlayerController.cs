@@ -81,6 +81,7 @@ public class PlayerController : MonoBehaviour
     public AudioClip hurtOugh;
     public AudioClip swingSword;
     public AudioClip shootBow;
+    public AudioClip blockAttack;
     private bool canSteppy;
     private int pickYourPoison;
 
@@ -191,10 +192,14 @@ public class PlayerController : MonoBehaviour
     {
         if (iframes < 0)
         {
-            if (blocking && chargeTime <= .3)
+            if (blocking)
             {
-                print("perfect block");
-                iframes = .15f;
+                pVocalCords.PlayOneShot(blockAttack);
+                if (chargeTime <= .3)
+                {
+                    print("perfect block");
+                    iframes = .15f;
+                }
             }
             else if (!dodgeing)
             {

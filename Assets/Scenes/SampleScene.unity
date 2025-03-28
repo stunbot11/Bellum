@@ -2898,13 +2898,14 @@ MonoBehaviour:
   upgrades: 000000000000000000000000
   tripArrowCount: 3
   hitEffect: {fileID: 1319581403}
-  pVocalCords: {fileID: 1753687150}
+  pVocalCords: {fileID: 0}
   step: {fileID: 8300000, guid: 8d6c8a504c1a12042bfc79b7d72452f3, type: 3}
   hurtHoogh: {fileID: 8300000, guid: 72f8264e5bb39164a9f8c2cc2bd4bf66, type: 3}
   hurtAagh: {fileID: 8300000, guid: e24eee20f1679d54c81baeddb48a8214, type: 3}
   hurtOugh: {fileID: 8300000, guid: 42e1b2fd9b7f7a04e98c89527e58160d, type: 3}
   swingSword: {fileID: 8300000, guid: 8cdb96fe52a491e4ea0cd93cf3604f28, type: 3}
   shootBow: {fileID: 8300000, guid: 73d8c0cfd1485ae4b8d7f4659a8c7452, type: 3}
+  blockAttack: {fileID: 8300000, guid: 21b98f32662d9ac428b84200f24f3dbc, type: 3}
   susytime: 0
 --- !u!212 &428950514
 SpriteRenderer:
@@ -15133,12 +15134,12 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 3554b3f8dbc073848b065500a3a8793a, type: 3}
+  m_Resource: {fileID: 8300000, guid: 3554b3f8dbc073848b065500a3a8793a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
