@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Runtime.CompilerServices;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -127,6 +125,8 @@ public class PlayerController : MonoBehaviour
         timeSinceAction += Time.deltaTime;
         if (!dodgeing && health > 0)
             rb.linearVelocity = move.action.ReadValue<Vector2>() * speed * ((blocking || (gameManager.classType == 2 && primaryButton.action.inProgress)) ? .5f : 1) * (upgrades[0] > 0 ? 1.25f : 1);
+        else if (health <= 0)
+            rb.linearVelocity = Vector2.zero;
 
         if (rb.linearVelocity != Vector2.zero && !dodgeing)
         {
@@ -140,7 +140,7 @@ public class PlayerController : MonoBehaviour
         {
             if (chargeTime < 4)
                 chargeTime += Time.deltaTime * (gameManager.classType == 2 && upgrades[0] > 0 ? 1.25f : 1) * (gameManager.classType == 1 && upgrades[1] > 1 ? .75f : 1);
-            else
+            else if (gameManager.classType == 2)
                 negCharge -= Time.deltaTime;
         }
         else
@@ -198,6 +198,7 @@ public class PlayerController : MonoBehaviour
             if (blocking)
             {
                 pVocalCords.PlayOneShot(blockAttack);
+                iframes = .3f;
                 if (chargeTime <= .3)
                 {
                     print("perfect block");
@@ -206,7 +207,7 @@ public class PlayerController : MonoBehaviour
             }
             else if (!dodgeing)
             {
-                health -= blocking ? damage / (gameManager.classType == 0 && upgrades[1] > 0 ? 8 : 4) : damage;
+                health -= Mathf.RoundToInt((blocking ? damage / (gameManager.classType == 0 && upgrades[1] > 0 ? 8 : 4) : damage) * (gameManager.activeEmperor.increaseDamage ? gameManager.activeEmperor.bossEffectStrength : 1));
                 pickYourPoison = Random.Range(1, 3);
 
                 switch (pickYourPoison)

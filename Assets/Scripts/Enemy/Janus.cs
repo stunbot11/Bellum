@@ -13,7 +13,8 @@ public class Janus : MonoBehaviour
     private bool spearThrown;
     public float spearSpeed;
 
-
+    public float swordAtkRange;
+    public float spearAtkRange;
     public int damage;
 
     private void Start()
@@ -30,6 +31,9 @@ public class Janus : MonoBehaviour
             thrownSpear = null;
             enemyController.targetOveride = false;
         }
+
+        if (enemyController.canAttack && !spearThrown && Vector2.Distance(transform.position, enemyController.player.transform.position) <= (!phase ? swordAtkRange : spearAtkRange))
+            StartCoroutine(attack());
     }
 
     private IEnumerator attack()
@@ -47,10 +51,18 @@ public class Janus : MonoBehaviour
             yield return new WaitForSeconds(.1f);
             spearHitBox.SetActive(false);
         }
+        StartCoroutine(enemyController.cooldown(.5f));
+    }
+
+    IEnumerator phaseTime()
+    {
+        yield return new WaitForSeconds(Random.Range(25, 35f));
+        StartCoroutine(switchPhase());
     }
 
     private IEnumerator switchPhase()
     {
+        print("switched phase");
         //flip coin anim
         bool side = Random.Range(0, 2) == 0; // if rolls 0 goes to sword phase
         yield return new WaitForSeconds(.5f);
@@ -91,5 +103,6 @@ public class Janus : MonoBehaviour
             enemyController.targetOveride = true;
             enemyController.target = thrownSpear.transform.position;
         }
+        StartCoroutine(phaseTime());
     }
 }

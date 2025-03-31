@@ -49,6 +49,7 @@ public class EnemyController : MonoBehaviour
         gameManager.totalBosses++;
         health = gameManager.challenges[1] ? health * 2 : health;
         canMove = true;
+        canAttack = true;
         StartCoroutine(goToTime());
         speed = gameManager.activeEmperor.increaseSpeed ? speed * gameManager.activeEmperor.bossEffectStrength : speed;
         health = gameManager.activeEmperor.increaseHealth ? Mathf.RoundToInt(health * gameManager.activeEmperor.bossEffectStrength) : health;
