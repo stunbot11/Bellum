@@ -11,65 +11,61 @@ public class LeaderBoard : MonoBehaviour
     public float time;
     public float challengesMod;
 
-    private int place;
+    public int place;
 
     public TextMeshProUGUI[] scores;
 
-    void calculateScore()
+    public void calculateScore()
     {
         score = (health * 10 + Mathf.Lerp(5000, 0, time / 200)) * challengesMod;
     }
 
-    void getPlace()
+    public void getPlace()
     {
-        for (int i = 1; score > PlayerPrefs.GetInt("Score" + i); i++)
+        place = 6;
+        for (int i = 5; score > PlayerPrefs.GetInt("Score" + i) && i != 0; i--)
         {
-            place++;
+            place--;
         }
     }
 
-    void saveScore()
+    public void setScore()
     {
-        PlayerPrefs.SetInt("Score1", Mathf.RoundToInt(score));
-        PlayerPrefs.SetInt("Score2", Mathf.RoundToInt(score));
-        PlayerPrefs.SetInt("Score3", Mathf.RoundToInt(score));
-        PlayerPrefs.SetInt("Score4", Mathf.RoundToInt(score));
-        PlayerPrefs.SetInt("Score5", Mathf.RoundToInt(score));
-
-        if (place == 5)
+        for (int i = 5; i >= place; i--)
         {
-            PlayerPrefs.SetInt("Score1", Mathf.RoundToInt(score));
-            PlayerPrefs.SetString("Name1", playerName);
-
-            for (int i = 5; i < place; i--)
-            {
-
-            }
+                PlayerPrefs.SetInt("Score" + i, PlayerPrefs.GetInt("Score" + (i - 1)));
+                PlayerPrefs.SetString("Name" + i, PlayerPrefs.GetString("Name" + (i - 1)));
         }
+        PlayerPrefs.SetInt("Score" + place, Mathf.RoundToInt(score));
+        PlayerPrefs.SetString("Name" + place, playerName);
 
         PlayerPrefs.Save();
     }
 
-    void getScores()
-    {
-        PlayerPrefs.GetInt("Score1");
-        PlayerPrefs.GetInt("Score2");
-        PlayerPrefs.GetInt("Score3");
-        PlayerPrefs.GetInt("Score4");
-        PlayerPrefs.GetInt("Score5");
-
-        PlayerPrefs.GetString("Name1");
-        PlayerPrefs.GetString("Name2");
-        PlayerPrefs.GetString("Name3");
-        PlayerPrefs.GetString("Name4");
-        PlayerPrefs.GetString("Name5");
-    }
-
-    void setLeaderBoard()
+    public void setLeaderBoard()
     {
         for (int i = 0; i < scores.Length; i++)
         {
-            scores[i].text = PlayerPrefs.GetString("Name" + (i + 1)) + "-----" + PlayerPrefs.GetInt("Score" + (i + 1));
+            scores[i].text = PlayerPrefs.GetString("Name" + (i + 1)) + " ----- " + PlayerPrefs.GetInt("Score" + (i + 1));
         }
+    }
+
+    public void deletePlayer()
+    {
+        PlayerPrefs.DeleteAll();
+    }
+
+    public void hardSet()
+    {
+        PlayerPrefs.SetInt("Score1", 10000);
+        PlayerPrefs.SetString("Name1", "aaa");
+        PlayerPrefs.SetInt("Score2", 7000);
+        PlayerPrefs.SetString("Name2", "sss");
+        PlayerPrefs.SetInt("Score3", 5000);
+        PlayerPrefs.SetString("Name3", "ddd");
+        PlayerPrefs.SetInt("Score4", 3000);
+        PlayerPrefs.SetString("Name4", "fff");
+        PlayerPrefs.SetInt("Score5", 1000);
+        PlayerPrefs.SetString("Name5", "ggg");
     }
 }
