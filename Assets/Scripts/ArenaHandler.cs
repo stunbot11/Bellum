@@ -14,8 +14,6 @@ public class ArenaHandler : MonoBehaviour
     public AudioClip theLionsDen;
     public AudioClip commotion;
     public AudioClip janusFundamentum;
-    public AudioClip janusSinistro;
-    public AudioClip janusDextrum;
 
     private void Start()
     {
