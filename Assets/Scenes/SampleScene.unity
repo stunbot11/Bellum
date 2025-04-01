@@ -273,14 +273,14 @@ MonoBehaviour:
   canMove: 1
   imbolized: 0
   dotTicks: 0
-  eVocalCords: {fileID: 0}
+  eVocalCords: {fileID: 1753687150}
   steppy: {fileID: 0}
   attack1: {fileID: 8300000, guid: e3277eb23718c4d419da7b078f5b2ab1, type: 3}
   attack2: {fileID: 0}
   hurtAagh: {fileID: 8300000, guid: b4f6741214bcd0d48951693d79525856, type: 3}
   hurtHoogh: {fileID: 8300000, guid: 6e2c661079f6dd44e9eee3551199c344, type: 3}
   hurtOugh: {fileID: 8300000, guid: 61dda1290adc72a47bae30425a7adbea, type: 3}
-  netHit: {fileID: 0}
+  netHit: {fileID: 8300000, guid: a322bb9bea92c97409d120e0b7810c51, type: 3}
   angle: 0
   distance: 0
 --- !u!50 &67232405
