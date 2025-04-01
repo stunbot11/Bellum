@@ -2058,6 +2058,11 @@ MonoBehaviour:
   Commodus: {fileID: 1211185855}
   Janus: {fileID: 67232401}
   door: {fileID: 1766397621}
+  theLionsDen: {fileID: 8300000, guid: 3554b3f8dbc073848b065500a3a8793a, type: 3}
+  commotion: {fileID: 0}
+  janusFundamentum: {fileID: 8300000, guid: 8fd81081c9c5c1847b23930d23582431, type: 3}
+  janusSinistro: {fileID: 8300000, guid: cf793e3a34a0996478b3898678a8f435, type: 3}
+  janusDextrum: {fileID: 0}
 --- !u!61 &271670701
 BoxCollider2D:
   m_ObjectHideFlags: 0
