@@ -23,11 +23,22 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public int bossesDead;
 
     public Image playerHealthBar;
+    public bool bossActive;
+
+    [HideInInspector] public int health;
+    [HideInInspector] public float time;
+    [HideInInspector] public int activeChallenges;
 
     private void Start()
     {
         DontDestroyOnLoad(gameObject); 
         eventSystem = GameObject.Find("EventSystem").GetComponent<EventSystem>();
+    }
+
+    private void Update()
+    {
+        if (bossActive)
+            time += Time.deltaTime;
     }
 
     public void start()
@@ -65,5 +76,20 @@ public class GameManager : MonoBehaviour
         currentMainMenu = menu;
 
         eventSystem.SetSelectedGameObject(GameObject.Find(menu == 0 ? "start" : "Challenges Back"));
+    }
+
+    public void leaderBoard()
+    {
+        for (int i = 0; i < challenges.Length; i++)
+        {
+            if (challenges[i] == true)
+                activeChallenges++;
+        }
+        SceneManager.LoadScene("Leaderboard");
+    }
+
+    public void deleteSave()
+    {
+        PlayerPrefs.DeleteAll();
     }
 }

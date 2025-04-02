@@ -165,6 +165,7 @@ public class PlayerController : MonoBehaviour
 
         if (gameManager.bossesDead >= gameManager.totalBosses && gameManager.totalBosses != 0)
         {
+            gameManager.bossActive = false;
             Color tempScreen = winScreen.color;
             tempScreen.a += Time.deltaTime / 3;
             winScreen.color = tempScreen;
@@ -173,7 +174,7 @@ public class PlayerController : MonoBehaviour
             tempText.a += Time.deltaTime / 3;
             winText.color = tempText;
             if (tempScreen.a - (2 / 3) > 1)
-                gameManager.menu();
+                gameManager.leaderBoard();
         }
 
         if (canDodge < (upgrades[1] > 1 ? 2 : 1) && !chargingDodge)

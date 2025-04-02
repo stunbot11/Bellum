@@ -44,7 +44,7 @@ public class ArenaHandler : MonoBehaviour
                     EC.eVocalCords.PlayOneShot(janusFundamentum);
                     break;
             }
-            
+            gameManager.bossActive = true;
             Destroy(this);
         }
     }
