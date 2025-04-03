@@ -247,7 +247,7 @@ MonoBehaviour:
   spearAtkRange: 4.1
   damage: 2
   janusSinistro: {fileID: 8300000, guid: cf793e3a34a0996478b3898678a8f435, type: 3}
-  janusDextrum: {fileID: 0}
+  janusDextrum: {fileID: 8300000, guid: 359cee2b0f82f5e48a9d99d3f88acda8, type: 3}
 --- !u!114 &67232404
 MonoBehaviour:
   m_ObjectHideFlags: 0
