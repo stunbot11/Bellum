@@ -166,6 +166,7 @@ public class PlayerController : MonoBehaviour
         if (gameManager.bossesDead >= gameManager.totalBosses && gameManager.totalBosses != 0)
         {
             gameManager.bossActive = false;
+            gameManager.health = health;
             Color tempScreen = winScreen.color;
             tempScreen.a += Time.deltaTime / 3;
             winScreen.color = tempScreen;

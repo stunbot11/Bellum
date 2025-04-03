@@ -86,6 +86,7 @@ public class Janus : MonoBehaviour
         }
         else // switch to spear
         {
+            print("Spear");
             enemyController.eVocalCords.PlayOneShot(janusSinistro);
             enemyController.canAttack = false;
             enemyController.canMove = false;

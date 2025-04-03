@@ -25,9 +25,9 @@ public class GameManager : MonoBehaviour
     public Image playerHealthBar;
     public bool bossActive;
 
-    [HideInInspector] public int health;
-    [HideInInspector] public float time;
-    [HideInInspector] public int activeChallenges;
+     public int health;
+     public float time;
+     public int activeChallenges;
 
     private void Start()
     {
