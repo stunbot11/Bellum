@@ -2976,6 +2976,8 @@ MonoBehaviour:
   swingSword: {fileID: 8300000, guid: 8cdb96fe52a491e4ea0cd93cf3604f28, type: 3}
   shootBow: {fileID: 8300000, guid: 73d8c0cfd1485ae4b8d7f4659a8c7452, type: 3}
   blockAttack: {fileID: 8300000, guid: 21b98f32662d9ac428b84200f24f3dbc, type: 3}
+  victory: {fileID: 8300000, guid: 58dc231c3820b854bb7b26bc4dc90e98, type: 3}
+  defeat: {fileID: 8300000, guid: aed803e5816173a4f8d480f0c2226656, type: 3}
   susytime: 0
 --- !u!212 &428950514
 SpriteRenderer:

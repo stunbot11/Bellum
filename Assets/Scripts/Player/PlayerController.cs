@@ -80,6 +80,8 @@ public class PlayerController : MonoBehaviour
     public AudioClip swingSword;
     public AudioClip shootBow;
     public AudioClip blockAttack;
+    public AudioClip victory;
+    public AudioClip defeat;
     private bool canSteppy;
     private int pickYourPoison;
 
@@ -152,6 +154,7 @@ public class PlayerController : MonoBehaviour
 
         if (health <= 0)
         {
+            pVocalCords.PlayOneShot(defeat);
             Color tempScreen = fadeScreen.color;
             tempScreen.a += Time.deltaTime / 3;
             fadeScreen.color = tempScreen;
@@ -166,6 +169,7 @@ public class PlayerController : MonoBehaviour
         if (gameManager.bossesDead >= gameManager.totalBosses && gameManager.totalBosses != 0)
         {
             gameManager.bossActive = false;
+            pVocalCords.PlayOneShot(victory);
             gameManager.health = health;
             Color tempScreen = winScreen.color;
             tempScreen.a += Time.deltaTime / 3;
