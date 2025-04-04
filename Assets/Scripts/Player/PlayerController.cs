@@ -177,7 +177,7 @@ public class PlayerController : MonoBehaviour
             gameManager.bossActive = false;
             if (canJingle)
             {
-                pVocalCords.PlayOneShot(defeat);
+                pVocalCords.PlayOneShot(victory);
                 canJingle = false;
             }
             gameManager.health = health;
