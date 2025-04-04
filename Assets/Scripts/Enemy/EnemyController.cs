@@ -121,6 +121,7 @@ public class EnemyController : MonoBehaviour
         health -= (int)(dmgType == "DoT" ? damage : (damage * (gameManager.classType == 1 && player.GetComponent<PlayerController>().upgrades[0] >= 3 && inDoT ? 1.5f : 1)));
         if (health <= 0)
         {
+            eVocalCords.Pause();
             gameManager.bossesDead++;
             Destroy(this.gameObject);
         }

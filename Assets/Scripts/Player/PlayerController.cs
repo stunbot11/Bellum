@@ -82,12 +82,14 @@ public class PlayerController : MonoBehaviour
     public AudioClip blockAttack;
     public AudioClip victory;
     public AudioClip defeat;
-    private bool canSteppy;
+    private bool canSteppy = true;
+    private bool canJingle = true;
     private int pickYourPoison;
 
     private void Start()
     {
         move.action.Disable();
+        canJingle = true;
         rb = GetComponent<Rigidbody2D>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         gameManager.playerController = this;
@@ -154,8 +156,11 @@ public class PlayerController : MonoBehaviour
 
         if (health <= 0)
         {
-            pVocalCords.Stop();
-            pVocalCords.PlayOneShot(defeat);
+            if (canJingle)
+            {
+                pVocalCords.PlayOneShot(defeat);
+                canJingle = false;
+            }
             Color tempScreen = fadeScreen.color;
             tempScreen.a += Time.deltaTime / 3;
             fadeScreen.color = tempScreen;
@@ -170,8 +175,11 @@ public class PlayerController : MonoBehaviour
         if (gameManager.bossesDead >= gameManager.totalBosses && gameManager.totalBosses != 0)
         {
             gameManager.bossActive = false;
-            pVocalCords.Stop();
-            pVocalCords.PlayOneShot(victory);
+            if (canJingle)
+            {
+                pVocalCords.PlayOneShot(defeat);
+                canJingle = false;
+            }
             gameManager.health = health;
             Color tempScreen = winScreen.color;
             tempScreen.a += Time.deltaTime / 3;
