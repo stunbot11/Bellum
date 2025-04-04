@@ -41,7 +41,7 @@ public class ArenaHandler : MonoBehaviour
 
                 case 3:
                     Janus.SetActive(true);
-                    EC.eVocalCords.PlayOneShot(janusFundamentum);
+                    //EC.eVocalCords.PlayOneShot(janusFundamentum);
                     break;
             }
             gameManager.bossActive = true;

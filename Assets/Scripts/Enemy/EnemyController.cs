@@ -21,6 +21,7 @@ public class EnemyController : MonoBehaviour
     [HideInInspector] public bool canAttack = true;
     [HideInInspector] public bool canMove = true;
     [HideInInspector] public bool imbolized;
+    [HideInInspector] public bool spearThrown;
 
     private bool inDoT;
     public int dotTicks;
@@ -69,7 +70,7 @@ public class EnemyController : MonoBehaviour
         else
             rb.linearVelocity = Vector2.zero;
 
-        if (Vector2.Distance(transform.position, target) <= 1 && goingToTarget)
+        if (Vector2.Distance(transform.position, target) <= 1 && goingToTarget && !spearThrown)
         {
             goingToTarget = false;
             targetOveride = false;
@@ -164,7 +165,10 @@ public class EnemyController : MonoBehaviour
     IEnumerator goToTime()
     {
         yield return new WaitForSeconds(Random.Range(4f, 10f));
-        goToRandom();
+        if (!spearThrown)
+            goToRandom();
+        else
+            StartCoroutine(goToTime());
     }
 
     IEnumerator DoT()

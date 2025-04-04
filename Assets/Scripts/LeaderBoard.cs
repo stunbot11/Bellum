@@ -28,9 +28,9 @@ public class LeaderBoard : MonoBehaviour
 
     private void Start()
     {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         if (gameManager != null)
         {
-            gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
             health = gameManager.health;
             time = gameManager.time;
             challengesMod = 1 + (.25f * gameManager.activeChallenges);
@@ -115,7 +115,7 @@ public class LeaderBoard : MonoBehaviour
     public void mainMenu()
     {
         if (gameManager != null)
-            Destroy(gameManager);
+            Destroy(gameManager.gameObject);
         SceneManager.LoadScene("Main Menu");
     }
 

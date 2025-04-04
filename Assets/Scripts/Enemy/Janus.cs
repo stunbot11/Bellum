@@ -9,8 +9,9 @@ public class Janus : MonoBehaviour
     public GameObject swordHitBox;
     public GameObject spearHitBox;
     public GameObject spear;
-    private GameObject thrownSpear;
-    private bool spearThrown;
+    public GameObject thrownSpear;
+    public bool spearThrown;
+    public bool canPickUp;
     public float spearSpeed;
 
     public float swordAtkRange;
@@ -24,16 +25,22 @@ public class Janus : MonoBehaviour
     private void Start()
     {
         enemyController = GetComponent<EnemyController>();
+        StartCoroutine(phaseTime());
     }
 
     private void Update()
     {
-        if (spearThrown && Vector2.Distance(transform.position, thrownSpear.transform.position) < .5f)
+        if (spearThrown && Vector2.Distance(transform.position, thrownSpear.transform.position) < 1f && canPickUp)
         {
             spearThrown = false;
             Destroy(thrownSpear);
             thrownSpear = null;
             enemyController.targetOveride = false;
+            enemyController.goingToTarget = false;
+            enemyController.spearThrown = false;
+            enemyController.canAttack = true;
+            canPickUp = false;
+            print("here");
         }
 
         if (enemyController.canAttack && !spearThrown && Vector2.Distance(transform.position, enemyController.player.transform.position) <= (!phase ? swordAtkRange : spearAtkRange))
@@ -90,6 +97,7 @@ public class Janus : MonoBehaviour
             enemyController.eVocalCords.PlayOneShot(janusSinistro);
             enemyController.canAttack = false;
             enemyController.canMove = false;
+            enemyController.spearThrown = true;
             spearThrown = true;
             phase = true; //gets angle for launch
             Vector2 arrowDirectionTemp = (enemyController.player.transform.position - transform.position).normalized;
@@ -104,6 +112,7 @@ public class Janus : MonoBehaviour
             thrownSpear.GetComponent<Rigidbody2D>().linearVelocity = arrowDirection * spearSpeed;
 
             yield return new WaitForSeconds(1); //waits 1 second then goes to pick up spear
+            canPickUp = true;
             thrownSpear.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
             enemyController.canMove = true;
             enemyController.targetOveride = true;
