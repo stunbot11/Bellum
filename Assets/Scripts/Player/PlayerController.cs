@@ -154,6 +154,7 @@ public class PlayerController : MonoBehaviour
 
         if (health <= 0)
         {
+            pVocalCords.Stop();
             pVocalCords.PlayOneShot(defeat);
             Color tempScreen = fadeScreen.color;
             tempScreen.a += Time.deltaTime / 3;
@@ -169,6 +170,7 @@ public class PlayerController : MonoBehaviour
         if (gameManager.bossesDead >= gameManager.totalBosses && gameManager.totalBosses != 0)
         {
             gameManager.bossActive = false;
+            pVocalCords.Stop();
             pVocalCords.PlayOneShot(victory);
             gameManager.health = health;
             Color tempScreen = winScreen.color;
