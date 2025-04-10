@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Lion : MonoBehaviour
 {
@@ -40,7 +39,7 @@ public class Lion : MonoBehaviour
             lungeATK();
         }
 
-        if ((enemyController.targetOveride ? Vector2.Distance(transform.position, enemyController.target) <= .2 : true) && !ready && pendingAttack == 4)
+        if ((enemyController.targetOveride ? Vector2.Distance(transform.position, enemyController.target) <= 1 : true) && !ready && pendingAttack == 4)
         {
             ready = true;
             enemyController.gameManager.lionReady++;
@@ -78,6 +77,7 @@ public class Lion : MonoBehaviour
                     lion1.enemyController.targetOveride = true;
                     lion1.enemyController.speedMod = 3f;
                     lion1.enemyController.target = (Vector2)enemyController.player.transform.position + Vector2.up * lungeDisMult;
+                    lion1.enemyController.spearThrown = true;
                 }
 
                 if (lion2 != null)
@@ -87,6 +87,7 @@ public class Lion : MonoBehaviour
                     lion2.enemyController.targetOveride = true;
                     lion2.enemyController.speedMod = 3f;
                     lion2.enemyController.target = (Vector2)enemyController.player.transform.position + Vector2.left * lungeDisMult;
+                    lion2.enemyController.spearThrown = true;
                 }
 
                 if (lion3 != null)
@@ -96,6 +97,7 @@ public class Lion : MonoBehaviour
                     lion3.enemyController.targetOveride = true;
                     lion3.enemyController.speedMod = 3f;
                     lion3.enemyController.target = (Vector2)enemyController.player.transform.position + Vector2.right * lungeDisMult;
+                    lion3.enemyController.spearThrown = true;
                 }
                 break;
             case 4:
@@ -114,11 +116,13 @@ public class Lion : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         ready = false;
+        enemyController.spearThrown = false;
         enemyController.gameManager.lionCheck = 0;
         enemyController.gameManager.lionReady = 0;
         enemyController.targetOveride = false;
         enemyController.speedMod = 1;
         enemyController.target = Vector2.up * 999999;
+        
         StartCoroutine(enemyController.cooldown(1, lungeHitBox));
         pendingAttack = Random.Range(1, 4);
     }

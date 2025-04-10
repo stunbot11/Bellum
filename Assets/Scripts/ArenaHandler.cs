@@ -27,16 +27,20 @@ public class ArenaHandler : MonoBehaviour
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         classes[gameManager.classType - 1].SetActive(true);
 
-        //gets each object in the obsticles empty and randomizes if they will be active or not (33% to be active)
+        //gets each object in the obsticles empty and randomizes if they will be active or not (33% * (active objects / inactive objects) to be active)
         Transform[] obT = obsticles.GetComponentsInChildren<Transform>();
         total = obT.Length;
         foreach (Transform g in obT)
         {
-            percent = .66f * (active / inactive);
+            percent = .66f * (((float)active + 1) / ((float)inactive + 1));
             float rng = Random.Range(0, 1f);
             g.gameObject.SetActive(rng > percent);
+            if (rng > percent)
+                active++;
+            else
+                inactive++;
         }
-            
+        obsticles.SetActive(true);   
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

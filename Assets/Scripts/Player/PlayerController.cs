@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
     //// upgrade path 2: faster dodge cooldown / 2 dodge charges / dodging through enemies damage them
     // Retiarius upgrades:
     //// upgrade path 1: longer attack range / wider attack range / more damage
-    //// upgrade path 2: effect-damge increase / knockback/ knockback damage
+    //// upgrade path 2: longer time netted / faster cooldown / enemies take more damage while netted
     // upgrade path 3: faster move speed / more health / more damage
     public int[] upgrades = { 0, 0, 0 };
     public int tripArrowCount = 3;
@@ -132,7 +132,7 @@ public class PlayerController : MonoBehaviour
         iframes -= Time.deltaTime;
         timeSinceAction += Time.deltaTime;
         if (!dodgeing && health > 0)
-            rb.linearVelocity = move.action.ReadValue<Vector2>() * speed * ((blocking || (gameManager.classType == 2 && primaryButton.action.inProgress)) ? .5f : 1) * (upgrades[0] > 0 ? 1.25f : 1);
+            rb.linearVelocity = move.action.ReadValue<Vector2>() * speed * ((blocking || (gameManager.classType == 2 && primaryButton.action.inProgress)) ? .5f : 1) * (upgrades[2] > 0 ? 1.25f : 1);
         else if (health <= 0)
             rb.linearVelocity = Vector2.zero;
 

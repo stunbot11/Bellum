@@ -1,9 +1,12 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Upgrades : MonoBehaviour
 {
     private PlayerController playerController;
+    public TextMeshProUGUI primaryName;
+    public TextMeshProUGUI secondaryName;
     public GameObject[] path1 = new GameObject[3];
     public GameObject[] path2 = new GameObject[3];
     public GameObject[] path3 = new GameObject[3];
@@ -20,6 +23,42 @@ public class Upgrades : MonoBehaviour
         bool1 = new bool[path1.Length + 1];
         bool2 = new bool[path2.Length + 1];
         bool3 = new bool[path3.Length + 1];
+
+        switch (playerController.gameManager.classType)
+        {
+            case 1:
+                primaryName.text = "Sword";
+                secondaryName.text = "Shield";
+                path1[0].GetComponentInChildren<TextMeshProUGUI>().text = "Sword poisons enemies";
+                path1[1].GetComponentInChildren<TextMeshProUGUI>().text = "Faster attack speed";
+                path1[2].GetComponentInChildren<TextMeshProUGUI>().text = "Enmies that are poisoned take more damage";
+                path2[0].GetComponentInChildren<TextMeshProUGUI>().text = "Blocking blocks more damage";
+                path2[1].GetComponentInChildren<TextMeshProUGUI>().text = "Perfect block is easier";
+                path2[2].GetComponentInChildren<TextMeshProUGUI>().text = "Deal more damage after perfect block";
+                break;
+
+            case 2:
+                primaryName.text = "Bow";
+                secondaryName.text = "Dodge";
+                path1[0].GetComponentInChildren<TextMeshProUGUI>().text = "Charge your arrows faster";
+                path1[1].GetComponentInChildren<TextMeshProUGUI>().text = "Arrows ignite enemies";
+                path1[2].GetComponentInChildren<TextMeshProUGUI>().text = "Shoot more arrows";
+                path2[0].GetComponentInChildren<TextMeshProUGUI>().text = "Dodge cooldown is shorter";
+                path2[1].GetComponentInChildren<TextMeshProUGUI>().text = "Gain another dodge charge";
+                path2[2].GetComponentInChildren<TextMeshProUGUI>().text = "Dodging through enemies deals damage";
+                break;
+
+            case 3:
+                primaryName.text = "Trident";
+                secondaryName.text = "Net";
+                path1[0].GetComponentInChildren<TextMeshProUGUI>().text = "Longer attack range";
+                path1[1].GetComponentInChildren<TextMeshProUGUI>().text = "Wider attack range";
+                path1[2].GetComponentInChildren<TextMeshProUGUI>().text = "More attack damage";
+                path2[0].GetComponentInChildren<TextMeshProUGUI>().text = "Enemies are immoblized for longer";
+                path2[1].GetComponentInChildren<TextMeshProUGUI>().text = "Faster cooldown for net";
+                path2[2].GetComponentInChildren<TextMeshProUGUI>().text = "Deal more damage to netted enemies";
+                break;
+        }
     }
     public void upgrade1(int num)
     {
