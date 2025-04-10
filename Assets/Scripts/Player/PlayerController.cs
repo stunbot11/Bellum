@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
     public float chargeTime;
     public float negCharge;
 
+    public GameObject pauseMenu;
+
     [Header("weapons")]
     private GameObject weapon;
     public GameObject swordHitbox;
@@ -32,6 +34,7 @@ public class PlayerController : MonoBehaviour
     public float netSpeed;
 
     [Header("Controlls")]
+    public InputActionReference pauseButton;
     public InputActionReference move;
     public InputActionReference primaryButton;
     public InputActionReference secondaryButton;
@@ -111,6 +114,7 @@ public class PlayerController : MonoBehaviour
         health = gameManager.activeEmperor.decreaseHealth ? Mathf.RoundToInt(health * gameManager.activeEmperor.playerEffectStrength) : health;
         damage = gameManager.activeEmperor.decreaseDamage ? Mathf.RoundToInt(damage * gameManager.activeEmperor.playerEffectStrength) : damage;
 
+        pauseButton.action.started += pause;
         move.action.Enable();
         primaryButton.action.started += primary;
         if (gameManager.classType == 2)
@@ -407,6 +411,28 @@ public class PlayerController : MonoBehaviour
             if (susytime > 60)
                 sisyphus.SetActive(true);
         }
+    }
+
+
+    //pause menu stuff
+    public void pause(InputAction.CallbackContext phase)
+    {
+        if (phase.started)
+        {
+            Time.timeScale = (Time.timeScale == 1 ? 0 : 1);
+            pauseMenu.SetActive(Time.timeScale == 0);
+        }
+    }
+
+    public void resume()
+    {
+        Time.timeScale = 1;
+        pauseMenu.SetActive(false);
+    }
+
+    public void menu()
+    {
+        gameManager.menu();
     }
 }
 

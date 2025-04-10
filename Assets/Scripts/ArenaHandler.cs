@@ -9,6 +9,13 @@ public class ArenaHandler : MonoBehaviour
     public GameObject Commodus;
     public GameObject Janus;
     public GameObject door;
+    public GameObject obsticles;
+
+    private int active;
+    private int inactive;
+    private int left;
+    private int total;
+    private float percent = .66f;
 
     [Header("Music")]
     public AudioClip theLionsDen;
@@ -19,6 +26,17 @@ public class ArenaHandler : MonoBehaviour
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         classes[gameManager.classType - 1].SetActive(true);
+
+        //gets each object in the obsticles empty and randomizes if they will be active or not (33% to be active)
+        Transform[] obT = obsticles.GetComponentsInChildren<Transform>();
+        total = obT.Length;
+        foreach (Transform g in obT)
+        {
+            percent = .66f * (active / inactive);
+            float rng = Random.Range(0, 1f);
+            g.gameObject.SetActive(rng > percent);
+        }
+            
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
