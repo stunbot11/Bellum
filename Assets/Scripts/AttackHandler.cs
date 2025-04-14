@@ -5,10 +5,11 @@ public class AttackHandler : MonoBehaviour
 {
     public GameObject parent;
     public int damage;
+    public bool dontUsePlayer;
 
     private void Start()
     {
-        if (parent.tag == "Player")
+        if (parent.tag == "Player" && dontUsePlayer)
             damage = parent.GetComponent<PlayerController>().damage;
     }
     private void OnTriggerEnter2D(Collider2D collision)

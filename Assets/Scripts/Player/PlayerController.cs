@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
     private GameObject weapon;
     public GameObject swordHitbox;
     public GameObject tridantHitbox;
+    public GameObject dodgeHitBox;
     public GameObject shield;
     public GameObject arrow;
     public float arrowSpeed;
@@ -50,14 +51,14 @@ public class PlayerController : MonoBehaviour
     [Header("Upgrade stuffs")]
     // Secutor upgrades:
     //// upgrade path 1: DoT / Faster Swings / Enemies take more damage while DoT is in effect (done)
-    //// upgrade path 2: blocking blocks more damage / easier perfect blocks (done) / enemies take more damage after perfect block
+    //// upgrade path 2: blocking blocks more damage / easier perfect blocks / enemies take more damage after perfect block (done)
     // Sagittarius upgrades:
-    //// upgrade path 1: faster charges / fire arrows / more arrows shot
-    //// upgrade path 2: faster dodge cooldown / 2 dodge charges / dodging through enemies damage them
+    //// upgrade path 1: faster charges / fire arrows / more arrows shot (done)
+    //// upgrade path 2: faster dodge cooldown / 2 dodge charges / dodging through enemies damage them (done)
     // Retiarius upgrades:
-    //// upgrade path 1: longer attack range / wider attack range / more damage
-    //// upgrade path 2: longer time netted / faster cooldown / enemies take more damage while netted
-    // upgrade path 3: faster move speed / more health / more damage
+    //// upgrade path 1: longer attack range / wider attack range / more damage (done)
+    //// upgrade path 2: longer time netted / faster cooldown / enemies take more damage while netted (done)
+    // upgrade path 3: faster move speed / more health / more damage (done)
     public int[] upgrades = { 0, 0, 0 };
     public int tripArrowCount = 3;
 
@@ -66,6 +67,7 @@ public class PlayerController : MonoBehaviour
     private float direction;
     private float timeSinceAction;
     private float iframes;
+    [HideInInspector] public float pBlock;
 
     private bool blocking;
     private bool chargingDodge;
@@ -113,12 +115,19 @@ public class PlayerController : MonoBehaviour
         speed = gameManager.activeEmperor.decreaseSpeed ? speed * gameManager.activeEmperor.playerEffectStrength : speed;
         health = gameManager.activeEmperor.decreaseHealth ? Mathf.RoundToInt(health * gameManager.activeEmperor.playerEffectStrength) : health;
         damage = gameManager.activeEmperor.decreaseDamage ? Mathf.RoundToInt(damage * gameManager.activeEmperor.playerEffectStrength) : damage;
+        damage = gameManager.classType == 3 && upgrades[0] > 2 ? Mathf.RoundToInt(damage * 1.25f) : damage;
 
         pauseButton.action.started += pause;
         move.action.Enable();
         primaryButton.action.started += primary;
         if (gameManager.classType == 2)
             primaryButton.action.canceled += primary;
+
+        else if (gameManager.classType == 3 && upgrades[0] > 0) //adjusts the trient based on if it is bigger or not
+        {
+            tridantHitbox.transform.localScale = new Vector2((upgrades[0] > 1 ? 1.6f : 1), 1.3f);
+            tridantHitbox.transform.localPosition = new Vector2((upgrades[0] > 1 ? 1.35f : 0), .075f);
+        }
         if (!gameManager.challenges[2])
         {
             secondaryButton.action.started += secondary;
@@ -130,6 +139,8 @@ public class PlayerController : MonoBehaviour
     {
         healthBar.fillAmount = (float)health / (float)maxHealth;
         iframes -= Time.deltaTime;
+        pBlock -= Time.deltaTime;
+        
         timeSinceAction += Time.deltaTime;
         if (!dodgeing && health > 0)
             rb.linearVelocity = move.action.ReadValue<Vector2>() * speed * ((blocking || (gameManager.classType == 2 && primaryButton.action.inProgress)) ? .5f : 1) * (upgrades[2] > 0 ? 1.25f : 1);
@@ -199,7 +210,7 @@ public class PlayerController : MonoBehaviour
         if (canDodge < (upgrades[1] > 1 ? 2 : 1) && !chargingDodge)
         {
             chargingDodge = true;
-            StartCoroutine(dodgeCooldown(.15f * (upgrades[1] > 0 ? .75f : 1)));
+            StartCoroutine(dodgeCooldown(.15f * (upgrades[1] > 0 ? .5f : 1)));
         }
     }
 
@@ -215,19 +226,20 @@ public class PlayerController : MonoBehaviour
     {
         if (iframes < 0)
         {
-            if (blocking)
+            if (blocking && chargeTime <= .3)
             {
+                print("perfect block");
+                iframes = .45f;
+                pBlock = 2f;
                 pVocalCords.PlayOneShot(blockAttack);
-                iframes = .3f;
-                if (chargeTime <= .3)
-                {
-                    print("perfect block");
-                    iframes = .15f;
-                }
             }
             else if (!dodgeing)
             {
                 health -= Mathf.RoundToInt((blocking ? damage / (gameManager.classType == 0 && upgrades[1] > 0 ? 8 : 4) : damage) * (gameManager.activeEmperor.increaseDamage ? gameManager.activeEmperor.bossEffectStrength : 1));
+                if (blocking)
+                {
+                    pVocalCords.PlayOneShot(blockAttack);
+                }
                 pickYourPoison = Random.Range(1, 3);
 
                 switch (pickYourPoison)
@@ -363,8 +375,11 @@ public class PlayerController : MonoBehaviour
                     if (phase.started && canDodge > 0)
                     {
                         dodgeing = true;
+                        GetComponent<CircleCollider2D>().isTrigger = true;
                         canDodge--;
                         rb.linearVelocity = move.action.ReadValue<Vector2>() * speed * 3;
+                        if (upgrades[1] > 2)
+                            dodgeHitBox.SetActive(true);
                     }
                     break;
 
@@ -387,17 +402,19 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator dodgeCooldown(float time)
     {
-        yield return new WaitForSeconds(time);
+        yield return new WaitForSeconds(.5f);
         dodgeing = false;
+        dodgeHitBox.SetActive(false);
+        GetComponent<CircleCollider2D>().isTrigger = false;
 
-        yield return new WaitForSeconds(.75f);
+        yield return new WaitForSeconds(time);
         canDodge++;
         chargingDodge = false;
     }
 
     private IEnumerator netCoolDown()
     {
-        yield return new WaitForSeconds(15);
+        yield return new WaitForSeconds(upgrades[1] > 1 ? 10 : 15);
         canNet = true;
     }
 
