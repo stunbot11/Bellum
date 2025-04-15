@@ -109,6 +109,8 @@ public class Lion : MonoBehaviour
     {
         enemyController.rb.linearVelocity = (thisLionNum == 1 ? Vector2.down : (thisLionNum == 2 ? Vector2.right : Vector2.left)) * lungeSpeed;
         lungeHitBox.SetActive(true);
+        GetComponent<PolygonCollider2D>().excludeLayers = 8;
+        GetComponent<PolygonCollider2D>().excludeLayers += 64;
         StartCoroutine(lungeTime(2f));
     }    
 
@@ -122,7 +124,7 @@ public class Lion : MonoBehaviour
         enemyController.targetOveride = false;
         enemyController.speedMod = 1;
         enemyController.target = Vector2.up * 999999;
-        
+        GetComponent<PolygonCollider2D>().excludeLayers = 0;
         StartCoroutine(enemyController.cooldown(1, lungeHitBox));
         pendingAttack = Random.Range(1, 4);
     }

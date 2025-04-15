@@ -46,7 +46,8 @@ public class PlayerController : MonoBehaviour
     public int maxHealth;
     public int health;
     public float speed;
-    public int damage;
+    [HideInInspector] public int damage;
+    public int[] classDmg;
 
     [Header("Upgrade stuffs")]
     // Secutor upgrades:
@@ -98,6 +99,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         gameManager.playerController = this;
+        damage = classDmg[gameManager.classType - 1];
         weapon = GameObject.Find("sword");
 
         damage = Mathf.RoundToInt((gameManager.challenges[0] ? damage / 2 : damage) * (upgrades[2] > 2 ? 1.25f : 1));
@@ -116,6 +118,7 @@ public class PlayerController : MonoBehaviour
         health = gameManager.activeEmperor.decreaseHealth ? Mathf.RoundToInt(health * gameManager.activeEmperor.playerEffectStrength) : health;
         damage = gameManager.activeEmperor.decreaseDamage ? Mathf.RoundToInt(damage * gameManager.activeEmperor.playerEffectStrength) : damage;
         damage = gameManager.classType == 3 && upgrades[0] > 2 ? Mathf.RoundToInt(damage * 1.25f) : damage;
+        canDodge = (upgrades[1] > 1 ? 2 : 1);
 
         pauseButton.action.started += pause;
         move.action.Enable();
@@ -205,12 +208,6 @@ public class PlayerController : MonoBehaviour
             winText.color = tempText;
             if (tempScreen.a - (2 / 3) > 1)
                 gameManager.leaderBoard();
-        }
-
-        if (canDodge < (upgrades[1] > 1 ? 2 : 1) && !chargingDodge)
-        {
-            chargingDodge = true;
-            StartCoroutine(dodgeCooldown(.15f * (upgrades[1] > 0 ? .5f : 1)));
         }
     }
 
@@ -374,8 +371,9 @@ public class PlayerController : MonoBehaviour
                 case 2: //dodge
                     if (phase.started && canDodge > 0)
                     {
+                        StartCoroutine(dodgeCooldown(upgrades[1] > 0 ? .75f : 1.5f));
                         dodgeing = true;
-                        GetComponent<CircleCollider2D>().isTrigger = true;
+                        GetComponent<CircleCollider2D>().excludeLayers = 8;
                         canDodge--;
                         rb.linearVelocity = move.action.ReadValue<Vector2>() * speed * 3;
                         if (upgrades[1] > 2)
@@ -402,14 +400,13 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator dodgeCooldown(float time)
     {
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(.15f);
         dodgeing = false;
         dodgeHitBox.SetActive(false);
-        GetComponent<CircleCollider2D>().isTrigger = false;
+        GetComponent<CircleCollider2D>().excludeLayers = 0;
 
         yield return new WaitForSeconds(time);
         canDodge++;
-        chargingDodge = false;
     }
 
     private IEnumerator netCoolDown()

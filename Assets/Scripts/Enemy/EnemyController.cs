@@ -4,7 +4,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     [HideInInspector] public GameObject player;
-     public bool targetOveride;
+    public bool targetOveride;
     [HideInInspector] public Vector2 target;
 
     [HideInInspector] public GameManager gameManager;
@@ -36,7 +36,7 @@ public class EnemyController : MonoBehaviour
     public AudioClip hurtOugh;
     public AudioClip netHit;
     private bool canSteppy = true;
-    private int pickYourPoison;
+    //private int pickYourPoison;
 
     [HideInInspector] public float angle;
     [HideInInspector] public float distance;
@@ -89,6 +89,7 @@ public class EnemyController : MonoBehaviour
 
     public void takeDamage(int damage, bool net = false, string dmgType = null, int ToDoT = 0)
     {
+        PlayerController playerController = gameManager.playerController;
         if (ToDoT >= dotTicks)
             dotTicks = ToDoT;
         if (net)
@@ -96,9 +97,9 @@ public class EnemyController : MonoBehaviour
         hitEffect.SetActive(true);
         if (!net)
         {
-            pickYourPoison = Random.Range(1, 3);
+            //pickYourPoison = Random.Range(1, 4);
             if (gameManager.boss == 2)
-                switch (pickYourPoison)
+                switch (Random.Range(1, 4))
                 {
                     case 1:
                         eVocalCords.PlayOneShot(hurtAagh);
@@ -112,14 +113,17 @@ public class EnemyController : MonoBehaviour
                         eVocalCords.PlayOneShot(hurtOugh);
                         break;
 
-
                     default:
                         break;
                 }
         }
         else eVocalCords.PlayOneShot(netHit);
         StartCoroutine(hitEffectStop());
-        health -= (int)(dmgType == "DoT" ? damage : (damage * (gameManager.classType == 1 && player.GetComponent<PlayerController>().upgrades[0] >= 3 && inDoT ? 1.5f : 1)));
+        float dmgBoost = 1;
+        dmgBoost += imbolized && playerController.upgrades[1] > 2 ? .75f : 0; //if imbolized increase damage if have upgrade
+        dmgBoost += gameManager.classType == 1 && playerController.upgrades[0] >= 3 && dmgType != "DoT" && inDoT ? .5f : 0; //if in dot and have upgrade increaase damage
+        dmgBoost += playerController.upgrades[1] > 2 && playerController.pBlock > 0 ? .5f : 0;
+        health -= (int)(damage * dmgBoost);
         if (health <= 0)
         {
             eVocalCords.Pause();
@@ -150,7 +154,7 @@ public class EnemyController : MonoBehaviour
 
     public IEnumerator imbolizedCooldown()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(player.GetComponent<PlayerController>().upgrades[1] > 0 ? 6 : 3);
         imbolized = false;
     }
 

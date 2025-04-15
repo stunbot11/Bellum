@@ -194,7 +194,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9181485}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LungeHitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: 67232405}
   - component: {fileID: 67232404}
   - component: {fileID: 67232403}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Janus
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -563,7 +563,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 83162809}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LungeHitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -599,7 +599,7 @@ GameObject:
   - component: {fileID: 90242798}
   - component: {fileID: 90242797}
   - component: {fileID: 90242796}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Closed Sprite Shape (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1212,7 +1212,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 160880494}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Hitboxes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1383,7 +1383,7 @@ GameObject:
   m_Component:
   - component: {fileID: 172004548}
   - component: {fileID: 172004549}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Triangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1605,7 +1605,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 226449329}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SlashHitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1773,7 +1773,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 248542894}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: hitboxes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1810,7 +1810,7 @@ GameObject:
   - component: {fileID: 258219515}
   - component: {fileID: 258219514}
   - component: {fileID: 258219513}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Closed Sprite Shape (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2287,7 +2287,7 @@ GameObject:
   - component: {fileID: 273770218}
   - component: {fileID: 273770217}
   - component: {fileID: 273770216}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Lion 3
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -2525,7 +2525,7 @@ GameObject:
   - component: {fileID: 337292378}
   - component: {fileID: 337292377}
   - component: {fileID: 337292376}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2672,7 +2672,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 345584803}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Hitboxes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2843,7 +2843,7 @@ GameObject:
   - component: {fileID: 363483475}
   - component: {fileID: 363483474}
   - component: {fileID: 363483473}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Lion 2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -3170,7 +3170,7 @@ GameObject:
   - component: {fileID: 428950511}
   - component: {fileID: 428950510}
   - component: {fileID: 428950513}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -3324,9 +3324,11 @@ MonoBehaviour:
   health: 100
   speed: 5
   damage: 5
+  classDmg: 0f0000000500000014000000
   upgrades: 000000000000000000000000
   tripArrowCount: 3
   hitEffect: {fileID: 1319581403}
+  pBlock: 0
   pVocalCords: {fileID: 519420034}
   step: {fileID: 8300000, guid: 8d6c8a504c1a12042bfc79b7d72452f3, type: 3}
   hurtHoogh: {fileID: 8300000, guid: 72f8264e5bb39164a9f8c2cc2bd4bf66, type: 3}
@@ -4164,7 +4166,7 @@ GameObject:
   m_Component:
   - component: {fileID: 494294656}
   - component: {fileID: 494294657}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4288,7 +4290,7 @@ GameObject:
   m_Component:
   - component: {fileID: 507204172}
   - component: {fileID: 507204171}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: hitEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4679,7 +4681,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 537717725}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SlashHitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4715,7 +4717,7 @@ GameObject:
   - component: {fileID: 547823530}
   - component: {fileID: 547823529}
   - component: {fileID: 547823528}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Closed Sprite Shape (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5137,7 +5139,7 @@ GameObject:
   - component: {fileID: 570264084}
   - component: {fileID: 570264083}
   - component: {fileID: 570264082}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Lion 1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -5583,7 +5585,7 @@ GameObject:
   m_Component:
   - component: {fileID: 607544054}
   - component: {fileID: 607544055}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Triangle (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5828,7 +5830,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 631913700}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Hitboxes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5863,7 +5865,7 @@ GameObject:
   m_Component:
   - component: {fileID: 638655196}
   - component: {fileID: 638655197}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Triangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5953,7 +5955,7 @@ GameObject:
   - component: {fileID: 669384268}
   - component: {fileID: 669384267}
   - component: {fileID: 669384266}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Closed Sprite Shape (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6601,7 +6603,7 @@ GameObject:
   - component: {fileID: 712286677}
   - component: {fileID: 712286676}
   - component: {fileID: 712286675}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Closed Sprite Shape (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7492,7 +7494,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 817556667}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Secutor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7526,7 +7528,7 @@ GameObject:
   m_Component:
   - component: {fileID: 820477610}
   - component: {fileID: 820477611}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Triangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7820,7 +7822,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 830352689}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BiteHitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8099,7 +8101,7 @@ GameObject:
   - component: {fileID: 949741155}
   - component: {fileID: 949741157}
   - component: {fileID: 949741156}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: dodgeHitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8397,7 +8399,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1007304660}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: weapon holder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8986,7 +8988,7 @@ GameObject:
   - component: {fileID: 1083792754}
   - component: {fileID: 1083792753}
   - component: {fileID: 1083792752}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Closed Sprite Shape (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9327,7 +9329,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1095945251}
   - component: {fileID: 1095945250}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Triangle (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9416,7 +9418,7 @@ GameObject:
   - component: {fileID: 1115537148}
   - component: {fileID: 1115537147}
   - component: {fileID: 1115537146}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9563,7 +9565,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1127114761}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9595,7 +9597,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1138381496}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BiteHitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9798,7 +9800,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1162302170}
   - component: {fileID: 1162302169}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: hitEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9884,7 +9886,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1178491542}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9916,7 +9918,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1179036299}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Retiarius
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10019,7 +10021,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1204974389}
   - component: {fileID: 1204974390}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Triangle (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10109,7 +10111,7 @@ GameObject:
   - component: {fileID: 1211185859}
   - component: {fileID: 1211185858}
   - component: {fileID: 1211185857}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Commodus
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -10790,7 +10792,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1276804209}
   - component: {fileID: 1276804210}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10878,7 +10880,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1287307193}
   - component: {fileID: 1287307194}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Triangle (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10964,7 +10966,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1288789504}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sword Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11130,7 +11132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1319581404}
   - component: {fileID: 1319581405}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hit effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11220,7 +11222,7 @@ GameObject:
   - component: {fileID: 1324429110}
   - component: {fileID: 1324429109}
   - component: {fileID: 1324429108}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Closed Sprite Shape (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11714,7 +11716,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1367462793}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11863,7 +11865,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1419978335}
   - component: {fileID: 1419978336}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18655,7 +18657,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1435413649}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LungeHitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18945,7 +18947,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1470373513}
   - component: {fileID: 1470373514}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Triangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19266,7 +19268,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1490114156}
   - component: {fileID: 1490114155}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: hitEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19353,7 +19355,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1500543551}
   - component: {fileID: 1500543550}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: sprite (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19601,7 +19603,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1539786765}
   - component: {fileID: 1539786766}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: trident
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19688,7 +19690,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1554661634}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Spear Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20266,7 +20268,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1618169175}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20302,7 +20304,7 @@ GameObject:
   - component: {fileID: 1618308874}
   - component: {fileID: 1618308873}
   - component: {fileID: 1618308876}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Closed Sprite Shape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21001,7 +21003,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1671385770}
   - component: {fileID: 1671385771}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Triangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21417,7 +21419,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1732495441}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BiteHitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21918,7 +21920,7 @@ GameObject:
   - component: {fileID: 1758105325}
   - component: {fileID: 1758105324}
   - component: {fileID: 1758105323}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Closed Sprite Shape (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22426,7 +22428,7 @@ GameObject:
   - component: {fileID: 1773962838}
   - component: {fileID: 1773962837}
   - component: {fileID: 1773962836}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Closed Sprite Shape (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22786,7 +22788,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1828614523}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SlashHitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23387,7 +23389,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1897907429}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sagittarius
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23420,7 +23422,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1911518337}
   - component: {fileID: 1911518338}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23882,7 +23884,7 @@ GameObject:
   - component: {fileID: 1958480488}
   - component: {fileID: 1958480487}
   - component: {fileID: 1958480486}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Closed Sprite Shape (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24733,7 +24735,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2055316560}
   - component: {fileID: 2055316561}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: temp bow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24953,7 +24955,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2119947300}
   - component: {fileID: 2119947301}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Triangle (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
