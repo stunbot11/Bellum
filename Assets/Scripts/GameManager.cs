@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject); 
         eventSystem = GameObject.Find("EventSystem").GetComponent<EventSystem>();
+
     }
 
     private void Update()
