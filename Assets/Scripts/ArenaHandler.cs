@@ -53,7 +53,7 @@ public class ArenaHandler : MonoBehaviour
                 case 1:
                     for (int i = 0; i < lions.Length; i++)
                         lions[i].SetActive(true);
-                    //EC.eVocalCords.PlayOneShot(theLionsDen);
+                    EC.eVocalCords.PlayOneShot(theLionsDen);
                     break;
 
                 case 2:
@@ -63,7 +63,7 @@ public class ArenaHandler : MonoBehaviour
 
                 case 3:
                     Janus.SetActive(true);
-                    //EC.eVocalCords.PlayOneShot(janusFundamentum);
+                    EC.eVocalCords.PlayOneShot(janusFundamentum);
                     break;
             }
             gameManager.bossActive = true;
