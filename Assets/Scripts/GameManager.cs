@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     public int boss = 1;
     public bool[] challenges; //1: half damage / 2: double boss health / 3: no secondary abilities / 4: no upgrades
     public Image[] challengeColors;
+    public Image[] classColors;
+    public Image[] bossColors;
 
     private int currentMainMenu;
     public GameObject[] mainMenus;
@@ -53,14 +55,22 @@ public class GameManager : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    public void setClass(int num)
+    public void setClass(int num) //sets class and changes color of class buttons
     {
         classType = num;
+
+        for (int i = 0; i < 3; i++)
+            classColors[i].color = Color.red;
+        classColors[num - 1].color = Color.green;
     }
 
-    public void setBoss(int num)
+    public void setBoss(int num) //sets boss and changes color of boss buttons
     {
         boss = num;
+
+        for (int i = 0; i < 3; i++)
+            bossColors[i].color = Color.red;
+        bossColors[num - 1].color = Color.green;
     }
 
     public void setChallenges(int num)

@@ -62,7 +62,7 @@ public class Janus : MonoBehaviour
             yield return new WaitForSeconds(.1f);
             spearHitBox.SetActive(false);
         }
-        StartCoroutine(enemyController.cooldown(.5f));
+        StartCoroutine(enemyController.cooldown(.75f));
     }
 
     IEnumerator phaseTime()
