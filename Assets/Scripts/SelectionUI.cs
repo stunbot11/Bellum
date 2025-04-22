@@ -85,4 +85,9 @@ public class SelectionUI : MonoBehaviour
         startTxt.SetActive(flickerOn);
         StartCoroutine(buttonFlicker());
     }
+
+    public void discard()
+    {
+        backButton.action.started -= back;
+    }
 }
