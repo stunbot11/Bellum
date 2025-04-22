@@ -43,7 +43,7 @@ public class Janus : MonoBehaviour
             print("here");
         }
 
-        if (enemyController.canAttack && !spearThrown && Vector2.Distance(transform.position, enemyController.player.transform.position) <= (!phase ? swordAtkRange : spearAtkRange))
+        if (enemyController.canAttack && !enemyController.imbolized && !spearThrown && Vector2.Distance(transform.position, enemyController.player.transform.position) <= (!phase ? swordAtkRange : spearAtkRange))
             StartCoroutine(attack());
     }
 

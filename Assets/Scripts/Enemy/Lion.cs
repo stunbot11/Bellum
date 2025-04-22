@@ -31,7 +31,7 @@ public class Lion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (enemyController.canAttack && Vector2.Distance(transform.position, enemyController.player.transform.position) < attackRange && pendingAttack != 4)
+        if (enemyController.canAttack && !enemyController.imbolized && Vector2.Distance(transform.position, enemyController.player.transform.position) < attackRange && pendingAttack != 4)
             attack();
 
         if (pendingAttack == 4 && enemyController.gameManager.lionCheck == enemyController.gameManager.lionReady && enemyController.gameManager.lionCheck != 0 && ready)

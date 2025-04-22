@@ -50,7 +50,7 @@ public class Commodus : MonoBehaviour
 
     private void Update()
     {
-        if (enemyController.canAttack && meGoShootyShootyShootShoot) // add another bool that will happend during cooldown that lets player move
+        if (enemyController.canAttack && meGoShootyShootyShootShoot && !enemyController.imbolized) // add another bool that will happend during cooldown that lets player move
             attack();
     }
 
