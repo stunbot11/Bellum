@@ -18,9 +18,10 @@ public class ArenaHandler : MonoBehaviour
     private float percent = .66f;
 
     [Header("Music")]
-    public AudioClip theLionsDen;
-    public AudioClip commotion;
-    public AudioClip janusFundamentum;
+    public AudioSource theLionsDen;
+    public AudioSource commotion;
+    public AudioSource janusFundamentum;
+    private bool lionsPlaying = false;
 
     private void Start()
     {
@@ -52,18 +53,24 @@ public class ArenaHandler : MonoBehaviour
             {
                 case 1:
                     for (int i = 0; i < lions.Length; i++)
+                    {
                         lions[i].SetActive(true);
-                    EC.eVocalCords.PlayOneShot(theLionsDen);
+                        if (!lionsPlaying)
+                        {
+                            theLionsDen.Play();
+                            lionsPlaying = true;
+                        }
+                    }
                     break;
 
                 case 2:
                     Commodus.SetActive(true);
-                    EC.eVocalCords.PlayOneShot(commotion);
+                    commotion.Play();
                     break;
 
                 case 3:
                     Janus.SetActive(true);
-                    EC.eVocalCords.PlayOneShot(janusFundamentum);
+                    janusFundamentum.Play();
                     break;
             }
             gameManager.bossActive = true;

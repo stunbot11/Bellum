@@ -19,8 +19,8 @@ public class Janus : MonoBehaviour
     public int damage;
 
     [Header("Music")]
-    public AudioClip janusSinistro;
-    public AudioClip janusDextrum;
+    public AudioSource janusSinistro;
+    public AudioSource janusDextrum;
 
     private void Start()
     {
@@ -80,7 +80,8 @@ public class Janus : MonoBehaviour
         if (side) // switch to sword
         {
             phase = false;
-            enemyController.eVocalCords.PlayOneShot(janusDextrum);
+            janusSinistro.Stop();
+            janusDextrum.Play();
             for (int i = 0; i < 3; i++)// three sword swings after changing to sword
             {
                 swordHitBox.SetActive(true);
@@ -93,8 +94,9 @@ public class Janus : MonoBehaviour
         }
         else // switch to spear
         {
+            janusDextrum.Stop();
+            janusSinistro.Play();
             print("Spear");
-            enemyController.eVocalCords.PlayOneShot(janusSinistro);
             enemyController.canAttack = false;
             enemyController.canMove = false;
             enemyController.spearThrown = true;
