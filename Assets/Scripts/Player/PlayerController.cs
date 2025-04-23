@@ -63,6 +63,9 @@ public class PlayerController : MonoBehaviour
     public int[] upgrades = { 0, 0, 0 };
     public int tripArrowCount = 3;
 
+    private int dotTicks;
+    private bool inDoT;
+
     [Header("Misc.")]
     public GameObject hitEffect;
     private float direction;
@@ -209,6 +212,12 @@ public class PlayerController : MonoBehaviour
             if (tempScreen.a - (2 / 3) > 1)
                 gameManager.leaderBoard();
         }
+
+        if (dotTicks > 0 && !inDoT)
+        {
+            inDoT = true;
+            StartCoroutine(DoT());
+        }
     }
 
     public IEnumerator bigSteppy()
@@ -219,9 +228,15 @@ public class PlayerController : MonoBehaviour
         canSteppy = true;
     }
 
-    public void takeDamage(int damage)
+    public void takeDamage(int damage, string damageType = null, int ToDoT = 0)
     {
-        if (iframes < 0)
+        if (ToDoT >= dotTicks)
+            dotTicks = ToDoT;
+        if (damageType == "DoT" && ToDoT > 0)
+        {
+            health -= damage;
+        }
+        else if (iframes < 0)
         {
             if (blocking && chargeTime <= .3)
             {
@@ -262,15 +277,22 @@ public class PlayerController : MonoBehaviour
                 StartCoroutine(hitVXF());
                 iframes = .3f;
             }
-
-            if (health <= 0)
-            {
-                StopAllCoroutines();
-                primaryButton.action.started -= primary;
-                secondaryButton.action.started -= secondary;
-                secondaryButton.action.canceled -= secondary;
-            }
         }
+        if (health <= 0)
+        {
+            StopAllCoroutines();
+            primaryButton.action.started -= primary;
+            secondaryButton.action.started -= secondary;
+            secondaryButton.action.canceled -= secondary;
+        }
+    }
+
+    IEnumerator DoT()
+    {
+        dotTicks--;
+        yield return new WaitForSeconds(1);
+        takeDamage(5, "DoT");
+        inDoT = false;
     }
 
     IEnumerator hitVXF()

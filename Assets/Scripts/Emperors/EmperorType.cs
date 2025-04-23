@@ -18,5 +18,9 @@ public class EmperorType : ScriptableObject
     public bool decreaseHealth;
     public bool decreaseSpeed;
     public float playerEffectStrength = 1;
+
+    [Header("Arena Effects")]
+    public GameObject ObjectToSpawn;
+    public float timeBetweenEffects;
 }
 
