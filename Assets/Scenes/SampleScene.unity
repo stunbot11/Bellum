@@ -358,9 +358,6 @@ MonoBehaviour:
   netHit: {fileID: 8300000, guid: a322bb9bea92c97409d120e0b7810c51, type: 3}
   angle: 0
   distance: 0
-  theLionsDen: {fileID: 0}
-  commotion: {fileID: 0}
-  janusFundamentum: {fileID: 67232409}
 --- !u!50 &67232405
 Rigidbody2D:
   serializedVersion: 5
@@ -2497,6 +2494,9 @@ MonoBehaviour:
   Janus: {fileID: 67232401}
   door: {fileID: 1766397621}
   obsticles: {fileID: 258902597}
+  theLionsDen: {fileID: 570264087}
+  commotion: {fileID: 1211185861}
+  janusFundamentum: {fileID: 67232409}
 --- !u!61 &271670701
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2649,9 +2649,6 @@ MonoBehaviour:
   netHit: {fileID: 8300000, guid: a322bb9bea92c97409d120e0b7810c51, type: 3}
   angle: 0
   distance: 0
-  theLionsDen: {fileID: 0}
-  commotion: {fileID: 0}
-  janusFundamentum: {fileID: 0}
 --- !u!60 &273770218
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3208,9 +3205,6 @@ MonoBehaviour:
   netHit: {fileID: 8300000, guid: a322bb9bea92c97409d120e0b7810c51, type: 3}
   angle: 0
   distance: 0
-  theLionsDen: {fileID: 0}
-  commotion: {fileID: 0}
-  janusFundamentum: {fileID: 0}
 --- !u!60 &363483475
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5410,9 +5404,6 @@ MonoBehaviour:
   netHit: {fileID: 8300000, guid: a322bb9bea92c97409d120e0b7810c51, type: 3}
   angle: 0
   distance: 0
-  theLionsDen: {fileID: 570264087}
-  commotion: {fileID: 0}
-  janusFundamentum: {fileID: 0}
 --- !u!60 &570264084
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -10508,9 +10499,6 @@ MonoBehaviour:
   netHit: {fileID: 8300000, guid: a322bb9bea92c97409d120e0b7810c51, type: 3}
   angle: 0
   distance: 0
-  theLionsDen: {fileID: 0}
-  commotion: {fileID: 1211185861}
-  janusFundamentum: {fileID: 0}
 --- !u!58 &1211185859
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -23454,6 +23442,7 @@ MonoBehaviour:
   emperorName: {fileID: 1606861257}
   effectDiscription: {fileID: 1337261268}
   arenaEffect: {fileID: 1917448630}
+  obsticle: {fileID: 0}
 --- !u!61 &1890697552
 BoxCollider2D:
   m_ObjectHideFlags: 0

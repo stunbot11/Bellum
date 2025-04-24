@@ -21,7 +21,6 @@ public class ArenaHandler : MonoBehaviour
     public AudioSource theLionsDen;
     public AudioSource commotion;
     public AudioSource janusFundamentum;
-    private bool lionsPlaying = false;
 
     private void Start()
     {
@@ -55,12 +54,8 @@ public class ArenaHandler : MonoBehaviour
                     for (int i = 0; i < lions.Length; i++)
                     {
                         lions[i].SetActive(true);
-                        if (!lionsPlaying)
-                        {
-                            theLionsDen.Play();
-                            lionsPlaying = true;
-                        }
                     }
+                    theLionsDen.Play();
                     break;
 
                 case 2:
