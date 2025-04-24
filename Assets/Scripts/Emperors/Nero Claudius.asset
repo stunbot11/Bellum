@@ -19,7 +19,7 @@ MonoBehaviour:
   increaseDamage: 1
   increaseHealth: 1
   increaseSpeed: 0
-  bossEffectStrength: 1
+  bossEffectStrength: 1.25
   decreaseDamage: 0
   decreaseHealth: 0
   decreaseSpeed: 0

@@ -10,6 +10,7 @@ public class ArenaHandler : MonoBehaviour
     public GameObject Janus;
     public GameObject door;
     public GameObject obsticles;
+    public EmperorInfo emperorInfo;
 
     private int active;
     private int inactive;
@@ -48,6 +49,7 @@ public class ArenaHandler : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             door.SetActive(true);
+            emperorInfo.fakeStart();
             switch (gameManager.boss)
             {
                 case 1:

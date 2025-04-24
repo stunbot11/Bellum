@@ -20,8 +20,10 @@ MonoBehaviour:
   increaseDamage: 1
   increaseHealth: 0
   increaseSpeed: 0
-  bossEffectStrength: 1
+  bossEffectStrength: 1.25
   decreaseDamage: 0
   decreaseHealth: 1
   decreaseSpeed: 0
-  playerEffectStrength: 1
+  playerEffectStrength: 0.75
+  ObjectToSpawn: {fileID: 5343847839361663021, guid: a399a51dbf28b0a4bbae7266b1f43c6e, type: 3}
+  timeBetweenEffects: 10

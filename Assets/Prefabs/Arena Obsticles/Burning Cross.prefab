@@ -4938,7 +4938,7 @@ MonoBehaviour:
   damage: 1
   DoTT: 10
   timeAlive: 20
-  damageType: DoT
+  damageType: Unblockable
   entityNotToDamage: Enemy
 --- !u!58 &6742698388639059968
 CircleCollider2D:
@@ -4970,7 +4970,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 1
   m_CompositeOperation: 0
   m_CompositeOrder: 0

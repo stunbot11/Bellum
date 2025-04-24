@@ -238,7 +238,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (iframes < 0)
         {
-            if (blocking && chargeTime <= .3)
+            if (blocking && chargeTime <= .3 && damageType != "Unblockable")
             {
                 print("perfect block");
                 iframes = .45f;
