@@ -289,9 +289,10 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator DoT()
     {
+
         dotTicks--;
         yield return new WaitForSeconds(1);
-        takeDamage(5, "DoT");
+        takeDamage(1, "DoT");
         inDoT = false;
     }
 

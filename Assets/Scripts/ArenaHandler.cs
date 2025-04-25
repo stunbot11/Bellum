@@ -49,14 +49,17 @@ public class ArenaHandler : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             door.SetActive(true);
-            emperorInfo.fakeStart();
+            if (gameManager.activeEmperor.ObjectToSpawn != null)
+                emperorInfo.fakeStart();
             switch (gameManager.boss)
             {
                 case 1:
-                    for (int i = 0; i < lions.Length; i++)
+                    for (int i = 0; i < lions.Length - 1; i++)
                     {
                         lions[i].SetActive(true);
                     }
+                    if (gameManager.activeEmperor.emperorName == "Julius Caeser")
+                        lions[3].SetActive(true);
                     theLionsDen.Play();
                     break;
 

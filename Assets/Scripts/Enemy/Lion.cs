@@ -10,6 +10,7 @@ public class Lion : MonoBehaviour
     public Lion lion1;
     public Lion lion2;
     public Lion lion3;
+    public Lion lion4;
 
     private bool ready;
 
@@ -98,6 +99,16 @@ public class Lion : MonoBehaviour
                     lion3.enemyController.speedMod = 3f;
                     lion3.enemyController.target = (Vector2)enemyController.player.transform.position + Vector2.right * lungeDisMult;
                     lion3.enemyController.spearThrown = true;
+                }
+
+                if (lion4 != null)
+                {
+                    enemyController.gameManager.lionCheck++;
+                    lion4.pendingAttack = 4;
+                    lion4.enemyController.targetOveride = true;
+                    lion4.enemyController.speedMod = 3f;
+                    lion4.enemyController.target = (Vector2)enemyController.player.transform.position + Vector2.down * lungeDisMult;
+                    lion4.enemyController.spearThrown = true;
                 }
                 break;
             case 4:

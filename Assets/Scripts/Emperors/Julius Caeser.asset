@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0be1303181aa86f4b866165c2f821454, type: 3}
-  m_Name: Julius Ceaser
+  m_Name: Julius Caeser
   m_EditorClassIdentifier: 
   emperorName: Julius Caeser
   bossEffectDiscription: Increases boss attack damage and lowers the hp of the player
