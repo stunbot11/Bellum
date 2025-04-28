@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -44,8 +45,14 @@ public class GameManager : MonoBehaviour
             time += Time.deltaTime;
     }
 
-    public void start()
+    public void stort()
     {
+        StartCoroutine(start());
+    }
+
+    IEnumerator start()
+    {
+        yield return new WaitForSeconds(2.5f);
         SceneManager.LoadScene(1);
     }
 
