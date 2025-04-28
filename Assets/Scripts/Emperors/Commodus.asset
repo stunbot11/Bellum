@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   emperorName: Commodus
   bossEffectDiscription: Increases boss hp and bosses speed.
-  arenaEffectDiscription: An Elephant appears and acts as another enemy for the player
-    to fight.
+  arenaEffectDiscription: Adds a lion to the fight that the player must kill
   increaseDamage: 0
   increaseHealth: 1
   increaseSpeed: 1
@@ -25,4 +24,4 @@ MonoBehaviour:
   decreaseSpeed: 0
   playerEffectStrength: 1
   ObjectToSpawn: {fileID: 5343847839361663021, guid: a399a51dbf28b0a4bbae7266b1f43c6e, type: 3}
-  timeBetweenEffects: 10
+  timeBetweenEffects: 9999999

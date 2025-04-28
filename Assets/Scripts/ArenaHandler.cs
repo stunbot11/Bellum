@@ -58,7 +58,7 @@ public class ArenaHandler : MonoBehaviour
                     {
                         lions[i].SetActive(true);
                     }
-                    if (gameManager.activeEmperor.emperorName == "Julius Caeser")
+                    if (gameManager.activeEmperor.emperorName == "Commodus")
                         lions[3].SetActive(true);
                     theLionsDen.Play();
                     break;

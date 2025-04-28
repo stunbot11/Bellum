@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 
 public class PlayerController : MonoBehaviour
 {
@@ -79,6 +80,8 @@ public class PlayerController : MonoBehaviour
     private bool canAttack = true;
     private bool dodgeing;
     private bool canNet = true;
+
+    public GameObject resumeButton;
 
     [Header("SFX")]
     public AudioSource pVocalCords;
@@ -454,6 +457,7 @@ public class PlayerController : MonoBehaviour
         if (phase.started)
         {
             Time.timeScale = (Time.timeScale == 1 ? 0 : 1);
+            GameObject.Find("EventSystem").GetComponent<EventSystem>().SetSelectedGameObject(resumeButton);
             pauseMenu.SetActive(Time.timeScale == 0);
         }
     }

@@ -15,8 +15,8 @@ MonoBehaviour:
   emperorName: Julius Caeser
   bossEffectDiscription: Increases boss attack damage and lowers the hp of the player
     character.
-  arenaEffectDiscription: Horses run from one side of the coliseum to the other side.
-    The player gets damaged if they get hit by the horses.
+  arenaEffectDiscription: lightning strikes happy periodically that deal damage to
+    the player
   increaseDamage: 1
   increaseHealth: 0
   increaseSpeed: 0
@@ -26,4 +26,4 @@ MonoBehaviour:
   decreaseSpeed: 0
   playerEffectStrength: 0.75
   ObjectToSpawn: {fileID: 5343847839361663021, guid: a399a51dbf28b0a4bbae7266b1f43c6e, type: 3}
-  timeBetweenEffects: 10
+  timeBetweenEffects: 20
