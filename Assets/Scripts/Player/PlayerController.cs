@@ -122,6 +122,7 @@ public class PlayerController : MonoBehaviour
         maxHealth += (upgrades[2] > 1 ? maxHealth / 4 : 0);
         speed = gameManager.activeEmperor.decreaseSpeed ? speed * gameManager.activeEmperor.playerEffectStrength : speed;
         health = gameManager.activeEmperor.decreaseHealth ? Mathf.RoundToInt(health * gameManager.activeEmperor.playerEffectStrength) : health;
+        maxHealth = gameManager.activeEmperor.decreaseHealth ? Mathf.RoundToInt(maxHealth * gameManager.activeEmperor.playerEffectStrength) : maxHealth;
         damage = gameManager.activeEmperor.decreaseDamage ? Mathf.RoundToInt(damage * gameManager.activeEmperor.playerEffectStrength) : damage;
         damage = gameManager.classType == 3 && upgrades[0] > 2 ? Mathf.RoundToInt(damage * 1.25f) : damage;
         canDodge = (upgrades[1] > 1 ? 2 : 1);
