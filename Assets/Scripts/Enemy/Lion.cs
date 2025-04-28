@@ -118,7 +118,7 @@ public class Lion : MonoBehaviour
     }
     public void lungeATK()
     {
-        enemyController.rb.linearVelocity = (thisLionNum == 1 ? Vector2.down : (thisLionNum == 2 ? Vector2.right : Vector2.left)) * lungeSpeed;
+        enemyController.rb.linearVelocity = (thisLionNum == 1 ? Vector2.down :  (thisLionNum == 4 ? Vector2.up : (thisLionNum == 2 ? Vector2.right : Vector2.left))) * lungeSpeed;
         lungeHitBox.SetActive(true);
         GetComponent<PolygonCollider2D>().excludeLayers = 8;
         GetComponent<PolygonCollider2D>().excludeLayers += 64;
