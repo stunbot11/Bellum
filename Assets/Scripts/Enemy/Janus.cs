@@ -4,6 +4,7 @@ using UnityEngine;
 public class Janus : MonoBehaviour
 {
     private EnemyController enemyController;
+    private ArenaHandler AH;
     private bool phase; //false = sword / true = spear
 
     public GameObject swordHitBox;
@@ -81,6 +82,8 @@ public class Janus : MonoBehaviour
         {
             phase = false;
             janusSinistro.Stop();
+            AH.janusFundamentum.Stop();
+            AH.janusFundamentum.Play();
             janusDextrum.Play();
             for (int i = 0; i < 3; i++)// three sword swings after changing to sword
             {
@@ -95,6 +98,8 @@ public class Janus : MonoBehaviour
         else // switch to spear
         {
             janusDextrum.Stop();
+            AH.janusFundamentum.Stop();
+            AH.janusFundamentum.Play();
             janusSinistro.Play();
             print("Spear");
             enemyController.canAttack = false;

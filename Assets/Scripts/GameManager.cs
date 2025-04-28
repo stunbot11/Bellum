@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
 
     private int currentMainMenu;
     public GameObject[] mainMenus;
+    public AudioSource loudspeaker;
 
     [HideInInspector] public EmperorType activeEmperor;
 
@@ -47,6 +48,7 @@ public class GameManager : MonoBehaviour
 
     public void stort()
     {
+        loudspeaker.Stop();
         StartCoroutine(start());
     }
 

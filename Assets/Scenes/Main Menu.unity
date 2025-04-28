@@ -4117,6 +4117,7 @@ MonoBehaviour:
   - {fileID: 434257905}
   - {fileID: 0}
   - {fileID: 0}
+  loudspeaker: {fileID: 1473558300}
   activeEmperor: {fileID: 0}
   lionReady: 0
   lionCheck: 0
