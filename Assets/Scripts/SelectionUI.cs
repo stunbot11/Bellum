@@ -37,6 +37,8 @@ public class SelectionUI : MonoBehaviour
             activeScroll.SetActive(false);
             eventSystem.SetSelectedGameObject(parts[selectionPart]);
         }
+        else if (selectionPart == 0)
+            Application.Quit();
         else if (selectionPart == 1)
         {
             selectionPart = 0;
@@ -50,7 +52,7 @@ public class SelectionUI : MonoBehaviour
             eventSystem.SetSelectedGameObject(parts[selectionPart]);
             if (selectionPart == 1)
             {
-                for (int i  = 0; i < playerClass.Length; i++)
+                for (int i = 0; i < playerClass.Length; i++)
                     playerClass[i].color = Color.red;
             }
             else if (selectionPart == 2)
