@@ -98,7 +98,6 @@ public class EnemyController : MonoBehaviour
         if (!net)
         {
             //pickYourPoison = Random.Range(1, 4);
-            if (gameManager.boss == 2)
                 switch (Random.Range(1, 3))
                 {
                     case 1:
