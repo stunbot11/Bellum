@@ -177,11 +177,7 @@ public class PlayerController : MonoBehaviour
 
         if (health <= 0)
         {
-            if (canJingle)
-            {
-                pVocalCords.PlayOneShot(defeat);
-                canJingle = false;
-            }
+            
             Color tempScreen = fadeScreen.color;
             tempScreen.a += Time.deltaTime / 3;
             fadeScreen.color = tempScreen;
@@ -280,6 +276,7 @@ public class PlayerController : MonoBehaviour
         }
         if (health <= 0)
         {
+            pVocalCords.PlayOneShot(defeat);
             StopAllCoroutines();
             primaryButton.action.started -= primary;
             secondaryButton.action.started -= secondary;
