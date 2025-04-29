@@ -67,6 +67,7 @@ public class Lion : MonoBehaviour
 
             case 2: //slash
                 slashHitBox.SetActive(true);
+                enemyController.eVocalCords.PlayOneShot(enemyController.attack1);
                 StartCoroutine(enemyController.cooldown(1.5f, slashHitBox));
                 break;
 
@@ -74,6 +75,7 @@ public class Lion : MonoBehaviour
                 if (lion1 != null)
                 {
                     enemyController.gameManager.lionCheck++;
+                    enemyController.eVocalCords.PlayOneShot(enemyController.attack2);
                     lion1.pendingAttack = 4;
                     lion1.enemyController.targetOveride = true;
                     lion1.enemyController.speedMod = 3f;
@@ -84,6 +86,7 @@ public class Lion : MonoBehaviour
                 if (lion2 != null)
                 {
                     enemyController.gameManager.lionCheck++;
+                    enemyController.eVocalCords.PlayOneShot(enemyController.attack2);
                     lion2.pendingAttack = 4;
                     lion2.enemyController.targetOveride = true;
                     lion2.enemyController.speedMod = 3f;
@@ -94,6 +97,7 @@ public class Lion : MonoBehaviour
                 if (lion3 != null)
                 {
                     enemyController.gameManager.lionCheck++;
+                    enemyController.eVocalCords.PlayOneShot(enemyController.attack2);
                     lion3.pendingAttack = 4;
                     lion3.enemyController.targetOveride = true;
                     lion3.enemyController.speedMod = 3f;
@@ -104,6 +108,7 @@ public class Lion : MonoBehaviour
                 if (lion4 != null && lion4.isActiveAndEnabled)
                 {
                     enemyController.gameManager.lionCheck++;
+                    enemyController.eVocalCords.PlayOneShot(enemyController.attack2);
                     lion4.pendingAttack = 4;
                     lion4.enemyController.targetOveride = true;
                     lion4.enemyController.speedMod = 3f;
