@@ -40,7 +40,7 @@ public class Lion : MonoBehaviour
             lungeATK();
         }
 
-        if ((enemyController.targetOveride ? Vector2.Distance(transform.position, enemyController.target) <= 1 : true) && !ready && pendingAttack == 4)
+        if ((enemyController.targetOveride ? Vector2.Distance(transform.position, new Vector2(Mathf.Clamp(enemyController.target.x, -38, 38), Mathf.Clamp(enemyController.target.y, Mathf.Lerp(12f, 17.5f, (Mathf.Abs(enemyController.target.x) - 25.5f) / 12.5f), Mathf.Lerp(36f, 30.5f, (Mathf.Abs(enemyController.target.x) - 25.5f) / 12.5f)))) <= 1 : true) && !ready && pendingAttack == 4)
         {
             ready = true;
             enemyController.gameManager.lionReady++;
@@ -101,7 +101,7 @@ public class Lion : MonoBehaviour
                     lion3.enemyController.spearThrown = true;
                 }
 
-                if (lion4 != null)
+                if (lion4 != null && lion4.isActiveAndEnabled)
                 {
                     enemyController.gameManager.lionCheck++;
                     lion4.pendingAttack = 4;

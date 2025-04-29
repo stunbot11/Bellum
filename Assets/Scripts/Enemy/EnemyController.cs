@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 public class EnemyController : MonoBehaviour
 {
@@ -59,9 +60,19 @@ public class EnemyController : MonoBehaviour
     private void Update()
     {
         //gets angle from enemy to player in 8 directions and moves towards them
-        Vector2 targetPos = ((targetOveride ? (Vector3)target : player.transform.position) - transform.position).normalized;
+        Vector2 targetPos = ((targetOveride ? new Vector2(Mathf.Clamp(target.x, -38, 38), Mathf.Clamp(target.y , Mathf.Lerp(12f, 17.5f, (Mathf.Abs(target.x) - 25.5f) / 12.5f), Mathf.Lerp(36f, 30.5f, (Mathf.Abs(target.x) - 25.5f) / 12.5f))) : player.transform.position) - transform.position).normalized;
         float tempRot = Mathf.Atan2(targetPos.y, targetPos.x) * Mathf.Rad2Deg * (gameManager.boss == 2 && !targetOveride && Vector2.Distance(player.transform.position, transform.position) <= distance ? -1 : 1);
         angle = (Mathf.Round((tempRot - 45) / 45) * 45 - 45);
+        RaycastHit2D objectDect = Physics2D.Raycast(transform.position, new Vector2(Mathf.Sin(angle * Mathf.Deg2Rad) * -1, Mathf.Cos(angle * Mathf.Deg2Rad)).normalized, 2, LayerMask.NameToLayer("Enemy"));
+        if (objectDect.collider != null)
+        {
+            print(objectDect.collider.gameObject.name + "               " + this.gameObject.name);
+            if (objectDect.collider.CompareTag("Untagged"))
+            {
+                print("object in way");
+                angle += 45;
+            }
+        }
         rb.rotation = angle;
 
         Vector2 moveDir = new Vector2(Mathf.Sin(angle * Mathf.Deg2Rad) * -1, Mathf.Cos(angle * Mathf.Deg2Rad)).normalized;
