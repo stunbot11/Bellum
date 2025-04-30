@@ -144,14 +144,8 @@ public class PlayerController : MonoBehaviour
             secondaryButton.action.canceled += secondary;
         }
     }
-
-    private void Update()
+    private void FixedUpdate()
     {
-        healthBar.fillAmount = (float)health / (float)maxHealth;
-        iframes -= Time.deltaTime;
-        pBlock -= Time.deltaTime;
-        
-        timeSinceAction += Time.deltaTime;
         if (!dodgeing && health > 0)
             rb.linearVelocity = move.action.ReadValue<Vector2>() * speed * ((blocking || (gameManager.classType == 2 && primaryButton.action.inProgress)) ? .5f : 1) * (upgrades[2] > 0 ? 1.25f : 1);
         else if (health <= 0)
@@ -164,6 +158,16 @@ public class PlayerController : MonoBehaviour
             if (canSteppy) StartCoroutine(bigSteppy());
         }
         rotPoint.transform.rotation = Quaternion.Euler(new Vector3(0, 0, direction));
+    }
+
+    private void Update()
+    {
+        healthBar.fillAmount = (float)health / (float)maxHealth;
+        iframes -= Time.deltaTime;
+        pBlock -= Time.deltaTime;
+        
+        timeSinceAction += Time.deltaTime;
+        
 
         if (blocking || gameManager.classType == 2 && primaryButton.action.inProgress && canAttack)
         {

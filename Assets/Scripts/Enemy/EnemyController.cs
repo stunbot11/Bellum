@@ -64,6 +64,7 @@ public class EnemyController : MonoBehaviour
         float tempRot = Mathf.Atan2(targetPos.y, targetPos.x) * Mathf.Rad2Deg * (gameManager.boss == 2 && !targetOveride && Vector2.Distance(player.transform.position, transform.position) <= distance ? -1 : 1);
         angle = (Mathf.Round((tempRot - 45) / 45) * 45 - 45);
         RaycastHit2D objectDect = Physics2D.Raycast(transform.position, new Vector2(Mathf.Sin(angle * Mathf.Deg2Rad) * -1, Mathf.Cos(angle * Mathf.Deg2Rad)).normalized, 2, LayerMask.NameToLayer("Enemy"));
+        print(new Vector2(Mathf.Sin(angle * Mathf.Deg2Rad) * -1, Mathf.Cos(angle * Mathf.Deg2Rad)).normalized);
         if (objectDect.collider != null)
         {
             print(objectDect.collider.gameObject.name + "               " + this.gameObject.name);
