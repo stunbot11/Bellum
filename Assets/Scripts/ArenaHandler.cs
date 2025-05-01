@@ -3,7 +3,6 @@ using UnityEngine;
 public class ArenaHandler : MonoBehaviour
 {
     private GameManager gameManager;
-    private EnemyController EC;
     public GameObject[] classes;
     public GameObject[] lions;
     public GameObject Commodus;
@@ -19,14 +18,16 @@ public class ArenaHandler : MonoBehaviour
     private float percent = .66f;
 
     [Header("Music")]
-    public AudioSource theLionsDen;
-    public AudioSource commotion;
-    public AudioSource janusFundamentum;
+    public AudioSource speaker;
+    public AudioClip[] bossMusic;
 
     private void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         classes[gameManager.classType - 1].SetActive(true);
+        speaker.resource = bossMusic[gameManager.boss - 1];
+        speaker.Play();
+        speaker.Stop();
 
         //gets each object in the obsticles empty and randomizes if they will be active or not (33% * (active objects / inactive objects) to be active)
         Transform[] obT = obsticles.GetComponentsInChildren<Transform>();
@@ -49,6 +50,7 @@ public class ArenaHandler : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             door.SetActive(true);
+            speaker.Play();
             if (gameManager.activeEmperor.ObjectToSpawn != null)
                 emperorInfo.fakeStart();
             switch (gameManager.boss)
@@ -60,17 +62,14 @@ public class ArenaHandler : MonoBehaviour
                     }
                     if (gameManager.activeEmperor.emperorName == "Commodus")
                         lions[3].SetActive(true);
-                    theLionsDen.Play();
                     break;
 
                 case 2:
                     Commodus.SetActive(true);
-                    commotion.Play();
                     break;
 
                 case 3:
                     Janus.SetActive(true);
-                    janusFundamentum.Play();
                     break;
             }
             gameManager.bossActive = true;

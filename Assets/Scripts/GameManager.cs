@@ -33,6 +33,10 @@ public class GameManager : MonoBehaviour
      public float time;
      public int activeChallenges;
 
+    private void Awake()
+    {
+        Application.targetFrameRate = 60;
+    }
     private void Start()
     {
         DontDestroyOnLoad(gameObject); 
