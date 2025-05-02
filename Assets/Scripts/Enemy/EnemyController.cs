@@ -63,7 +63,7 @@ public class EnemyController : MonoBehaviour
         Vector2 targetPos = ((targetOveride ? new Vector2(Mathf.Clamp(target.x, -38, 38), Mathf.Clamp(target.y , Mathf.Lerp(12f, 17.5f, (Mathf.Abs(target.x) - 25.5f) / 12.5f), Mathf.Lerp(36f, 30.5f, (Mathf.Abs(target.x) - 25.5f) / 12.5f))) : player.transform.position) - transform.position).normalized;
         float tempRot = Mathf.Atan2(targetPos.y, targetPos.x) * Mathf.Rad2Deg * (gameManager.boss == 2 && !targetOveride && Vector2.Distance(player.transform.position, transform.position) <= distance ? -1 : 1);
         angle = (Mathf.Round((tempRot - 45) / 45) * 45 - 45);
-        RaycastHit2D objectDect = Physics2D.Raycast(transform.position, new Vector2(Mathf.Sin(angle * Mathf.Deg2Rad) * -1, Mathf.Cos(angle * Mathf.Deg2Rad)).normalized, 2, LayerMask.NameToLayer("Enemy"));
+        RaycastHit2D objectDect = Physics2D.Raycast(transform.position, rb.linearVelocity.normalized, 2, LayerMask.NameToLayer("Default"));
         print(new Vector2(Mathf.Sin(angle * Mathf.Deg2Rad) * -1, Mathf.Cos(angle * Mathf.Deg2Rad)).normalized);
         if (objectDect.collider != null)
         {
@@ -95,7 +95,7 @@ public class EnemyController : MonoBehaviour
             StartCoroutine(DoT());
         }
 
-        if (gameManager.boss<3 && goingToTarget && canSteppy)
+        if (gameManager.boss < 3 && goingToTarget && canSteppy)
             StartCoroutine(biggerSteppy());
     }
 
@@ -109,7 +109,6 @@ public class EnemyController : MonoBehaviour
         hitEffect.SetActive(true);
         if (!net)
         {
-            //pickYourPoison = Random.Range(1, 4);
                 switch (Random.Range(1, 3))
                 {
                     case 1:

@@ -3613,7 +3613,7 @@ MonoBehaviour:
   health: 100
   speed: 5
   damage: 5
-  classDmg: 0f0000000500000014000000
+  classDmg: 19000000050000000f000000
   upgrades: 000000000000000000000000
   tripArrowCount: 3
   hitEffect: {fileID: 1319581403}
@@ -25058,7 +25058,7 @@ MonoBehaviour:
   hitEffect: {fileID: 199212662}
   goingToTarget: 0
   effectMod: 0
-  health: 100
+  health: 70
   speed: 2
   speedMod: 1
   canAttack: 1
