@@ -34,7 +34,8 @@ public class SelectionUI : MonoBehaviour
         if (scrollActive)
         {
             scrollActive = false;
-            activeScroll.SetActive(false);
+            activeScroll.GetComponent<Animator>().SetTrigger("Close");
+            activeScroll.transform.GetChild(0).gameObject.SetActive(false);
             eventSystem.SetSelectedGameObject(parts[selectionPart]);
         }
         else if (selectionPart == 0)

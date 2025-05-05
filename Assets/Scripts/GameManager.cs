@@ -57,7 +57,9 @@ public class GameManager : MonoBehaviour
 
     IEnumerator start()
     {
+        print("start");
         yield return new WaitForSeconds(2.5f);
+        print("start2");
         SceneManager.LoadScene(1);
     }
 

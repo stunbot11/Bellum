@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class ArenaHandler : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class ArenaHandler : MonoBehaviour
     public GameObject door;
     public GameObject obsticles;
     public EmperorInfo emperorInfo;
+
+    public GameObject globalLight;
 
     private int active;
     private int inactive;
@@ -59,6 +62,7 @@ public class ArenaHandler : MonoBehaviour
                     for (int i = 0; i < lions.Length - 1; i++)
                     {
                         lions[i].SetActive(true);
+                        lions[i].GetComponentInChildren<Light2D>().enabled = gameManager.activeEmperor.emperorName == "Caligula";
                     }
                     if (gameManager.activeEmperor.emperorName == "Commodus")
                         lions[3].SetActive(true);
@@ -66,12 +70,15 @@ public class ArenaHandler : MonoBehaviour
 
                 case 2:
                     Commodus.SetActive(true);
+                    Commodus.GetComponentInChildren<Light2D>().enabled = gameManager.activeEmperor.emperorName == "Caligula";
                     break;
 
                 case 3:
                     Janus.SetActive(true);
+                    Janus.GetComponentInChildren<Light2D>().enabled = gameManager.activeEmperor.emperorName == "Caligula";
                     break;
             }
+            globalLight.SetActive(true);
             gameManager.bossActive = true;
             Destroy(this);
         }

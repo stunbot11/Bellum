@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   emperorName: Nero Claudius
   bossEffectDiscription: Increases boss hp and boss attack damage.
-  arenaEffectDiscription: Burning crosses appear on stage and if the player runs
+  arenaEffectDiscription: Burning circles appear on stage and if the player runs
     into them the player gets burn damage over time.
   increaseDamage: 1
   increaseHealth: 1

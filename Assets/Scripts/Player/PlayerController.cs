@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
     public int maxHealth;
     public int health;
     public float speed;
-    [HideInInspector] public int damage;
+     public int damage;
     public int[] classDmg;
 
     [Header("Upgrade stuffs")]
