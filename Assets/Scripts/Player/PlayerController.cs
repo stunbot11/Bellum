@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
 {
     public GameObject sisyphus;
     private Rigidbody2D rb;
+    private Animator animator;
     [HideInInspector] public GameManager gameManager;
 
     [Header("UI")]
@@ -107,6 +108,7 @@ public class PlayerController : MonoBehaviour
         gameManager.playerController = this;
         damage = classDmg[gameManager.classType - 1];
         weapon = GameObject.Find("sword");
+        animator = GetComponent<Animator>();
 
         damage = Mathf.RoundToInt((gameManager.challenges[0] ? damage / 2 : damage) * (upgrades[2] > 2 ? 1.25f : 1));
 
@@ -130,6 +132,8 @@ public class PlayerController : MonoBehaviour
         pauseButton.action.started += pause;
         move.action.Enable();
         primaryButton.action.started += primary;
+        move.action.started += pAnim;
+        move.action.canceled += pAnim;
         if (gameManager.classType == 2)
             primaryButton.action.canceled += primary;
 
@@ -319,6 +323,7 @@ public class PlayerController : MonoBehaviour
                     swordHitbox.SetActive(true);
                     pVocalCords.PlayOneShot(swingSword);
                     StartCoroutine(attackCooldown(.4f * (upgrades[0] > 0 ? .75f : 1), .1f, swordHitbox));
+                    animator.SetTrigger("SeAttack");
                     break;
 
                 case 2: //bow
@@ -336,6 +341,7 @@ public class PlayerController : MonoBehaviour
                                 projectileData1.damage = Mathf.RoundToInt(Mathf.Lerp(damage, damage * 4, chargeTime - (chargeTime + negCharge) / 2));
                                 p1.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(Mathf.Sin(ang * Mathf.Deg2Rad) * -1, Mathf.Cos(ang * Mathf.Deg2Rad)).normalized * Mathf.Lerp(arrowSpeed / 4, arrowSpeed, Mathf.Clamp(chargeTime + negCharge, 0, arrowSpeed) / 2);
                                 Destroy(p1, 5);
+                                animator.SetTrigger("SAAttack");
                             }
                         }
                         else
@@ -354,6 +360,7 @@ public class PlayerController : MonoBehaviour
                     canAttack = false;
                     tridantHitbox.SetActive(true);
                     StartCoroutine(attackCooldown(.4f, .1f, tridantHitbox));
+                    animator.SetTrigger("RAttack");
                     break;
 
                 default:
@@ -453,6 +460,16 @@ public class PlayerController : MonoBehaviour
             if (susytime > 60)
                 sisyphus.SetActive(true);
         }
+    }
+
+    private void pAnim(InputAction.CallbackContext phase)
+    {
+        float val = move.action.ReadValue<Vector2>().x;
+        animator.SetBool("Walking", val != 0 || move.action.ReadValue<Vector2>().y != 0);
+        if (val > 0)
+            transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x) * -1, transform.localScale.y);
+        else if (val < 0)
+            transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x), transform.localScale.y);
     }
 
 
