@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -11,10 +12,14 @@ public class GameManager : MonoBehaviour
     public int boss = 1;
     public bool[] challenges; //1: half damage / 2: double boss health / 3: no secondary abilities / 4: no upgrades
     public Image[] challengeColors;
+    public Image[] classColors;
+    public Image[] bossColors;
 
     private int currentMainMenu;
     public GameObject[] mainMenus;
+    public AudioSource loudspeaker;
 
+    [HideInInspector] public EmperorType activeEmperor;
 
      public int lionReady;
      public int lionCheck;
@@ -22,15 +27,39 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public int bossesDead;
 
     public Image playerHealthBar;
+    public bool bossActive;
 
+     public int health;
+     public float time;
+     public int activeChallenges;
+
+    private void Awake()
+    {
+        Application.targetFrameRate = -1;
+    }
     private void Start()
     {
         DontDestroyOnLoad(gameObject); 
         eventSystem = GameObject.Find("EventSystem").GetComponent<EventSystem>();
     }
 
-    public void start()
+    private void Update()
     {
+        if (bossActive)
+            time += Time.deltaTime;
+    }
+
+    public void stort()
+    {
+        loudspeaker.Stop();
+        StartCoroutine(start());
+    }
+
+    IEnumerator start()
+    {
+        print("start");
+        yield return new WaitForSeconds(2.5f);
+        print("start2");
         SceneManager.LoadScene(1);
     }
 
@@ -40,14 +69,22 @@ public class GameManager : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    public void setClass(int num)
+    public void setClass(int num) //sets class and changes color of class buttons
     {
         classType = num;
+
+        for (int i = 0; i < 3; i++)
+            classColors[i].color = Color.red;
+        classColors[num - 1].color = Color.green;
     }
 
-    public void setBoss(int num)
+    public void setBoss(int num) //sets boss and changes color of boss buttons
     {
         boss = num;
+
+        for (int i = 0; i < 3; i++)
+            bossColors[i].color = Color.red;
+        bossColors[num - 1].color = Color.green;
     }
 
     public void setChallenges(int num)
@@ -64,5 +101,20 @@ public class GameManager : MonoBehaviour
         currentMainMenu = menu;
 
         eventSystem.SetSelectedGameObject(GameObject.Find(menu == 0 ? "start" : "Challenges Back"));
+    }
+
+    public void leaderBoard()
+    {
+        for (int i = 0; i < challenges.Length; i++)
+        {
+            if (challenges[i] == true)
+                activeChallenges++;
+        }
+        SceneManager.LoadScene("Leaderboard");
+    }
+
+    public void deleteSave()
+    {
+        PlayerPrefs.DeleteAll();
     }
 }

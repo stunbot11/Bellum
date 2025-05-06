@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0be1303181aa86f4b866165c2f821454, type: 3}
+  m_Name: Nero Claudius
+  m_EditorClassIdentifier: 
+  emperorName: Nero Claudius
+  bossEffectDiscription: Increases boss hp and boss attack damage.
+  arenaEffectDiscription: Burning circles appear on stage and if the player runs
+    into them the player gets burn damage over time.
+  increaseDamage: 1
+  increaseHealth: 1
+  increaseSpeed: 0
+  bossEffectStrength: 1.25
+  decreaseDamage: 0
+  decreaseHealth: 0
+  decreaseSpeed: 0
+  playerEffectStrength: 1
+  ObjectToSpawn: {fileID: 5343847839361663021, guid: a399a51dbf28b0a4bbae7266b1f43c6e, type: 3}
+  timeBetweenEffects: 10

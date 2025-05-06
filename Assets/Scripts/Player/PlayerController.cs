@@ -1,10 +1,9 @@
 using System.Collections;
-using System.Runtime.CompilerServices;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 
 public class PlayerController : MonoBehaviour
 {
@@ -23,10 +22,13 @@ public class PlayerController : MonoBehaviour
     public float chargeTime;
     public float negCharge;
 
+    public GameObject pauseMenu;
+
     [Header("weapons")]
     private GameObject weapon;
     public GameObject swordHitbox;
     public GameObject tridantHitbox;
+    public GameObject dodgeHitBox;
     public GameObject shield;
     public GameObject arrow;
     public float arrowSpeed;
@@ -34,6 +36,7 @@ public class PlayerController : MonoBehaviour
     public float netSpeed;
 
     [Header("Controlls")]
+    public InputActionReference pauseButton;
     public InputActionReference move;
     public InputActionReference primaryButton;
     public InputActionReference secondaryButton;
@@ -44,26 +47,32 @@ public class PlayerController : MonoBehaviour
     public int maxHealth;
     public int health;
     public float speed;
-    public int damage;
+     public int damage;
+    public int[] classDmg;
 
     [Header("Upgrade stuffs")]
     // Secutor upgrades:
     //// upgrade path 1: DoT / Faster Swings / Enemies take more damage while DoT is in effect (done)
-    //// upgrade path 2: blocking blocks more damage / easier perfect blocks (done) / enemies take more damage after perfect block
+    //// upgrade path 2: blocking blocks more damage / easier perfect blocks / enemies take more damage after perfect block (done)
     // Sagittarius upgrades:
-    //// upgrade path 1: faster charges / fire arrows / more arrows shot
-    //// upgrade path 2: faster dodge cooldown / 2 dodge charges / dodging through enemies damage them
+    //// upgrade path 1: faster charges / fire arrows / more arrows shot (done)
+    //// upgrade path 2: faster dodge cooldown / 2 dodge charges / dodging through enemies damage them (done)
     // Retiarius upgrades:
-    //// upgrade path 1: longer attack range / wider attack range / more damage
-    //// upgrade path 2: effect-damge increase / knockback/ knockback damage
-    // upgrade path 3: faster move speed / more health / more damage
+    //// upgrade path 1: longer attack range / wider attack range / more damage (done)
+    //// upgrade path 2: longer time netted / faster cooldown / enemies take more damage while netted (done)
+    // upgrade path 3: faster move speed / more health / more damage (done)
     public int[] upgrades = { 0, 0, 0 };
+    public int tripArrowCount = 3;
+
+    private int dotTicks;
+    private bool inDoT;
 
     [Header("Misc.")]
     public GameObject hitEffect;
     private float direction;
     private float timeSinceAction;
     private float iframes;
+    [HideInInspector] public float pBlock;
 
     private bool blocking;
     private bool chargingDodge;
@@ -71,12 +80,32 @@ public class PlayerController : MonoBehaviour
     private bool canAttack = true;
     private bool dodgeing;
     private bool canNet = true;
+
+    public GameObject resumeButton;
+
+    [Header("SFX")]
+    public AudioSource pVocalCords;
+    public AudioClip step;
+    public AudioClip hurtHoogh;
+    public AudioClip hurtAagh;
+    public AudioClip hurtOugh;
+    public AudioClip swingSword;
+    public AudioClip shootBow;
+    public AudioClip blockAttack;
+    public AudioClip victory;
+    public AudioClip defeat;
+    private bool canSteppy = true;
+    private bool canJingle = true;
+    private int pickYourPoison;
+
     private void Start()
     {
         move.action.Disable();
+        canJingle = true;
         rb = GetComponent<Rigidbody2D>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         gameManager.playerController = this;
+        damage = classDmg[gameManager.classType - 1];
         weapon = GameObject.Find("sword");
 
         damage = Mathf.RoundToInt((gameManager.challenges[0] ? damage / 2 : damage) * (upgrades[2] > 2 ? 1.25f : 1));
@@ -91,38 +120,60 @@ public class PlayerController : MonoBehaviour
     {
         health += (upgrades[2] > 1 ? health / 4 : 0);
         maxHealth += (upgrades[2] > 1 ? maxHealth / 4 : 0);
+        speed = gameManager.activeEmperor.decreaseSpeed ? speed * gameManager.activeEmperor.playerEffectStrength : speed;
+        health = gameManager.activeEmperor.decreaseHealth ? Mathf.RoundToInt(health * gameManager.activeEmperor.playerEffectStrength) : health;
+        maxHealth = gameManager.activeEmperor.decreaseHealth ? Mathf.RoundToInt(maxHealth * gameManager.activeEmperor.playerEffectStrength) : maxHealth;
+        damage = gameManager.activeEmperor.decreaseDamage ? Mathf.RoundToInt(damage * gameManager.activeEmperor.playerEffectStrength) : damage;
+        damage = gameManager.classType == 3 && upgrades[0] > 2 ? Mathf.RoundToInt(damage * 1.25f) : damage;
+        canDodge = (upgrades[1] > 1 ? 2 : 1);
 
+        pauseButton.action.started += pause;
         move.action.Enable();
         primaryButton.action.started += primary;
         if (gameManager.classType == 2)
             primaryButton.action.canceled += primary;
+
+        else if (gameManager.classType == 3 && upgrades[0] > 0) //adjusts the trient based on if it is bigger or not
+        {
+            tridantHitbox.transform.localScale = new Vector2((upgrades[0] > 1 ? 1.6f : 1), 1.3f);
+            tridantHitbox.transform.localPosition = new Vector2((upgrades[0] > 1 ? 1.35f : 0), .075f);
+        }
         if (!gameManager.challenges[2])
         {
             secondaryButton.action.started += secondary;
             secondaryButton.action.canceled += secondary;
         }
     }
-
-    private void Update()
+    private void FixedUpdate()
     {
-        healthBar.fillAmount = (float)health / (float)maxHealth;
-        iframes -= Time.deltaTime;
-        timeSinceAction += Time.deltaTime;
         if (!dodgeing && health > 0)
-            rb.linearVelocity = move.action.ReadValue<Vector2>() * speed * ((blocking || (gameManager.classType == 2 && primaryButton.action.inProgress)) ? .5f : 1) * (upgrades[0] > 0 ? 1.25f : 1);
+            rb.linearVelocity = move.action.ReadValue<Vector2>() * speed * ((blocking || (gameManager.classType == 2 && primaryButton.action.inProgress)) ? .5f : 1) * (upgrades[2] > 0 ? 1.25f : 1);
+        else if (health <= 0)
+            rb.linearVelocity = Vector2.zero;
 
         if (rb.linearVelocity != Vector2.zero && !dodgeing)
         {
             lastInput = move.action.ReadValue<Vector2>();
             direction = (Mathf.Atan2(move.action.ReadValue<Vector2>().y, move.action.ReadValue<Vector2>().x) * Mathf.Rad2Deg) - 90;
+            if (canSteppy) StartCoroutine(bigSteppy());
         }
         rotPoint.transform.rotation = Quaternion.Euler(new Vector3(0, 0, direction));
+    }
+
+    private void Update()
+    {
+        healthBar.fillAmount = (float)health / (float)maxHealth;
+        iframes -= Time.deltaTime;
+        pBlock -= Time.deltaTime;
+        
+        timeSinceAction += Time.deltaTime;
+        
 
         if (blocking || gameManager.classType == 2 && primaryButton.action.inProgress && canAttack)
         {
             if (chargeTime < 4)
                 chargeTime += Time.deltaTime * (gameManager.classType == 2 && upgrades[0] > 0 ? 1.25f : 1) * (gameManager.classType == 1 && upgrades[1] > 1 ? .75f : 1);
-            else
+            else if (gameManager.classType == 2)
                 negCharge -= Time.deltaTime;
         }
         else
@@ -134,6 +185,7 @@ public class PlayerController : MonoBehaviour
 
         if (health <= 0)
         {
+            
             Color tempScreen = fadeScreen.color;
             tempScreen.a += Time.deltaTime / 3;
             fadeScreen.color = tempScreen;
@@ -147,6 +199,13 @@ public class PlayerController : MonoBehaviour
 
         if (gameManager.bossesDead >= gameManager.totalBosses && gameManager.totalBosses != 0)
         {
+            gameManager.bossActive = false;
+            if (canJingle)
+            {
+                pVocalCords.PlayOneShot(victory);
+                canJingle = false;
+            }
+            gameManager.health = health;
             Color tempScreen = winScreen.color;
             tempScreen.a += Time.deltaTime / 3;
             winScreen.color = tempScreen;
@@ -155,41 +214,91 @@ public class PlayerController : MonoBehaviour
             tempText.a += Time.deltaTime / 3;
             winText.color = tempText;
             if (tempScreen.a - (2 / 3) > 1)
-                gameManager.menu();
+                gameManager.leaderBoard();
         }
 
-        if (canDodge < (upgrades[1] > 1 ? 2 : 1) && !chargingDodge)
+        if (dotTicks > 0 && !inDoT)
         {
-            chargingDodge = true;
-            StartCoroutine(dodgeCooldown(.15f * (upgrades[1] > 0 ? .75f : 1)));
+            inDoT = true;
+            StartCoroutine(DoT());
         }
     }
 
-    public void takeDamage(int damage)
+    public IEnumerator bigSteppy()
     {
-        if (iframes < 0)
+        canSteppy = false;
+        pVocalCords.PlayOneShot(step);
+        yield return new WaitForSeconds(0.17f);
+        canSteppy = true;
+    }
+
+    public void takeDamage(int damage, string damageType = null, int ToDoT = 0)
+    {
+        if (ToDoT >= dotTicks)
+            dotTicks = ToDoT;
+        if (damageType == "DoT" && ToDoT > 0)
         {
-            if (blocking && chargeTime <= .3)
+            health -= damage;
+        }
+        else if (iframes < 0)
+        {
+            if (blocking && chargeTime <= .3 && damageType != "Unblockable")
             {
                 print("perfect block");
-                iframes = .15f;
+                iframes = .45f;
+                pBlock = 2f;
+                pVocalCords.PlayOneShot(blockAttack);
             }
             else if (!dodgeing)
             {
-                health -= blocking ? damage / (gameManager.classType == 0 && upgrades[1] > 0 ? 8 : 4) : damage;
+                health -= Mathf.RoundToInt((blocking ? damage / (gameManager.classType == 0 && upgrades[1] > 0 ? 8 : 4) : damage) * (gameManager.activeEmperor.increaseDamage ? gameManager.activeEmperor.bossEffectStrength : 1));
+                if (blocking)
+                {
+                    pVocalCords.PlayOneShot(blockAttack);
+                }
+                pickYourPoison = Random.Range(1, 3);
+
+                switch (pickYourPoison)
+                {
+                    case 1:
+                        pVocalCords.PlayOneShot(hurtAagh);
+                        break;
+
+                    case 2:
+                        pVocalCords.PlayOneShot(hurtHoogh);
+                        break;
+
+                    case 3:
+                        pVocalCords.PlayOneShot(hurtOugh);
+                        break;
+
+
+                    default:
+                        break;
+                }
+
                 hitEffect.SetActive(true);
                 StartCoroutine(hitVXF());
                 iframes = .3f;
             }
-
-            if (health <= 0)
-            {
-                StopAllCoroutines();
-                primaryButton.action.started -= primary;
-                secondaryButton.action.started -= secondary;
-                secondaryButton.action.canceled -= secondary;
-            }
         }
+        if (health <= 0)
+        {
+            pVocalCords.PlayOneShot(defeat);
+            StopAllCoroutines();
+            primaryButton.action.started -= primary;
+            secondaryButton.action.started -= secondary;
+            secondaryButton.action.canceled -= secondary;
+        }
+    }
+
+    IEnumerator DoT()
+    {
+
+        dotTicks--;
+        yield return new WaitForSeconds(1);
+        takeDamage(1, "DoT");
+        inDoT = false;
     }
 
     IEnumerator hitVXF()
@@ -208,18 +317,35 @@ public class PlayerController : MonoBehaviour
                 case 1: //sword
                     canAttack = false;
                     swordHitbox.SetActive(true);
+                    pVocalCords.PlayOneShot(swingSword);
                     StartCoroutine(attackCooldown(.4f * (upgrades[0] > 0 ? .75f : 1), .1f, swordHitbox));
                     break;
 
                 case 2: //bow
                     if (phase.canceled && canAttack)
                     {
-                        canAttack = false;
-                        GameObject p = Instantiate(arrow, transform.position, rotPoint.transform.rotation, null);
+                        if (upgrades[0] > 2) // if player has upgrade 3 for path 1 it will shoot multiple arrows
+                        {
+                            for (int i = 0; i < tripArrowCount; i++)
+                            {
+                                float ang = Mathf.Lerp(direction - 30, direction + 30, (i / (float)tripArrowCount));
+                                GameObject p1 = Instantiate(arrow, transform.position, Quaternion.identity, null);
+                                p1.GetComponent<Rigidbody2D>().rotation = ang;
+                                ProjectileHandler projectileData1 = p1.GetComponent<ProjectileHandler>();
+                                projectileData1.creator = this.gameObject;
+                                projectileData1.damage = Mathf.RoundToInt(Mathf.Lerp(damage, damage * 4, chargeTime - (chargeTime + negCharge) / 2));
+                                p1.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(Mathf.Sin(ang * Mathf.Deg2Rad) * -1, Mathf.Cos(ang * Mathf.Deg2Rad)).normalized * Mathf.Lerp(arrowSpeed / 4, arrowSpeed, Mathf.Clamp(chargeTime + negCharge, 0, arrowSpeed) / 2);
+                                Destroy(p1, 5);
+                            }
+                        }
+                        else
+                        {
+                            GameObject p = Instantiate(arrow, transform.position, rotPoint.transform.rotation, null);
 
-                        p.GetComponent<Rigidbody2D>().linearVelocity = (rb.linearVelocity / 8 + lastInput) * Mathf.Lerp(arrowSpeed / 4, arrowSpeed, Mathf.Clamp(chargeTime + negCharge, 0, arrowSpeed) / 2);
-                        p.GetComponent<ProjectileHandler>().damage = Mathf.RoundToInt(Mathf.Lerp(damage, damage * 4, chargeTime - (chargeTime + negCharge) / 2)); //changes arrow speed and dmg based on charge time
-                        p.GetComponent<ProjectileHandler>().creator = this.gameObject;
+                            p.GetComponent<Rigidbody2D>().linearVelocity = (rb.linearVelocity / 8 + lastInput) * Mathf.Lerp(arrowSpeed / 4, arrowSpeed, Mathf.Clamp(chargeTime + negCharge, 0, arrowSpeed) / 2);
+                            p.GetComponent<ProjectileHandler>().damage = Mathf.RoundToInt(Mathf.Lerp(damage, damage * 4, chargeTime - (chargeTime + negCharge) / 2)); //changes arrow speed and dmg based on charge time
+                            p.GetComponent<ProjectileHandler>().creator = this.gameObject;
+                        }
                         StartCoroutine(attackCooldown(.5f));
                     }
                     break;
@@ -273,9 +399,13 @@ public class PlayerController : MonoBehaviour
                 case 2: //dodge
                     if (phase.started && canDodge > 0)
                     {
+                        StartCoroutine(dodgeCooldown(upgrades[1] > 0 ? .75f : 1.5f));
                         dodgeing = true;
+                        GetComponent<CircleCollider2D>().excludeLayers = 8;
                         canDodge--;
                         rb.linearVelocity = move.action.ReadValue<Vector2>() * speed * 3;
+                        if (upgrades[1] > 2)
+                            dodgeHitBox.SetActive(true);
                     }
                     break;
 
@@ -298,17 +428,18 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator dodgeCooldown(float time)
     {
-        yield return new WaitForSeconds(time);
+        yield return new WaitForSeconds(.15f);
         dodgeing = false;
+        dodgeHitBox.SetActive(false);
+        GetComponent<CircleCollider2D>().excludeLayers = 0;
 
-        yield return new WaitForSeconds(.75f);
+        yield return new WaitForSeconds(time);
         canDodge++;
-        chargingDodge = false;
     }
 
     private IEnumerator netCoolDown()
     {
-        yield return new WaitForSeconds(15);
+        yield return new WaitForSeconds(upgrades[1] > 1 ? 10 : 15);
         canNet = true;
     }
 
@@ -322,6 +453,29 @@ public class PlayerController : MonoBehaviour
             if (susytime > 60)
                 sisyphus.SetActive(true);
         }
+    }
+
+
+    //pause menu stuff
+    public void pause(InputAction.CallbackContext phase)
+    {
+        if (phase.started)
+        {
+            Time.timeScale = (Time.timeScale == 1 ? 0 : 1);
+            GameObject.Find("EventSystem").GetComponent<EventSystem>().SetSelectedGameObject(resumeButton);
+            pauseMenu.SetActive(Time.timeScale == 0);
+        }
+    }
+
+    public void resume()
+    {
+        Time.timeScale = 1;
+        pauseMenu.SetActive(false);
+    }
+
+    public void menu()
+    {
+        gameManager.menu();
     }
 }
 

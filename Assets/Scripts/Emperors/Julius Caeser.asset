@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0be1303181aa86f4b866165c2f821454, type: 3}
+  m_Name: Julius Caeser
+  m_EditorClassIdentifier: 
+  emperorName: Julius Caeser
+  bossEffectDiscription: Increases boss attack damage and lowers the hp of the player
+    character.
+  arenaEffectDiscription: lightning strikes happy periodically that deal damage to
+    the player
+  increaseDamage: 1
+  increaseHealth: 0
+  increaseSpeed: 0
+  bossEffectStrength: 1.25
+  decreaseDamage: 0
+  decreaseHealth: 1
+  decreaseSpeed: 0
+  playerEffectStrength: 0.75
+  ObjectToSpawn: {fileID: 8548924504557360471, guid: 13e252984efc4c144b44d34ad0200667, type: 3}
+  timeBetweenEffects: 20

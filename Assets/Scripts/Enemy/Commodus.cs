@@ -1,16 +1,14 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements;
-using UnityEngine.WSA;
 
 public class Commodus : MonoBehaviour
 {
     private EnemyController enemyController;
 
     private float moveTime;
+    public float spaceAway;
     [Header("atk stats")]
-    public Vector2 arrowDirection;
+    [HideInInspector] public Vector2 arrowDirection;
     public GameObject arrow;
     [HideInInspector] public int pendingAttack;
     public float attackRange;
@@ -34,16 +32,22 @@ public class Commodus : MonoBehaviour
     public int vollyDmg;
     public float vollyRad;
     public float vollyTime;
+    
+
+
+
+
     void Start()
     {
         enemyController = GetComponent<EnemyController>();
         volly.GetComponent<ProjectileHandler>().creator = this.gameObject;
         pendingAttack = Random.Range(1, 3);
+        enemyController.distance = spaceAway;
     }
 
     private void Update()
     {
-        if (enemyController.canAttack && meGoShootyShootyShootShoot) // add another bool that will happend during cooldown that lets player move
+        if (enemyController.canAttack && meGoShootyShootyShootShoot && !enemyController.imbolized) // add another bool that will happend during cooldown that lets player move
             attack();
     }
 
@@ -60,6 +64,7 @@ public class Commodus : MonoBehaviour
         switch (pendingAttack)
         {
             case 1: // single shot
+                enemyController.eVocalCords.PlayOneShot(enemyController.attack1);
                 GameObject p = Instantiate(arrow, transform.position, Quaternion.identity, null);
                 ProjectileHandler projectileData = p.GetComponent<ProjectileHandler>();
                 p.GetComponent<Rigidbody2D>().rotation = ang1;
@@ -76,6 +81,7 @@ public class Commodus : MonoBehaviour
                 {
                     float ang = Mathf.Lerp(ang1 - 45, ang1 + 45, (i / (float)tripNum));
                     print(ang);
+                    enemyController.eVocalCords.PlayOneShot(enemyController.attack1);
                     GameObject p1 = Instantiate(arrow, transform.position, Quaternion.identity, null);
                     p1.GetComponent<Rigidbody2D>().rotation = ang;
                     ProjectileHandler projectileData1 = p1.GetComponent<ProjectileHandler>();
@@ -83,8 +89,8 @@ public class Commodus : MonoBehaviour
                     projectileData1.damage = tripDmg;
                     p1.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(Mathf.Sin(ang * Mathf.Deg2Rad) * -1, Mathf.Cos(ang * Mathf.Deg2Rad)).normalized * arrowSpeed;
                     Destroy(p1, 5);
-                    StartCoroutine(enemyController.cooldown(2));
                 }
+                StartCoroutine(enemyController.cooldown(2));
                 break;
 
             case 3: // burst shot
@@ -99,11 +105,13 @@ public class Commodus : MonoBehaviour
         StartCoroutine(meGoNameThings());
     }
 
+    
     IEnumerator burst()
     {
         for (int i = 0; i < burstNum; i++)
         {
             yield return new WaitForSeconds(burstSpeed);
+            enemyController.eVocalCords.PlayOneShot(enemyController.attack1);
             GameObject p = Instantiate(arrow, transform.position, Quaternion.identity, null);
             p.GetComponent<Rigidbody2D>().rotation = ang1;
             ProjectileHandler projectileData = p.GetComponent<ProjectileHandler>();
@@ -129,7 +137,7 @@ public class Commodus : MonoBehaviour
 
     IEnumerator meGoNameThings()
     {
-        yield return new WaitForSeconds(Random.Range(3, 10));
+        yield return new WaitForSeconds(Random.Range(3, 5));
         meGoShootyShootyShootShoot = true;
     }
 }
