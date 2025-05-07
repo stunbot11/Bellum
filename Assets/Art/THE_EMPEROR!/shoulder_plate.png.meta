@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 76902ae89b1b0fd44afa5c626342e976
+guid: 36809c375c197a6429eac9e8c03885d5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5457806503012611904
-    second: emperor_torso&head_0
+      213: 2462546209184858451
+    second: shoulder_plate_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: emperor_torso&head_0
+      name: shoulder_plate_0
       rect:
         serializedVersion: 2
-        x: 315
-        y: 64
-        width: 495
-        height: 951
+        x: 369
+        y: 433
+        width: 285
+        height: 146
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 04732e809160ebb40800000000000000
-      internalID: 5457806503012611904
+      spriteID: 351c279eab8bc2220800000000000000
+      internalID: 2462546209184858451
       vertices: []
       indices: 
       edges: []
