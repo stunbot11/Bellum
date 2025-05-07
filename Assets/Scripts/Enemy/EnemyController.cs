@@ -36,7 +36,6 @@ public class EnemyController : MonoBehaviour
     public AudioClip hurtHoogh;
     public AudioClip hurtOugh;
     public AudioClip netHit;
-    private bool canSteppy = true;
     //private int pickYourPoison;
 
     [HideInInspector] public float angle;
@@ -93,9 +92,6 @@ public class EnemyController : MonoBehaviour
             inDoT = true;
             StartCoroutine(DoT());
         }
-
-        if (gameManager.boss < 3 && goingToTarget && canSteppy)
-            StartCoroutine(biggerSteppy());
     }
 
     public void takeDamage(int damage, bool net = false, string dmgType = null, int ToDoT = 0)
@@ -190,13 +186,5 @@ public class EnemyController : MonoBehaviour
         yield return new WaitForSeconds(1);
         takeDamage(5, false, "DoT");
         inDoT = false;
-    }
-
-    IEnumerator biggerSteppy()
-    {
-        canSteppy = false;
-        eVocalCords.PlayOneShot(steppy);
-        yield return new WaitForSeconds(0.17f);
-        canSteppy = true;
     }
 }
