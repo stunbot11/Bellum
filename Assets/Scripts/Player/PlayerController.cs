@@ -203,6 +203,7 @@ public class PlayerController : MonoBehaviour
 
         if (gameManager.bossesDead >= gameManager.totalBosses && gameManager.totalBosses != 0)
         {
+            unbindControlls();
             gameManager.bossActive = false;
             if (canJingle)
             {
@@ -290,6 +291,7 @@ public class PlayerController : MonoBehaviour
         {
             pVocalCords.PlayOneShot(defeat);
             StopAllCoroutines();
+            unbindControlls();
             primaryButton.action.started -= primary;
             secondaryButton.action.started -= secondary;
             secondaryButton.action.canceled -= secondary;
@@ -492,7 +494,16 @@ public class PlayerController : MonoBehaviour
 
     public void menu()
     {
+        unbindControlls();
         gameManager.menu();
+    }
+
+    private void unbindControlls()
+    {
+        move.action.Disable();
+        primaryButton.action.Disable();
+        secondaryButton.action.Disable();
+        pauseButton.action.Disable();
     }
 }
 
