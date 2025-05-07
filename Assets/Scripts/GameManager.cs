@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour
         print("start");
         yield return new WaitForSeconds(2.5f);
         print("start2");
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(boss);
     }
 
     public void menu()

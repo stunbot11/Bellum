@@ -5,9 +5,7 @@ public class ArenaHandler : MonoBehaviour
 {
     private GameManager gameManager;
     public GameObject[] classes;
-    public GameObject[] lions;
-    public GameObject Commodus;
-    public GameObject Janus;
+    public GameObject[] bosses;
     public GameObject door;
     public GameObject obsticles;
     public EmperorInfo emperorInfo;
@@ -22,13 +20,12 @@ public class ArenaHandler : MonoBehaviour
 
     [Header("Music")]
     public AudioSource speaker;
-    public AudioClip[] bossMusic;
+
 
     private void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         classes[gameManager.classType - 1].SetActive(true);
-        speaker.resource = bossMusic[gameManager.boss - 1];
         speaker.Play();
         speaker.Stop();
 
@@ -56,29 +53,13 @@ public class ArenaHandler : MonoBehaviour
             speaker.Play();
             if (gameManager.activeEmperor.ObjectToSpawn != null)
                 emperorInfo.fakeStart();
-            switch (gameManager.boss)
+            for (int i = 0; i < bosses.Length; i ++)
             {
-                case 1:
-                    for (int i = 0; i < lions.Length - 1; i++)
-                    {
-                        lions[i].SetActive(true);
-                        lions[i].GetComponentInChildren<Light2D>().enabled = gameManager.activeEmperor.emperorName == "Caligula";
-                    }
-                    if (gameManager.activeEmperor.emperorName == "Commodus")
-                        lions[3].SetActive(true);
-                    break;
-
-                case 2:
-                    Commodus.SetActive(true);
-                    Commodus.GetComponentInChildren<Light2D>().enabled = gameManager.activeEmperor.emperorName == "Caligula";
-                    break;
-
-                case 3:
-                    Janus.SetActive(true);
-                    Janus.GetComponentInChildren<Light2D>().enabled = gameManager.activeEmperor.emperorName == "Caligula";
-                    break;
+                bosses[i].gameObject.SetActive(true);
+                bosses[i].GetComponentInChildren<Light2D>().enabled = gameManager.activeEmperor.emperorName == "Caligula";
             }
-            globalLight.SetActive(true);
+            if (gameManager.activeEmperor.emperorName == "Caligula")
+                globalLight.SetActive(true);
             gameManager.bossActive = true;
             Destroy(this);
         }
