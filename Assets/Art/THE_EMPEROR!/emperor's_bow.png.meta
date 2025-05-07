@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      emperor's_bow_0: -2625468267250585414
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

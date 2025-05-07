@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      emperor's_left_leg_0: -127705951466752439
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

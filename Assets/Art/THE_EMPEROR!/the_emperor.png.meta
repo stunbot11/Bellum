@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      the_emperor_0: 4404666876035723847
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
