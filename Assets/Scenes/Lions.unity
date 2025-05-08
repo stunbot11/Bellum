@@ -2139,6 +2139,7 @@ MonoBehaviour:
   player: {fileID: 0}
   targetOveride: 0
   target: {x: 0, y: 0}
+  anim: {fileID: 0}
   gameManager: {fileID: 0}
   rb: {fileID: 0}
   hitEffect: {fileID: 507204170}
@@ -2696,6 +2697,7 @@ MonoBehaviour:
   player: {fileID: 0}
   targetOveride: 0
   target: {x: 0, y: 0}
+  anim: {fileID: 0}
   gameManager: {fileID: 0}
   rb: {fileID: 0}
   hitEffect: {fileID: 1490114154}
@@ -4916,6 +4918,7 @@ MonoBehaviour:
   player: {fileID: 0}
   targetOveride: 0
   target: {x: 0, y: 0}
+  anim: {fileID: 0}
   gameManager: {fileID: 0}
   rb: {fileID: 0}
   hitEffect: {fileID: 1162302168}

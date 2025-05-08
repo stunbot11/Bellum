@@ -7,7 +7,7 @@ public class EnemyController : MonoBehaviour
     [HideInInspector] public GameObject player;
     public bool targetOveride;
     [HideInInspector] public Vector2 target;
-    private Animator anim;
+    [HideInInspector] public Animator anim;
 
     [HideInInspector] public GameManager gameManager;
     [HideInInspector] public Rigidbody2D rb;
@@ -78,9 +78,15 @@ public class EnemyController : MonoBehaviour
 
         Vector2 moveDir = new Vector2(Mathf.Sin(angle * Mathf.Deg2Rad) * -1, Mathf.Cos(angle * Mathf.Deg2Rad)).normalized;
         if ((targetOveride ? Vector2.Distance(transform.position, target) >= 1 : true) && !imbolized && canMove)
+        {
             rb.linearVelocity = moveDir * speed * speedMod;
+            //anim.SetBool("Move", true); disabled untill all enemies have animation controllers
+        }
         else
+        {
             rb.linearVelocity = Vector2.zero;
+            //anim.SetBool("Move", false); disabled untill all enemies have animation controllers
+        }
 
         if (Vector2.Distance(transform.position, target) <= 1 && goingToTarget && !spearThrown)
         {
