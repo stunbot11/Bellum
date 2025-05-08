@@ -7,6 +7,7 @@ public class EnemyController : MonoBehaviour
     [HideInInspector] public GameObject player;
     public bool targetOveride;
     [HideInInspector] public Vector2 target;
+    private Animator anim;
 
     [HideInInspector] public GameManager gameManager;
     [HideInInspector] public Rigidbody2D rb;
@@ -54,6 +55,7 @@ public class EnemyController : MonoBehaviour
         StartCoroutine(goToTime());
         speed = gameManager.activeEmperor.increaseSpeed ? speed * gameManager.activeEmperor.bossEffectStrength : speed;
         health = gameManager.activeEmperor.increaseHealth ? Mathf.RoundToInt(health * gameManager.activeEmperor.bossEffectStrength) : health;
+        //anim = GetComponentInChildren<Animator>();
     }
 
     private void Update()
