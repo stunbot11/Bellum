@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ColosseumWall_0: -524821055727610095
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
