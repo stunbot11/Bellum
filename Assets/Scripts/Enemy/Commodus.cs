@@ -78,7 +78,7 @@ public class Commodus : MonoBehaviour
                 
             case 2: // triple shot
 
-                enemyController.anim.SetTrigger("TripShot");
+                enemyController.anim.SetTrigger("TripShoot");
                 for (int i = 0; i < tripNum; i++)
                 {
                     float ang = Mathf.Lerp(ang1 - 45, ang1 + 45, (i / (float)tripNum));
