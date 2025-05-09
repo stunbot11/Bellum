@@ -103,6 +103,14 @@ public class GameManager : MonoBehaviour
         eventSystem.SetSelectedGameObject(GameObject.Find(menu == 0 ? "start" : "Challenges Back"));
     }
 
+    [HideInInspector] public Image bossHealthBar;
+    [HideInInspector] public float tEHealth;
+    [HideInInspector] public float tEMHealth;
+    public void updateBar()
+    {
+        bossHealthBar.fillAmount = tEHealth / tEMHealth;
+    }
+
     public void leaderBoard()
     {
         for (int i = 0; i < challenges.Length; i++)

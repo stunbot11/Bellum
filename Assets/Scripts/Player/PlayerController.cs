@@ -171,7 +171,7 @@ public class PlayerController : MonoBehaviour
         pBlock -= Time.deltaTime;
         
         timeSinceAction += Time.deltaTime;
-        
+
 
         if (blocking || gameManager.classType == 2 && primaryButton.action.inProgress && canAttack)
         {
@@ -180,12 +180,15 @@ public class PlayerController : MonoBehaviour
             else if (gameManager.classType == 2)
                 negCharge -= Time.deltaTime;
         }
+        else if (gameManager.classType == 3 && !canNet)
+            chargeTime += Time.deltaTime;
+
         else
         {
             chargeTime = 0;
             negCharge = 0;
         }
-        chargeBar.fillAmount = (chargeTime + negCharge) / 2;
+        chargeBar.fillAmount = gameManager.classType == 1 ? chargeTime / (.3f * (chargeTime > .3f ? 999999999 : 1)) : (gameManager.classType == 2 ? (chargeTime + negCharge) / 2 : chargeTime / (upgrades[1] > 1 ? 10 : 15));
 
         if (health <= 0)
         {

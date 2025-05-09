@@ -37,6 +37,7 @@ public class Lion : MonoBehaviour
 
         if (pendingAttack == 4 && enemyController.gameManager.lionCheck == enemyController.gameManager.lionReady && enemyController.gameManager.lionCheck != 0 && ready)
         {
+            enemyController.anim.SetBool("Lunge", true);
             lungeATK();
         }
 
@@ -61,11 +62,13 @@ public class Lion : MonoBehaviour
         switch (pendingAttack)
         {
             case 1: //bite
+                enemyController.anim.SetTrigger("Bite");
                 biteHitBox.SetActive(true);
                 StartCoroutine(enemyController.cooldown(1.5f, biteHitBox));
                 break;
 
             case 2: //slash
+                enemyController.anim.SetTrigger("Slash");
                 slashHitBox.SetActive(true);
                 enemyController.eVocalCords.PlayOneShot(enemyController.attack1);
                 StartCoroutine(enemyController.cooldown(1.5f, slashHitBox));
@@ -133,6 +136,7 @@ public class Lion : MonoBehaviour
     IEnumerator lungeTime(float time)
     {
         yield return new WaitForSeconds(time);
+        enemyController.anim.SetBool("Lunge", false);
         ready = false;
         enemyController.spearThrown = false;
         enemyController.gameManager.lionCheck = 0;

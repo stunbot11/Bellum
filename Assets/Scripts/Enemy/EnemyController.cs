@@ -1,18 +1,18 @@
 using System.Collections;
 using UnityEngine;
-using static UnityEngine.Rendering.DebugUI;
 
 public class EnemyController : MonoBehaviour
 {
     [HideInInspector] public GameObject player;
     public bool targetOveride;
     [HideInInspector] public Vector2 target;
-    private Animator anim;
+    [HideInInspector] public Animator anim;
 
     [HideInInspector] public GameManager gameManager;
     [HideInInspector] public Rigidbody2D rb;
     public GameObject hitEffect;
     public bool goingToTarget;
+    public GameObject rotPoint;
 
     [Header("Stats")]
     [HideInInspector] public float effectMod;
@@ -48,6 +48,8 @@ public class EnemyController : MonoBehaviour
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.Find("Player");
+        gameManager.tEMHealth += health;
+        gameManager.tEHealth += health;
         gameManager.totalBosses++;
         health = gameManager.challenges[1] ? health * 2 : health;
         canMove = true;
@@ -55,7 +57,7 @@ public class EnemyController : MonoBehaviour
         StartCoroutine(goToTime());
         speed = gameManager.activeEmperor.increaseSpeed ? speed * gameManager.activeEmperor.bossEffectStrength : speed;
         health = gameManager.activeEmperor.increaseHealth ? Mathf.RoundToInt(health * gameManager.activeEmperor.bossEffectStrength) : health;
-        //anim = GetComponentInChildren<Animator>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     private void Update()
@@ -74,13 +76,20 @@ public class EnemyController : MonoBehaviour
                 angle += 45;
             }
         }
-        rb.rotation = angle;
+        rotPoint.transform.rotation = Quaternion.Euler(0, 0, angle);
+        this.transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x) * (rb.linearVelocityX > 0 ? -1 : (rb.linearVelocityX < 0 ? 1 : transform.localScale.x / Mathf.Abs(transform.localScale.x))), transform.localScale.y);
 
         Vector2 moveDir = new Vector2(Mathf.Sin(angle * Mathf.Deg2Rad) * -1, Mathf.Cos(angle * Mathf.Deg2Rad)).normalized;
         if ((targetOveride ? Vector2.Distance(transform.position, target) >= 1 : true) && !imbolized && canMove)
+        {
             rb.linearVelocity = moveDir * speed * speedMod;
+            anim.SetBool("Move", true);
+        }
         else
+        {
             rb.linearVelocity = Vector2.zero;
+            anim.SetBool("Move", false);
+        }
 
         if (Vector2.Distance(transform.position, target) <= 1 && goingToTarget && !spearThrown)
         {
@@ -131,6 +140,8 @@ public class EnemyController : MonoBehaviour
         dmgBoost += gameManager.classType == 1 && playerController.upgrades[0] >= 3 && dmgType != "DoT" && inDoT ? .5f : 0; //if in dot and have upgrade increaase damage
         dmgBoost += playerController.upgrades[1] > 2 && playerController.pBlock > 0 ? .5f : 0;
         health -= (int)(damage * dmgBoost);
+        gameManager.tEHealth -= health < damage ? health : damage;
+        gameManager.updateBar();
         if (health <= 0)
         {
             eVocalCords.Pause();
