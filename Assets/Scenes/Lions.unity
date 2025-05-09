@@ -268,7 +268,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1976443358280247149, guid: 77eb313afe08d204abd8bd1075cd9017, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.1
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 2902378050865796262, guid: 77eb313afe08d204abd8bd1075cd9017, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2233,7 +2233,7 @@ MonoBehaviour:
   goingToTarget: 0
   rotPoint: {fileID: 1466015816}
   effectMod: 0
-  health: 100
+  health: 200
   speed: 2
   speedMod: 1
   canAttack: 1
@@ -2879,7 +2879,7 @@ MonoBehaviour:
   goingToTarget: 0
   rotPoint: {fileID: 247013076}
   effectMod: 0
-  health: 100
+  health: 200
   speed: 2
   speedMod: 1
   canAttack: 1
@@ -5054,7 +5054,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &570264082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5101,7 +5101,7 @@ MonoBehaviour:
   goingToTarget: 0
   rotPoint: {fileID: 1057927312}
   effectMod: 0
-  health: 100
+  health: 200
   speed: 2
   speedMod: 1
   canAttack: 1
@@ -51428,7 +51428,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1976443358280247149, guid: 77eb313afe08d204abd8bd1075cd9017, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.1
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 2902378050865796262, guid: 77eb313afe08d204abd8bd1075cd9017, type: 3}
       propertyPath: m_LocalPosition.z
@@ -57649,6 +57649,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 570264086}
     m_Modifications:
+    - target: {fileID: 1976443358280247149, guid: 77eb313afe08d204abd8bd1075cd9017, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 8850457910876458467, guid: 77eb313afe08d204abd8bd1075cd9017, type: 3}
       propertyPath: m_Name
       value: Lion
