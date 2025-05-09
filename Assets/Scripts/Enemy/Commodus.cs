@@ -64,6 +64,7 @@ public class Commodus : MonoBehaviour
         switch (pendingAttack)
         {
             case 1: // single shot
+                enemyController.anim.SetTrigger("Shot");
                 enemyController.eVocalCords.PlayOneShot(enemyController.attack1);
                 GameObject p = Instantiate(arrow, transform.position, Quaternion.identity, null);
                 ProjectileHandler projectileData = p.GetComponent<ProjectileHandler>();
@@ -77,6 +78,7 @@ public class Commodus : MonoBehaviour
                 
             case 2: // triple shot
 
+                enemyController.anim.SetTrigger("TripShot");
                 for (int i = 0; i < tripNum; i++)
                 {
                     float ang = Mathf.Lerp(ang1 - 45, ang1 + 45, (i / (float)tripNum));
@@ -94,10 +96,12 @@ public class Commodus : MonoBehaviour
                 break;
 
             case 3: // burst shot
+                enemyController.anim.SetTrigger("Shot");
                 StartCoroutine(burst());
                 break;
 
             case 4: // volly shot
+                enemyController.anim.SetTrigger("ArrowRain");
                 volly.transform.position = enemyController.player.transform.position;
                 StartCoroutine(vollyStuff(.5f));
                 break;
