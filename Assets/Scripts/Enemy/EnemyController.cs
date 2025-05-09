@@ -48,6 +48,8 @@ public class EnemyController : MonoBehaviour
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.Find("Player");
+        gameManager.tEMHealth += health;
+        gameManager.tEHealth += health;
         gameManager.totalBosses++;
         health = gameManager.challenges[1] ? health * 2 : health;
         canMove = true;
@@ -81,12 +83,12 @@ public class EnemyController : MonoBehaviour
         if ((targetOveride ? Vector2.Distance(transform.position, target) >= 1 : true) && !imbolized && canMove)
         {
             rb.linearVelocity = moveDir * speed * speedMod;
-            //anim.SetBool("Move", true); disabled untill all enemies have animation controllers
+            anim.SetBool("Move", true);
         }
         else
         {
             rb.linearVelocity = Vector2.zero;
-            //anim.SetBool("Move", false); disabled untill all enemies have animation controllers
+            anim.SetBool("Move", false);
         }
 
         if (Vector2.Distance(transform.position, target) <= 1 && goingToTarget && !spearThrown)
@@ -138,6 +140,8 @@ public class EnemyController : MonoBehaviour
         dmgBoost += gameManager.classType == 1 && playerController.upgrades[0] >= 3 && dmgType != "DoT" && inDoT ? .5f : 0; //if in dot and have upgrade increaase damage
         dmgBoost += playerController.upgrades[1] > 2 && playerController.pBlock > 0 ? .5f : 0;
         health -= (int)(damage * dmgBoost);
+        gameManager.tEHealth -= health < damage ? health : damage;
+        gameManager.updateBar();
         if (health <= 0)
         {
             eVocalCords.Pause();

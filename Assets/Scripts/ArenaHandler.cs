@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.UI;
 
 public class ArenaHandler : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class ArenaHandler : MonoBehaviour
     public GameObject door;
     public GameObject obsticles;
     public EmperorInfo emperorInfo;
+    public Image bossBar;
 
     public GameObject globalLight;
 
@@ -51,6 +53,8 @@ public class ArenaHandler : MonoBehaviour
         {
             door.SetActive(true);
             speaker.Play();
+            bossBar.transform.parent.transform.gameObject.SetActive(true);
+            gameManager.bossHealthBar = bossBar;
             if (gameManager.activeEmperor.ObjectToSpawn != null)
                 emperorInfo.fakeStart();
             for (int i = 0; i < bosses.Length; i ++)
