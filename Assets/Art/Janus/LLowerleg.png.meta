@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7d2a78df015aaf041a8a9469e71b75ea
+guid: 5d4863d3a2c528d48be92a6a7fe1a59b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4673363330001956793
-    second: RFoot_0
+      213: 672882301231065170
+    second: LLowerleg_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RFoot_0
+      name: LLowerleg_0
       rect:
         serializedVersion: 2
-        x: 345
-        y: 3
-        width: 128
-        height: 123
+        x: 396
+        y: 94
+        width: 95
+        height: 206
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 74095e8dfc0e42fb0800000000000000
-      internalID: -4673363330001956793
+      spriteID: 258668c43ee865900800000000000000
+      internalID: 672882301231065170
       vertices: []
       indices: 
       edges: []
