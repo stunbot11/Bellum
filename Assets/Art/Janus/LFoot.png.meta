@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 7471f22b0ff751a43ada739c17e6b026
+guid: 452fe45a7a9a4774d98f27376e79f498
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6757604448314075875
-    second: health_banner_0
-  - first:
-      213: -8209668834029561140
-    second: health_banner_1
+      213: 3498832857178135613
+    second: LFoot_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -49,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -78,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -116,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: health_banner_0
+      name: LFoot_0
       rect:
         serializedVersion: 2
-        x: 197
-        y: 232
-        width: 495
-        height: 776
+        x: 345
+        y: 3
+        width: 146
+        height: 297
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,30 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3ea2c524175d7cd50800000000000000
-      internalID: 6757604448314075875
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: health_banner_1
-      rect:
-        serializedVersion: 2
-        x: 433
-        y: 1007
-        width: 7
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cca921031b5611e80800000000000000
-      internalID: -8209668834029561140
+      spriteID: d3c519c22f95e8030800000000000000
+      internalID: 3498832857178135613
       vertices: []
       indices: 
       edges: []
@@ -163,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -173,8 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      health_banner_0: 6757604448314075875
-      health_banner_1: -8209668834029561140
+      LFoot_0: 3498832857178135613
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
