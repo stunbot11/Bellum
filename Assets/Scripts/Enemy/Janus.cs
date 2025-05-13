@@ -50,6 +50,7 @@ public class Janus : MonoBehaviour
 
     private IEnumerator attack()
     {
+        enemyController.anim.SetTrigger("Attack");
         enemyController.canAttack = false;
         if (!phase) //sword attacks
         {
@@ -80,6 +81,8 @@ public class Janus : MonoBehaviour
         yield return new WaitForSeconds(.5f);
         if (side) // switch to sword
         {
+            enemyController.anim.SetBool("Sword", true);
+            enemyController.anim.SetTrigger("Phase Sword");
             phase = false;
             janusPhaseMusic.Stop();
             janusPhaseMusic.resource = jPhase[0];
@@ -96,6 +99,8 @@ public class Janus : MonoBehaviour
         }
         else // switch to spear
         {
+            enemyController.anim.SetBool("Sword", false);
+            enemyController.anim.SetTrigger("Phase Spear");
             janusPhaseMusic.Stop();
             janusPhaseMusic.resource = jPhase[1];
             janusPhaseMusic.Play();
