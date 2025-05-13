@@ -27,6 +27,17 @@ public class Lion : MonoBehaviour
     void Start()
     {
         enemyController = GetComponent<EnemyController>();
+        if (enemyController.gameManager.activeEmperor.name == "Commodus")
+        {
+            if (GameObject.Find("Lion 4").TryGetComponent(out Lion lion))
+            {
+                lion4 = lion;
+                lion4.lion1 = lion1;
+                lion4.lion2 = lion2;
+                lion4.lion3 = lion3;
+                lion4.lion4 = lion4;
+            }
+        }
     }
 
     // Update is called once per frame

@@ -11,7 +11,6 @@ public class EmperorInfo : MonoBehaviour
     public TextMeshProUGUI emperorName;
     public TextMeshProUGUI effectDiscription;
     public TextMeshProUGUI arenaEffect;
-    public GameObject obsticle;
 
     private void Start()
     {
