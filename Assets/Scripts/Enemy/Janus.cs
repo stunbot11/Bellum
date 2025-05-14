@@ -19,6 +19,9 @@ public class Janus : MonoBehaviour
     public float spearAtkRange;
     public int damage;
 
+    public GameObject swordAnim;
+    public GameObject spearAnim;
+
     [Header("Music")]
     public AudioSource janusPhaseMusic;
     public AudioClip[] jPhase;
@@ -34,6 +37,7 @@ public class Janus : MonoBehaviour
         if (spearThrown && Vector2.Distance(transform.position, thrownSpear.transform.position) < 1f && canPickUp)
         {
             spearThrown = false;
+            spearAnim.SetActive(true);
             Destroy(thrownSpear);
             thrownSpear = null;
             enemyController.targetOveride = false;
@@ -52,6 +56,7 @@ public class Janus : MonoBehaviour
     {
         enemyController.anim.SetTrigger("Attack");
         enemyController.canAttack = false;
+        enemyController.canMove = false;
         if (!phase) //sword attacks
         {
             swordHitBox.SetActive(true);
@@ -64,6 +69,7 @@ public class Janus : MonoBehaviour
             yield return new WaitForSeconds(.1f);
             spearHitBox.SetActive(false);
         }
+        enemyController.canMove = true;
         StartCoroutine(enemyController.cooldown(.75f));
     }
 
@@ -81,6 +87,8 @@ public class Janus : MonoBehaviour
         yield return new WaitForSeconds(.5f);
         if (side) // switch to sword
         {
+            spearAnim.SetActive(false);
+            swordAnim.SetActive(true);
             enemyController.anim.SetBool("Sword", true);
             enemyController.anim.SetTrigger("Phase Sword");
             phase = false;
@@ -99,8 +107,12 @@ public class Janus : MonoBehaviour
         }
         else // switch to spear
         {
+            swordAnim.SetActive(false);
+            spearAnim.SetActive(true);
             enemyController.anim.SetBool("Sword", false);
             enemyController.anim.SetTrigger("Phase Spear");
+            yield return new WaitForSeconds(1);
+            spearAnim.SetActive(false);
             janusPhaseMusic.Stop();
             janusPhaseMusic.resource = jPhase[1];
             janusPhaseMusic.Play();
