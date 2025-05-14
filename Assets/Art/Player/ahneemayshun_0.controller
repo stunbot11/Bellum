@@ -187,7 +187,7 @@ AnimatorStateTransition:
     m_ConditionEvent: Walking
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: SaRelease
+    m_ConditionEvent: SaDown
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3560318513405363315}
@@ -215,7 +215,7 @@ AnimatorStateTransition:
     m_ConditionEvent: Walking
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: SaRelease
+    m_ConditionEvent: SaDown
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5921186266083088796}
@@ -258,7 +258,7 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: SaRelease
+  - m_Name: SaDown
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
