@@ -332,6 +332,8 @@ public class PlayerController : MonoBehaviour
                     break;
 
                 case 2: //bow
+                    if (phase.started && canAttack)
+                        animator.SetTrigger("SaAttack");
                     if (phase.canceled && canAttack)
                     {
                         if (upgrades[0] > 2) // if player has upgrade 3 for path 1 it will shoot multiple arrows
@@ -346,7 +348,7 @@ public class PlayerController : MonoBehaviour
                                 projectileData1.damage = Mathf.RoundToInt(Mathf.Lerp(damage, damage * 4, chargeTime - (chargeTime + negCharge) / 2));
                                 p1.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(Mathf.Sin(ang * Mathf.Deg2Rad) * -1, Mathf.Cos(ang * Mathf.Deg2Rad)).normalized * Mathf.Lerp(arrowSpeed / 4, arrowSpeed, Mathf.Clamp(chargeTime + negCharge, 0, arrowSpeed) / 2);
                                 Destroy(p1, 5);
-                                animator.SetTrigger("SAAttack");
+                                animator.SetTrigger("SaRelease");
                             }
                         }
                         else

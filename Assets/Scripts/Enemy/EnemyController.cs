@@ -62,8 +62,8 @@ public class EnemyController : MonoBehaviour
 
     private void Update()
     {
-        //gets angle from enemy to player in 8 directions and moves towards them
-        Vector2 targetPos = ((targetOveride ? new Vector2(Mathf.Clamp(target.x, -38, 38), Mathf.Clamp(target.y , Mathf.Lerp(12f, 17.5f, (Mathf.Abs(target.x) - 25.5f) / 12.5f), Mathf.Lerp(36f, 30.5f, (Mathf.Abs(target.x) - 25.5f) / 12.5f))) : player.transform.position) - transform.position).normalized;
+        //gets angle from enemy to player in 8 directions and moves towards them  max and min x of arena                     lower min and max of arena      how far from center    upper min and max                          width of edge minused
+        Vector2 targetPos = ((targetOveride ? new Vector2(Mathf.Clamp(target.x, -36, 36), Mathf.Clamp(target.y , Mathf.Lerp(16f, 25.5f, (Mathf.Abs(target.x) - 27) / 8.5f), Mathf.Lerp(35f, 25.5f, (Mathf.Abs(target.x) - 27) / 8.5f))) : player.transform.position) - transform.position).normalized;
         float tempRot = Mathf.Atan2(targetPos.y, targetPos.x) * Mathf.Rad2Deg * (gameManager.boss == 2 && !targetOveride && Vector2.Distance(player.transform.position, transform.position) <= distance ? -1 : 1);
         angle = (Mathf.Round((tempRot - 45) / 45) * 45 - 45);
         RaycastHit2D objectDect = Physics2D.Raycast(transform.position, rb.linearVelocity.normalized, 2, LayerMask.NameToLayer("Default"));
