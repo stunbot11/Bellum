@@ -146,6 +146,7 @@ public class EnemyController : MonoBehaviour
         {
             eVocalCords.Pause();
             gameManager.bossesDead++;
+            gameManager.lionCheck--;
             Destroy(this.gameObject);
         }
     }
