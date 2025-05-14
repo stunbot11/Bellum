@@ -3781,7 +3781,7 @@ Transform:
   m_GameObject: {fileID: 428950507}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.08, y: 5.75, z: 0}
+  m_LocalPosition: {x: -0.08, y: 7.06, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4750,7 +4750,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.08, y: 5.75, z: -10}
+  m_LocalPosition: {x: -0.08, y: 7.06, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -54653,7 +54653,7 @@ Transform:
   m_GameObject: {fileID: 1753687146}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.08, y: 5.75, z: -10}
+  m_LocalPosition: {x: -0.08, y: 7.06, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -57783,9 +57783,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2065067978}
-  - component: {fileID: 2065067977}
   - component: {fileID: 2065067976}
   - component: {fileID: 2065067975}
+  - component: {fileID: 2065067979}
   m_Layer: 0
   m_Name: arena
   m_TagString: Untagged
@@ -57898,52 +57898,6 @@ MonoBehaviour:
   bossBar: {fileID: 1352795255}
   globalLight: {fileID: 619394800}
   speaker: {fileID: 1753687150}
---- !u!61 &2065067977
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2065067974}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0.020452023, y: 2.211574}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 4.242511, y: 1.3557558}
-  m_EdgeRadius: 0
 --- !u!4 &2065067978
 Transform:
   m_ObjectHideFlags: 0
@@ -57978,6 +57932,63 @@ Transform:
   - {fileID: 881105762}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &2065067979
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065067974}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 2.5848043, y: 3.1008234}
+      - {x: 1.6077921, y: 4.404545}
+      - {x: -0.15989888, y: 4.7416344}
+      - {x: -2.5367851, y: 4.2051907}
+      - {x: -2.572528, y: 1.189677}
+      - {x: -1.6538854, y: 1.1281368}
+      - {x: -1.4246099, y: 3.5317764}
+      - {x: 1.3538549, y: 3.326047}
+      - {x: 1.6644388, y: 0.8859103}
+      - {x: 2.6224494, y: 0.92528814}
+  m_UseDelaunayMesh: 0
 --- !u!1001 &2076197162
 PrefabInstance:
   m_ObjectHideFlags: 0
