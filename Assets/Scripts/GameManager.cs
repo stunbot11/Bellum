@@ -121,6 +121,15 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Leaderboard");
     }
 
+    public IEnumerator hitEffect(SpriteRenderer[] limbs)
+    {
+        for (int i = 0; i < limbs.Length; i++)
+            limbs[i].color = Color.red;
+        yield return new WaitForSeconds(.2f);
+        for (int i = 0; i < limbs.Length; i++)
+            limbs[i].color = Color.white;
+    }
+
     public void deleteSave()
     {
         PlayerPrefs.DeleteAll();

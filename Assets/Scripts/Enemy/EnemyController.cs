@@ -10,7 +10,7 @@ public class EnemyController : MonoBehaviour
 
     [HideInInspector] public GameManager gameManager;
     [HideInInspector] public Rigidbody2D rb;
-    public GameObject hitEffect;
+    public SpriteRenderer[] hitEffect;
     public bool goingToTarget;
     public GameObject rotPoint;
 
@@ -112,7 +112,6 @@ public class EnemyController : MonoBehaviour
             dotTicks = ToDoT;
         if (net)
             StartCoroutine(imbolizedCooldown());
-        hitEffect.SetActive(true);
         if (!net)
         {
                 switch (Random.Range(1, 3))
@@ -134,7 +133,7 @@ public class EnemyController : MonoBehaviour
                 }
         }
         else eVocalCords.PlayOneShot(netHit);
-        StartCoroutine(hitEffectStop());
+        StartCoroutine(gameManager.hitEffect(hitEffect));
         float dmgBoost = 1;
         dmgBoost += imbolized && playerController.upgrades[1] > 2 ? .75f : 0; //if imbolized increase damage if have upgrade
         dmgBoost += gameManager.classType == 1 && playerController.upgrades[0] >= 3 && dmgType != "DoT" && inDoT ? .5f : 0; //if in dot and have upgrade increaase damage
@@ -149,13 +148,6 @@ public class EnemyController : MonoBehaviour
             gameManager.lionCheck--;
             Destroy(this.gameObject);
         }
-    }
-
-    
-    IEnumerator hitEffectStop()
-    {
-        yield return new WaitForSeconds(.2f);
-        hitEffect.SetActive(false);
     }
 
     public IEnumerator cooldown(float cooldown, GameObject hitbox = null)
