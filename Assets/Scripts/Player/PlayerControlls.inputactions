@@ -155,6 +155,17 @@
                 },
                 {
                     "name": "",
+                    "id": "8cfb1edc-fb03-45b6-898f-df2bb0cf0a97",
+                    "path": "<HID::Microntek              USB Joystick          >/stick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Joystick",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "c6031868-ab54-4a67-b758-3757d84a43c5",
                     "path": "<Keyboard>/j",
                     "interactions": "",
@@ -177,6 +188,17 @@
                 },
                 {
                     "name": "",
+                    "id": "d87e2592-1c0d-4c4d-8505-2e3f4ca21e8d",
+                    "path": "<HID::Microntek              USB Joystick          >/trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Joystick",
+                    "action": "Primary",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "ee041d1e-b4fa-44bb-930c-f55c726cea99",
                     "path": "<Keyboard>/k",
                     "interactions": "",
@@ -193,6 +215,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
+                    "action": "Secondary",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7a0f6d23-5df0-412f-b850-c949adf94480",
+                    "path": "<HID::Microntek              USB Joystick          >/trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Joystick",
                     "action": "Secondary",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -278,6 +311,17 @@
                 },
                 {
                     "name": "",
+                    "id": "1a4beafd-3985-4e72-9a63-3b06634a9d8c",
+                    "path": "<HID::Microntek              USB Joystick          >/button2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Joystick",
+                    "action": "Back",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "bf1e71ba-e9b1-4495-955f-6a44772afcbf",
                     "path": "<Keyboard>/j",
                     "interactions": "",
@@ -294,6 +338,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
+                    "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "953438a9-7be0-4d6a-97c0-0ef0a68b6e64",
+                    "path": "<HID::Microntek              USB Joystick          >/trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Joystick",
                     "action": "Select",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -354,59 +409,15 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "2D Vector",
-                    "id": "e309e810-2462-40bf-a3a3-9039026a96be",
-                    "path": "2DVector",
+                    "name": "",
+                    "id": "f8ba0847-17ee-4835-bfe1-7049415f0f68",
+                    "path": "<HID::Microntek              USB Joystick          >/stick",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Joystick",
                     "action": "Move",
-                    "isComposite": true,
+                    "isComposite": false,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "up",
-                    "id": "6f737d06-0782-4934-9e27-b4d6b1295412",
-                    "path": "<Gamepad>/leftStick/up",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "down",
-                    "id": "8309a5cf-46dd-4df2-9bc2-92d099fbdef5",
-                    "path": "<Gamepad>/leftStick/down",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "left",
-                    "id": "0d33271f-711a-49b3-9fde-45b3b1d81933",
-                    "path": "<Gamepad>/leftStick/left",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "right",
-                    "id": "6290e33e-1b74-4d46-99cc-9c9f7b484ab1",
-                    "path": "<Gamepad>/leftStick/right",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
                 }
             ]
         }
