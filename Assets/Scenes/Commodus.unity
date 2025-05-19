@@ -8211,6 +8211,7 @@ GameObject:
   - component: {fileID: 1211185859}
   - component: {fileID: 1211185858}
   - component: {fileID: 1211185857}
+  - component: {fileID: 1211185861}
   m_Layer: 3
   m_Name: Commodus
   m_TagString: Enemy
@@ -8285,7 +8286,13 @@ MonoBehaviour:
   anim: {fileID: 0}
   gameManager: {fileID: 0}
   rb: {fileID: 0}
-  hitEffect: {fileID: 871351024}
+  hitEffect:
+  - {fileID: 945559748570761594}
+  - {fileID: 945559748570761593}
+  - {fileID: 945559748570761592}
+  - {fileID: 945559748570761591}
+  - {fileID: 945559748570761590}
+  - {fileID: 945559748570761589}
   goingToTarget: 0
   rotPoint: {fileID: 2130561463}
   effectMod: 0
@@ -8341,8 +8348,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Offset: {x: -0.030413449, y: -1.5320787}
+  m_Radius: 0.37454396
 --- !u!50 &1211185860
 Rigidbody2D:
   serializedVersion: 5
@@ -8370,6 +8377,43 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!70 &1211185861
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211185855}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.049421847, y: -0.39917755}
+  m_Size: {x: 0.6900846, y: 2.8324127}
+  m_Direction: 0
 --- !u!1 &1220405710
 GameObject:
   m_ObjectHideFlags: 0
@@ -49617,6 +49661,36 @@ Animator:
 --- !u!4 &945559748570761588 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3878994331059199808, guid: a21e89d442694fa49bdeaa4334c6c028, type: 3}
+  m_PrefabInstance: {fileID: 945559748570761585}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &945559748570761589 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5052336752434526437, guid: a21e89d442694fa49bdeaa4334c6c028, type: 3}
+  m_PrefabInstance: {fileID: 945559748570761585}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &945559748570761590 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 255883601033525058, guid: a21e89d442694fa49bdeaa4334c6c028, type: 3}
+  m_PrefabInstance: {fileID: 945559748570761585}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &945559748570761591 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2250684584143151459, guid: a21e89d442694fa49bdeaa4334c6c028, type: 3}
+  m_PrefabInstance: {fileID: 945559748570761585}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &945559748570761592 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 6512235767030552390, guid: a21e89d442694fa49bdeaa4334c6c028, type: 3}
+  m_PrefabInstance: {fileID: 945559748570761585}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &945559748570761593 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 7392869708011994259, guid: a21e89d442694fa49bdeaa4334c6c028, type: 3}
+  m_PrefabInstance: {fileID: 945559748570761585}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &945559748570761594 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8482786627546107689, guid: a21e89d442694fa49bdeaa4334c6c028, type: 3}
   m_PrefabInstance: {fileID: 945559748570761585}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
