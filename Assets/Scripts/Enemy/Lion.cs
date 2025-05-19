@@ -60,7 +60,7 @@ public class Lion : MonoBehaviour
             lungeATK();
         }
 
-        if ((enemyController.targetOveride ? Vector2.Distance(transform.position, new Vector2(Mathf.Clamp(enemyController.target.x, -38, 38), Mathf.Clamp(enemyController.target.y, Mathf.Lerp(12f, 17.5f, (Mathf.Abs(enemyController.target.x) - 25.5f) / 12.5f), Mathf.Lerp(36f, 30.5f, (Mathf.Abs(enemyController.target.x) - 25.5f) / 12.5f)))) <= 1 : true) && !ready && pendingAttack == 4)
+        if ((enemyController.targetOveride ? Vector2.Distance(transform.position, new Vector2(Mathf.Clamp(enemyController.target.x, -36, 36), Mathf.Clamp(enemyController.target.y, Mathf.Lerp(16f, 25.5f, (Mathf.Abs(enemyController.target.x) - 27) / 8.5f), Mathf.Lerp(35f, 25.5f, (Mathf.Abs(enemyController.target.x) - 27) / 8.5f)))) <= 1 : true) && !ready && pendingAttack == 4)
         {
             ready = true;
             enemyController.gameManager.lionReady++;

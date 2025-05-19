@@ -79,6 +79,7 @@ GameObject:
   - component: {fileID: 1229037400412975643}
   - component: {fileID: 7161762758296879184}
   - component: {fileID: 6295015845319973717}
+  - component: {fileID: 3725656938336545106}
   m_Layer: 3
   m_Name: Lion 4
   m_TagString: Enemy
@@ -200,7 +201,8 @@ MonoBehaviour:
   anim: {fileID: 0}
   gameManager: {fileID: 0}
   rb: {fileID: 0}
-  hitEffect: {fileID: 9123647201302535177}
+  hitEffect:
+  - {fileID: 0}
   goingToTarget: 0
   rotPoint: {fileID: 1648319358524280404}
   effectMod: 0
@@ -246,6 +248,62 @@ MonoBehaviour:
   slashHitBox: {fileID: 7661691774755015424}
   lungeHitBox: {fileID: 1729224527025666012}
   attackRange: 2
+--- !u!60 &3725656938336545106
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2679372334078584066}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.33402395, y: 0.32743952}
+      - {x: -0.3874948, y: 0.44868594}
+      - {x: -0.6540616, y: 0.92079383}
+      - {x: -1.2868304, y: 1.2621598}
+      - {x: -1.8993168, y: 0.19560376}
+      - {x: -1.3414398, y: -0.29868743}
+      - {x: -1.7124658, y: -1.4359398}
+      - {x: 1.5013913, y: -1.4831953}
+      - {x: 0.9195529, y: 0.38777632}
+  m_UseDelaunayMesh: 0
 --- !u!1 &3254433285190074786
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,9 +317,9 @@ GameObject:
   - component: {fileID: 366316255552634987}
   - component: {fileID: 3467604651000158464}
   - component: {fileID: 8842221763955236669}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: Closed Sprite Shape (1)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -559,9 +617,9 @@ GameObject:
   - component: {fileID: 2512230276244026079}
   - component: {fileID: 1155885693356305915}
   - component: {fileID: 3603568861714135324}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: Closed Sprite Shape (3)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -877,9 +935,9 @@ GameObject:
   - component: {fileID: 8457929173472756778}
   - component: {fileID: 8449064135313492658}
   - component: {fileID: 1478739224413568851}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: Closed Sprite Shape (2)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

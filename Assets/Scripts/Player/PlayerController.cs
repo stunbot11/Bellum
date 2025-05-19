@@ -132,7 +132,7 @@ public class PlayerController : MonoBehaviour
         pauseButton.action.started += pause;
         move.action.Enable();
         primaryButton.action.started += primary;
-        move.action.started += pAnim;
+        move.action.performed += pAnim;
         move.action.canceled += pAnim;
         if (gameManager.classType == 2)
             primaryButton.action.canceled += primary;

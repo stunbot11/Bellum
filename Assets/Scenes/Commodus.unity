@@ -2176,9 +2176,9 @@ GameObject:
   - component: {fileID: 337292378}
   - component: {fileID: 337292377}
   - component: {fileID: 337292376}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Square (1)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2841,7 +2841,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -8330,7 +8330,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -45827,9 +45827,9 @@ GameObject:
   - component: {fileID: 1618308874}
   - component: {fileID: 1618308873}
   - component: {fileID: 1618308876}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Closed Sprite Shape
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46512,7 +46512,7 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -1.6712215, y: 1.0983067}
+    - - {x: -1.9822165, y: 0.8721285}
       - {x: -27.410276, y: 0.8992784}
       - {x: -30.821392, y: 2.1662712}
       - {x: -35.220654, y: 5.943884}
@@ -46530,8 +46530,8 @@ PolygonCollider2D:
       - {x: 35.33382, y: 6.162245}
       - {x: 32.63492, y: 3.451643}
       - {x: 27.538948, y: 1.0124388}
-      - {x: 1.7133846, y: 0.8501911}
-      - {x: 1.9055338, y: -0.775156}
+      - {x: 2.653436, y: 0.8289871}
+      - {x: 2.8950596, y: -0.88117695}
       - {x: 21.476782, y: -2.8146057}
       - {x: 34.72692, y: -0.7546835}
       - {x: 41.80095, y: 8.704615}
@@ -46543,7 +46543,7 @@ PolygonCollider2D:
       - {x: -41.51709, y: 6.991678}
       - {x: -32.049126, y: 0.23481274}
       - {x: -18.780075, y: -0.83971286}
-      - {x: -1.7436264, y: -1.2564659}
+      - {x: -2.6836777, y: -1.2069893}
   m_UseDelaunayMesh: 0
 --- !u!114 &1675699524
 MonoBehaviour:
@@ -46651,12 +46651,12 @@ PolygonCollider2D:
     m_Paths:
     - - {x: 2.1442204, y: 3.6269684}
       - {x: -1.9385597, y: 4.3402843}
-      - {x: -2.4621406, y: 1.0645568}
-      - {x: -1.5421531, y: 0.9108335}
-      - {x: -1.2540001, y: 3.162075}
-      - {x: 1.0972924, y: 2.9440365}
-      - {x: 1.7210971, y: 1.0102465}
-      - {x: 2.8200278, y: 0.9750871}
+      - {x: -2.4847853, y: 0.8758495}
+      - {x: -1.8287175, y: 1.7591964}
+      - {x: -1.5376819, y: 3.5071049}
+      - {x: 1.7075456, y: 3.4573936}
+      - {x: 2.3537865, y: 1.3998759}
+      - {x: 2.8728662, y: 0.8845071}
   m_UseDelaunayMesh: 0
 --- !u!1 &1709435462
 GameObject:

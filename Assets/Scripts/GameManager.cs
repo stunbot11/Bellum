@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
 
      public int lionReady;
      public int lionCheck;
-    [HideInInspector] public int totalBosses;
+     public int totalBosses;
     [HideInInspector] public int bossesDead;
 
     public Image playerHealthBar;
@@ -104,7 +104,7 @@ public class GameManager : MonoBehaviour
     }
 
     [HideInInspector] public Image bossHealthBar;
-    [HideInInspector] public float tEHealth;
+     public float tEHealth;
     [HideInInspector] public float tEMHealth;
     public void updateBar()
     {
