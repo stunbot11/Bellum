@@ -1,0 +1,520 @@
+fileFormatVersion: 2
+guid: 2109b4be5ba80cd418fd4c0c2276a478
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -420097530002675012
+    second: EmperorArmF1_0
+  - first:
+      213: -6304376434862168267
+    second: EmperorArmF1_1
+  - first:
+      213: -6343497412171600726
+    second: EmperorArmF1_2
+  - first:
+      213: 9098622819805556667
+    second: EmperorArmF1_3
+  - first:
+      213: -5825050970412997418
+    second: EmperorArmF1_4
+  - first:
+      213: -3372735364071288925
+    second: EmperorArmF1_5
+  - first:
+      213: -9211272024374065743
+    second: EmperorArmF1_6
+  - first:
+      213: -7261537390522980125
+    second: EmperorArmF1_7
+  - first:
+      213: 7900293373009751188
+    second: EmperorArmF1_8
+  - first:
+      213: -6990218043700359442
+    second: EmperorArmF1_9
+  - first:
+      213: 6261776673044071254
+    second: EmperorArmF1_10
+  - first:
+      213: 6730967456031728966
+    second: EmperorArmF1_11
+  - first:
+      213: -2083336365851567634
+    second: EmperorArmF1_12
+  - first:
+      213: -841066423994425982
+    second: EmperorArmF1_13
+  - first:
+      213: 1704270951430691120
+    second: EmperorArmF1_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: EmperorArmF1_0
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 475
+        width: 128
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbaeb21b5838b2af0800000000000000
+      internalID: -420097530002675012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF1_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 594
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53762b5d80b5288a0800000000000000
+      internalID: -6304376434862168267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF1_2
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 581
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aace6e186be57f7a0800000000000000
+      internalID: -6343497412171600726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF1_3
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 416
+        width: 107
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbfe5cf7f3dc44e70800000000000000
+      internalID: 9098622819805556667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF1_4
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 514
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d42dfd3103492fa0800000000000000
+      internalID: -5825050970412997418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF1_5
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 463
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3af022f4e03a131d0800000000000000
+      internalID: -3372735364071288925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF1_6
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 347
+        width: 47
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b5c0b1b5ecfa2080800000000000000
+      internalID: -9211272024374065743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF1_7
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 459
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e829a27736d93b90800000000000000
+      internalID: -7261537390522980125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF1_8
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 469
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49c6e9717fa73ad60800000000000000
+      internalID: 7900293373009751188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF1_9
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 470
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eeec6ba99b1cdfe90800000000000000
+      internalID: -6990218043700359442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF1_10
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 300
+        width: 94
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6538e9335bc46e650800000000000000
+      internalID: 6261776673044071254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF1_11
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 451
+        width: 10
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6456c733d33396d50800000000000000
+      internalID: 6730967456031728966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF1_12
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 415
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee993cdfc908613e0800000000000000
+      internalID: -2083336365851567634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF1_13
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 290
+        width: 419
+        height: 542
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28ddd452b8ee354f0800000000000000
+      internalID: -841066423994425982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF1_14
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 289
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0391b059669c6a710800000000000000
+      internalID: 1704270951430691120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      EmperorArmF1_0: -420097530002675012
+      EmperorArmF1_1: -6304376434862168267
+      EmperorArmF1_10: 6261776673044071254
+      EmperorArmF1_11: 6730967456031728966
+      EmperorArmF1_12: -2083336365851567634
+      EmperorArmF1_13: -841066423994425982
+      EmperorArmF1_14: 1704270951430691120
+      EmperorArmF1_2: -6343497412171600726
+      EmperorArmF1_3: 9098622819805556667
+      EmperorArmF1_4: -5825050970412997418
+      EmperorArmF1_5: -3372735364071288925
+      EmperorArmF1_6: -9211272024374065743
+      EmperorArmF1_7: -7261537390522980125
+      EmperorArmF1_8: 7900293373009751188
+      EmperorArmF1_9: -6990218043700359442
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

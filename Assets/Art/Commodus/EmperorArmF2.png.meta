@@ -1,0 +1,6656 @@
+fileFormatVersion: 2
+guid: 746644f613516dd49bcf4d12833d29c9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8133206607946725938
+    second: EmperorArmF2_0
+  - first:
+      213: -7977794717609104338
+    second: EmperorArmF2_1
+  - first:
+      213: 7306366542312045896
+    second: EmperorArmF2_2
+  - first:
+      213: -6970688160225103989
+    second: EmperorArmF2_3
+  - first:
+      213: 3020091041553233505
+    second: EmperorArmF2_4
+  - first:
+      213: 58368350680005474
+    second: EmperorArmF2_5
+  - first:
+      213: 4695882623167563855
+    second: EmperorArmF2_6
+  - first:
+      213: 2529872242461729871
+    second: EmperorArmF2_7
+  - first:
+      213: -7252477940486285377
+    second: EmperorArmF2_8
+  - first:
+      213: 5463524794618120392
+    second: EmperorArmF2_9
+  - first:
+      213: -3976378641765005774
+    second: EmperorArmF2_10
+  - first:
+      213: -6278081303164992912
+    second: EmperorArmF2_11
+  - first:
+      213: -5310927850637762193
+    second: EmperorArmF2_12
+  - first:
+      213: -4278857168693462273
+    second: EmperorArmF2_13
+  - first:
+      213: 4563808186953945062
+    second: EmperorArmF2_14
+  - first:
+      213: -4346814454926197687
+    second: EmperorArmF2_15
+  - first:
+      213: 4885323856215484710
+    second: EmperorArmF2_16
+  - first:
+      213: -5536238306385820178
+    second: EmperorArmF2_17
+  - first:
+      213: -602827328757930226
+    second: EmperorArmF2_18
+  - first:
+      213: 4922340209432623393
+    second: EmperorArmF2_19
+  - first:
+      213: -8265517118678372986
+    second: EmperorArmF2_20
+  - first:
+      213: 5561624897828356107
+    second: EmperorArmF2_21
+  - first:
+      213: 6763352646081338425
+    second: EmperorArmF2_22
+  - first:
+      213: -276270540115727630
+    second: EmperorArmF2_23
+  - first:
+      213: -7040221061490255180
+    second: EmperorArmF2_24
+  - first:
+      213: 4332339199337791635
+    second: EmperorArmF2_25
+  - first:
+      213: 5094257465220024747
+    second: EmperorArmF2_26
+  - first:
+      213: 3987683844028672436
+    second: EmperorArmF2_27
+  - first:
+      213: -2059044601667206635
+    second: EmperorArmF2_28
+  - first:
+      213: -8194333148862121272
+    second: EmperorArmF2_29
+  - first:
+      213: 3382026456305717709
+    second: EmperorArmF2_30
+  - first:
+      213: -2736186875209159382
+    second: EmperorArmF2_31
+  - first:
+      213: 7847831290638255255
+    second: EmperorArmF2_32
+  - first:
+      213: 3091389111059220429
+    second: EmperorArmF2_33
+  - first:
+      213: 5550036690055304363
+    second: EmperorArmF2_34
+  - first:
+      213: 971152660008627506
+    second: EmperorArmF2_35
+  - first:
+      213: 6763931920826265525
+    second: EmperorArmF2_36
+  - first:
+      213: 3341583709899554830
+    second: EmperorArmF2_37
+  - first:
+      213: 2504302882400838476
+    second: EmperorArmF2_38
+  - first:
+      213: -966246032458954382
+    second: EmperorArmF2_39
+  - first:
+      213: -3025905608954790696
+    second: EmperorArmF2_40
+  - first:
+      213: 5904836301467431365
+    second: EmperorArmF2_41
+  - first:
+      213: 3187664428887378553
+    second: EmperorArmF2_42
+  - first:
+      213: 1024487756677546514
+    second: EmperorArmF2_43
+  - first:
+      213: 5007131315821541454
+    second: EmperorArmF2_44
+  - first:
+      213: 3391968537282253249
+    second: EmperorArmF2_45
+  - first:
+      213: -6871584278752593474
+    second: EmperorArmF2_46
+  - first:
+      213: 1151670265526349491
+    second: EmperorArmF2_47
+  - first:
+      213: 8780531783122204558
+    second: EmperorArmF2_48
+  - first:
+      213: 8055790574337332552
+    second: EmperorArmF2_49
+  - first:
+      213: -1983600465380174019
+    second: EmperorArmF2_50
+  - first:
+      213: -2821871933369923108
+    second: EmperorArmF2_51
+  - first:
+      213: -3295458790294708870
+    second: EmperorArmF2_52
+  - first:
+      213: -245197417913229858
+    second: EmperorArmF2_53
+  - first:
+      213: 4400903988055065788
+    second: EmperorArmF2_54
+  - first:
+      213: -1684234210540506496
+    second: EmperorArmF2_55
+  - first:
+      213: -8900941808389868793
+    second: EmperorArmF2_56
+  - first:
+      213: 404460737860651967
+    second: EmperorArmF2_57
+  - first:
+      213: 989935616826243007
+    second: EmperorArmF2_58
+  - first:
+      213: -2262134328926807364
+    second: EmperorArmF2_59
+  - first:
+      213: -8270114912906342916
+    second: EmperorArmF2_60
+  - first:
+      213: -2385744686430583285
+    second: EmperorArmF2_61
+  - first:
+      213: 6278945101681798770
+    second: EmperorArmF2_62
+  - first:
+      213: 1510732764817325436
+    second: EmperorArmF2_63
+  - first:
+      213: -9059235375767473447
+    second: EmperorArmF2_64
+  - first:
+      213: 3302147294690296709
+    second: EmperorArmF2_65
+  - first:
+      213: -702991336112300066
+    second: EmperorArmF2_66
+  - first:
+      213: 2552248808261740258
+    second: EmperorArmF2_67
+  - first:
+      213: 7785654922446870784
+    second: EmperorArmF2_68
+  - first:
+      213: 3405181266637838323
+    second: EmperorArmF2_69
+  - first:
+      213: -3004678324877594686
+    second: EmperorArmF2_70
+  - first:
+      213: -7320135825321830981
+    second: EmperorArmF2_71
+  - first:
+      213: -3226282096976798872
+    second: EmperorArmF2_72
+  - first:
+      213: -505374286952083273
+    second: EmperorArmF2_73
+  - first:
+      213: -2077788745561935862
+    second: EmperorArmF2_74
+  - first:
+      213: 5468682203862031105
+    second: EmperorArmF2_75
+  - first:
+      213: 6007782262079184538
+    second: EmperorArmF2_76
+  - first:
+      213: -1342876242034326143
+    second: EmperorArmF2_77
+  - first:
+      213: 3218216269754520055
+    second: EmperorArmF2_78
+  - first:
+      213: 1680407564206687598
+    second: EmperorArmF2_79
+  - first:
+      213: -5699688020584443017
+    second: EmperorArmF2_80
+  - first:
+      213: -2555246377523200461
+    second: EmperorArmF2_81
+  - first:
+      213: -3587574356823863218
+    second: EmperorArmF2_82
+  - first:
+      213: -7742248105522340980
+    second: EmperorArmF2_83
+  - first:
+      213: 312366547693113364
+    second: EmperorArmF2_84
+  - first:
+      213: -61010280085299633
+    second: EmperorArmF2_85
+  - first:
+      213: 37510248941320606
+    second: EmperorArmF2_86
+  - first:
+      213: -5626852459118167885
+    second: EmperorArmF2_87
+  - first:
+      213: 2568307665267566370
+    second: EmperorArmF2_88
+  - first:
+      213: -3826207111005374030
+    second: EmperorArmF2_89
+  - first:
+      213: -8383346465047445159
+    second: EmperorArmF2_90
+  - first:
+      213: 5699576018753567538
+    second: EmperorArmF2_91
+  - first:
+      213: -5821879864723735689
+    second: EmperorArmF2_92
+  - first:
+      213: -9177099360346128696
+    second: EmperorArmF2_93
+  - first:
+      213: 4308090722811766750
+    second: EmperorArmF2_94
+  - first:
+      213: -2271175233518265208
+    second: EmperorArmF2_95
+  - first:
+      213: -1920865164156941502
+    second: EmperorArmF2_96
+  - first:
+      213: 5718502334858877538
+    second: EmperorArmF2_97
+  - first:
+      213: -3930585585263777824
+    second: EmperorArmF2_98
+  - first:
+      213: 7796689173992299354
+    second: EmperorArmF2_99
+  - first:
+      213: 4638487346542188497
+    second: EmperorArmF2_100
+  - first:
+      213: -5413461446526657921
+    second: EmperorArmF2_101
+  - first:
+      213: 4994754075606275757
+    second: EmperorArmF2_102
+  - first:
+      213: 7657633027381304247
+    second: EmperorArmF2_103
+  - first:
+      213: -1343808877251686930
+    second: EmperorArmF2_104
+  - first:
+      213: 4667778536644181257
+    second: EmperorArmF2_105
+  - first:
+      213: -1763398798155253688
+    second: EmperorArmF2_106
+  - first:
+      213: 5855681216639486157
+    second: EmperorArmF2_107
+  - first:
+      213: -6948164860237589407
+    second: EmperorArmF2_108
+  - first:
+      213: 2399914935214641438
+    second: EmperorArmF2_109
+  - first:
+      213: 3369079112796338161
+    second: EmperorArmF2_110
+  - first:
+      213: -8905751034170562137
+    second: EmperorArmF2_111
+  - first:
+      213: 4794825481131529632
+    second: EmperorArmF2_112
+  - first:
+      213: 2759479880456409363
+    second: EmperorArmF2_113
+  - first:
+      213: -5915363065801396634
+    second: EmperorArmF2_114
+  - first:
+      213: -5037177484336561461
+    second: EmperorArmF2_115
+  - first:
+      213: -810650395696463675
+    second: EmperorArmF2_116
+  - first:
+      213: -1829432246909167640
+    second: EmperorArmF2_117
+  - first:
+      213: -677832295421987196
+    second: EmperorArmF2_118
+  - first:
+      213: -7322337383089236476
+    second: EmperorArmF2_119
+  - first:
+      213: 330783811493430115
+    second: EmperorArmF2_120
+  - first:
+      213: -4912440489863478024
+    second: EmperorArmF2_121
+  - first:
+      213: -3203158238386638912
+    second: EmperorArmF2_122
+  - first:
+      213: -779864599266100062
+    second: EmperorArmF2_123
+  - first:
+      213: 5748838441256935232
+    second: EmperorArmF2_124
+  - first:
+      213: -6287424362322834632
+    second: EmperorArmF2_125
+  - first:
+      213: -3699912285606689117
+    second: EmperorArmF2_126
+  - first:
+      213: -7221648508120931900
+    second: EmperorArmF2_127
+  - first:
+      213: -2972630309385377641
+    second: EmperorArmF2_128
+  - first:
+      213: -1086599309235913365
+    second: EmperorArmF2_129
+  - first:
+      213: 3294265819089659177
+    second: EmperorArmF2_130
+  - first:
+      213: -3329512952389700098
+    second: EmperorArmF2_131
+  - first:
+      213: 8487134065067009226
+    second: EmperorArmF2_132
+  - first:
+      213: 5245423707636046658
+    second: EmperorArmF2_133
+  - first:
+      213: -2626417233607662765
+    second: EmperorArmF2_134
+  - first:
+      213: -1669446691615134091
+    second: EmperorArmF2_135
+  - first:
+      213: 2749214288301262144
+    second: EmperorArmF2_136
+  - first:
+      213: -6569244975779878456
+    second: EmperorArmF2_137
+  - first:
+      213: -1730895324161228351
+    second: EmperorArmF2_138
+  - first:
+      213: -2022555255344128579
+    second: EmperorArmF2_139
+  - first:
+      213: 7388569428290837058
+    second: EmperorArmF2_140
+  - first:
+      213: -1269582312971025654
+    second: EmperorArmF2_141
+  - first:
+      213: -1556366822952714894
+    second: EmperorArmF2_142
+  - first:
+      213: 7588784409896141610
+    second: EmperorArmF2_143
+  - first:
+      213: -4947365325017198346
+    second: EmperorArmF2_144
+  - first:
+      213: 7047789278838401116
+    second: EmperorArmF2_145
+  - first:
+      213: -1866468803735826956
+    second: EmperorArmF2_146
+  - first:
+      213: 965415368618777503
+    second: EmperorArmF2_147
+  - first:
+      213: 1611951289663842018
+    second: EmperorArmF2_148
+  - first:
+      213: -3390335807940226810
+    second: EmperorArmF2_149
+  - first:
+      213: -8585496782807060607
+    second: EmperorArmF2_150
+  - first:
+      213: -4948006426086627296
+    second: EmperorArmF2_151
+  - first:
+      213: -5782609818118087429
+    second: EmperorArmF2_152
+  - first:
+      213: -959561337800170854
+    second: EmperorArmF2_153
+  - first:
+      213: 5757028503938765999
+    second: EmperorArmF2_154
+  - first:
+      213: -8068914704073201880
+    second: EmperorArmF2_155
+  - first:
+      213: -6134193054359595015
+    second: EmperorArmF2_156
+  - first:
+      213: 4042217294542768830
+    second: EmperorArmF2_157
+  - first:
+      213: 937902032287634181
+    second: EmperorArmF2_158
+  - first:
+      213: -3984323982730436780
+    second: EmperorArmF2_159
+  - first:
+      213: -4034012840252729128
+    second: EmperorArmF2_160
+  - first:
+      213: -1589369948472894872
+    second: EmperorArmF2_161
+  - first:
+      213: 7702432898417974939
+    second: EmperorArmF2_162
+  - first:
+      213: -5004100395940453542
+    second: EmperorArmF2_163
+  - first:
+      213: -9029713771160955397
+    second: EmperorArmF2_164
+  - first:
+      213: 4189985067960509832
+    second: EmperorArmF2_165
+  - first:
+      213: -3916633340128175267
+    second: EmperorArmF2_166
+  - first:
+      213: 3169674843757928494
+    second: EmperorArmF2_167
+  - first:
+      213: 92000375170317662
+    second: EmperorArmF2_168
+  - first:
+      213: 2653297008979987657
+    second: EmperorArmF2_169
+  - first:
+      213: -189852890322532232
+    second: EmperorArmF2_170
+  - first:
+      213: -5609639473199272289
+    second: EmperorArmF2_171
+  - first:
+      213: 83398867862097647
+    second: EmperorArmF2_172
+  - first:
+      213: 2885033042096745457
+    second: EmperorArmF2_173
+  - first:
+      213: -6130905934539495229
+    second: EmperorArmF2_174
+  - first:
+      213: 6789648510486999750
+    second: EmperorArmF2_175
+  - first:
+      213: 8758215785525814191
+    second: EmperorArmF2_176
+  - first:
+      213: 6916175800924631457
+    second: EmperorArmF2_177
+  - first:
+      213: -7526465498700209966
+    second: EmperorArmF2_178
+  - first:
+      213: 8943047121957994784
+    second: EmperorArmF2_179
+  - first:
+      213: -2874069618746721384
+    second: EmperorArmF2_180
+  - first:
+      213: 3528899325401625739
+    second: EmperorArmF2_181
+  - first:
+      213: 5991547674533383775
+    second: EmperorArmF2_182
+  - first:
+      213: 7892097644526863598
+    second: EmperorArmF2_183
+  - first:
+      213: 7234629517953929293
+    second: EmperorArmF2_184
+  - first:
+      213: -2962293484062950415
+    second: EmperorArmF2_185
+  - first:
+      213: 4548459209244451606
+    second: EmperorArmF2_186
+  - first:
+      213: -7185585388522862115
+    second: EmperorArmF2_187
+  - first:
+      213: -7824298515142349156
+    second: EmperorArmF2_188
+  - first:
+      213: 1363905360230340913
+    second: EmperorArmF2_189
+  - first:
+      213: 8127378362955372501
+    second: EmperorArmF2_190
+  - first:
+      213: 8570187697024189153
+    second: EmperorArmF2_191
+  - first:
+      213: -7810173234085821401
+    second: EmperorArmF2_192
+  - first:
+      213: 7126979646667346923
+    second: EmperorArmF2_193
+  - first:
+      213: 3817333419555413358
+    second: EmperorArmF2_194
+  - first:
+      213: -6983814599438674162
+    second: EmperorArmF2_195
+  - first:
+      213: -5838350643550418796
+    second: EmperorArmF2_196
+  - first:
+      213: 1195145247016144353
+    second: EmperorArmF2_197
+  - first:
+      213: -2415733872616187911
+    second: EmperorArmF2_198
+  - first:
+      213: 216586612671110294
+    second: EmperorArmF2_199
+  - first:
+      213: 8497848068550354969
+    second: EmperorArmF2_200
+  - first:
+      213: 1752268184984487368
+    second: EmperorArmF2_201
+  - first:
+      213: -6501816186795575121
+    second: EmperorArmF2_202
+  - first:
+      213: 5371100203221103322
+    second: EmperorArmF2_203
+  - first:
+      213: 904693123029083294
+    second: EmperorArmF2_204
+  - first:
+      213: -162087243339705408
+    second: EmperorArmF2_205
+  - first:
+      213: 8479139153103580640
+    second: EmperorArmF2_206
+  - first:
+      213: 8771440703818618602
+    second: EmperorArmF2_207
+  - first:
+      213: -1875283889205605299
+    second: EmperorArmF2_208
+  - first:
+      213: 8163431959177206511
+    second: EmperorArmF2_209
+  - first:
+      213: 2872983958545299688
+    second: EmperorArmF2_210
+  - first:
+      213: 6912177226118133357
+    second: EmperorArmF2_211
+  - first:
+      213: -2611849272047824375
+    second: EmperorArmF2_212
+  - first:
+      213: -7451845765919636843
+    second: EmperorArmF2_213
+  - first:
+      213: 4737922565286728444
+    second: EmperorArmF2_214
+  - first:
+      213: 7558567680728681135
+    second: EmperorArmF2_215
+  - first:
+      213: 2355344732466755281
+    second: EmperorArmF2_216
+  - first:
+      213: 6943417115341430215
+    second: EmperorArmF2_217
+  - first:
+      213: 1642190801114012786
+    second: EmperorArmF2_218
+  - first:
+      213: 3441113849730953286
+    second: EmperorArmF2_219
+  - first:
+      213: -7703916253672679855
+    second: EmperorArmF2_220
+  - first:
+      213: 9065775406910933814
+    second: EmperorArmF2_221
+  - first:
+      213: 8688524075091084577
+    second: EmperorArmF2_222
+  - first:
+      213: 3720118465539812659
+    second: EmperorArmF2_223
+  - first:
+      213: -573303498346184537
+    second: EmperorArmF2_224
+  - first:
+      213: 6371650127102004472
+    second: EmperorArmF2_225
+  - first:
+      213: -7442873195668706032
+    second: EmperorArmF2_226
+  - first:
+      213: 1609724202896832173
+    second: EmperorArmF2_227
+  - first:
+      213: -3739779305303907335
+    second: EmperorArmF2_228
+  - first:
+      213: -8993174266039715429
+    second: EmperorArmF2_229
+  - first:
+      213: 384512241772087207
+    second: EmperorArmF2_230
+  - first:
+      213: -6435385614968040582
+    second: EmperorArmF2_231
+  - first:
+      213: 3134513865985818003
+    second: EmperorArmF2_232
+  - first:
+      213: -7417596105846474532
+    second: EmperorArmF2_233
+  - first:
+      213: -4613961721290723184
+    second: EmperorArmF2_234
+  - first:
+      213: 919425288770075816
+    second: EmperorArmF2_235
+  - first:
+      213: -8423799156292659260
+    second: EmperorArmF2_236
+  - first:
+      213: -9111024292919195793
+    second: EmperorArmF2_237
+  - first:
+      213: 2166290209062494250
+    second: EmperorArmF2_238
+  - first:
+      213: -2280467017034386571
+    second: EmperorArmF2_239
+  - first:
+      213: -8479863640631650886
+    second: EmperorArmF2_240
+  - first:
+      213: 4441259804056330501
+    second: EmperorArmF2_241
+  - first:
+      213: 3782569489006308758
+    second: EmperorArmF2_242
+  - first:
+      213: -5329056202980862814
+    second: EmperorArmF2_243
+  - first:
+      213: 4039561194383279421
+    second: EmperorArmF2_244
+  - first:
+      213: -6012885488827221890
+    second: EmperorArmF2_245
+  - first:
+      213: 5340381104197568388
+    second: EmperorArmF2_246
+  - first:
+      213: 479579638558258473
+    second: EmperorArmF2_247
+  - first:
+      213: 5756598876915586405
+    second: EmperorArmF2_248
+  - first:
+      213: 7663921928638080365
+    second: EmperorArmF2_249
+  - first:
+      213: 5386872155046542029
+    second: EmperorArmF2_250
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: EmperorArmF2_0
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 320
+        width: 316
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec5c9708eab012f80800000000000000
+      internalID: -8133206607946725938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_1
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 546
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2cebe5f8fd294190800000000000000
+      internalID: -7977794717609104338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_2
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 484
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84dfe41d8ad656560800000000000000
+      internalID: 7306366542312045896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_3
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 524
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8fe2c1fc04234f90800000000000000
+      internalID: -6970688160225103989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_4
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 513
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 166be191dc489e920800000000000000
+      internalID: 3020091041553233505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_5
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 485
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26b3868a4bd5fc000800000000000000
+      internalID: 58368350680005474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_6
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 467
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4805dcad502b2140800000000000000
+      internalID: 4695882623167563855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_7
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 518
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f446d039669eb1320800000000000000
+      internalID: 2529872242461729871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_8
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 477
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb755f70db50a5b90800000000000000
+      internalID: -7252477940486285377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_9
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 473
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c880cc8ad652db40800000000000000
+      internalID: 5463524794618120392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_10
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 524
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 236852d61b011d8c0800000000000000
+      internalID: -3976378641765005774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_11
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 514
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07244d54156cfd8a0800000000000000
+      internalID: -6278081303164992912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_12
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 531
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f61e103224bcb46b0800000000000000
+      internalID: -5310927850637762193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_13
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 413
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffa746f43127e94c0800000000000000
+      internalID: -4278857168693462273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_14
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 285
+        width: 255
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6efc86ead57e55f30800000000000000
+      internalID: 4563808186953945062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_15
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 528
+        width: 76
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94c379d98430da3c0800000000000000
+      internalID: -4346814454926197687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_16
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 520
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6292776e9282cc340800000000000000
+      internalID: 4885323856215484710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_17
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 587
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee586f3b7945b23b0800000000000000
+      internalID: -5536238306385820178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_18
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 610
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e076c780db352a7f0800000000000000
+      internalID: -602827328757930226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_19
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 614
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1297ade375aaf4440800000000000000
+      internalID: 4922340209432623393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_20
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 568
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68de34029fbfa4d80800000000000000
+      internalID: -8265517118678372986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_21
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 408
+        width: 149
+        height: 418
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b000709b06cde2d40800000000000000
+      internalID: 5561624897828356107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_22
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 584
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93c5068d5614cdd50800000000000000
+      internalID: 6763352646081338425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_23
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 574
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fa2f72586d7a2cf0800000000000000
+      internalID: -276270540115727630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_24
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 551
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ba56a9ce3c1c4e90800000000000000
+      internalID: -7040221061490255180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_25
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 528
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 390870f4c8f8f1c30800000000000000
+      internalID: 4332339199337791635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_26
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 414
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba942d09c2072b640800000000000000
+      internalID: 5094257465220024747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_27
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 764
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b9a4e71459175730800000000000000
+      internalID: 3987683844028672436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_28
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 739
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 512c0f418ddcc63e0800000000000000
+      internalID: -2059044601667206635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_29
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 751
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ca7dd2aa61e74e80800000000000000
+      internalID: -8194333148862121272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_30
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 730
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc1531da42f5fee20800000000000000
+      internalID: 3382026456305717709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_31
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 724
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2d6210b88c170ad0800000000000000
+      internalID: -2736186875209159382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_32
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 603
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79440bfaaf819ec60800000000000000
+      internalID: 7847831290638255255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_33
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 705
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc702338402d6ea20800000000000000
+      internalID: 3091389111059220429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_34
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 766
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba49129d6f0b50d40800000000000000
+      internalID: 5550036690055304363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_35
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 687
+        width: 11
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23d6d7ae23a3a7d00800000000000000
+      internalID: 971152660008627506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_36
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 688
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bf66c1ce305edd50800000000000000
+      internalID: 6763931920826265525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_37
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 710
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e008bcffda0bf5e20800000000000000
+      internalID: 3341583709899554830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_38
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 548
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c432d73043211c220800000000000000
+      internalID: 2504302882400838476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_39
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 666
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27947a55a543792f0800000000000000
+      internalID: -966246032458954382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_40
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 706
+        width: 37
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dc336e61e2d106d0800000000000000
+      internalID: -3025905608954790696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_41
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 792
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c13ccdb45132f150800000000000000
+      internalID: 5904836301467431365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_42
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 690
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97a0bfab8ebdc3c20800000000000000
+      internalID: 3187664428887378553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_43
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 639
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 212808dcf26b73e00800000000000000
+      internalID: 1024487756677546514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_44
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 810
+        width: 11
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e48f64f1767ec7540800000000000000
+      internalID: 5007131315821541454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_45
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 764
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c1920ac961b21f20800000000000000
+      internalID: 3391968537282253249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_46
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 662
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb9fac4718a33a0a0800000000000000
+      internalID: -6871584278752593474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_47
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 606
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bee313310e8bff00800000000000000
+      internalID: 1151670265526349491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_48
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 509
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e87b600b227bad970800000000000000
+      internalID: 8780531783122204558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_49
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 657
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 845115098daebcf60800000000000000
+      internalID: 8055790574337332552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_50
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 494
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3717b4e2e5d874e0800000000000000
+      internalID: -1983600465380174019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_51
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 791
+        width: 23
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd947d17d62b6d8d0800000000000000
+      internalID: -2821871933369923108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_52
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 790
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7d9b88b0bd2442d0800000000000000
+      internalID: -3295458790294708870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_53
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 688
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edd507d5f32e89cf0800000000000000
+      internalID: -245197417913229858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_54
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 637
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb44f923cd6231d30800000000000000
+      internalID: 4400903988055065788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_55
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 802
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0823c22b8e560a8e0800000000000000
+      internalID: -1684234210540506496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_56
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 751
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 703bf70a590897480800000000000000
+      internalID: -8900941808389868793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_57
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 700
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbbc6cde5eeec9500800000000000000
+      internalID: 404460737860651967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_58
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 649
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb77f67d235fcbd00800000000000000
+      internalID: 989935616826243007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_59
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 598
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbad91a20d84b90e0800000000000000
+      internalID: -2262134328926807364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_60
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 689
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfd8e8cbd46aa3d80800000000000000
+      internalID: -8270114912906342916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_61
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 638
+        width: 16
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b06878019d124eed0800000000000000
+      internalID: -2385744686430583285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_62
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 732
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27e2ced7d4b432750800000000000000
+      internalID: 6278945101681798770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_63
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 484
+        width: 25
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7dfa75027337f410800000000000000
+      internalID: 1510732764817325436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_64
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 588
+        width: 14
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d23ab27c61274280800000000000000
+      internalID: -9059235375767473447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_65
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 784
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5834800187593dd20800000000000000
+      internalID: 3302147294690296709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_66
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 756
+        width: 13
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edf59daba197e36f0800000000000000
+      internalID: -702991336112300066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_67
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 682
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e6eadac4c86b6320800000000000000
+      internalID: 2552248808261740258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_68
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 631
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 009973cd6e33c0c60800000000000000
+      internalID: 7785654922446870784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_69
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 578
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f753c11252a14f20800000000000000
+      internalID: 3405181266637838323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_70
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 782
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cfea55abfc3d46d0800000000000000
+      internalID: -3004678324877594686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_71
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 731
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb5d4182047a96a90800000000000000
+      internalID: -7320135825321830981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_72
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 680
+        width: 13
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86bde70c681f933d0800000000000000
+      internalID: -3226282096976798872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_73
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 629
+        width: 13
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b0da9b73cc8cf8f0800000000000000
+      internalID: -505374286952083273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_74
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 790
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a00f97ef4263a23e0800000000000000
+      internalID: -2077788745561935862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_75
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 739
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10b52b67d79a4eb40800000000000000
+      internalID: 5468682203862031105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_76
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 688
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9e5f13032eef5350800000000000000
+      internalID: 6007782262079184538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_77
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 637
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1858b383c252d5de0800000000000000
+      internalID: -1342876242034326143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_78
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 586
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f1d91185a669ac20800000000000000
+      internalID: 3218216269754520055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_79
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 773
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e654b66c6c1025710800000000000000
+      internalID: 1680407564206687598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_80
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 722
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 773d38a81f3a6e0b0800000000000000
+      internalID: -5699688020584443017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_81
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 671
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33e302a35f0f98cd0800000000000000
+      internalID: -2555246377523200461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_82
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 620
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4096385120663ec0800000000000000
+      internalID: -3587574356823863218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_83
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 812
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8b56634e520e8490800000000000000
+      internalID: -7742248105522340980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_84
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 761
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41096fa58bfb55400800000000000000
+      internalID: 312366547693113364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_85
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 710
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4e5ed7397f372ff0800000000000000
+      internalID: -61010280085299633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_86
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 659
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9975976f53458000800000000000000
+      internalID: 37510248941320606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_87
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 608
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b87ab2308769e1b0800000000000000
+      internalID: -5626852459118167885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_88
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 557
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 227af2ec63674a320800000000000000
+      internalID: 2568307665267566370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_89
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 503
+        width: 39
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b9737797e496eac0800000000000000
+      internalID: -3826207111005374030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_90
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 690
+        width: 33
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95102d19ece58ab80800000000000000
+      internalID: -8383346465047445159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_91
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 638
+        width: 42
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23b34200136f81f40800000000000000
+      internalID: 5699576018753567538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_92
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 587
+        width: 42
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77b7422db17843fa0800000000000000
+      internalID: -5821879864723735689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_93
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 553
+        width: 41
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ceba1e01c464a080800000000000000
+      internalID: -9177099360346128696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_94
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 787
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed7e959efa969cb30800000000000000
+      internalID: 4308090722811766750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_95
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 772
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88c9a77882a2b70e0800000000000000
+      internalID: -2271175233518265208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_96
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 757
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24bc0057f47b755e0800000000000000
+      internalID: -1920865164156941502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_97
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 717
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26a518c53933c5f40800000000000000
+      internalID: 5718502334858877538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_98
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 666
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e7e41f3c31c379c0800000000000000
+      internalID: -3930585585263777824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_99
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 615
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5bd1ffbe77633c60800000000000000
+      internalID: 7796689173992299354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_100
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 564
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d79ac97aa73f5040800000000000000
+      internalID: 4638487346542188497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_101
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 808
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7a91820f758fd4b0800000000000000
+      internalID: -5413461446526657921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_102
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 759
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da652f05e5ee05540800000000000000
+      internalID: 4994754075606275757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_103
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 713
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bb9c51aaa0654a60800000000000000
+      internalID: 7657633027381304247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_104
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 662
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eed856922f4d95de0800000000000000
+      internalID: -1343808877251686930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_105
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 611
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90d7ede19d747c040800000000000000
+      internalID: 4667778536644181257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_106
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 560
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 848fa9ec2262787e0800000000000000
+      internalID: -1763398798155253688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_107
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 805
+        width: 26
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc849b3ba0f834150800000000000000
+      internalID: 5855681216639486157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_108
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 779
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 164dfa06fd8239f90800000000000000
+      internalID: -6948164860237589407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_109
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 728
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e119f941be53e4120800000000000000
+      internalID: 2399914935214641438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_110
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 677
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f7f96a5a9f51ce20800000000000000
+      internalID: 3369079112796338161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_111
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 626
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a9223e7e9a686480800000000000000
+      internalID: -8905751034170562137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_112
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 575
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a516dafe54aa8240800000000000000
+      internalID: 4794825481131529632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_113
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 524
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3111177b454ab4620800000000000000
+      internalID: 2759479880456409363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_114
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 789
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66e2171f1a868eda0800000000000000
+      internalID: -5915363065801396634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_115
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 800
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc2068f14c9581ab0800000000000000
+      internalID: -5037177484336561461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_116
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 758
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c08b7792cdffb4f0800000000000000
+      internalID: -810650395696463675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_117
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 739
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e7955e601d8c96e0800000000000000
+      internalID: -1829432246909167640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_118
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 688
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 486b51e5e1bd796f0800000000000000
+      internalID: -677832295421987196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_119
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 637
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 406176b02f4d16a90800000000000000
+      internalID: -7322337383089236476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_120
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 586
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 363048dbf1e279400800000000000000
+      internalID: 330783811493430115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_121
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 535
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f40175d66183dbb0800000000000000
+      internalID: -4912440489863478024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_122
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 783
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cf2991ad881c83d0800000000000000
+      internalID: -3203158238386638912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_123
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 772
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ac77d3674d5d25f0800000000000000
+      internalID: -779864599266100062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_124
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 751
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04fda3a8a1af7cf40800000000000000
+      internalID: 5748838441256935232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_125
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 700
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83b4c9bcad49eb8a0800000000000000
+      internalID: -6287424362322834632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_126
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 649
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a64f44116547acc0800000000000000
+      internalID: -3699912285606689117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_127
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 598
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c1e8bc91fc87cb90800000000000000
+      internalID: -7221648508120931900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_128
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 547
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7986688bb781fb6d0800000000000000
+      internalID: -2972630309385377641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_129
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 789
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6dfecf6faf9be0f0800000000000000
+      internalID: -1086599309235913365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_130
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 737
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 925ec860f4597bd20800000000000000
+      internalID: 3294265819089659177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_131
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 722
+        width: 13
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef5ffbd3c913bc1d0800000000000000
+      internalID: -3329512952389700098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_132
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 532
+        width: 16
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac4af65277b58c570800000000000000
+      internalID: 8487134065067009226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_133
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 783
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24b1f06121d7bc840800000000000000
+      internalID: 5245423707636046658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_134
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 761
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 353e9def0771d8bd0800000000000000
+      internalID: -2626417233607662765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_135
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 681
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57e24de341fe4d8e0800000000000000
+      internalID: -1669446691615134091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_136
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 630
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04500a944db272620800000000000000
+      internalID: 2749214288301262144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_137
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 579
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c9ee18ff7a55d4a0800000000000000
+      internalID: -6569244975779878456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_138
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 689
+        width: 12
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c14cf39fdf9af7e0800000000000000
+      internalID: -1730895324161228351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_139
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 780
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbd1d9216b07ee3e0800000000000000
+      internalID: -2022555255344128579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_140
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 754
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24a169bafb8798660800000000000000
+      internalID: 7388569428290837058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_141
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 650
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a034e36ec99816ee0800000000000000
+      internalID: -1269582312971025654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_142
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 599
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27d33b9de9ca66ae0800000000000000
+      internalID: -1556366822952714894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_143
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 788
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a23c1e4b637c05960800000000000000
+      internalID: 7588784409896141610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_144
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 795
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f0d34cf27d675bb0800000000000000
+      internalID: -4947365325017198346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_145
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 744
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5828f02207cec160800000000000000
+      internalID: 7047789278838401116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_146
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 772
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fd4af01388f816e0800000000000000
+      internalID: -1866468803735826956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_147
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 721
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9b993ba928d56d00800000000000000
+      internalID: 965415368618777503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_148
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 729
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e665af482dce5610800000000000000
+      internalID: 1611951289663842018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_149
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 706
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6019f62ab8b13f0d0800000000000000
+      internalID: -3390335807940226810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_150
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 691
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18fa688f9203ad880800000000000000
+      internalID: -8585496782807060607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_151
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 629
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 028a1c20f56255bb0800000000000000
+      internalID: -4948006426086627296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_152
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 578
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfc926c020b00cfa0800000000000000
+      internalID: -5782609818118087429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_153
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 541
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a92e8381c04fea2f0800000000000000
+      internalID: -959561337800170854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_154
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 688
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa4911b1ce215ef40800000000000000
+      internalID: 5757028503938765999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_155
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 637
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8276accd3d4750090800000000000000
+      internalID: -8068914704073201880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_156
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 586
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f75a3bdae7fedaa0800000000000000
+      internalID: -6134193054359595015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_157
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 797
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eba892a7637d81830800000000000000
+      internalID: 4042217294542768830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_158
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 746
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5031f9cdde8140d00800000000000000
+      internalID: 937902032287634181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_159
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 671
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45f58439276d4b8c0800000000000000
+      internalID: -3984323982730436780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_160
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 620
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d81f55e1be4408c0800000000000000
+      internalID: -4034012840252729128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_161
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 569
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86a9794e37c61f9e0800000000000000
+      internalID: -1589369948472894872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_162
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 759
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9e5c7079e984ea60800000000000000
+      internalID: 7702432898417974939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_163
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 659
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a53e397e33ddd8ab0800000000000000
+      internalID: -5004100395940453542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_164
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 608
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf59f76aa2300b280800000000000000
+      internalID: -9029713771160955397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_165
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 557
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8852af54831d52a30800000000000000
+      internalID: 4189985067960509832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_166
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 780
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5b55367ab255a9c0800000000000000
+      internalID: -3916633340128175267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_167
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 729
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e20eeab0a72fcfb20800000000000000
+      internalID: 3169674843757928494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_168
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 680
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5dba319ad9d64100800000000000000
+      internalID: 92000375170317662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_169
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 786
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cccbd7629762d420800000000000000
+      internalID: 2653297008979987657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_170
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 735
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8788eb85dc18d5df0800000000000000
+      internalID: -189852890322532232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_171
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 629
+        width: 25
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9ea2f9ce9e8622b0800000000000000
+      internalID: -5609639473199272289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_172
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 756
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fee079514da482100800000000000000
+      internalID: 83398867862097647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_173
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 739
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fbe0772442b90820800000000000000
+      internalID: 2885033042096745457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_174
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 705
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c860741985aaeaa0800000000000000
+      internalID: -6130905934539495229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_175
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 688
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c27651e85da93e50800000000000000
+      internalID: 6789648510486999750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_176
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 676
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa32c7a9ade6b8970800000000000000
+      internalID: 8758215785525814191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_177
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 603
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a1f34a5f313bff50800000000000000
+      internalID: 6916175800924631457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_178
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 583
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d0adbf718f9c8790800000000000000
+      internalID: -7526465498700209966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_179
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 568
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 021c2e1a9f51c1c70800000000000000
+      internalID: 8943047121957994784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_180
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 797
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89bfbd2c8e04d18d0800000000000000
+      internalID: -2874069618746721384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_181
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 656
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b84fda25d3b29f030800000000000000
+      internalID: 3528899325401625739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_182
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 561
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5e416b8dd0462350800000000000000
+      internalID: 5991547674533383775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_183
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 782
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee488ba5efc568d60800000000000000
+      internalID: 7892097644526863598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_184
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 731
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4013334731966460800000000000000
+      internalID: 7234629517953929293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_185
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 790
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fb39f965c1d3e6d0800000000000000
+      internalID: -2962293484062950415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_186
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 754
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 613ae525d8f5f1f30800000000000000
+      internalID: 4548459209244451606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_187
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 703
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd98bd5f82ca74c90800000000000000
+      internalID: -7185585388522862115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_188
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 652
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9ee25494f18a6390800000000000000
+      internalID: -7824298515142349156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_189
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 602
+        width: 33
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 139d7c7e2b09de210800000000000000
+      internalID: 1363905360230340913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_190
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 604
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d796277f8f3ac070800000000000000
+      internalID: 8127378362955372501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_191
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 649
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e2cc8bbd4c6fe670800000000000000
+      internalID: 8570187697024189153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_192
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 789
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7240d0cd2d0bc9390800000000000000
+      internalID: -7810173234085821401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_193
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 738
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be3db017a3e18e260800000000000000
+      internalID: 7126979646667346923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_194
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 687
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6dd3dd1584e9f430800000000000000
+      internalID: 3817333419555413358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_195
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 636
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e075547af91841f90800000000000000
+      internalID: -6983814599438674162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_196
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 583
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4980109c5030afea0800000000000000
+      internalID: -5838350643550418796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_197
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 749
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1edc46f1542069010800000000000000
+      internalID: 1195145247016144353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_198
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 698
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f755da87d6997ed0800000000000000
+      internalID: -2415733872616187911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_199
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 647
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69cdd5f6068710300800000000000000
+      internalID: 216586612671110294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_200
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 596
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 918ee297bcb6ee570800000000000000
+      internalID: 8497848068550354969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_201
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 789
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c5083d51ae415810800000000000000
+      internalID: 1752268184984487368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_202
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 738
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa83a2f40a8e4c5a0800000000000000
+      internalID: -6501816186795575121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_203
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 687
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad2b5027d2bf98a40800000000000000
+      internalID: 5371100203221103322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_204
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 636
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9423e42a9d1e8c00800000000000000
+      internalID: 904693123029083294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_205
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 761
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c35d1ec28620cdf0800000000000000
+      internalID: -162087243339705408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_206
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 710
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ed68d5a224fba570800000000000000
+      internalID: 8479139153103580640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_207
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 659
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae6d287d8da6ab970800000000000000
+      internalID: 8771440703818618602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_208
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 608
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4c03ea0d37a9f5e0800000000000000
+      internalID: -1875283889205605299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_209
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 780
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fea14da7d165a4170800000000000000
+      internalID: 8163431959177206511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_210
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 729
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e8fc7640b3eed720800000000000000
+      internalID: 2872983958545299688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_211
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 678
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d66f05b909cfcef50800000000000000
+      internalID: 6912177226118133357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_212
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 627
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9021abcdce8d0cbd0800000000000000
+      internalID: -2611849272047824375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_213
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 737
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5928c59e1c9b59890800000000000000
+      internalID: -7451845765919636843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_214
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 744
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf21935787b70c140800000000000000
+      internalID: 4737922565286728444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_215
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 686
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faac494324d65e860800000000000000
+      internalID: 7558567680728681135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_216
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 693
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d6b4461e8ddfa020800000000000000
+      internalID: 2355344732466755281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_217
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 635
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cd1b4f1419fb5060800000000000000
+      internalID: 6943417115341430215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_218
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 642
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27c90d935db3ac610800000000000000
+      internalID: 1642190801114012786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_219
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 772
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 640f3e480da41cf20800000000000000
+      internalID: 3441113849730953286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_220
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 721
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1565b700cf0361590800000000000000
+      internalID: -7703916253672679855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_221
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 670
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63b066633ba10dd70800000000000000
+      internalID: 9065775406910933814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_222
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 613
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 125cb3ecc96d39870800000000000000
+      internalID: 8688524075091084577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_223
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 746
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33d2fdcc80480a330800000000000000
+      internalID: 3720118465539812659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_224
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 695
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a0469871873b08f0800000000000000
+      internalID: -573303498346184537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_225
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 644
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fcccfa3806ac6850800000000000000
+      internalID: 6371650127102004472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_226
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 759
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01de3e7334a95b890800000000000000
+      internalID: -7442873195668706032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_227
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 708
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da6b30442a3e65610800000000000000
+      internalID: 1609724202896832173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_228
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 657
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f3e0093982a91cc0800000000000000
+      internalID: -3739779305303907335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_229
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 729
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b99b48527a3d13380800000000000000
+      internalID: -8993174266039715429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_230
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 678
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a74d9eb8df065500800000000000000
+      internalID: 384512241772087207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_231
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 628
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a73db2b11eae0b6a0800000000000000
+      internalID: -6435385614968040582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_232
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 735
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39dfe95f0c7008b20800000000000000
+      internalID: 3134513865985818003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_233
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 684
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd833bf44a76f0990800000000000000
+      internalID: -7417596105846474532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_234
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 633
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0907733a24ae7ffb0800000000000000
+      internalID: -4613961721290723184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_235
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 756
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8acb6a6cd6472cc00800000000000000
+      internalID: 919425288770075816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_236
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 739
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c7d0fd6c47a81b80800000000000000
+      internalID: -8423799156292659260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_237
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 705
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f67c8988da32f8180800000000000000
+      internalID: -9111024292919195793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_238
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 654
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a20a397b775301e10800000000000000
+      internalID: 2166290209062494250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_239
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 638
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 573bba794572a50e0800000000000000
+      internalID: -2280467017034386571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_240
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 715
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab5566472f8715a80800000000000000
+      internalID: -8479863640631650886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_241
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 688
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 501afffc24682ad30800000000000000
+      internalID: 4441259804056330501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_242
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 731
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69da37ac8e26e7430800000000000000
+      internalID: 3782569489006308758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_243
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 680
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a4db313e936b06b0800000000000000
+      internalID: -5329056202980862814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_244
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 702
+        width: 17
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d350ba7f0876f0830800000000000000
+      internalID: 4039561194383279421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_245
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 671
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e783a5b6180fd8ca0800000000000000
+      internalID: -6012885488827221890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_246
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 757
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48787e8d158dc1a40800000000000000
+      internalID: 5340381104197568388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_247
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 655
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92576cde32fc7a600800000000000000
+      internalID: 479579638558258473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_248
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 386
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56557f4cd2c83ef40800000000000000
+      internalID: 5756598876915586405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_249
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 373
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d65acce8368bb5a60800000000000000
+      internalID: 7663921928638080365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmperorArmF2_250
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 363
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcafdf32fa302ca40800000000000000
+      internalID: 5386872155046542029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      EmperorArmF2_0: -8133206607946725938
+      EmperorArmF2_1: -7977794717609104338
+      EmperorArmF2_10: -3976378641765005774
+      EmperorArmF2_100: 4638487346542188497
+      EmperorArmF2_101: -5413461446526657921
+      EmperorArmF2_102: 4994754075606275757
+      EmperorArmF2_103: 7657633027381304247
+      EmperorArmF2_104: -1343808877251686930
+      EmperorArmF2_105: 4667778536644181257
+      EmperorArmF2_106: -1763398798155253688
+      EmperorArmF2_107: 5855681216639486157
+      EmperorArmF2_108: -6948164860237589407
+      EmperorArmF2_109: 2399914935214641438
+      EmperorArmF2_11: -6278081303164992912
+      EmperorArmF2_110: 3369079112796338161
+      EmperorArmF2_111: -8905751034170562137
+      EmperorArmF2_112: 4794825481131529632
+      EmperorArmF2_113: 2759479880456409363
+      EmperorArmF2_114: -5915363065801396634
+      EmperorArmF2_115: -5037177484336561461
+      EmperorArmF2_116: -810650395696463675
+      EmperorArmF2_117: -1829432246909167640
+      EmperorArmF2_118: -677832295421987196
+      EmperorArmF2_119: -7322337383089236476
+      EmperorArmF2_12: -5310927850637762193
+      EmperorArmF2_120: 330783811493430115
+      EmperorArmF2_121: -4912440489863478024
+      EmperorArmF2_122: -3203158238386638912
+      EmperorArmF2_123: -779864599266100062
+      EmperorArmF2_124: 5748838441256935232
+      EmperorArmF2_125: -6287424362322834632
+      EmperorArmF2_126: -3699912285606689117
+      EmperorArmF2_127: -7221648508120931900
+      EmperorArmF2_128: -2972630309385377641
+      EmperorArmF2_129: -1086599309235913365
+      EmperorArmF2_13: -4278857168693462273
+      EmperorArmF2_130: 3294265819089659177
+      EmperorArmF2_131: -3329512952389700098
+      EmperorArmF2_132: 8487134065067009226
+      EmperorArmF2_133: 5245423707636046658
+      EmperorArmF2_134: -2626417233607662765
+      EmperorArmF2_135: -1669446691615134091
+      EmperorArmF2_136: 2749214288301262144
+      EmperorArmF2_137: -6569244975779878456
+      EmperorArmF2_138: -1730895324161228351
+      EmperorArmF2_139: -2022555255344128579
+      EmperorArmF2_14: 4563808186953945062
+      EmperorArmF2_140: 7388569428290837058
+      EmperorArmF2_141: -1269582312971025654
+      EmperorArmF2_142: -1556366822952714894
+      EmperorArmF2_143: 7588784409896141610
+      EmperorArmF2_144: -4947365325017198346
+      EmperorArmF2_145: 7047789278838401116
+      EmperorArmF2_146: -1866468803735826956
+      EmperorArmF2_147: 965415368618777503
+      EmperorArmF2_148: 1611951289663842018
+      EmperorArmF2_149: -3390335807940226810
+      EmperorArmF2_15: -4346814454926197687
+      EmperorArmF2_150: -8585496782807060607
+      EmperorArmF2_151: -4948006426086627296
+      EmperorArmF2_152: -5782609818118087429
+      EmperorArmF2_153: -959561337800170854
+      EmperorArmF2_154: 5757028503938765999
+      EmperorArmF2_155: -8068914704073201880
+      EmperorArmF2_156: -6134193054359595015
+      EmperorArmF2_157: 4042217294542768830
+      EmperorArmF2_158: 937902032287634181
+      EmperorArmF2_159: -3984323982730436780
+      EmperorArmF2_16: 4885323856215484710
+      EmperorArmF2_160: -4034012840252729128
+      EmperorArmF2_161: -1589369948472894872
+      EmperorArmF2_162: 7702432898417974939
+      EmperorArmF2_163: -5004100395940453542
+      EmperorArmF2_164: -9029713771160955397
+      EmperorArmF2_165: 4189985067960509832
+      EmperorArmF2_166: -3916633340128175267
+      EmperorArmF2_167: 3169674843757928494
+      EmperorArmF2_168: 92000375170317662
+      EmperorArmF2_169: 2653297008979987657
+      EmperorArmF2_17: -5536238306385820178
+      EmperorArmF2_170: -189852890322532232
+      EmperorArmF2_171: -5609639473199272289
+      EmperorArmF2_172: 83398867862097647
+      EmperorArmF2_173: 2885033042096745457
+      EmperorArmF2_174: -6130905934539495229
+      EmperorArmF2_175: 6789648510486999750
+      EmperorArmF2_176: 8758215785525814191
+      EmperorArmF2_177: 6916175800924631457
+      EmperorArmF2_178: -7526465498700209966
+      EmperorArmF2_179: 8943047121957994784
+      EmperorArmF2_18: -602827328757930226
+      EmperorArmF2_180: -2874069618746721384
+      EmperorArmF2_181: 3528899325401625739
+      EmperorArmF2_182: 5991547674533383775
+      EmperorArmF2_183: 7892097644526863598
+      EmperorArmF2_184: 7234629517953929293
+      EmperorArmF2_185: -2962293484062950415
+      EmperorArmF2_186: 4548459209244451606
+      EmperorArmF2_187: -7185585388522862115
+      EmperorArmF2_188: -7824298515142349156
+      EmperorArmF2_189: 1363905360230340913
+      EmperorArmF2_19: 4922340209432623393
+      EmperorArmF2_190: 8127378362955372501
+      EmperorArmF2_191: 8570187697024189153
+      EmperorArmF2_192: -7810173234085821401
+      EmperorArmF2_193: 7126979646667346923
+      EmperorArmF2_194: 3817333419555413358
+      EmperorArmF2_195: -6983814599438674162
+      EmperorArmF2_196: -5838350643550418796
+      EmperorArmF2_197: 1195145247016144353
+      EmperorArmF2_198: -2415733872616187911
+      EmperorArmF2_199: 216586612671110294
+      EmperorArmF2_2: 7306366542312045896
+      EmperorArmF2_20: -8265517118678372986
+      EmperorArmF2_200: 8497848068550354969
+      EmperorArmF2_201: 1752268184984487368
+      EmperorArmF2_202: -6501816186795575121
+      EmperorArmF2_203: 5371100203221103322
+      EmperorArmF2_204: 904693123029083294
+      EmperorArmF2_205: -162087243339705408
+      EmperorArmF2_206: 8479139153103580640
+      EmperorArmF2_207: 8771440703818618602
+      EmperorArmF2_208: -1875283889205605299
+      EmperorArmF2_209: 8163431959177206511
+      EmperorArmF2_21: 5561624897828356107
+      EmperorArmF2_210: 2872983958545299688
+      EmperorArmF2_211: 6912177226118133357
+      EmperorArmF2_212: -2611849272047824375
+      EmperorArmF2_213: -7451845765919636843
+      EmperorArmF2_214: 4737922565286728444
+      EmperorArmF2_215: 7558567680728681135
+      EmperorArmF2_216: 2355344732466755281
+      EmperorArmF2_217: 6943417115341430215
+      EmperorArmF2_218: 1642190801114012786
+      EmperorArmF2_219: 3441113849730953286
+      EmperorArmF2_22: 6763352646081338425
+      EmperorArmF2_220: -7703916253672679855
+      EmperorArmF2_221: 9065775406910933814
+      EmperorArmF2_222: 8688524075091084577
+      EmperorArmF2_223: 3720118465539812659
+      EmperorArmF2_224: -573303498346184537
+      EmperorArmF2_225: 6371650127102004472
+      EmperorArmF2_226: -7442873195668706032
+      EmperorArmF2_227: 1609724202896832173
+      EmperorArmF2_228: -3739779305303907335
+      EmperorArmF2_229: -8993174266039715429
+      EmperorArmF2_23: -276270540115727630
+      EmperorArmF2_230: 384512241772087207
+      EmperorArmF2_231: -6435385614968040582
+      EmperorArmF2_232: 3134513865985818003
+      EmperorArmF2_233: -7417596105846474532
+      EmperorArmF2_234: -4613961721290723184
+      EmperorArmF2_235: 919425288770075816
+      EmperorArmF2_236: -8423799156292659260
+      EmperorArmF2_237: -9111024292919195793
+      EmperorArmF2_238: 2166290209062494250
+      EmperorArmF2_239: -2280467017034386571
+      EmperorArmF2_24: -7040221061490255180
+      EmperorArmF2_240: -8479863640631650886
+      EmperorArmF2_241: 4441259804056330501
+      EmperorArmF2_242: 3782569489006308758
+      EmperorArmF2_243: -5329056202980862814
+      EmperorArmF2_244: 4039561194383279421
+      EmperorArmF2_245: -6012885488827221890
+      EmperorArmF2_246: 5340381104197568388
+      EmperorArmF2_247: 479579638558258473
+      EmperorArmF2_248: 5756598876915586405
+      EmperorArmF2_249: 7663921928638080365
+      EmperorArmF2_25: 4332339199337791635
+      EmperorArmF2_250: 5386872155046542029
+      EmperorArmF2_26: 5094257465220024747
+      EmperorArmF2_27: 3987683844028672436
+      EmperorArmF2_28: -2059044601667206635
+      EmperorArmF2_29: -8194333148862121272
+      EmperorArmF2_3: -6970688160225103989
+      EmperorArmF2_30: 3382026456305717709
+      EmperorArmF2_31: -2736186875209159382
+      EmperorArmF2_32: 7847831290638255255
+      EmperorArmF2_33: 3091389111059220429
+      EmperorArmF2_34: 5550036690055304363
+      EmperorArmF2_35: 971152660008627506
+      EmperorArmF2_36: 6763931920826265525
+      EmperorArmF2_37: 3341583709899554830
+      EmperorArmF2_38: 2504302882400838476
+      EmperorArmF2_39: -966246032458954382
+      EmperorArmF2_4: 3020091041553233505
+      EmperorArmF2_40: -3025905608954790696
+      EmperorArmF2_41: 5904836301467431365
+      EmperorArmF2_42: 3187664428887378553
+      EmperorArmF2_43: 1024487756677546514
+      EmperorArmF2_44: 5007131315821541454
+      EmperorArmF2_45: 3391968537282253249
+      EmperorArmF2_46: -6871584278752593474
+      EmperorArmF2_47: 1151670265526349491
+      EmperorArmF2_48: 8780531783122204558
+      EmperorArmF2_49: 8055790574337332552
+      EmperorArmF2_5: 58368350680005474
+      EmperorArmF2_50: -1983600465380174019
+      EmperorArmF2_51: -2821871933369923108
+      EmperorArmF2_52: -3295458790294708870
+      EmperorArmF2_53: -245197417913229858
+      EmperorArmF2_54: 4400903988055065788
+      EmperorArmF2_55: -1684234210540506496
+      EmperorArmF2_56: -8900941808389868793
+      EmperorArmF2_57: 404460737860651967
+      EmperorArmF2_58: 989935616826243007
+      EmperorArmF2_59: -2262134328926807364
+      EmperorArmF2_6: 4695882623167563855
+      EmperorArmF2_60: -8270114912906342916
+      EmperorArmF2_61: -2385744686430583285
+      EmperorArmF2_62: 6278945101681798770
+      EmperorArmF2_63: 1510732764817325436
+      EmperorArmF2_64: -9059235375767473447
+      EmperorArmF2_65: 3302147294690296709
+      EmperorArmF2_66: -702991336112300066
+      EmperorArmF2_67: 2552248808261740258
+      EmperorArmF2_68: 7785654922446870784
+      EmperorArmF2_69: 3405181266637838323
+      EmperorArmF2_7: 2529872242461729871
+      EmperorArmF2_70: -3004678324877594686
+      EmperorArmF2_71: -7320135825321830981
+      EmperorArmF2_72: -3226282096976798872
+      EmperorArmF2_73: -505374286952083273
+      EmperorArmF2_74: -2077788745561935862
+      EmperorArmF2_75: 5468682203862031105
+      EmperorArmF2_76: 6007782262079184538
+      EmperorArmF2_77: -1342876242034326143
+      EmperorArmF2_78: 3218216269754520055
+      EmperorArmF2_79: 1680407564206687598
+      EmperorArmF2_8: -7252477940486285377
+      EmperorArmF2_80: -5699688020584443017
+      EmperorArmF2_81: -2555246377523200461
+      EmperorArmF2_82: -3587574356823863218
+      EmperorArmF2_83: -7742248105522340980
+      EmperorArmF2_84: 312366547693113364
+      EmperorArmF2_85: -61010280085299633
+      EmperorArmF2_86: 37510248941320606
+      EmperorArmF2_87: -5626852459118167885
+      EmperorArmF2_88: 2568307665267566370
+      EmperorArmF2_89: -3826207111005374030
+      EmperorArmF2_9: 5463524794618120392
+      EmperorArmF2_90: -8383346465047445159
+      EmperorArmF2_91: 5699576018753567538
+      EmperorArmF2_92: -5821879864723735689
+      EmperorArmF2_93: -9177099360346128696
+      EmperorArmF2_94: 4308090722811766750
+      EmperorArmF2_95: -2271175233518265208
+      EmperorArmF2_96: -1920865164156941502
+      EmperorArmF2_97: 5718502334858877538
+      EmperorArmF2_98: -3930585585263777824
+      EmperorArmF2_99: 7796689173992299354
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
