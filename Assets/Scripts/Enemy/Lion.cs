@@ -38,11 +38,11 @@ public class Lion : MonoBehaviour
             }
             if (thisLionNum == 4)
             {
-                enemyController.eVocalCords = GameObject.Find("CinemacchineCamera").GetComponent<AudioSource>();
                 lion1.lion4 = lion4;
                 lion2.lion4 = lion4;
                 lion3.lion4 = lion4;
                 lion4.lion4 = lion4;
+                enemyController.eVocalCords = lion1.enemyController.eVocalCords;
             }
                 
         }
@@ -52,7 +52,7 @@ public class Lion : MonoBehaviour
     void Update()
     {
         if (enemyController.canAttack && !enemyController.imbolized && Vector2.Distance(transform.position, enemyController.player.transform.position) < attackRange && pendingAttack != 4)
-            attack();
+            StartCoroutine(attack());
 
         if (pendingAttack == 4 && enemyController.gameManager.lionCheck == enemyController.gameManager.lionReady && enemyController.gameManager.lionCheck != 0 && ready)
         {
@@ -67,7 +67,7 @@ public class Lion : MonoBehaviour
         }
     }
 
-    public void attack()
+    public IEnumerator attack()
     {
         enemyController.canAttack = false;
         float temp = Random.Range(1f, 100.0f);
@@ -81,16 +81,22 @@ public class Lion : MonoBehaviour
         switch (pendingAttack)
         {
             case 1: //bite
+                enemyController.canMove = false;
                 enemyController.anim.SetTrigger("Bite");
+                yield return new WaitForSeconds(.30f);
                 biteHitBox.SetActive(true);
                 StartCoroutine(enemyController.cooldown(1.5f, biteHitBox));
+                enemyController.canMove = true;
                 break;
 
             case 2: //slash
+                enemyController.canMove = false;
                 enemyController.anim.SetTrigger("Slash");
+                yield return new WaitForSeconds(.4f);
                 slashHitBox.SetActive(true);
                 enemyController.eVocalCords.PlayOneShot(enemyController.attack1);
                 StartCoroutine(enemyController.cooldown(1.5f, slashHitBox));
+                enemyController.canMove = true;
                 break;
 
             case 3: //group lunge

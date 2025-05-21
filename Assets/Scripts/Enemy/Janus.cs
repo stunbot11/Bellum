@@ -59,12 +59,14 @@ public class Janus : MonoBehaviour
         enemyController.canMove = false;
         if (!phase) //sword attacks
         {
+            yield return new WaitForSeconds(.45f); // anim time
             swordHitBox.SetActive(true);
             yield return new WaitForSeconds(.1f);
             swordHitBox.SetActive(false);
         }
         else
         {
+            yield return new WaitForSeconds(.1f);
             spearHitBox.SetActive(true);
             yield return new WaitForSeconds(.1f);
             spearHitBox.SetActive(false);
