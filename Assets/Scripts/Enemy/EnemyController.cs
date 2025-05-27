@@ -41,6 +41,8 @@ public class EnemyController : MonoBehaviour
 
     [HideInInspector] public float angle;
     [HideInInspector] public float distance;
+    public BossAttacks[] attacks;
+    public GameObject[] attacksHitbox;
 
     void Start()
     {
@@ -192,5 +194,31 @@ public class EnemyController : MonoBehaviour
         yield return new WaitForSeconds(1);
         takeDamage(5, false, "DoT");
         inDoT = false;
+    }
+
+    IEnumerator attack(BossAttacks atk)
+    {
+        switch (atk.attack)
+        {
+            case BossAttacks.atk.meleeSwing:
+                yield return new WaitForSeconds(atk.cooldownTime);
+                break;
+
+            case BossAttacks.atk.meleeBurst:
+                yield return new WaitForSeconds(atk.cooldownTime);
+                break;
+
+            case BossAttacks.atk.rangedSingle:
+                yield return new WaitForSeconds(atk.cooldownTime);
+                break;
+
+            case BossAttacks.atk.rangedBurst:
+                yield return new WaitForSeconds(atk.cooldownTime);
+                break;
+
+            case BossAttacks.atk.lunge:
+                yield return new WaitForSeconds(atk.cooldownTime);
+                break;
+        }
     }
 }

@@ -916,6 +916,8 @@ MonoBehaviour:
   netHit: {fileID: 8300000, guid: a322bb9bea92c97409d120e0b7810c51, type: 3}
   angle: 0
   distance: 0
+  attacks: []
+  attacksHitbox: []
 --- !u!50 &67232405
 Rigidbody2D:
   serializedVersion: 5
@@ -44486,11 +44488,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1991703594113914895, guid: 7b3f060eb7d271e47bf1ef6988476deb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.055
       objectReference: {fileID: 0}
     - target: {fileID: 1991703594113914895, guid: 7b3f060eb7d271e47bf1ef6988476deb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.082
       objectReference: {fileID: 0}
     - target: {fileID: 1991703594113914895, guid: 7b3f060eb7d271e47bf1ef6988476deb, type: 3}
       propertyPath: m_LocalPosition.z

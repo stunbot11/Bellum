@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     private EventSystem eventSystem;
     [HideInInspector] public PlayerController playerController;
+    public bool arcadeMode;
     public int classType = 1; // 1 sword and shield / 2 bow / 3 tridant
     public int boss = 1;
     public bool[] challenges; //1: half damage / 2: double boss health / 3: no secondary abilities / 4: no upgrades
@@ -29,9 +30,10 @@ public class GameManager : MonoBehaviour
     public Image playerHealthBar;
     public bool bossActive;
 
-     public int health;
-     public float time;
-     public int activeChallenges;
+    public int health;
+    public float time;
+    public int activeChallenges;
+    public int gold;
 
     private void Awake()
     {

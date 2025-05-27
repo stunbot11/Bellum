@@ -3406,6 +3406,8 @@ MonoBehaviour:
   netHit: {fileID: 8300000, guid: a322bb9bea92c97409d120e0b7810c51, type: 3}
   angle: 0
   distance: 0
+  attacks: []
+  attacksHitbox: []
 --- !u!61 &391617665
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5111,6 +5113,8 @@ MonoBehaviour:
   netHit: {fileID: 8300000, guid: a322bb9bea92c97409d120e0b7810c51, type: 3}
   angle: 0
   distance: 0
+  attacks: []
+  attacksHitbox: []
 --- !u!50 &570264085
 Rigidbody2D:
   serializedVersion: 5
@@ -54561,6 +54565,8 @@ MonoBehaviour:
   netHit: {fileID: 8300000, guid: a322bb9bea92c97409d120e0b7810c51, type: 3}
   angle: 0
   distance: 0
+  attacks: []
+  attacksHitbox: []
 --- !u!61 &1750750298
 BoxCollider2D:
   m_ObjectHideFlags: 0

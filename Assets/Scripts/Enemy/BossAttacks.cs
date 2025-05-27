@@ -6,13 +6,17 @@ public class BossAttacks : ScriptableObject
     public int attackNum;
 
     [Header("Attacks")]
-    public bool meleeSwing;
-    public bool meleeBurst;
+    public atk attack;
+    public enum atk
+    {
+        meleeSwing,
+        meleeBurst,
+        rangedSingle,
+        rangedBurst,
+        lunge
+    }
     public int mbAmount;
-    public bool rangedSingle;
-    public bool rangedBurst;
     public int rbAmount;
-    public bool lunge;
 
     [Header("Stats/properties")]
     public int phase; // used to determin the active weapon
