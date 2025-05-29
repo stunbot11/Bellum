@@ -30,10 +30,20 @@ public class GameManager : MonoBehaviour
     public Image playerHealthBar;
     public bool bossActive;
 
+    public int maxHealth;
     public int health;
     public float time;
     public int activeChallenges;
-    public int gold;
+
+    public int upgradePoints;
+    public int money;
+    public int lastboss = 1;
+    public int upgradePointLevel;
+    public int maxHealthLevel;
+    public int healthRegenLevel;
+
+    public float testVal1;
+    public float testVal2;
 
     private void Awake()
     {
@@ -43,6 +53,9 @@ public class GameManager : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject); 
         eventSystem = GameObject.Find("EventSystem").GetComponent<EventSystem>();
+
+        print("sin graph " + Mathf.Sin((testVal1 * Mathf.PI) / 2));
+        print("easeinout " + (testVal2 < 0.5 ? 8 * testVal2 * testVal2 * testVal2 * testVal2 : 1 - Mathf.Pow(-2 * testVal2 + 2, 4) / 2));
     }
 
     private void Update()
@@ -57,11 +70,14 @@ public class GameManager : MonoBehaviour
         StartCoroutine(start());
     }
 
-    IEnumerator start()
+    public IEnumerator start()
     {
-        print("start");
+        if (arcadeMode)
+        {
+            while (boss == lastboss)
+                boss = Random.Range(0, totalBosses + 1);
+        }
         yield return new WaitForSeconds(2.5f);
-        print("start2");
         SceneManager.LoadScene(boss);
     }
 

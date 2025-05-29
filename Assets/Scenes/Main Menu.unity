@@ -5135,10 +5135,18 @@ MonoBehaviour:
   bossesDead: 0
   playerHealthBar: {fileID: 0}
   bossActive: 0
-  health: 0
+  maxHealth: 100
+  health: 100
   time: 0
   activeChallenges: 0
-  gold: 0
+  upgradePoints: 0
+  money: 0
+  lastboss: 1
+  upgradePointLevel: 0
+  maxHealthLevel: 0
+  healthRegenLevel: 0
+  testVal1: 0.3
+  testVal2: 0.3
   bossHealthBar: {fileID: 0}
   tEHealth: 0
   tEMHealth: 0

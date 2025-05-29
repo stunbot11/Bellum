@@ -116,6 +116,9 @@ public class PlayerController : MonoBehaviour
         fadeText = GameObject.Find("death text").GetComponent<TextMeshProUGUI>();
         winScreen = GameObject.Find("win screen").GetComponent<Image>();
         winText = GameObject.Find("win text").GetComponent<TextMeshProUGUI>();
+
+        maxHealth = gameManager.maxHealth;
+        health = gameManager.health;
     }
 
     public void fakeStart()

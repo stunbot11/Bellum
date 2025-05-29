@@ -24,6 +24,9 @@ public class Upgrades : MonoBehaviour
         bool2 = new bool[path2.Length + 1];
         bool3 = new bool[path3.Length + 1];
 
+        if (playerController.gameManager.arcadeMode)
+            points = playerController.gameManager.upgradePoints;
+
         switch (playerController.gameManager.classType)
         {
             case 1:
