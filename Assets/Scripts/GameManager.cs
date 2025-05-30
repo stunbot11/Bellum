@@ -41,9 +41,7 @@ public class GameManager : MonoBehaviour
     public int upgradePointLevel;
     public int maxHealthLevel;
     public int healthRegenLevel;
-
-    public float testVal1;
-    public float testVal2;
+    public int round;
 
     private void Awake()
     {
@@ -53,9 +51,6 @@ public class GameManager : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject); 
         eventSystem = GameObject.Find("EventSystem").GetComponent<EventSystem>();
-
-        print("sin graph " + Mathf.Sin((testVal1 * Mathf.PI) / 2));
-        print("easeinout " + (testVal2 < 0.5 ? 8 * testVal2 * testVal2 * testVal2 * testVal2 : 1 - Mathf.Pow(-2 * testVal2 + 2, 4) / 2));
     }
 
     private void Update()
@@ -137,6 +132,25 @@ public class GameManager : MonoBehaviour
                 activeChallenges++;
         }
         SceneManager.LoadScene("Leaderboard");
+    }
+
+    public void win()
+    {
+        if (arcadeMode)
+        {
+            round++;
+            SceneManager.LoadScene("Shop");
+        }
+        else
+            leaderBoard();
+    }
+
+    public void loss()
+    {
+        if (arcadeMode)
+            leaderBoard();
+        else
+            menu();
     }
 
     public IEnumerator hitEffect(SpriteRenderer[] limbs)

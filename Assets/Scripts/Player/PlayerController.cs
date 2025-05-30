@@ -204,7 +204,7 @@ public class PlayerController : MonoBehaviour
             tempText.a += Time.deltaTime / 3;
             fadeText.color = tempText;
             if (tempScreen.a - (2 / 3) > 1)
-                gameManager.menu();
+                gameManager.loss();
         }
 
         if (gameManager.bossesDead >= gameManager.totalBosses && gameManager.totalBosses != 0)
@@ -225,7 +225,7 @@ public class PlayerController : MonoBehaviour
             tempText.a += Time.deltaTime / 3;
             winText.color = tempText;
             if (tempScreen.a - (2 / 3) > 1)
-                gameManager.leaderBoard();
+                gameManager.win();
         }
 
         if (dotTicks > 0 && !inDoT)
