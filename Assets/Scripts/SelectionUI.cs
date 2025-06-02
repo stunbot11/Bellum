@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class SelectionUI : MonoBehaviour
 {
     public EventSystem eventSystem;
-    [HideInInspector] public int selectionPart; //0 = title, 1 = class, 2 = boss, 3 = challenges/start
+     public int selectionPart; //0 = title, 1 = class, 2 = boss, 3 = challenges/start
     private bool flickerOn = true;
     public GameObject startTxt;
     public GameObject[] parts;
@@ -20,6 +20,7 @@ public class SelectionUI : MonoBehaviour
     public InputActionReference backButton;
 
     public GameObject titelScreen;
+    public GameObject modeSelect;
     public GameObject selectionScreen;
 
     private void Start()
@@ -37,7 +38,7 @@ public class SelectionUI : MonoBehaviour
             activeScroll.GetComponent<Animator>().SetTrigger("Close");
             activeScroll.transform.GetChild(0).gameObject.SetActive(false);
             eventSystem.SetSelectedGameObject(parts[selectionPart]);
-        }
+        } /*
         else if (selectionPart == 0)
             Application.Quit();
         else if (selectionPart == 1)
@@ -61,6 +62,41 @@ public class SelectionUI : MonoBehaviour
                 for (int i = 0; i < bossType.Length; i++)
                     bossType[i].color = Color.red;
             }
+        } */
+        else
+        {
+            switch (selectionPart)
+            {
+                case 0:
+                    Application.Quit();
+                    break;
+
+                case 1:
+                    titelScreen.SetActive(true);
+                    modeSelect.SetActive(false);
+                    break;
+
+                case 2:
+                    modeSelect.SetActive(true);
+                    selectionScreen.SetActive(false);
+                    break;
+
+                case 3:
+                    for (int i = 0; i < playerClass.Length; i++)
+                        playerClass[i].color = Color.red;
+                    break;
+
+                case 4:
+                    for (int i = 0; i < bossType.Length; i++)
+                        bossType[i].color = Color.red;
+                    break;
+
+                default:
+
+                    break;
+            }
+            selectionPart--;
+            eventSystem.SetSelectedGameObject(parts[selectionPart]);
         }
     }
 

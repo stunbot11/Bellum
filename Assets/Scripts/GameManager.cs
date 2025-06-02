@@ -82,6 +82,11 @@ public class GameManager : MonoBehaviour
         Destroy(this.gameObject);
     }
 
+    public void gameMode(bool arcade)
+    {
+        arcadeMode = arcade;
+    }
+
     public void setClass(int num) //sets class and changes color of class buttons
     {
         classType = num;

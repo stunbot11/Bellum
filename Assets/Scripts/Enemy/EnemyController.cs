@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
@@ -195,6 +196,16 @@ public class EnemyController : MonoBehaviour
         takeDamage(5, false, "DoT");
         inDoT = false;
     }
+
+    void atk()
+    {
+        int atkNum = Random.Range(0, attacks.Length);
+        if (attacks[atkNum].attackRange <= (Vector2.Distance(player.transform.position, transform.position)))
+            StartCoroutine(attack(attacks[atkNum])); 
+        else
+            atk();
+    }
+
 
     IEnumerator attack(BossAttacks atk)
     {

@@ -20,7 +20,6 @@ public class BossAttacks : ScriptableObject
 
     [Header("Stats/properties")]
     public int phase; // used to determin the active weapon
+    public float attackRange;
     public float cooldownTime;
-    public GameObject weapon;
-    public GameObject dmgSpot; // projectile / hitbox
 }
