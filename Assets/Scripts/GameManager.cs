@@ -69,8 +69,11 @@ public class GameManager : MonoBehaviour
     {
         if (arcadeMode)
         {
-            while (boss == lastboss)
-                boss = Random.Range(0, totalBosses + 1);
+            boss = Random.Range(1, totalBosses + 2);
+            if (boss == lastboss && boss == totalBosses + 2)
+                boss--;
+            else
+                boss++;
         }
         yield return new WaitForSeconds(2.5f);
         SceneManager.LoadScene(boss);

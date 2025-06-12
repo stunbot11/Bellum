@@ -230,6 +230,9 @@ public class EnemyController : MonoBehaviour
             case BossAttacks.atk.lunge:
                 yield return new WaitForSeconds(atk.cooldownTime);
                 break;
+
+            default:
+                break;
         }
     }
 }

@@ -36,7 +36,7 @@ public class Lion : MonoBehaviour
                 lion4.lion3 = lion3;
                 lion4.lion4 = lion4;
             }
-            if (thisLionNum == 4)
+            if (thisLionNum == 4 && enemyController.gameManager.boss == 1)
             {
                 lion1.lion4 = lion4;
                 lion2.lion4 = lion4;
