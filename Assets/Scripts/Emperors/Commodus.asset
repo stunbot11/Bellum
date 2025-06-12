@@ -23,5 +23,5 @@ MonoBehaviour:
   decreaseHealth: 0
   decreaseSpeed: 0
   playerEffectStrength: 1
-  ObjectToSpawn: {fileID: 2679372334078584066, guid: 1c2dca48c030ad0419f89820da1ebf3d, type: 3}
+  ObjectToSpawn: {fileID: 7013819487655863050, guid: 1c2dca48c030ad0419f89820da1ebf3d, type: 3}
   timeBetweenEffects: 9999999

@@ -3333,7 +3333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c4bcfed1b739b4eb232aad485c8752, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thisLionNum: 1
+  thisLionNum: 3
   pendingAttack: 0
   lion1: {fileID: 570264082}
   lion2: {fileID: 1750750295}
@@ -54474,7 +54474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c4bcfed1b739b4eb232aad485c8752, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thisLionNum: 1
+  thisLionNum: 2
   pendingAttack: 0
   lion1: {fileID: 570264082}
   lion2: {fileID: 1750750295}
