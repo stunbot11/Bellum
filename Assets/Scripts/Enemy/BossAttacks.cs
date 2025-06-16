@@ -13,7 +13,8 @@ public class BossAttacks : ScriptableObject
         meleeBurst,
         rangedSingle,
         rangedBurst,
-        lunge
+        lunge,
+        special
     }
     public int mbAmount;
     public int rbAmount;

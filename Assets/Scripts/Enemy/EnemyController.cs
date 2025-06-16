@@ -44,6 +44,7 @@ public class EnemyController : MonoBehaviour
     [HideInInspector] public float distance;
     public BossAttacks[] attacks;
     public GameObject[] attacksHitbox;
+    public SpecialAttacks sATK;
 
     void Start()
     {
@@ -229,6 +230,9 @@ public class EnemyController : MonoBehaviour
 
             case BossAttacks.atk.lunge:
                 yield return new WaitForSeconds(atk.cooldownTime);
+                break;
+
+            case BossAttacks.atk.special:
                 break;
 
             default:
