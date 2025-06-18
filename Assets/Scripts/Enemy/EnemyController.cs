@@ -1,5 +1,4 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
@@ -42,9 +41,11 @@ public class EnemyController : MonoBehaviour
 
     [HideInInspector] public float angle;
     [HideInInspector] public float distance;
+
+    [Header("Attack")]
     public BossAttacks[] attacks;
     public GameObject[] attacksHitbox;
-    public SpecialAttacks sATK;
+    public int[] damageNums;
 
     void Start()
     {
@@ -200,36 +201,73 @@ public class EnemyController : MonoBehaviour
 
     void atk()
     {
+        canAttack = false;
         int atkNum = Random.Range(0, attacks.Length);
         if (attacks[atkNum].attackRange <= (Vector2.Distance(player.transform.position, transform.position)))
-            StartCoroutine(attack(attacks[atkNum])); 
+            StartCoroutine(attack(atkNum)); 
         else
             atk();
     }
 
 
-    IEnumerator attack(BossAttacks atk)
+    IEnumerator attack(int atkNum)
     {
+        canMove = false;
+        BossAttacks atk = attacks[atkNum];
+        GameObject neededHitbox = attacksHitbox[atkNum];
+
+        Vector2 arrowDirectionTemp = (player.transform.position - transform.position).normalized;
+        float ang1 = (Mathf.Round(((Mathf.Atan2(arrowDirectionTemp.y, arrowDirectionTemp.x) * Mathf.Rad2Deg) - 45) / 45) * 45 - 45);
+        Vector2 arrowDirection = new Vector2(Mathf.Sin(ang1 * Mathf.Deg2Rad) * -1, Mathf.Cos(ang1 * Mathf.Deg2Rad)).normalized;
+
         switch (atk.attack)
         {
             case BossAttacks.atk.meleeSwing:
-                yield return new WaitForSeconds(atk.cooldownTime);
+                neededHitbox.GetComponent<AttackHandler>().damage = damageNums[atkNum];
+                neededHitbox.SetActive(true);
+                StartCoroutine(cooldown(atk.cooldownTime, neededHitbox));
                 break;
 
             case BossAttacks.atk.meleeBurst:
-                yield return new WaitForSeconds(atk.cooldownTime);
+                neededHitbox.GetComponent<AttackHandler>().damage = damageNums[atkNum];
+                for (int i = 0; i < atk.mbAmount; i++)
+                {
+                    canMove = false;
+                    neededHitbox.SetActive(true);
+                    yield return new WaitForSeconds(.1f);
+                    neededHitbox.SetActive(false);
+                    canMove = true;
+                    yield return new WaitForSeconds(.5f);
+                }
+                StartCoroutine(cooldown(atk.cooldownTime));
                 break;
 
             case BossAttacks.atk.rangedSingle:
-                yield return new WaitForSeconds(atk.cooldownTime);
+                shoot(neededHitbox, ang1, damageNums[atkNum], arrowDirection, atk.projSpeed, atk.projLifeTime);
+                StartCoroutine(cooldown(atk.cooldownTime));
                 break;
 
             case BossAttacks.atk.rangedBurst:
-                yield return new WaitForSeconds(atk.cooldownTime);
+                for (int i = 0; i < atk.rbAmount; i++)
+                {
+                    shoot(neededHitbox, ang1, damageNums[atkNum], arrowDirection, atk.projSpeed, atk.projLifeTime);
+                    yield return new WaitForSeconds(.3f);
+                }
+                StartCoroutine(cooldown(atk.cooldownTime));
                 break;
 
             case BossAttacks.atk.lunge:
-                yield return new WaitForSeconds(atk.cooldownTime);
+                spearThrown = true;
+                targetOveride = true;
+                goingToTarget = true;
+                target = arrowDirection * 10000;
+                speedMod = atk.projSpeed;
+                yield return new WaitForSeconds(atk.projLifeTime);
+                spearThrown = false;
+                spearThrown = false;
+                targetOveride = false;
+                goingToTarget = false;
+                speedMod = 1;
                 break;
 
             case BossAttacks.atk.special:
@@ -238,5 +276,16 @@ public class EnemyController : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    void shoot(GameObject proj, float dir, int dmg, Vector2 bDir, float speed, float lifeTime)
+    {
+        GameObject p = Instantiate(proj, transform.position, Quaternion.identity, null);
+        ProjectileHandler projectileData = p.GetComponent<ProjectileHandler>();
+        p.GetComponent<Rigidbody2D>().rotation = dir;
+        projectileData.creator = this.gameObject;
+        projectileData.damage = dmg;
+        p.GetComponent<Rigidbody2D>().linearVelocity = bDir * speed;
+        Destroy(p, lifeTime);
     }
 }

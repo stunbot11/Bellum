@@ -21,6 +21,8 @@ public class BossAttacks : ScriptableObject
 
     [Header("Stats/properties")]
     public int phase; // used to determin the active weapon
+    public float projSpeed;
+    public float projLifeTime;
     public float attackRange;
     public float cooldownTime;
 }
