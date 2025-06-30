@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class EnemyController : MonoBehaviour
 {
@@ -43,8 +44,10 @@ public class EnemyController : MonoBehaviour
     [HideInInspector] public float distance;
 
     [Header("Attack")]
+    private float timeBetweenAttacks;
     public BossAttacks[] attacks;
     public GameObject[] attacksHitbox;
+    public float[] animTelegraph;
     public int[] damageNums;
 
     void Start()
@@ -108,6 +111,10 @@ public class EnemyController : MonoBehaviour
             inDoT = true;
             StartCoroutine(DoT());
         }
+
+        timeBetweenAttacks -= Time.deltaTime;
+        if (canAttack && timeBetweenAttacks < 0)
+            atk();
     }
 
     public void takeDamage(int damage, bool net = false, string dmgType = null, int ToDoT = 0)
@@ -166,6 +173,7 @@ public class EnemyController : MonoBehaviour
         yield return new WaitForSeconds(cooldown);
         canAttack = true;
         canMove = true;
+        timeBetweenAttacks = Random.Range(0.5f, 3f);
     }
 
     public IEnumerator imbolizedCooldown()
@@ -202,7 +210,7 @@ public class EnemyController : MonoBehaviour
     void atk()
     {
         canAttack = false;
-        int atkNum = Random.Range(0, attacks.Length);
+        int atkNum = Random.Range(0, attacks.Length + 1);
         if (attacks[atkNum].attackRange <= (Vector2.Distance(player.transform.position, transform.position)))
             StartCoroutine(attack(atkNum)); 
         else
@@ -223,6 +231,7 @@ public class EnemyController : MonoBehaviour
         switch (atk.attack)
         {
             case BossAttacks.atk.meleeSwing:
+                yield return new WaitForSeconds(animTelegraph[atkNum]);
                 neededHitbox.GetComponent<AttackHandler>().damage = damageNums[atkNum];
                 neededHitbox.SetActive(true);
                 StartCoroutine(cooldown(atk.cooldownTime, neededHitbox));
@@ -233,6 +242,7 @@ public class EnemyController : MonoBehaviour
                 for (int i = 0; i < atk.mbAmount; i++)
                 {
                     canMove = false;
+                    yield return new WaitForSeconds(animTelegraph[atkNum]);
                     neededHitbox.SetActive(true);
                     yield return new WaitForSeconds(.1f);
                     neededHitbox.SetActive(false);
@@ -243,6 +253,7 @@ public class EnemyController : MonoBehaviour
                 break;
 
             case BossAttacks.atk.rangedSingle:
+                yield return new WaitForSeconds(animTelegraph[atkNum]);
                 shoot(neededHitbox, ang1, damageNums[atkNum], arrowDirection, atk.projSpeed, atk.projLifeTime);
                 StartCoroutine(cooldown(atk.cooldownTime));
                 break;
@@ -250,13 +261,33 @@ public class EnemyController : MonoBehaviour
             case BossAttacks.atk.rangedBurst:
                 for (int i = 0; i < atk.rbAmount; i++)
                 {
+                    yield return new WaitForSeconds(animTelegraph[atkNum]);
                     shoot(neededHitbox, ang1, damageNums[atkNum], arrowDirection, atk.projSpeed, atk.projLifeTime);
                     yield return new WaitForSeconds(.3f);
                 }
                 StartCoroutine(cooldown(atk.cooldownTime));
                 break;
 
+            case BossAttacks.atk.rangedTrip:
+                for (int i = 0; i < atk.rtAmount; i++)
+                {
+                    float ang = Mathf.Lerp(ang1 - 45, ang1 + 45, (i / (float)atk.rtAmount));
+                    print(ang);
+                    eVocalCords.PlayOneShot(attack1);
+                    GameObject p1 = Instantiate(neededHitbox, transform.position, Quaternion.identity, null);
+                    p1.GetComponent<Rigidbody2D>().rotation = ang;
+                    ProjectileHandler projectileData1 = p1.GetComponent<ProjectileHandler>();
+                    projectileData1.creator = this.gameObject;
+                    projectileData1.damage = damageNums[atkNum];
+                    p1.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(Mathf.Sin(ang * Mathf.Deg2Rad) * -1, Mathf.Cos(ang * Mathf.Deg2Rad)).normalized * atk.projSpeed;
+                    Destroy(p1, atk.projLifeTime);
+                }
+                StartCoroutine(cooldown(atk.cooldownTime));
+                break;
+
+
             case BossAttacks.atk.lunge:
+                yield return new WaitForSeconds(animTelegraph[atkNum]);
                 spearThrown = true;
                 targetOveride = true;
                 goingToTarget = true;
@@ -270,10 +301,15 @@ public class EnemyController : MonoBehaviour
                 speedMod = 1;
                 break;
 
-            case BossAttacks.atk.special:
-                break;
-
             default:
+                if (TryGetComponent<Lion>(out Lion lion))
+                {
+                    lion.attack();
+                }
+                else if (TryGetComponent<Commodus>(out Commodus commodus))
+                {
+                    StartCoroutine(commodus.attack());
+                } // janus doesnt have special attack, he has phases that does it automatically
                 break;
         }
     }

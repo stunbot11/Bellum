@@ -45,34 +45,7 @@ public class Janus : MonoBehaviour
             enemyController.spearThrown = false;
             enemyController.canAttack = true;
             canPickUp = false;
-            print("here");
         }
-
-        if (enemyController.canAttack && !enemyController.imbolized && !spearThrown && Vector2.Distance(transform.position, enemyController.player.transform.position) <= (!phase ? swordAtkRange : spearAtkRange))
-            StartCoroutine(attack());
-    }
-
-    private IEnumerator attack()
-    {
-        enemyController.anim.SetTrigger("Attack");
-        enemyController.canAttack = false;
-        enemyController.canMove = false;
-        if (!phase) //sword attacks
-        {
-            yield return new WaitForSeconds(.45f); // anim time
-            swordHitBox.SetActive(true);
-            yield return new WaitForSeconds(.1f);
-            swordHitBox.SetActive(false);
-        }
-        else
-        {
-            yield return new WaitForSeconds(.1f);
-            spearHitBox.SetActive(true);
-            yield return new WaitForSeconds(.1f);
-            spearHitBox.SetActive(false);
-        }
-        enemyController.canMove = true;
-        StartCoroutine(enemyController.cooldown(.75f));
     }
 
     IEnumerator phaseTime()

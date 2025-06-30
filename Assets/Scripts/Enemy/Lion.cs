@@ -51,9 +51,6 @@ public class Lion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (enemyController.canAttack && !enemyController.imbolized && Vector2.Distance(transform.position, enemyController.player.transform.position) < attackRange && pendingAttack != 4)
-            StartCoroutine(attack());
-
         if (pendingAttack == 4 && enemyController.gameManager.lionCheck == enemyController.gameManager.lionReady && enemyController.gameManager.lionCheck != 0 && ready)
         {
             enemyController.anim.SetBool("Lunge", true);
@@ -67,86 +64,52 @@ public class Lion : MonoBehaviour
         }
     }
 
-    public IEnumerator attack()
+    public void attack()
     {
         enemyController.canAttack = false;
-        float temp = Random.Range(1f, 100.0f);
 
-        if (temp <= 50)
-            pendingAttack = 1;
-        else if (temp <= 66.66f)
-            pendingAttack = 3;
-        else
-            pendingAttack = 2;
-        switch (pendingAttack)
+        if (lion1 != null)
         {
-            case 1: //bite
-                enemyController.canMove = false;
-                enemyController.anim.SetTrigger("Bite");
-                yield return new WaitForSeconds(.30f);
-                biteHitBox.SetActive(true);
-                StartCoroutine(enemyController.cooldown(1.5f, biteHitBox));
-                enemyController.canMove = true;
-                break;
+            enemyController.gameManager.lionCheck++;
+            enemyController.eVocalCords.PlayOneShot(enemyController.attack2);
+            lion1.enemyController.canAttack = false;
+            lion1.enemyController.targetOveride = true;
+            lion1.enemyController.speedMod = 3f;
+            lion1.enemyController.target = (Vector2)enemyController.player.transform.position + Vector2.up * lungeDisMult;
+            lion1.enemyController.spearThrown = true;
+        }
 
-            case 2: //slash
-                enemyController.canMove = false;
-                enemyController.anim.SetTrigger("Slash");
-                yield return new WaitForSeconds(.4f);
-                slashHitBox.SetActive(true);
-                enemyController.eVocalCords.PlayOneShot(enemyController.attack1);
-                StartCoroutine(enemyController.cooldown(1.5f, slashHitBox));
-                enemyController.canMove = true;
-                break;
+        if (lion2 != null)
+        {
+            enemyController.gameManager.lionCheck++;
+            enemyController.eVocalCords.PlayOneShot(enemyController.attack2);
+            lion2.enemyController.canAttack = false;
+            lion2.enemyController.targetOveride = true;
+            lion2.enemyController.speedMod = 3f;
+            lion2.enemyController.target = (Vector2)enemyController.player.transform.position + Vector2.left * lungeDisMult;
+            lion2.enemyController.spearThrown = true;
+        }
 
-            case 3: //group lunge
-                if (lion1 != null)
-                {
-                    enemyController.gameManager.lionCheck++;
-                    enemyController.eVocalCords.PlayOneShot(enemyController.attack2);
-                    lion1.pendingAttack = 4;
-                    lion1.enemyController.targetOveride = true;
-                    lion1.enemyController.speedMod = 3f;
-                    lion1.enemyController.target = (Vector2)enemyController.player.transform.position + Vector2.up * lungeDisMult;
-                    lion1.enemyController.spearThrown = true;
-                }
+        if (lion3 != null)
+        {
+            enemyController.gameManager.lionCheck++;
+            enemyController.eVocalCords.PlayOneShot(enemyController.attack2);
+            lion3.enemyController.canAttack = false;
+            lion3.enemyController.targetOveride = true;
+            lion3.enemyController.speedMod = 3f;
+            lion3.enemyController.target = (Vector2)enemyController.player.transform.position + Vector2.right * lungeDisMult;
+            lion3.enemyController.spearThrown = true;
+        }
 
-                if (lion2 != null)
-                {
-                    enemyController.gameManager.lionCheck++;
-                    enemyController.eVocalCords.PlayOneShot(enemyController.attack2);
-                    lion2.pendingAttack = 4;
-                    lion2.enemyController.targetOveride = true;
-                    lion2.enemyController.speedMod = 3f;
-                    lion2.enemyController.target = (Vector2)enemyController.player.transform.position + Vector2.left * lungeDisMult;
-                    lion2.enemyController.spearThrown = true;
-                }
-
-                if (lion3 != null)
-                {
-                    enemyController.gameManager.lionCheck++;
-                    enemyController.eVocalCords.PlayOneShot(enemyController.attack2);
-                    lion3.pendingAttack = 4;
-                    lion3.enemyController.targetOveride = true;
-                    lion3.enemyController.speedMod = 3f;
-                    lion3.enemyController.target = (Vector2)enemyController.player.transform.position + Vector2.right * lungeDisMult;
-                    lion3.enemyController.spearThrown = true;
-                }
-
-                if (lion4 != null && lion4.isActiveAndEnabled)
-                {
-                    enemyController.gameManager.lionCheck++;
-                    enemyController.eVocalCords.PlayOneShot(enemyController.attack2);
-                    lion4.pendingAttack = 4;
-                    lion4.enemyController.targetOveride = true;
-                    lion4.enemyController.speedMod = 3f;
-                    lion4.enemyController.target = (Vector2)enemyController.player.transform.position + Vector2.down * lungeDisMult;
-                    lion4.enemyController.spearThrown = true;
-                }
-                break;
-            case 4:
-                enemyController.canAttack = false;
-                break;
+        if (lion4 != null && lion4.isActiveAndEnabled)
+        {
+            enemyController.gameManager.lionCheck++;
+            enemyController.eVocalCords.PlayOneShot(enemyController.attack2);
+            lion4.enemyController.canAttack = false;
+            lion4.enemyController.targetOveride = true;
+            lion4.enemyController.speedMod = 3f;
+            lion4.enemyController.target = (Vector2)enemyController.player.transform.position + Vector2.down * lungeDisMult;
+            lion4.enemyController.spearThrown = true;
         }
     }
     public void lungeATK()

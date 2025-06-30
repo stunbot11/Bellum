@@ -13,11 +13,12 @@ public class BossAttacks : ScriptableObject
         meleeBurst,
         rangedSingle,
         rangedBurst,
-        lunge,
-        special
+        rangedTrip,
+        lunge
     }
     public int mbAmount;
     public int rbAmount;
+    public int rtAmount;
 
     [Header("Stats/properties")]
     public int phase; // used to determin the active weapon
