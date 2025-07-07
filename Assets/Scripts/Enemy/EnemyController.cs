@@ -44,11 +44,15 @@ public class EnemyController : MonoBehaviour
     [HideInInspector] public float distance;
 
     [Header("Attack")]
+    public bool usePhase;
+    public int phase;
     private float timeBetweenAttacks;
     public BossAttacks[] attacks;
     public GameObject[] attacksHitbox;
     public float[] animTelegraph;
     public int[] damageNums;
+    public string[] animTriggerName;
+    public AudioClip[] attackClips;
 
     void Start()
     {
@@ -211,7 +215,7 @@ public class EnemyController : MonoBehaviour
     {
         canAttack = false;
         int atkNum = Random.Range(0, attacks.Length + 1);
-        if (attacks[atkNum].attackRange <= (Vector2.Distance(player.transform.position, transform.position)))
+        if (attacks[atkNum].attackRange <= Vector2.Distance(player.transform.position, transform.position) || usePhase ? attacks[atkNum].phase == phase : true)
             StartCoroutine(attack(atkNum)); 
         else
             atk();
@@ -231,18 +235,22 @@ public class EnemyController : MonoBehaviour
         switch (atk.attack)
         {
             case BossAttacks.atk.meleeSwing:
+                anim.SetTrigger(animTriggerName[atkNum]);
                 yield return new WaitForSeconds(animTelegraph[atkNum]);
+                eVocalCords.PlayOneShot(attackClips[atkNum]);
                 neededHitbox.GetComponent<AttackHandler>().damage = damageNums[atkNum];
                 neededHitbox.SetActive(true);
                 StartCoroutine(cooldown(atk.cooldownTime, neededHitbox));
                 break;
 
             case BossAttacks.atk.meleeBurst:
+                anim.SetTrigger(animTriggerName[atkNum]);
                 neededHitbox.GetComponent<AttackHandler>().damage = damageNums[atkNum];
                 for (int i = 0; i < atk.mbAmount; i++)
                 {
                     canMove = false;
                     yield return new WaitForSeconds(animTelegraph[atkNum]);
+                    eVocalCords.PlayOneShot(attackClips[atkNum]);
                     neededHitbox.SetActive(true);
                     yield return new WaitForSeconds(.1f);
                     neededHitbox.SetActive(false);
@@ -253,15 +261,19 @@ public class EnemyController : MonoBehaviour
                 break;
 
             case BossAttacks.atk.rangedSingle:
+                anim.SetTrigger(animTriggerName[atkNum]);
                 yield return new WaitForSeconds(animTelegraph[atkNum]);
+                eVocalCords.PlayOneShot(attackClips[atkNum]);
                 shoot(neededHitbox, ang1, damageNums[atkNum], arrowDirection, atk.projSpeed, atk.projLifeTime);
                 StartCoroutine(cooldown(atk.cooldownTime));
                 break;
 
             case BossAttacks.atk.rangedBurst:
+                anim.SetTrigger(animTriggerName[atkNum]);
                 for (int i = 0; i < atk.rbAmount; i++)
                 {
                     yield return new WaitForSeconds(animTelegraph[atkNum]);
+                    eVocalCords.PlayOneShot(attackClips[atkNum]);
                     shoot(neededHitbox, ang1, damageNums[atkNum], arrowDirection, atk.projSpeed, atk.projLifeTime);
                     yield return new WaitForSeconds(.3f);
                 }
@@ -269,11 +281,13 @@ public class EnemyController : MonoBehaviour
                 break;
 
             case BossAttacks.atk.rangedTrip:
+                anim.SetTrigger(animTriggerName[atkNum]);
+                yield return new WaitForSeconds(animTelegraph[atkNum]);
                 for (int i = 0; i < atk.rtAmount; i++)
                 {
                     float ang = Mathf.Lerp(ang1 - 45, ang1 + 45, (i / (float)atk.rtAmount));
                     print(ang);
-                    eVocalCords.PlayOneShot(attack1);
+                    eVocalCords.PlayOneShot(attackClips[atkNum]);
                     GameObject p1 = Instantiate(neededHitbox, transform.position, Quaternion.identity, null);
                     p1.GetComponent<Rigidbody2D>().rotation = ang;
                     ProjectileHandler projectileData1 = p1.GetComponent<ProjectileHandler>();
@@ -287,7 +301,9 @@ public class EnemyController : MonoBehaviour
 
 
             case BossAttacks.atk.lunge:
+                anim.SetTrigger(animTriggerName[atkNum]);
                 yield return new WaitForSeconds(animTelegraph[atkNum]);
+                eVocalCords.PlayOneShot(attackClips[atkNum]);
                 spearThrown = true;
                 targetOveride = true;
                 goingToTarget = true;

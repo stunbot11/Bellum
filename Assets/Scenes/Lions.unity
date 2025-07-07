@@ -3408,6 +3408,8 @@ MonoBehaviour:
   distance: 0
   attacks: []
   attacksHitbox: []
+  animTelegraph: []
+  damageNums: 
 --- !u!61 &391617665
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5115,6 +5117,8 @@ MonoBehaviour:
   distance: 0
   attacks: []
   attacksHitbox: []
+  animTelegraph: []
+  damageNums: 
 --- !u!50 &570264085
 Rigidbody2D:
   serializedVersion: 5
@@ -54567,6 +54571,8 @@ MonoBehaviour:
   distance: 0
   attacks: []
   attacksHitbox: []
+  animTelegraph: []
+  damageNums: 
 --- !u!61 &1750750298
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -54792,8 +54798,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3554b3f8dbc073848b065500a3a8793a, type: 3}
-  m_Resource: {fileID: 8300000, guid: 3554b3f8dbc073848b065500a3a8793a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b6b25abe78d61d544a8e79eddf0a4850, type: 3}
+  m_Resource: {fileID: 8300000, guid: b6b25abe78d61d544a8e79eddf0a4850, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.25
   m_Pitch: 1
