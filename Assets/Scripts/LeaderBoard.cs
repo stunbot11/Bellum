@@ -29,12 +29,16 @@ public class LeaderBoard : MonoBehaviour
     private void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        if (gameManager != null)
+        if (gameManager != null && !gameManager.arcadeMode)
         {
             health = gameManager.health;
             time = gameManager.time;
             challengesMod = 1 + (.25f * gameManager.activeChallenges);
             boss = gameManager.boss;
+        }
+        else if (gameManager != null && gameManager.arcadeMode)
+        {
+            score = gameManager.score;
         }
         else
             Debug.Log("i see you are testing things, have fun, eh");
@@ -60,11 +64,12 @@ public class LeaderBoard : MonoBehaviour
     public void leaderBoardStuff()
     {
         //calc score
-        score = (health * 10 + Mathf.Lerp(5000, 0, Mathf.Clamp((time - 30) / 200, 0, 1))) * challengesMod;
+        if (!gameManager.arcadeMode)
+            score = (health * 10 + Mathf.Lerp(5000, 0, Mathf.Clamp((time - 30) / 200, 0, 1))) * challengesMod;
 
         //get place
         place = 6;
-        for (int i = 5; score > PlayerPrefs.GetInt(boss + "Score" + i) && i != 0; i--)
+        for (int i = 5; score > PlayerPrefs.GetInt((gameManager.arcadeMode ? "Arcade" : boss) + "Score" + i) && i != 0; i--)
         {
             place--;
         }
@@ -72,18 +77,18 @@ public class LeaderBoard : MonoBehaviour
         // set player pref scores
         for (int i = 5; i >= place; i--)
         {
-            PlayerPrefs.SetInt(boss + "Score" + i, PlayerPrefs.GetInt("Score" + (i - 1)));
-            PlayerPrefs.SetString(boss + "Name" + i, PlayerPrefs.GetString("Name" + (i - 1)));
+            PlayerPrefs.SetInt((gameManager.arcadeMode ? "Arcade" : boss) + "Score" + i, PlayerPrefs.GetInt("Score" + (i - 1)));
+            PlayerPrefs.SetString((gameManager.arcadeMode ? "Arcade" : boss) + "Name" + i, PlayerPrefs.GetString("Name" + (i - 1)));
         }
-        PlayerPrefs.SetInt(boss + "Score" + place, Mathf.RoundToInt(score));
-        PlayerPrefs.SetString(boss + "Name" + place, playerName);
+        PlayerPrefs.SetInt((gameManager.arcadeMode ? "Arcade" : boss) + "Score" + place, Mathf.RoundToInt(score));
+        PlayerPrefs.SetString((gameManager.arcadeMode ? "Arcade" : boss) + "Name" + place, playerName);
 
         PlayerPrefs.Save();
 
         //set leaderboard
         for (int i = 0; i < scores.Length; i++)
         {
-            scores[i].text = PlayerPrefs.GetString(boss + "Name" + (i + 1)) + " ----- " + PlayerPrefs.GetInt(boss + "Score" + (i + 1));
+            scores[i].text = PlayerPrefs.GetString((gameManager.arcadeMode ? "Arcade" : boss) + "Name" + (i + 1)) + " ----- " + PlayerPrefs.GetInt((gameManager.arcadeMode ? "Arcade" : boss) + "Score" + (i + 1));
         }
     }
 

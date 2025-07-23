@@ -60,8 +60,6 @@ public class EnemyController : MonoBehaviour
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.Find("Player");
-        gameManager.tEMHealth += health;
-        gameManager.tEHealth += health;
         gameManager.totalBosses++;
         health = gameManager.challenges[1] ? health * 2 : health;
         canMove = true;
@@ -121,6 +119,7 @@ public class EnemyController : MonoBehaviour
             atk();
     }
 
+    [HideInInspector] public ArenaHandler arenaHandler;
     public void takeDamage(int damage, bool net = false, string dmgType = null, int ToDoT = 0)
     {
         PlayerController playerController = gameManager.playerController;
@@ -155,7 +154,6 @@ public class EnemyController : MonoBehaviour
         dmgBoost += gameManager.classType == 1 && playerController.upgrades[0] >= 3 && dmgType != "DoT" && inDoT ? .5f : 0; //if in dot and have upgrade increaase damage
         dmgBoost += playerController.upgrades[1] > 2 && playerController.pBlock > 0 ? .5f : 0;
         health -= (int)(damage * dmgBoost);
-        gameManager.tEHealth -= health < damage ? health : damage;
         gameManager.updateBar();
         if (health <= 0)
         {

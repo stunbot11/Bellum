@@ -3406,10 +3406,15 @@ MonoBehaviour:
   netHit: {fileID: 8300000, guid: a322bb9bea92c97409d120e0b7810c51, type: 3}
   angle: 0
   distance: 0
+  usePhase: 0
+  phase: 0
   attacks: []
   attacksHitbox: []
   animTelegraph: []
   damageNums: 
+  animTriggerName: []
+  attackClips: []
+  arenaHandler: {fileID: 0}
 --- !u!61 &391617665
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5115,10 +5120,15 @@ MonoBehaviour:
   netHit: {fileID: 8300000, guid: a322bb9bea92c97409d120e0b7810c51, type: 3}
   angle: 0
   distance: 0
+  usePhase: 0
+  phase: 0
   attacks: []
   attacksHitbox: []
   animTelegraph: []
   damageNums: 
+  animTriggerName: []
+  attackClips: []
+  arenaHandler: {fileID: 0}
 --- !u!50 &570264085
 Rigidbody2D:
   serializedVersion: 5
@@ -54569,10 +54579,15 @@ MonoBehaviour:
   netHit: {fileID: 8300000, guid: a322bb9bea92c97409d120e0b7810c51, type: 3}
   angle: 0
   distance: 0
+  usePhase: 0
+  phase: 0
   attacks: []
   attacksHitbox: []
   animTelegraph: []
   damageNums: 
+  animTriggerName: []
+  attackClips: []
+  arenaHandler: {fileID: 0}
 --- !u!61 &1750750298
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -57565,6 +57580,8 @@ MonoBehaviour:
   obsticles: {fileID: 881105761}
   emperorInfo: {fileID: 2107540181}
   bossBar: {fileID: 1352795255}
+  totEHealth: 0
+  eHealth: 0
   globalLight: {fileID: 619394800}
   speaker: {fileID: 1753687150}
 --- !u!4 &2065067978

@@ -124,14 +124,6 @@ public class GameManager : MonoBehaviour
         eventSystem.SetSelectedGameObject(GameObject.Find(menu == 0 ? "start" : "Challenges Back"));
     }
 
-    [HideInInspector] public Image bossHealthBar;
-     public float tEHealth;
-    [HideInInspector] public float tEMHealth;
-    public void updateBar()
-    {
-        bossHealthBar.fillAmount = tEHealth / tEMHealth;
-    }
-
     public void leaderBoard()
     {
         for (int i = 0; i < challenges.Length; i++)
@@ -142,10 +134,12 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Leaderboard");
     }
 
+    [HideInInspector] public float score;
     public void win()
     {
         if (arcadeMode)
         {
+            score += (health * 10 + Mathf.Lerp(5000, 0, Mathf.Clamp((time - 30) / 200, 0, 1))) * (1 + (activeChallenges * .25f));
             round++;
             SceneManager.LoadScene("Shop");
         }
@@ -168,6 +162,20 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(.2f);
         for (int i = 0; i < limbs.Length; i++)
             limbs[i].color = Color.white;
+    }
+
+    [HideInInspector] public EnemyController[] bosses;
+    [HideInInspector] public Image bossBar;
+    [HideInInspector] public int eHealth;
+    [HideInInspector] public int totEHealth;
+    public void updateBar()
+    {
+        for (int i = 0; i < bosses.Length;i++)
+        { 
+            if (bosses[i] != null && bosses[i].health > 0)
+                eHealth += bosses[i].health;
+        }
+        bossBar.fillAmount = eHealth / totEHealth;
     }
 
     public void deleteSave()

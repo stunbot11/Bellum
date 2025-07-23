@@ -12,6 +12,9 @@ public class ArenaHandler : MonoBehaviour
     public EmperorInfo emperorInfo;
     public Image bossBar;
 
+    public int totEHealth;
+    public int eHealth;
+
     public GameObject globalLight;
 
     private int active;
@@ -45,16 +48,25 @@ public class ArenaHandler : MonoBehaviour
                 inactive++;
         }
         obsticles.SetActive(true);   
+
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
+            for (int i = 0; i < bosses.Length; i++)
+            {
+                EnemyController boss = bosses[i].GetComponent<EnemyController>();
+                totEHealth += boss.health;
+                eHealth += boss.health;
+            }
+            gameManager.totEHealth = totEHealth;
+            gameManager.eHealth = eHealth;
             door.SetActive(true);
             speaker.Play();
             bossBar.transform.parent.transform.gameObject.SetActive(true);
-            gameManager.bossHealthBar = bossBar;
             if (gameManager.activeEmperor.ObjectToSpawn != null)
                 emperorInfo.fakeStart();
             for (int i = 0; i < bosses.Length; i ++)
