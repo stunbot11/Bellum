@@ -916,8 +916,15 @@ MonoBehaviour:
   netHit: {fileID: 8300000, guid: a322bb9bea92c97409d120e0b7810c51, type: 3}
   angle: 0
   distance: 0
+  usePhase: 0
+  phase: 0
   attacks: []
   attacksHitbox: []
+  animTelegraph: []
+  damageNums: 
+  animTriggerName: []
+  attackClips: []
+  arenaHandler: {fileID: 0}
 --- !u!50 &67232405
 Rigidbody2D:
   serializedVersion: 5
@@ -1907,6 +1914,8 @@ MonoBehaviour:
   obsticles: {fileID: 258902597}
   emperorInfo: {fileID: 1890697551}
   bossBar: {fileID: 1494286092}
+  totEHealth: 0
+  eHealth: 0
   globalLight: {fileID: 619394800}
   speaker: {fileID: 1753687150}
 --- !u!4 &271670702
@@ -44530,6 +44539,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.233
       objectReference: {fileID: 0}
+    - target: {fileID: 3361887866195866124, guid: 7b3f060eb7d271e47bf1ef6988476deb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3560193351154926283, guid: 7b3f060eb7d271e47bf1ef6988476deb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -44540,11 +44553,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4255929290274547664, guid: 7b3f060eb7d271e47bf1ef6988476deb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6447667716301508069, guid: 7b3f060eb7d271e47bf1ef6988476deb, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

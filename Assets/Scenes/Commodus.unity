@@ -8256,19 +8256,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spaceAway: 3
-  arrowDirection: {x: 0, y: 0}
   arrow: {fileID: 3470927396447796118, guid: b29881a35e56ab040b08c87497aae853, type: 3}
   pendingAttack: 0
   attackRange: 0
   meGoShootyShootyShootShoot: 1
-  ang1: 0
-  singleDmg: 10
-  arrowSpeed: 10
-  burstNum: 3
-  burstSpeed: 0.15
-  burstDmg: 5
-  tripNum: 3
-  tripDmg: 7
   volly: {fileID: 1651959728}
   vollyDmg: 3
   vollyRad: 0
@@ -8330,8 +8321,15 @@ MonoBehaviour:
   netHit: {fileID: 8300000, guid: a322bb9bea92c97409d120e0b7810c51, type: 3}
   angle: 0
   distance: 0
+  usePhase: 0
+  phase: 0
   attacks: []
   attacksHitbox: []
+  animTelegraph: []
+  damageNums: 
+  animTriggerName: []
+  attackClips: []
+  arenaHandler: {fileID: 0}
 --- !u!58 &1211185859
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -46607,6 +46605,8 @@ MonoBehaviour:
   obsticles: {fileID: 1620714959}
   emperorInfo: {fileID: 1834811819}
   bossBar: {fileID: 1394831025}
+  totEHealth: 0
+  eHealth: 0
   globalLight: {fileID: 619394800}
   speaker: {fileID: 1753687150}
 --- !u!4 &1675699526
