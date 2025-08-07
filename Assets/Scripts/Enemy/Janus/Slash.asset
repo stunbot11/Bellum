@@ -10,13 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 41b4b66c0b123c346979c907d81b60fb, type: 3}
-  m_Name: MeleeSwing
+  m_Name: Slash
   m_EditorClassIdentifier: 
-  attackNum: 0
   attack: 0
   mbAmount: 0
   rbAmount: 0
-  phase: 0
-  cooldownTime: 0.35
-  weapon: {fileID: 0}
-  dmgSpot: {fileID: 0}
+  rtAmount: 0
+  sfx: {fileID: 0}
+  phase: 1
+  dmg: 7
+  animName: Attack
+  teleTime: 0.25
+  projSpeed: 0
+  projLifeTime: 0
+  attackRange: 3
+  cooldownTime: 1.5

@@ -8323,12 +8323,16 @@ MonoBehaviour:
   distance: 0
   usePhase: 0
   phase: 0
-  attacks: []
-  attacksHitbox: []
-  animTelegraph: []
-  damageNums: 
-  animTriggerName: []
-  attackClips: []
+  attacks:
+  - {fileID: 11400000, guid: 65f0280b1c34f834186efe708aa39aeb, type: 2}
+  - {fileID: 11400000, guid: d3ca87b4a70997249a53e46cfb2a5140, type: 2}
+  - {fileID: 11400000, guid: d4949ae4f2c2f2c408b1c58831781353, type: 2}
+  - {fileID: 11400000, guid: 63ef6f93a52ee074aa49ef6a6f622f7b, type: 2}
+  attacksHitbox:
+  - {fileID: 3470927396447796118, guid: b29881a35e56ab040b08c87497aae853, type: 3}
+  - {fileID: 3470927396447796118, guid: b29881a35e56ab040b08c87497aae853, type: 3}
+  - {fileID: 3470927396447796118, guid: b29881a35e56ab040b08c87497aae853, type: 3}
+  - {fileID: 1651959728}
   arenaHandler: {fileID: 0}
 --- !u!58 &1211185859
 CircleCollider2D:

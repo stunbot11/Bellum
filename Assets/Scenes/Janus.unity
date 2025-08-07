@@ -916,14 +916,14 @@ MonoBehaviour:
   netHit: {fileID: 8300000, guid: a322bb9bea92c97409d120e0b7810c51, type: 3}
   angle: 0
   distance: 0
-  usePhase: 0
+  usePhase: 1
   phase: 0
-  attacks: []
-  attacksHitbox: []
-  animTelegraph: []
-  damageNums: 
-  animTriggerName: []
-  attackClips: []
+  attacks:
+  - {fileID: 11400000, guid: 7bca824dfa902314ab13a48eaabd6170, type: 2}
+  - {fileID: 11400000, guid: 869ff1dbe989cb54aa7f53be72ed2ccc, type: 2}
+  attacksHitbox:
+  - {fileID: 1554661633}
+  - {fileID: 1288789503}
   arenaHandler: {fileID: 0}
 --- !u!50 &67232405
 Rigidbody2D:

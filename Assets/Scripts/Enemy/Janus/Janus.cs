@@ -5,7 +5,6 @@ public class Janus : MonoBehaviour
 {
     private EnemyController enemyController;
     private ArenaHandler AH;
-    private bool phase; //false = sword / true = spear
 
     public GameObject swordHitBox;
     public GameObject spearHitBox;
@@ -56,17 +55,18 @@ public class Janus : MonoBehaviour
 
     private IEnumerator switchPhase()
     {
+        enemyController.canAttack = false;
         print("switched phase");
         //flip coin anim
         bool side = Random.Range(0, 2) == 0; // if rolls 0 goes to sword phase
         yield return new WaitForSeconds(.5f);
         if (side) // switch to sword
         {
+            enemyController.phase = 0;
             spearAnim.SetActive(false);
             swordAnim.SetActive(true);
             enemyController.anim.SetBool("Sword", true);
             enemyController.anim.SetTrigger("Phase Sword");
-            phase = false;
             janusPhaseMusic.Stop();
             janusPhaseMusic.resource = jPhase[0];
             janusPhaseMusic.Play();
@@ -82,6 +82,7 @@ public class Janus : MonoBehaviour
         }
         else // switch to spear
         {
+            enemyController.phase = 1;
             swordAnim.SetActive(false);
             spearAnim.SetActive(true);
             enemyController.anim.SetBool("Sword", false);
@@ -95,8 +96,7 @@ public class Janus : MonoBehaviour
             enemyController.canAttack = false;
             enemyController.canMove = false;
             enemyController.spearThrown = true;
-            spearThrown = true;
-            phase = true; //gets angle for launch
+            spearThrown = true; //gets angle for launch
             Vector2 arrowDirectionTemp = (enemyController.player.transform.position - transform.position).normalized;
             float ang1 = (Mathf.Round(((Mathf.Atan2(arrowDirectionTemp.y, arrowDirectionTemp.x) * Mathf.Rad2Deg) - 45) / 45) * 45 - 45);
             Vector2 arrowDirection = new Vector2(Mathf.Sin(ang1 * Mathf.Deg2Rad) * -1, Mathf.Cos(ang1 * Mathf.Deg2Rad)).normalized;
@@ -115,6 +115,7 @@ public class Janus : MonoBehaviour
             enemyController.targetOveride = true;
             enemyController.target = thrownSpear.transform.position;
         }
+        enemyController.cooldown(2);
         StartCoroutine(phaseTime());
     }
 }

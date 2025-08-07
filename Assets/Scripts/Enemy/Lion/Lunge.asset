@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41b4b66c0b123c346979c907d81b60fb, type: 3}
+  m_Name: Lunge
+  m_EditorClassIdentifier: 
+  attack: 5
+  mbAmount: 0
+  rbAmount: 0
+  rtAmount: 0
+  sfx: {fileID: 0}
+  phase: 0
+  dmg: 10
+  animName: Lunge
+  teleTime: 0.15
+  projSpeed: 0
+  projLifeTime: 0
+  attackRange: 3.4028235e+38
+  cooldownTime: 3
