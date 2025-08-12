@@ -16,7 +16,7 @@ MonoBehaviour:
   mbAmount: 0
   rbAmount: 0
   rtAmount: 0
-  sfx: {fileID: 0}
+  sfx: {fileID: 8300000, guid: a1d682e11db88b14f9cdd4ee1e42eca7, type: 3}
   phase: 0
   dmg: 0
   animName: null

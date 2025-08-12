@@ -16,7 +16,7 @@ MonoBehaviour:
   mbAmount: 0
   rbAmount: 0
   rtAmount: 0
-  sfx: {fileID: 0}
+  sfx: {fileID: 8300000, guid: e3277eb23718c4d419da7b078f5b2ab1, type: 3}
   phase: 1
   dmg: 7
   animName: Attack

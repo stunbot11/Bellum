@@ -16,7 +16,7 @@ MonoBehaviour:
   mbAmount: 0
   rbAmount: 0
   rtAmount: 0
-  sfx: {fileID: 0}
+  sfx: {fileID: 8300000, guid: d4cee8005f917d946952de7d40275640, type: 3}
   phase: 0
   dmg: 10
   animName: Lunge

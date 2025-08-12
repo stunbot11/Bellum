@@ -16,7 +16,7 @@ MonoBehaviour:
   mbAmount: 0
   rbAmount: 0
   rtAmount: 0
-  sfx: {fileID: 0}
+  sfx: {fileID: 8300000, guid: 725a97a5f32f2694db8abbe61dcfc4ff, type: 3}
   phase: 0
   dmg: 5
   animName: Bite

@@ -16,7 +16,7 @@ MonoBehaviour:
   mbAmount: 0
   rbAmount: 3
   rtAmount: 0
-  sfx: {fileID: 0}
+  sfx: {fileID: 8300000, guid: 3c2d1c0e82aeb8e4f9afeaeac9f56761, type: 3}
   phase: 0
   dmg: 3
   animName: Shoot
