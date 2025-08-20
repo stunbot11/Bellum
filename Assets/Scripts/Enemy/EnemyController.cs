@@ -15,6 +15,8 @@ public class EnemyController : MonoBehaviour
     public bool goingToTarget;
     public GameObject rotPoint;
 
+    public GameObject deathReplacement;
+
     [Header("Stats")]
     [HideInInspector] public float effectMod;
     public int health;
@@ -162,8 +164,10 @@ public class EnemyController : MonoBehaviour
             eVocalCords.Pause();
             gameManager.bossesDead++;
             gameManager.lionCheck--;
-            anim.SetTrigger("Death");
-            Destroy(this);
+            deathReplacement.transform.position = this.transform.position;
+            deathReplacement.transform.localScale = this.transform.localScale;
+            deathReplacement.SetActive(true);
+            Destroy(this.gameObject);
         }
     }
 

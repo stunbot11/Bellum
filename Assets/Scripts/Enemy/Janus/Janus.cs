@@ -62,7 +62,7 @@ public class Janus : MonoBehaviour
         yield return new WaitForSeconds(.5f);
         if (side) // switch to sword
         {
-            enemyController.phase = 0;
+            enemyController.phase = 1;
             spearAnim.SetActive(false);
             swordAnim.SetActive(true);
             enemyController.anim.SetBool("Sword", true);
@@ -82,7 +82,7 @@ public class Janus : MonoBehaviour
         }
         else // switch to spear
         {
-            enemyController.phase = 1;
+            enemyController.phase = 0;
             swordAnim.SetActive(false);
             spearAnim.SetActive(true);
             enemyController.anim.SetBool("Sword", false);
