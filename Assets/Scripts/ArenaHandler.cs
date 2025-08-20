@@ -56,14 +56,7 @@ public class ArenaHandler : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            for (int i = 0; i < bosses.Length; i++)
-            {
-                EnemyController boss = bosses[i].GetComponent<EnemyController>();
-                totEHealth += boss.health;
-                eHealth += boss.health;
-            }
-            gameManager.totEHealth = totEHealth;
-            gameManager.eHealth = eHealth;
+            gameManager.bossBar = bossBar;
             door.SetActive(true);
             speaker.Play();
             bossBar.transform.parent.transform.gameObject.SetActive(true);

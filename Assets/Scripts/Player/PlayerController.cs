@@ -245,6 +245,7 @@ public class PlayerController : MonoBehaviour
 
     public void takeDamage(int damage, string damageType = null, int ToDoT = 0)
     {
+        print(damage);
         if (ToDoT >= dotTicks)
             dotTicks = ToDoT;
         if (damageType == "DoT" && ToDoT > 0)

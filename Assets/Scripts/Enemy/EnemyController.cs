@@ -47,7 +47,7 @@ public class EnemyController : MonoBehaviour
     public bool usePhase;
     public int phase;
     private float timeBetweenAttacks;
-    private float dmgMod = 1;
+    [HideInInspector] public float dmgMod = 1;
     public BossAttacks[] attacks;
     public GameObject[] attacksHitbox;
 
@@ -57,7 +57,7 @@ public class EnemyController : MonoBehaviour
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.Find("Player");
-        dmgMod =+ gameManager.round * .10f;
+        dmgMod += gameManager.round * 1.10f;
         gameManager.totalBosses++;
         health = gameManager.challenges[1] ? health * 2 : health;
         canMove = true;
@@ -66,6 +66,9 @@ public class EnemyController : MonoBehaviour
         speed = gameManager.activeEmperor.increaseSpeed ? speed * gameManager.activeEmperor.bossEffectStrength : speed;
         health = gameManager.activeEmperor.increaseHealth ? Mathf.RoundToInt(health * gameManager.activeEmperor.bossEffectStrength) : health;
         anim = GetComponentInChildren<Animator>();
+
+        gameManager.totEHealth += health;
+        gameManager.eHealth += health;
     }
 
     private void Update()
@@ -151,6 +154,7 @@ public class EnemyController : MonoBehaviour
         dmgBoost += imbolized && playerController.upgrades[1] > 2 ? .75f : 0; //if imbolized increase damage if have upgrade
         dmgBoost += gameManager.classType == 1 && playerController.upgrades[0] >= 3 && dmgType != "DoT" && inDoT ? .5f : 0; //if in dot and have upgrade increaase damage
         dmgBoost += playerController.upgrades[1] > 2 && playerController.pBlock > 0 ? .5f : 0;
+        gameManager.eHealth -= (int)(damage * dmgBoost >= 0 ? damage * dmgBoost : health);
         health -= (int)(damage * dmgBoost);
         gameManager.updateBar();
         if (health <= 0)
@@ -211,7 +215,7 @@ public class EnemyController : MonoBehaviour
     void atk()
     {
         canAttack = false;
-        int atkNum = Random.Range(0, attacks.Length + 1);
+        int atkNum = Random.Range(0, attacks.Length);
         if (attacks[atkNum].attackRange <= Vector2.Distance(player.transform.position, transform.position) || usePhase ? attacks[atkNum].phase == phase : true)
             StartCoroutine(attack(atkNum)); 
         else
@@ -235,14 +239,14 @@ public class EnemyController : MonoBehaviour
                 anim.SetTrigger(atk.animName);
                 yield return new WaitForSeconds(atk.teleTime);
                 eVocalCords.PlayOneShot(atk.sfx);
-                neededHitbox.GetComponent<AttackHandler>().damage = Mathf.RoundToInt(atk.dmg * dmgMod);
+                neededHitbox.GetComponentInChildren<AttackHandler>().damage = Mathf.RoundToInt(atk.dmg * dmgMod);
                 neededHitbox.SetActive(true);
                 StartCoroutine(cooldown(atk.cooldownTime, neededHitbox));
                 break;
 
             case BossAttacks.atk.meleeBurst:
                 anim.SetTrigger(atk.animName);
-                neededHitbox.GetComponent<AttackHandler>().damage = Mathf.RoundToInt(atk.dmg * dmgMod);
+                neededHitbox.GetComponentInChildren<AttackHandler>().damage = Mathf.RoundToInt(atk.dmg * dmgMod);
                 for (int i = 0; i < atk.mbAmount; i++)
                 {
                     canMove = false;
@@ -258,6 +262,10 @@ public class EnemyController : MonoBehaviour
                 break;
 
             case BossAttacks.atk.rangedSingle:
+                print("base" + atk.dmg);
+                print("mod" + dmgMod);
+                print("both" + atk.dmg * dmgMod);
+                print("rounded" + Mathf.RoundToInt(atk.dmg * dmgMod));
                 anim.SetTrigger(atk.animName);
                 yield return new WaitForSeconds(atk.teleTime);
                 eVocalCords.PlayOneShot(atk.sfx);

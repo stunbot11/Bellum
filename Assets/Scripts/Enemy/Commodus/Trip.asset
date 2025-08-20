@@ -18,7 +18,7 @@ MonoBehaviour:
   rtAmount: 3
   sfx: {fileID: 8300000, guid: 3c2d1c0e82aeb8e4f9afeaeac9f56761, type: 3}
   phase: 0
-  dmg: 2
+  dmg: 10
   animName: TripShoot
   teleTime: 0.22
   projSpeed: 10

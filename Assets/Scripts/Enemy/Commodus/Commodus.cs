@@ -23,6 +23,7 @@ public class Commodus : MonoBehaviour
     {
         enemyController = GetComponent<EnemyController>();
         volly.GetComponent<ProjectileHandler>().creator = this.gameObject;
+        volly.GetComponent<ProjectileHandler>().damage = Mathf.RoundToInt(enemyController.dmgMod * enemyController.attacks[0].dmg);
         enemyController.distance = spaceAway;
     }
 

@@ -12,6 +12,7 @@ public class ProjectileHandler : MonoBehaviour
     {
         if (!stay)
         Destroy(gameObject, 5);
+        print(damage);
     }
 
     private void OnTriggerStay2D(Collider2D collision)

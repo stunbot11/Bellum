@@ -18,7 +18,7 @@ MonoBehaviour:
   rtAmount: 0
   sfx: {fileID: 8300000, guid: 3c2d1c0e82aeb8e4f9afeaeac9f56761, type: 3}
   phase: 0
-  dmg: 3
+  dmg: 15
   animName: Shoot
   teleTime: 0.9
   projSpeed: 10

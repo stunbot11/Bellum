@@ -1120,6 +1120,7 @@ MonoBehaviour:
   - {fileID: 4985174166387149163}
   - {fileID: 4943617390983763569}
   - {fileID: 3532739908557540128}
+  - {fileID: 3532739908557540128}
   arenaHandler: {fileID: 0}
 --- !u!114 &7020339356557826835
 MonoBehaviour:

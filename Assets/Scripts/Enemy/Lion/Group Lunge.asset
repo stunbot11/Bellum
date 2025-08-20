@@ -23,5 +23,5 @@ MonoBehaviour:
   teleTime: 0
   projSpeed: 0
   projLifeTime: 0
-  attackRange: 1e+30
+  attackRange: 100
   cooldownTime: 0

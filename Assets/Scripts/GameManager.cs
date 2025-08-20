@@ -165,7 +165,7 @@ public class GameManager : MonoBehaviour
     }
 
     [HideInInspector] public EnemyController[] bosses;
-    [HideInInspector] public Image bossBar;
+     public Image bossBar;
     [HideInInspector] public int eHealth;
     [HideInInspector] public int totEHealth;
     public void updateBar()
@@ -175,7 +175,7 @@ public class GameManager : MonoBehaviour
             if (bosses[i] != null && bosses[i].health > 0)
                 eHealth += bosses[i].health;
         }
-        bossBar.fillAmount = eHealth / totEHealth;
+        bossBar.fillAmount = (float)eHealth / (float)totEHealth;
     }
 
     public void deleteSave()

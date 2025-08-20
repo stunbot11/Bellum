@@ -68,7 +68,7 @@ public class Lion : MonoBehaviour
     {
         enemyController.canAttack = false;
 
-        if (lion1 != null)
+        if (lion1 != null && lion1.enemyController.health > 0)
         {
             enemyController.gameManager.lionCheck++;
             enemyController.eVocalCords.PlayOneShot(enemyController.attack2);
@@ -79,7 +79,7 @@ public class Lion : MonoBehaviour
             lion1.enemyController.spearThrown = true;
         }
 
-        if (lion2 != null)
+        if (lion2 != null && lion2.enemyController.health > 0)
         {
             enemyController.gameManager.lionCheck++;
             enemyController.eVocalCords.PlayOneShot(enemyController.attack2);
@@ -90,7 +90,7 @@ public class Lion : MonoBehaviour
             lion2.enemyController.spearThrown = true;
         }
 
-        if (lion3 != null)
+        if (lion3 != null && lion3.enemyController.health > 0)
         {
             enemyController.gameManager.lionCheck++;
             enemyController.eVocalCords.PlayOneShot(enemyController.attack2);
@@ -101,7 +101,7 @@ public class Lion : MonoBehaviour
             lion3.enemyController.spearThrown = true;
         }
 
-        if (lion4 != null && lion4.isActiveAndEnabled)
+        if (lion4 != null && lion4.enemyController.health > 0 && lion4.isActiveAndEnabled)
         {
             enemyController.gameManager.lionCheck++;
             enemyController.eVocalCords.PlayOneShot(enemyController.attack2);

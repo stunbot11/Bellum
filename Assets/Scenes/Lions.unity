@@ -3417,6 +3417,7 @@ MonoBehaviour:
   - {fileID: 420313525}
   - {fileID: 1703995009}
   - {fileID: 1807525474}
+  - {fileID: 1807525474}
   arenaHandler: {fileID: 0}
 --- !u!61 &391617665
 BoxCollider2D:
@@ -5133,6 +5134,7 @@ MonoBehaviour:
   attacksHitbox:
   - {fileID: 830352688}
   - {fileID: 226449328}
+  - {fileID: 1435413648}
   - {fileID: 1435413648}
   arenaHandler: {fileID: 0}
 --- !u!50 &570264085
@@ -54595,6 +54597,7 @@ MonoBehaviour:
   attacksHitbox:
   - {fileID: 1694033677}
   - {fileID: 1501026814}
+  - {fileID: 1645386872}
   - {fileID: 1645386872}
   arenaHandler: {fileID: 0}
 --- !u!61 &1750750298
