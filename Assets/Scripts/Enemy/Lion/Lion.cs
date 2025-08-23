@@ -6,7 +6,7 @@ public class Lion : MonoBehaviour
     private EnemyController enemyController;
 
     public int thisLionNum;
-    [HideInInspector] public int pendingAttack;
+    public int pendingAttack;
     public Lion lion1;
     public Lion lion2;
     public Lion lion3;
@@ -17,11 +17,7 @@ public class Lion : MonoBehaviour
     public float lungeDisMult;
     public float lungeSpeed;
 
-    public GameObject biteHitBox;
-    public GameObject slashHitBox;
     public GameObject lungeHitBox;
-
-    public float attackRange;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -36,13 +32,17 @@ public class Lion : MonoBehaviour
                 lion4.lion3 = lion3;
                 lion4.lion4 = lion4;
             }
-            if (thisLionNum == 4 && enemyController.gameManager.boss == 1)
+            if (thisLionNum == 4)
             {
-                lion1.lion4 = lion4;
-                lion2.lion4 = lion4;
-                lion3.lion4 = lion4;
-                lion4.lion4 = lion4;
-                enemyController.eVocalCords = lion1.enemyController.eVocalCords;
+                enemyController.deathReplacement = GameObject.Find("DRL");
+                if (enemyController.gameManager.boss == 1)
+                {
+                    lion1.lion4 = lion4;
+                    lion2.lion4 = lion4;
+                    lion3.lion4 = lion4;
+                    lion4.lion4 = lion4;
+                    enemyController.eVocalCords = lion1.enemyController.eVocalCords;
+                }
             }
                 
         }
@@ -55,6 +55,7 @@ public class Lion : MonoBehaviour
         {
             enemyController.anim.SetBool("Lunge", true);
             lungeATK();
+            pendingAttack = 0;
         }
 
         if ((enemyController.targetOveride ? Vector2.Distance(transform.position, new Vector2(Mathf.Clamp(enemyController.target.x, -36, 36), Mathf.Clamp(enemyController.target.y, Mathf.Lerp(16f, 25.5f, (Mathf.Abs(enemyController.target.x) - 27) / 8.5f), Mathf.Lerp(35f, 25.5f, (Mathf.Abs(enemyController.target.x) - 27) / 8.5f)))) <= 1 : true) && !ready && pendingAttack == 4)
@@ -72,6 +73,7 @@ public class Lion : MonoBehaviour
         {
             enemyController.gameManager.lionCheck++;
             enemyController.eVocalCords.PlayOneShot(enemyController.attack2);
+            lion1.pendingAttack = 4;
             lion1.enemyController.canAttack = false;
             lion1.enemyController.targetOveride = true;
             lion1.enemyController.speedMod = 3f;
@@ -83,6 +85,7 @@ public class Lion : MonoBehaviour
         {
             enemyController.gameManager.lionCheck++;
             enemyController.eVocalCords.PlayOneShot(enemyController.attack2);
+            lion2.pendingAttack = 4;
             lion2.enemyController.canAttack = false;
             lion2.enemyController.targetOveride = true;
             lion2.enemyController.speedMod = 3f;
@@ -94,6 +97,7 @@ public class Lion : MonoBehaviour
         {
             enemyController.gameManager.lionCheck++;
             enemyController.eVocalCords.PlayOneShot(enemyController.attack2);
+            lion3.pendingAttack = 4;
             lion3.enemyController.canAttack = false;
             lion3.enemyController.targetOveride = true;
             lion3.enemyController.speedMod = 3f;
@@ -105,6 +109,7 @@ public class Lion : MonoBehaviour
         {
             enemyController.gameManager.lionCheck++;
             enemyController.eVocalCords.PlayOneShot(enemyController.attack2);
+            lion4.pendingAttack = 4;
             lion4.enemyController.canAttack = false;
             lion4.enemyController.targetOveride = true;
             lion4.enemyController.speedMod = 3f;

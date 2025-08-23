@@ -18,10 +18,10 @@ MonoBehaviour:
   rtAmount: 0
   sfx: {fileID: 8300000, guid: 725a97a5f32f2694db8abbe61dcfc4ff, type: 3}
   phase: 0
-  dmg: 5
+  dmg: 10
   animName: Bite
   teleTime: 0.15
   projSpeed: 0
   projLifeTime: 0
-  attackRange: 5
+  attackRange: 1
   cooldownTime: 1
