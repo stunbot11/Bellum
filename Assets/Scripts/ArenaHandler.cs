@@ -8,6 +8,7 @@ public class ArenaHandler : MonoBehaviour
     public GameObject[] classes;
     public GameObject[] bosses;
     public GameObject door;
+    public GameObject pDoor;
     public GameObject obsticles;
     public EmperorInfo emperorInfo;
     public Image bossBar;
@@ -58,6 +59,7 @@ public class ArenaHandler : MonoBehaviour
         {
             gameManager.bossBar = bossBar;
             door.SetActive(true);
+            pDoor.SetActive(true);
             speaker.Play();
             bossBar.transform.parent.transform.gameObject.SetActive(true);
             if (gameManager.activeEmperor.ObjectToSpawn != null)

@@ -1913,6 +1913,7 @@ MonoBehaviour:
   bosses:
   - {fileID: 67232401}
   door: {fileID: 1766397621}
+  pDoor: {fileID: 1379582982}
   obsticles: {fileID: 258902597}
   emperorInfo: {fileID: 1890697551}
   bossBar: {fileID: 1494286092}
@@ -9744,7 +9745,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1379582983
 Transform:
   m_ObjectHideFlags: 0

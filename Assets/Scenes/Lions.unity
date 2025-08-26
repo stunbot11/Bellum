@@ -57432,7 +57432,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2021551843
 Transform:
   m_ObjectHideFlags: 0
@@ -57861,6 +57861,7 @@ MonoBehaviour:
   - {fileID: 1750750294}
   - {fileID: 391617662}
   door: {fileID: 324342852}
+  pDoor: {fileID: 2021551842}
   obsticles: {fileID: 881105761}
   emperorInfo: {fileID: 2107540181}
   bossBar: {fileID: 1352795255}
