@@ -21,7 +21,7 @@ MonoBehaviour:
   dmg: 10
   animName: Lunge
   teleTime: 0.15
-  projSpeed: 0
-  projLifeTime: 0
+  projSpeed: 5
+  projLifeTime: 2
   attackRange: 100
   cooldownTime: 3

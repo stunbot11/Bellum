@@ -54,8 +54,8 @@ public class Lion : MonoBehaviour
         if (pendingAttack == 4 && enemyController.gameManager.lionCheck == enemyController.gameManager.lionReady && enemyController.gameManager.lionCheck != 0 && ready)
         {
             enemyController.anim.SetBool("Lunge", true);
-            //lungeATK();
-            StartCoroutine(enemyController.attack(2));
+            lungeATK();
+            //StartCoroutine(enemyController.attack(2));
             pendingAttack = 0;
         }
 
@@ -70,13 +70,13 @@ public class Lion : MonoBehaviour
     public void attack()
     {
         enemyController.canAttack = false;
-        print("group Lunge");
 
         if (lion1 != null && lion1.enemyController.health > 0)
         {
             enemyController.gameManager.lionCheck++;
             enemyController.eVocalCords.PlayOneShot(enemyController.attack2);
             lion1.pendingAttack = 4;
+            //lion1.enemyController.canMove = true;
             lion1.enemyController.canAttack = false;
             lion1.enemyController.targetOveride = true;
             lion1.enemyController.speedMod = 3f;
@@ -89,6 +89,7 @@ public class Lion : MonoBehaviour
             enemyController.gameManager.lionCheck++;
             enemyController.eVocalCords.PlayOneShot(enemyController.attack2);
             lion2.pendingAttack = 4;
+            //lion2.enemyController.canMove = true;
             lion2.enemyController.canAttack = false;
             lion2.enemyController.targetOveride = true;
             lion2.enemyController.speedMod = 3f;
@@ -101,6 +102,7 @@ public class Lion : MonoBehaviour
             enemyController.gameManager.lionCheck++;
             enemyController.eVocalCords.PlayOneShot(enemyController.attack2);
             lion3.pendingAttack = 4;
+            //lion3.enemyController.canMove = true;
             lion3.enemyController.canAttack = false;
             lion3.enemyController.targetOveride = true;
             lion3.enemyController.speedMod = 3f;
@@ -113,6 +115,7 @@ public class Lion : MonoBehaviour
             enemyController.gameManager.lionCheck++;
             enemyController.eVocalCords.PlayOneShot(enemyController.attack2);
             lion4.pendingAttack = 4;
+            //lion4.enemyController.canMove = true;
             lion4.enemyController.canAttack = false;
             lion4.enemyController.targetOveride = true;
             lion4.enemyController.speedMod = 3f;

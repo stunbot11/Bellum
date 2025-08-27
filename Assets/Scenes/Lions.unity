@@ -3475,10 +3475,22 @@ MonoBehaviour:
   attacks:
   - {fileID: 11400000, guid: 1002b6cc27517b94495333e4d3ad580c, type: 2}
   - {fileID: 11400000, guid: aa08a6edd2cf1c24989d61331d010787, type: 2}
+  - {fileID: 11400000, guid: b20780466133f3f479c6bbd4276c0d9c, type: 2}
+  - {fileID: 11400000, guid: aa08a6edd2cf1c24989d61331d010787, type: 2}
+  - {fileID: 11400000, guid: 1002b6cc27517b94495333e4d3ad580c, type: 2}
+  - {fileID: 11400000, guid: b20780466133f3f479c6bbd4276c0d9c, type: 2}
+  - {fileID: 11400000, guid: aa08a6edd2cf1c24989d61331d010787, type: 2}
+  - {fileID: 11400000, guid: 1002b6cc27517b94495333e4d3ad580c, type: 2}
+  - {fileID: 11400000, guid: 7a0aea585ee2a4547bcf7dd5a8789d0c, type: 2}
   attacksHitbox:
   - {fileID: 420313525}
   - {fileID: 1703995009}
   - {fileID: 1807525474}
+  - {fileID: 1703995009}
+  - {fileID: 420313525}
+  - {fileID: 1807525474}
+  - {fileID: 1703995009}
+  - {fileID: 420313525}
   - {fileID: 1807525474}
   arenaHandler: {fileID: 0}
 --- !u!61 &391617665
@@ -5255,10 +5267,22 @@ MonoBehaviour:
   attacks:
   - {fileID: 11400000, guid: 1002b6cc27517b94495333e4d3ad580c, type: 2}
   - {fileID: 11400000, guid: aa08a6edd2cf1c24989d61331d010787, type: 2}
+  - {fileID: 11400000, guid: b20780466133f3f479c6bbd4276c0d9c, type: 2}
+  - {fileID: 11400000, guid: aa08a6edd2cf1c24989d61331d010787, type: 2}
+  - {fileID: 11400000, guid: 1002b6cc27517b94495333e4d3ad580c, type: 2}
+  - {fileID: 11400000, guid: b20780466133f3f479c6bbd4276c0d9c, type: 2}
+  - {fileID: 11400000, guid: aa08a6edd2cf1c24989d61331d010787, type: 2}
+  - {fileID: 11400000, guid: 1002b6cc27517b94495333e4d3ad580c, type: 2}
+  - {fileID: 11400000, guid: 7a0aea585ee2a4547bcf7dd5a8789d0c, type: 2}
   attacksHitbox:
   - {fileID: 830352688}
   - {fileID: 226449328}
   - {fileID: 1435413648}
+  - {fileID: 226449328}
+  - {fileID: 830352688}
+  - {fileID: 1435413648}
+  - {fileID: 226449328}
+  - {fileID: 830352688}
   - {fileID: 1435413648}
   arenaHandler: {fileID: 0}
 --- !u!50 &570264085
@@ -54790,10 +54814,22 @@ MonoBehaviour:
   attacks:
   - {fileID: 11400000, guid: 1002b6cc27517b94495333e4d3ad580c, type: 2}
   - {fileID: 11400000, guid: aa08a6edd2cf1c24989d61331d010787, type: 2}
+  - {fileID: 11400000, guid: b20780466133f3f479c6bbd4276c0d9c, type: 2}
+  - {fileID: 11400000, guid: aa08a6edd2cf1c24989d61331d010787, type: 2}
+  - {fileID: 11400000, guid: 1002b6cc27517b94495333e4d3ad580c, type: 2}
+  - {fileID: 11400000, guid: b20780466133f3f479c6bbd4276c0d9c, type: 2}
+  - {fileID: 11400000, guid: aa08a6edd2cf1c24989d61331d010787, type: 2}
+  - {fileID: 11400000, guid: 1002b6cc27517b94495333e4d3ad580c, type: 2}
+  - {fileID: 11400000, guid: 7a0aea585ee2a4547bcf7dd5a8789d0c, type: 2}
   attacksHitbox:
   - {fileID: 1694033677}
   - {fileID: 1501026814}
   - {fileID: 1645386872}
+  - {fileID: 1501026814}
+  - {fileID: 830352688}
+  - {fileID: 1645386872}
+  - {fileID: 226449328}
+  - {fileID: 830352688}
   - {fileID: 1645386872}
   arenaHandler: {fileID: 0}
 --- !u!61 &1750750298

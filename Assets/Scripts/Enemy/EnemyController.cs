@@ -310,8 +310,9 @@ public class EnemyController : MonoBehaviour
 
 
             case BossAttacks.atk.lunge:
-                anim.SetTrigger(atk.animName);
+                anim.SetBool(atk.animName, true);
                 yield return new WaitForSeconds(atk.teleTime);
+                canMove = true;
                 eVocalCords.PlayOneShot(atk.sfx);
                 GetComponent<BoxCollider2D>().excludeLayers = 8;
                 GetComponent<BoxCollider2D>().excludeLayers += 64;
@@ -322,6 +323,7 @@ public class EnemyController : MonoBehaviour
                 target = arrowDirection * 10000;
                 speedMod = atk.projSpeed;
                 yield return new WaitForSeconds(atk.projLifeTime);
+                anim.SetBool(atk.animName, false);
                 neededHitbox.SetActive(false);
                 GetComponent<BoxCollider2D>().excludeLayers = 0;
                 spearThrown = false;
@@ -335,6 +337,7 @@ public class EnemyController : MonoBehaviour
                 yield return new WaitForSeconds(atk.teleTime);
                 if (TryGetComponent<Lion>(out Lion lion))
                 {
+                    canMove = true;
                     lion.attack();
                 }
                 else if (TryGetComponent<Commodus>(out Commodus commodus))
