@@ -165,7 +165,7 @@ public class EnemyController : MonoBehaviour
             gameManager.bossesDead++;
             gameManager.lionCheck--;
             deathReplacement.transform.position = this.transform.position;
-            deathReplacement.transform.localScale = this.transform.localScale;
+            deathReplacement.transform.localScale = new Vector2(this.transform.localScale.x > 0 ? deathReplacement.transform.localScale.x : -deathReplacement.transform.localScale.x, deathReplacement.transform.localScale.y);
             deathReplacement.SetActive(true);
             Destroy(this.gameObject);
         }
