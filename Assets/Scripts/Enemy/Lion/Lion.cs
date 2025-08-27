@@ -54,12 +54,14 @@ public class Lion : MonoBehaviour
         if (pendingAttack == 4 && enemyController.gameManager.lionCheck == enemyController.gameManager.lionReady && enemyController.gameManager.lionCheck != 0 && ready)
         {
             enemyController.anim.SetBool("Lunge", true);
-            lungeATK();
+            //lungeATK();
+            StartCoroutine(enemyController.attack(2));
             pendingAttack = 0;
         }
 
         if ((enemyController.targetOveride ? Vector2.Distance(transform.position, new Vector2(Mathf.Clamp(enemyController.target.x, -36, 36), Mathf.Clamp(enemyController.target.y, Mathf.Lerp(16f, 25.5f, (Mathf.Abs(enemyController.target.x) - 27) / 8.5f), Mathf.Lerp(35f, 25.5f, (Mathf.Abs(enemyController.target.x) - 27) / 8.5f)))) <= 1 : true) && !ready && pendingAttack == 4)
         {
+            print("lion is ready");
             ready = true;
             enemyController.gameManager.lionReady++;
         }
@@ -68,6 +70,7 @@ public class Lion : MonoBehaviour
     public void attack()
     {
         enemyController.canAttack = false;
+        print("group Lunge");
 
         if (lion1 != null && lion1.enemyController.health > 0)
         {
@@ -139,6 +142,6 @@ public class Lion : MonoBehaviour
         enemyController.target = Vector2.up * 999999;
         GetComponent<PolygonCollider2D>().excludeLayers = 0;
         StartCoroutine(enemyController.cooldown(1, lungeHitBox));
-        pendingAttack = Random.Range(1, 4);
+        pendingAttack = 0;
     }
 }

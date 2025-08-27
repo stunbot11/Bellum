@@ -227,7 +227,7 @@ public class EnemyController : MonoBehaviour
     }
 
 
-    IEnumerator attack(int atkNum)
+    public IEnumerator attack(int atkNum)
     {
         canMove = false;
         BossAttacks atk = attacks[atkNum];
@@ -313,16 +313,21 @@ public class EnemyController : MonoBehaviour
                 anim.SetTrigger(atk.animName);
                 yield return new WaitForSeconds(atk.teleTime);
                 eVocalCords.PlayOneShot(atk.sfx);
+                GetComponent<BoxCollider2D>().excludeLayers = 8;
+                GetComponent<BoxCollider2D>().excludeLayers += 64;
                 spearThrown = true;
                 targetOveride = true;
                 goingToTarget = true;
+                neededHitbox.SetActive(true);
                 target = arrowDirection * 10000;
                 speedMod = atk.projSpeed;
                 yield return new WaitForSeconds(atk.projLifeTime);
-                spearThrown = false;
+                neededHitbox.SetActive(false);
+                GetComponent<BoxCollider2D>().excludeLayers = 0;
                 spearThrown = false;
                 targetOveride = false;
                 goingToTarget = false;
+                cooldown(atk.cooldownTime);
                 speedMod = 1;
                 break;
 
