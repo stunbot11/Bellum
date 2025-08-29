@@ -67,7 +67,9 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator start()
     {
-        yield return new WaitForSeconds(2.5f);
+        print("start");
+        //yield return new WaitForSeconds(2.5f);
+        print("second start");
         if (arcadeMode && round > 0)
         {
             boss = Random.Range(1, totalBosses + 2);
@@ -77,6 +79,7 @@ public class GameManager : MonoBehaviour
                 boss++;
         }
         SceneManager.LoadScene(boss);
+        yield return null;
     }
 
     public void menu()

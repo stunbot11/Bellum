@@ -68,7 +68,7 @@ public class SelectionUI : MonoBehaviour
             switch (selectionPart)
             {
                 case 0:
-                    Application.Quit();
+                    //Application.Quit();
                     break;
 
                 case 1:
